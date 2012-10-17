@@ -1,0 +1,64 @@
+/*Overall rhythm*/
+body {
+	-ms-word-break: break-all;
+	-epub-word-break: break-all;
+	word-break: break-all;
+
+	word-break: break-word;
+
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-epub-hyphens: auto;
+	hyphens: auto;
+}
+
+/*Font families*/
+html {
+	font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", sans-serif;
+}
+blockquote, q {
+	font-family: "Georgia", serif;
+}
+pre, code, kbd, samp {
+	font-family: monospace;
+}
+
+/*Sizes*/	
+html, body {
+	font-size: 1em;
+	line-height: 1.4;
+}
+h1, h2, h3 {
+	text-rendering: optimizeLegibility;
+}
+h1 {
+	font-size: 2.4em;
+}
+h2 {
+	font-size: 2.0em;
+}
+h3 {
+	font-size: 1.6em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5, h6 {
+	font-size: 1em;
+}
+small, .discreet {
+	font-size: 0.8em;
+}
+big, .highlighted {
+	font-size: 1.2em;
+}
+
+/*Responsive adjustments*/
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+		font-size: 0.85em;
+		-webkit-text-size-adjust: none;
+	}
+
+}

@@ -1,0 +1,63 @@
+/*Light color scheme*/
+
+html, body, div, blockquote, pre, 
+p, ol, ul, li, dl, dt, dd, 
+h1, h2, h3, h4, h5, h6, 
+table, th, tr, td, thead, tbody, tfoot, caption, 
+img, 
+form, fieldset, legend, label {
+	border-color: #e6e6e6;
+}
+
+/*Background colors*/
+
+body {
+	background-color: #fff;
+}
+
+pre, table {
+	background-color: #f2f2f2;
+	border-width: 1px;
+}
+
+/*Tables*/
+
+table th, .zebra tr.even td {
+	background-color: #e6e6e6;
+}
+
+	table table {
+		background-color: #e6e6e6;
+	}
+
+		table table .zebra tr.even td, table table th {
+			background-color: #f2f2f2;
+		}
+
+/*Text colors*/
+
+body {
+	color: #222;
+}
+
+a {
+	color: #0080bf;
+}
+
+	a:visited {
+		color: #860886;
+	}
+
+/*Alterations*/
+
+.light, .disabled {
+	color: #888;
+}
+
+.highlight {
+	color: #7ae400;
+}
+
+.error {
+	color: #c6122a;
+}

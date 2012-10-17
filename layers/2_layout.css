@@ -1,0 +1,307 @@
+
+/*Content columns (12-based)*/
+
+.row {
+	clear: both;
+}
+
+.column {
+	clear: right;
+	float: left;
+	margin-left: 0;
+	margin-right: 3.8%;
+	min-height: 1px;
+}
+
+	.column.first, .column.twelve {
+		clear: both;
+	}
+
+	.column.last, .column.twelve, .column.close, .column.close-right {
+		margin-right: 0;
+	}
+	
+	.column.right {
+		clear: none;
+		float: right;
+		margin-right: 0;
+		margin-left: 3.8%;
+	}
+
+		.column.right.last, .column.right.twelve, .column.right.close-left, .column.right.close {
+			margin-left: 0;
+		}
+
+	/*Fluid columns with gutter*/
+
+	.column.one {
+		width: 4.85%;
+	}
+
+	.column.two {
+		width: 13.45%;
+	}
+
+	.column.three {
+		width: 22.05%;
+	}
+
+	.column.four {
+		width: 30.75%;
+	}
+
+	.column.five {
+		width: 39.45%;
+	}
+
+	.column.six {
+		width: 48%;
+	}
+
+	.column.seven {
+		width: 56.75%;
+	}
+
+	.column.eight {
+		width: 65.4%;
+	}
+
+	.column.nine {
+		width: 74.05%;
+	}
+
+	.column.ten {
+		width: 82.7%;
+	}
+
+	.column.eleven {
+		width: 91.35%;
+	}
+
+	.column.twelve {
+		width: 100%;
+	}
+
+	/*Fluid columns without gutters*/
+
+	.column.one.close-right, .column.one.close-left, .column.one.close {
+		width: 8.3%;
+	}
+
+	.column.two.close-right, .column.two.close-left, .column.two.close {
+		width: 16.65%;
+	}
+
+	.column.three.close-right, .column.three.close-left, .column.three.close {
+		width: 25%;
+	}
+
+	.column.four.close-right, .column.four.close-left, .column.four.close {
+		width: 33.3%;
+	}
+
+	.column.five.close-right, .column.five.close-left, .column.five.close {
+		width: 41.65%;
+	}
+
+	.column.six.close-right, .column.six.close-left, .column.six.close {
+		width: 50%;
+	}
+
+	.column.seven.close-right, .column.seven.close-left, .column.seven.close {
+		width: 58.3%;
+	}
+
+	.column.eight.close-right, .column.eight.close-left, .column.eight.close {
+		width: 66.6%;
+	}
+
+	.column.nine.close-right, .column.nine.close-left, .column.nine.close {
+		width: 75%;
+	}
+
+	.column.ten.close-right, .column.ten.close-left, .column.ten.close {
+		width: 83.35%;
+	}
+
+	.column.eleven.close-right, .column.eleven.close-left, .column.eleven.close {
+		width: 91.7%;
+	}
+
+	/*Shift columns to the right*/
+
+	.column.push-one {
+		margin-left: 8.65%;
+	}
+
+	.column.push-two {
+		margin-left: 17.25%;
+	}
+
+	.column.push-three {
+		margin-left: 25.85%;
+	}
+
+	.column.push-four {
+		margin-left: 34.55%;
+	}
+
+	.column.push-five {
+		margin-left: 43.25%;
+	}
+
+	.column.push-six {
+		margin-left: 51.8%;
+	}
+
+	.column.push-seven {
+		margin-left: 60.55%;
+	}
+
+	.column.push-eight {
+		margin-left: 69.2%;
+	}
+
+	.column.push-nine {
+		margin-left: 77.85%;
+	}
+
+	.column.push-ten {
+		margin-left: 86.5%;
+	}
+
+	.column.push-eleven {
+		margin-left: 95.15%;
+	}
+
+	/*Alternative columns without gutters*/
+
+	.column.half, .column.fourth, .column.fifth, .column.tenth {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.column.half {
+		width: 50%;
+	}
+
+	.column.fourth {
+		width: 25%;
+	}
+
+	.column.fifth {
+		width: 20%;
+	}
+
+	.column.tenth {
+		width: 10%;
+	}
+
+
+
+/*Fixed-width column among fluid ones*/
+.column.fluid {
+	clear: none;
+	float: left;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+	.column.fluid > .content {
+		margin-left: 120px;
+	}
+	.column.fixed {
+		clear: none;
+		float: left;
+		margin-right: 0;
+		margin-left: -100%;
+		width: 100px;
+	}
+		.column.fluid.left > .content {
+			margin-left: 0;
+			margin-right: 120px;
+		}
+		.column.fixed.right {
+			float: right;
+		}
+
+
+
+/*Stacks*/
+.stack > li, .stack > div {
+	float: left;
+	clear: right;
+}
+
+
+
+/*Content areas*/
+.buffer {
+	padding: 1em 2em 2em 2em;
+}
+	.buffer-top {
+		padding-top: 1em;
+	}
+	.buffer-right {
+		padding-right: 2em;
+	}
+	.buffer-bottom {
+		padding-bottom: 2em;
+	}
+	.buffer-left {
+		padding-left: 2em;
+	}
+
+
+
+/*List layouts*/
+
+.menu ul, .menu ol, ul.menu, ol.menu {
+	list-style: none;
+	padding-left: 0;
+}
+	
+	.menu.inline ul {
+		clear: right;
+		float: left;
+	}
+
+	.menu.inline ul.right, .menu.inline ul.last {
+		float: right;
+		clear: right;
+	}
+
+.inline ul, .inline ol, ul.inline, ol.inline {
+	list-style: none;
+	padding-left: 0;
+}
+
+	.inline ul li, .inline ol li, ul.inline li, ol.inline li {
+		display: inline-block;
+		margin-right: 1.5em;
+	}
+
+		.inline ul li a, .inline ol li a, ul.inline li a, ol.inline li a {
+			display: inline-block;
+		}
+
+		.right .inline ul li, .right .inline ol li, .right ul.inline li, .right ol.inline li, ul.inline.right li, ol.inline.right li {
+			margin-right: 0;
+			margin-left: 1.5em;
+		}
+
+/*Collapse columns on small screens*/
+@media handheld, only screen and (max-width: 690px) {
+
+	.column, .column.one, .column.two, .column.three, .column.four, .column.five, .column.six, .column.eight, .column.nine, .column.ten, .column.eleven, .column.twelve, .column.half, .column.fourth, .column.fifth, .column.tenth {
+		width: auto;
+		float: none;
+		clear: both;
+		margin-right: 0;
+	}
+
+	.column.right, .column.right.one, .column.right.two, .column.right.three, .column.right.four, .column.right.five, .column.right.six, .column.right.eight, .column.right.nine, .column.right.ten, .column.right.eleven, .column.right.twelve {
+		margin-left: 0;
+	}
+
+}

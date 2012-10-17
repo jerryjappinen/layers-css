@@ -1,0 +1,94 @@
+/*Vertical rhythm*/
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1.4em;
+	margin-bottom: 0.7em;
+}
+
+p, ul, ol, table, pre, blockquote {
+	margin-top: 0.7em;
+	margin-bottom: 1.4em;
+}
+
+	ul ul, ul ol, ol ol, ol ul {
+		margin-top: 0;
+	}
+
+dl {
+	margin-bottom: 1.4em;
+}
+
+dt {
+	margin-top: 0.7em;
+}
+
+pre {
+	padding: 0.7em;
+}
+
+
+
+/*Tables*/
+
+caption {
+	margin-bottom: 0.7em;
+}
+
+th, td {
+	padding: 0.7em;
+}
+
+	.squeeze th, .squeeze td, table table th, table table td {
+		padding: 0.35em;
+	}
+
+	.close th, .close td {
+		padding: 0;
+	}
+
+
+
+/*Condensed blocks*/
+h1.squeeze, h2.squeeze, h3.squeeze, h4.squeeze, h5.squeeze, h6.squeeze, 
+h1.squeeze-top , h2.squeeze-top, h3.squeeze-top, h4.squeeze-top, h5.squeeze-top, h6.squeeze-top {
+	margin-top: 0.7em;
+}
+p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeeze,
+p.squeeze-top, ul.squeeze-top, ol.squeeze-top, table.squeeze-top, pre.squeeze-top, blockquote.squeeze-top {
+	margin-top: 0.35em;
+}
+h1.squeeze, h2.squeeze, h3.squeeze, h4.squeeze, h5.squeeze, h6.squeeze, 
+h1.squeeze-bottom , h2.squeeze-bottom, h3.squeeze-bottom, h4.squeeze-bottom, h5.squeeze-bottom, h6.squeeze-bottom {
+	margin-bottom: 0.35em;
+}
+p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeeze,
+p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pre.squeeze-bottom, blockquote.squeeze-bottom {
+	margin-bottom: 0.7em;
+}
+h1.close, h2.close, h3.close, h4.close, h5.close, h6.close, p.close, ul.close, ol.close, table.close, pre.close, blockquote.close,
+h1.close-top , h2.close-top, h3.close-top, h4.close-top, h5.close-top, h6.close-top, p.close-top, ul.close-top, ol.close-top, table.close-top, pre.close-top, blockquote.close-top {
+	margin-top: 0;
+}
+h1.close, h2.close, h3.close, h4.close, h5.close, h6.close, p.close, ul.close, ol.close, table.close, pre.close, blockquote.close,
+h1.close-bottom, h2.close-bottom, h3.close-bottom, h4.close-bottom, h5.close-bottom, h6.close-bottom, p.close-bottom, ul.close-bottom, ol.close-bottom, table.close-bottom, pre.close-bottom, blockquote.close-bottom {
+	margin-bottom: 0;
+}
+
+
+
+/*Condenced forms*/
+
+form p.label {
+	margin-top: 1.4em;
+	margin-bottom: 0;
+}
+
+form p.input {
+	margin-top: 0.35em;
+	margin-top: 0.7em;
+}
+
+form p.description {
+	margin-top: 0;
+	margin-bottom: 2.1em;
+}
