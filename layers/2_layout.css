@@ -1,10 +1,6 @@
 
 /*Content columns (12-based)*/
 
-.row {
-	clear: both;
-}
-
 .column {
 	clear: right;
 	float: left;
