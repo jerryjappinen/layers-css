@@ -41,3 +41,35 @@
 		padding-left: 0;
 		list-style-type: none;
 	}
+
+/*Spacing and closing*/
+.close {
+	margin: 0;
+}
+	.close-top {
+		margin-top: 0;
+	}
+	.close-right {
+		margin-right: 0;
+	}
+	.close-bottom {
+		margin-bottom: 0;
+	}
+	.close-left {
+		margin-left: 0;
+	}
+.spacing {
+	margin: 1em;
+}
+	.spacing-top {
+		margin-top: 1em;
+	}
+	.spacing-right {
+		margin-right: 1em;
+	}
+	.spacing-bottom {
+		margin-bottom: 1em;
+	}
+	.spacing-left {
+		margin-left: 1em;
+	}

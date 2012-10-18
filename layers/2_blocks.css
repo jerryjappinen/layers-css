@@ -65,14 +65,6 @@ p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeez
 p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pre.squeeze-bottom, blockquote.squeeze-bottom {
 	margin-bottom: 0.7em;
 }
-h1.close, h2.close, h3.close, h4.close, h5.close, h6.close, p.close, ul.close, ol.close, table.close, pre.close, blockquote.close,
-h1.close-top , h2.close-top, h3.close-top, h4.close-top, h5.close-top, h6.close-top, p.close-top, ul.close-top, ol.close-top, table.close-top, pre.close-top, blockquote.close-top {
-	margin-top: 0;
-}
-h1.close, h2.close, h3.close, h4.close, h5.close, h6.close, p.close, ul.close, ol.close, table.close, pre.close, blockquote.close,
-h1.close-bottom, h2.close-bottom, h3.close-bottom, h4.close-bottom, h5.close-bottom, h6.close-bottom, p.close-bottom, ul.close-bottom, ol.close-bottom, table.close-bottom, pre.close-bottom, blockquote.close-bottom {
-	margin-bottom: 0;
-}
 
 
 
