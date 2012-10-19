@@ -46,19 +46,9 @@ h4 {
 h5, h6 {
 	font-size: 1em;
 }
-small, .discreet {
+small {
 	font-size: 0.8em;
 }
-big, .highlighted {
+big {
 	font-size: 1.2em;
-}
-
-/*Responsive adjustments*/
-@media handheld, only screen and (max-width: 767px) {
-
-	body {
-		font-size: 0.85em;
-		-webkit-text-size-adjust: none;
-	}
-
 }

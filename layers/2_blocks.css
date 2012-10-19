@@ -1,27 +1,22 @@
-/*Vertical rhythm*/
 
+/*Vertical rhythm*/
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 1.4em;
 	margin-bottom: 0.7em;
 }
-
 p, ul, ol, table, pre, blockquote {
 	margin-top: 0.7em;
 	margin-bottom: 1.4em;
 }
-
 	ul ul, ul ol, ol ol, ol ul {
 		margin-top: 0;
 	}
-
 dl {
 	margin-bottom: 1.4em;
 }
-
 dt {
 	margin-top: 0.7em;
 }
-
 pre {
 	padding: 0.7em;
 }
@@ -29,20 +24,16 @@ pre {
 
 
 /*Tables*/
-
 caption {
 	margin-bottom: 0.7em;
 }
-
 th, td {
 	padding: 0.7em;
 }
-
 	.squeeze th, .squeeze td, table table th, table table td {
 		padding: 0.35em;
 	}
-
-	.close th, .close td {
+	.plain th, .plain td {
 		padding: 0;
 	}
 
@@ -69,17 +60,14 @@ p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pr
 
 
 /*Condenced forms*/
-
 form p.label {
 	margin-top: 1.4em;
 	margin-bottom: 0;
 }
-
 form p.input {
 	margin-top: 0.35em;
 	margin-top: 0.7em;
 }
-
 form p.description {
 	margin-top: 0;
 	margin-bottom: 2.1em;

@@ -6,15 +6,12 @@ img {
 }
 
 /*Form elements*/
-
 input.textfield, input.password, textarea {
 	width: 65%;	
 }
-
 input.textfield, input.password {
 	max-width: 300px;
 }
-
 	input.textfield.condensed, input.password.condensed {
 		width: 40%;
 		max-width: 200px;
@@ -24,7 +21,6 @@ textarea {
 	max-width: 500px;
 	height: 10em;
 }
-
 	textarea.condensed {
 		width: 40%;
 		height: 5em;
