@@ -6,7 +6,7 @@ img {
 
 /*Form elements*/
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
-	width: 65%;	
+	width: 70%;	
 }
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
 	max-width: 300px;
