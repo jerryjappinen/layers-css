@@ -1,10 +1,9 @@
 
-Layers CSS pack
-Collection of reset and sensible default styles to build your look on without having to override stuff
-By Jerry Jäppinen
-http://eiskis.net/
+Layers CSS
+Minimum-interference collection of reset and default styles
 
-For docs & other info, check out Bitbucket project at https://bitbucket.org/Eiskis/layers-css
+Docs and demos at http://eiskis.net/layers/
+Bitbucket project at https://bitbucket.org/Eiskis/layers-css
 
 By Jerry Jäppinen
 Released under the MIT license
@@ -48,7 +47,8 @@ Feel free to edit e.g. the breaking point for columns if you want. For more comp
 
 
 
-=== Colors ===
+Colors
+------
 
 None of the other files contain any color scheme declarations. You have an empty canvas for your look.
 
