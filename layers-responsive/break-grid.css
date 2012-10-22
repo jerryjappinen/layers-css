@@ -1,6 +1,6 @@
 
 /*Layout*/
-@media handheld, only screen and (max-width: 760px) {
+@media handheld, only screen and (max-width: 740px) {
 
 	/*Collapse columns on small screens*/
 	.column, .column.one, .column.two, .column.three, .column.four, .column.five, .column.six, .column.eight, .column.nine, .column.ten, .column.eleven, .column.twelve, .column.half, .column.fourth, .column.fifth, .column.tenth,

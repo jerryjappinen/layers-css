@@ -12,12 +12,12 @@
 
 		<!-- Layers -->
 		<link rel="stylesheet" href="../layers/_reset.css" media="screen">
-		<link rel="stylesheet" href="../layers/_tools.css" media="screen">
 		<link rel="stylesheet" href="../layers/defaults.css" media="screen">
 		<link rel="stylesheet" href="../layers/elements.css" media="screen">
 		<link rel="stylesheet" href="../layers/inline.css" media="screen">
 		<link rel="stylesheet" href="../layers/layout.css" media="screen">
-		<link rel="stylesheet" href="../layers/typography.css" media="screen">
+		<link rel="stylesheet" href="../layers/text.css" media="screen">
+		<link rel="stylesheet" href="../layers/tools.css" media="screen">
 
 		<!-- Responsive adjustments -->
 		<link rel="stylesheet" href="../layers-responsive/break-grid.css" media="screen">
@@ -57,7 +57,7 @@
 			body > .column.fixed.right {
 				width: 17em;
 			}
-			@media handheld, only screen and (max-width: 46em) {
+			@media handheld, only screen and (max-width: 48em) {
 				body > .column.fluid, body > .column.fixed {
 					width: auto;
 					float: none;
@@ -74,17 +74,16 @@
 
 			/*Colorize columns for clarity*/
 			.column .column, .stack > .container {
-				background-color: white;
-				color: black;
+				background-color: #293B3B;
 			}
 				.column .column.reset {
 					background-color: transparent;
 				}
 				.column .column.fluid > .container {
-					background-color: CadetBlue;
+					background-color: #557070;
 				}
 				.column .column.fixed {
-					background-color: CadetBlue;
+					background-color: #557070;
 				}
 
 			/*Custom stacked container dimensions*/
@@ -115,7 +114,7 @@
 
 				<h3>I think you get the idea.</h3>
 
-				<div class="column eight first">
+				<div class="column eight">
 					<p>.column.eight</p>
 				</div>
 
@@ -227,7 +226,7 @@
 
 
 				<!--  -->
-				<h1>cool tools.</h1>
+				<h1>common tools.</h1>
 
 				<p class="discreet">You can automatically use these as mixins in <em>LESS</em>.</p>
 
@@ -408,9 +407,9 @@
 		<!-- General info -->
 		<div class="column fixed right">
 				
-			<h1 class="close-top">about</h1>
-			<p>You've all seen most of this stuff elsewhere. But this time the format makes it easy to pick the stuff that <em>you</em> need, without having to override things.</p>
-			<p><em>Layers CSS</em> doesn't choose a visual style or color scheme for you. It just gives you tools.</p>
+			<h1 class="close-top">Layers CSS</h1>
+			<p>...is a clean CSS package that makes it easy to pick the stuff that <em>you</em> need, without having to override things. It doesn't choose a visual style or color scheme for you. It just gives you tools.</p>
+			<p>There are also no dependencies or special requirements.</p>
 			<p class="discreet"><strong>Hint!</strong> This page uses only stock <code>layers</code> extended by the styles visible in the document headers. Take a look at the source code to see what's added (Layers is not <em>black</em>).</p>
 	
 		</div>
