@@ -40,7 +40,7 @@
 				}
 			.discreet {
 				font-size: inherit;
-				color: CadetBlue;
+				color: #557070;
 			}
 
 			/*Layout frame*/
@@ -73,8 +73,8 @@
 			}
 
 			/*Colorize columns for clarity*/
-			.column .column, .stack > .container {
-				background-color: #293B3B;
+			.column .column, .stack > .container, ul, ol {
+				background-color: #293b3b;
 			}
 				.column .column.reset {
 					background-color: transparent;
@@ -273,49 +273,41 @@
 				<!--  -->
 				<h1>lists.</h1>
 
-				<div class="column six reset">
+				<p class="discreet">ul</p>
 
-					<p class="discreet">ul</p>
+				<ul>
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="#">Four</a></li>
+				</ul>
 
-					<ul>
-						<li><a href="#">One</a></li>
-						<li><a href="#">Two</a></li>
-						<li><a href="#">Three</a></li>
-						<li><a href="#">Four</a></li>
-					</ul>
+				<p class="discreet">ul.plain</p>
 
-					<p class="discreet">ul.plain</p>
+				<ul class="plain">
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="#">Four</a></li>
+				</ul>
 
-					<ul class="plain">
-						<li><a href="#">One</a></li>
-						<li><a href="#">Two</a></li>
-						<li><a href="#">Three</a></li>
-						<li><a href="#">Four</a></li>
-					</ul>
+				<p class="discreet">ul.inline</p>
 
-				</div>
+				<ul class="inline">
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="#">Four</a></li>
+				</ul>
 
-				<div class="column six last reset">
+				<p class="discreet">ol.inline.right</p>
 
-					<p class="discreet">ul.inline</p>
-
-					<ul class="inline">
-						<li><a href="#">One</a></li>
-						<li><a href="#">Two</a></li>
-						<li><a href="#">Three</a></li>
-						<li><a href="#">Four</a></li>
-					</ul>
-
-					<p class="discreet">ol.inline.right</p>
-
-					<ol class="inline right">
-						<li><a href="#">One</a></li>
-						<li><a href="#">Two</a></li>
-						<li><a href="#">Three</a></li>
-						<li><a href="#">Four</a></li>
-					</ol>
-
-				</div>
+				<ol class="inline right">
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="#">Four</a></li>
+				</ol>
 
 				<p class="discreet">ul.inline.push-left.close + ul.inline.push-right.close</p>
 
