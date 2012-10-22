@@ -22,14 +22,14 @@ To get it all, use the single-file compilation:
 
 You can also pick and choose what you want (use alphabetical order):
 	<link rel="stylesheet" href="layers/_reset.css">
-	<link rel="stylesheet" href="layers/_tools.css">
 	<link rel="stylesheet" href="layers/defaults.css">
 	<link rel="stylesheet" href="layers/elements.css">
 	<link rel="stylesheet" href="layers/inline.css">
 	<link rel="stylesheet" href="layers/layout.css">
-	<link rel="stylesheet" href="layers/typography.css">
+	<link rel="stylesheet" href="layers/text.css">
+	<link rel="stylesheet" href="layers/tools.css">
 
-If you use an autoloader (like asset pipeline in Rails, for example), you can just include the whole "layers" folder.
+If you use an autoloader (e.g. Rails' asset pipeline), you can just include the whole "layers" folder.
 
 
 
