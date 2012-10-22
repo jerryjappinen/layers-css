@@ -9,11 +9,11 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 	width: 70%;	
 }
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
-	max-width: 300px;
+	max-width: 24em;
 }
 	input[type="text"].condensed, input[type="password"].condensed, input[type="email"].condensed, input[type="url"].condensed, input[type="search"].condensed, input[type="tel"].condensed {
 		width: 40%;
-		max-width: 24em;
+		max-width: 16em;
 	}
 
 textarea {
