@@ -3,18 +3,24 @@
 .column {
 	clear: none;
 	float: left;
-	margin-left: 0;
-	margin-right: 3.8%;
 	min-height: 1px;
 }
 	.column.first, .column.twelve {
 		clear: both;
 	}
-	.column.last, .column.twelve, .column.close, .column.close-right {
-		margin-right: 0;
-	}
 	.column.right {
 		float: right;
+	}
+
+	/*Fluid columns with gutter*/
+	.column.one, .column.two, .column.three, .column.four, .column.five, .column.six, .column.seven, .column.eight, .column.nine, .column.ten, .column.eleven, .column.twelve {
+		margin-left: 0;
+		margin-right: 3.8%;
+	}
+		.column.last, .column.twelve, .column.close, .column.close-right {
+			margin-right: 0;
+		}
+	.column.one.right, .column.two.right, .column.three.right, .column.four.right, .column.five.right, .column.six.right, .column.seven.right, .column.eight.right, .column.nine.right, .column.ten.right, .column.eleven.right, .column.twelve.right {
 		margin-right: 0;
 		margin-left: 3.8%;
 	}

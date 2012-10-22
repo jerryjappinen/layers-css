@@ -1,18 +1,6 @@
 
-/*Font size*/
-@media handheld, only screen and (max-width: 760px) {
-
-	body {
-		font-size: 0.85em;
-		-webkit-text-size-adjust: none;
-	}
-
-}
-
-
-
 /*Layout*/
-@media handheld, only screen and (max-width: 680px) {
+@media handheld, only screen and (max-width: 760px) {
 
 	/*Collapse columns on small screens*/
 	.column, .column.one, .column.two, .column.three, .column.four, .column.five, .column.six, .column.eight, .column.nine, .column.ten, .column.eleven, .column.twelve, .column.half, .column.fourth, .column.fifth, .column.tenth,
@@ -40,7 +28,7 @@
 			margin-left: -100%;
 		}
 
-	/*Shift columns equally right*/
+	/*Shift columns equally to the right*/
 	.column.push-one {
 		margin-right: 8.65%;
 	}

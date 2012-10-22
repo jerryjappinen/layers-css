@@ -35,7 +35,7 @@
 				}
 			.discreet {
 				font-size: inherit;
-				color: gray;
+				color: CadetBlue;
 			}
 
 			/*Layout frame*/
@@ -43,7 +43,7 @@
 				max-width: 70em;
 				margin: 0 auto;
 				padding: 3% 5% 7% 5%;
-				background-color: black;
+				background-color: #11181c;
 				color: white;
 			}
 			body > .column.fluid.left > .container {
@@ -76,10 +76,10 @@
 					background-color: transparent;
 				}
 				.column .column.fluid > .container {
-					background-color: gray;
+					background-color: CadetBlue;
 				}
 				.column .column.fixed {
-					background-color: gray;
+					background-color: CadetBlue;
 				}
 
 			/*Custom stacked container dimensions*/
@@ -118,12 +118,12 @@
 					<p>.column.four last</p>
 				</div>
 
-				<div class="column six first">
-					<p>.column.six.first</p>
+				<div class="column five first">
+					<p>.column.five.first</p>
 				</div>
 			
-				<div class="column three push-one">
-					<p>.column.three.push-one</p>
+				<div class="column three push-two">
+					<p>.column.three.push-two</p>
 				</div>
 
 				<div class="column two last">
@@ -222,6 +222,51 @@
 
 
 				<!--  -->
+				<h1>cool tools.</h1>
+
+				<p class="discreet">You can automatically use these as mixins in <em>LESS</em>.</p>
+
+				<div class="column four">
+					<div class="buffer">
+						<dl>
+							<dt><code>.close</code></dt>
+							<dd>Remove margins</dd>
+							<dt><code>.squeeze</code></dt>
+							<dd>Make margins smaller</dd>
+							<dt><code>.buffer</code></dt>
+							<dd>Add comfortable paddings</dd>
+						</dl>
+
+						<p>Add directions to specify (<code>.close-top</code>, <code>.squeeze-right</code>...)</p>
+					</div>
+				</div>
+
+				<div class="column four">
+					<dl class="buffer">
+						<dt><code>.clear</code></dt>
+						<dd>Clear shit (<code>clear: both;</code>)</dd>
+						<dt><code>.hidden</code></dt>
+						<dd>Hide shit (<code>display: none;</code>)</dd>
+						<dt><code>.dry</code></dt>
+						<dd>Move inline content where only Hubble can see it</dd>
+					</dl>
+				</div>
+
+				<div class="column four last">
+					<dl class="buffer">
+						<dt><code>.reset</code></dt>
+						<dd>Remove margins, paddings, borders etc.</dd>
+						<dt><code>.fill</code></dt>
+						<dd></dd>
+						<dt><code>.border-box</code></dt>
+						<dd></dd>
+					</dl>
+				</div>
+				<div class="clear"></div>
+
+
+
+				<!--  -->
 				<h1>lists.</h1>
 
 				<div class="column six reset">
@@ -303,48 +348,51 @@
 
 
 				<!--  -->
-				<h1>cool tools.</h1>
+				<h1>tables.</h1>
 
-				<p class="discreet">You can automatically use these as mixins in <em>LESS</em>.</p>
-
-				<div class="column four">
-					<div class="buffer">
-						<dl>
-							<dt><code>.close</code></dt>
-							<dd>Remove margins</dd>
-							<dt><code>.squeeze</code></dt>
-							<dd>Make margins smaller</dd>
-							<dt><code>.buffer</code></dt>
-							<dd>Add comfortable paddings</dd>
-						</dl>
-
-						<p>Add directions to specify (<code>.close-top</code>, <code>.squeeze-right</code>...)</p>
-					</div>
-				</div>
-
-				<div class="column four">
-					<dl class="buffer">
-						<dt><code>.clear</code></dt>
-						<dd>Clear shit (<code>clear: both;</code>)</dd>
-						<dt><code>.hidden</code></dt>
-						<dd>Hide shit (<code>display: none;</code>)</dd>
-						<dt><code>.dry</code></dt>
-						<dd>Move inline content where only Hubble can see it</dd>
-					</dl>
-				</div>
-
-				<div class="column four last">
-					<dl class="buffer">
-						<dt><code>.reset</code></dt>
-						<dd>Remove margins, paddings, borders etc.</dd>
-						<dt><code>.fill</code></dt>
-						<dd></dd>
-						<dt><code>.border-box</code></dt>
-						<dd></dd>
-					</dl>
-				</div>
-				<div class="clear"></div>
-
+				<table>
+					<caption>table</caption>
+					<thead>
+						<tr>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+						</tr>
+						<tr>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+						</tr>
+						<tr>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+						</tr>
+						<tr>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+						</tr>
+						<tr>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+						</tr>
+					</tbody>
+				</table>
 
 
 			</div>
