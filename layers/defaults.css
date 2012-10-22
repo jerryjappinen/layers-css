@@ -1,4 +1,6 @@
 
+/*COmmon defaults to normalize browser differences*/
+
 /*Defaults*/
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,7 +47,9 @@ ol {
 
 /*Inline*/
 sub, sup {
-	font-size: 75%;
+	font-size: 0.8em;
+}
+sub, sup {
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
@@ -88,21 +92,26 @@ caption, th, td {
 /*Forms & interaction*/
 
 /*Use the same box-model in all browsers*/
-input.textfield, input.password, textarea {
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
-label, button, .button {
+textarea {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+a, label, button {
 	cursor: pointer;
 }
 	input[type="submit"], input[type="button"], input[type="reset"] {
 		cursor: pointer;
 	}
-	.disabled button, .disabled label, .disabled .button {
+	.disabled button, .disabled label, .disabled a, button.disabled, label.disabled, a.disabled {
 		cursor: default;
 	}
-	button[disabled], input[disabled] {
+	a[disabled], button[disabled], input[disabled] {
 		cursor: default;
 	}
 textarea {

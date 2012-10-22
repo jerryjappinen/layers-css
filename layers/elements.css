@@ -1,5 +1,5 @@
 
-/*Vertical rhythm*/
+/*Verticality*/
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 1.4em;
 	margin-bottom: 0.7em;
@@ -16,9 +16,6 @@ dl {
 }
 dt {
 	margin-top: 0.7em;
-}
-pre {
-	padding: 0.7em;
 }
 
 
@@ -55,20 +52,4 @@ h1.squeeze-bottom , h2.squeeze-bottom, h3.squeeze-bottom, h4.squeeze-bottom, h5.
 p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeeze,
 p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pre.squeeze-bottom, blockquote.squeeze-bottom {
 	margin-bottom: 0.7em;
-}
-
-
-
-/*Condenced forms*/
-form p.label {
-	margin-top: 1.4em;
-	margin-bottom: 0;
-}
-form p.input {
-	margin-top: 0.35em;
-	margin-top: 0.7em;
-}
-form p.description {
-	margin-top: 0;
-	margin-bottom: 2.1em;
 }

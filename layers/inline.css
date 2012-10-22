@@ -1,28 +1,28 @@
 
 /*Images*/
-
 img {
 	max-width: 100%;
 }
 
 /*Form elements*/
-input.textfield, input.password, textarea {
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
 	width: 65%;	
 }
-input.textfield, input.password {
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
 	max-width: 300px;
 }
-	input.textfield.condensed, input.password.condensed {
+	input[type="text"].condensed, input[type="password"].condensed, input[type="email"].condensed, input[type="url"].condensed, input[type="search"].condensed, input[type="tel"].condensed {
 		width: 40%;
-		max-width: 200px;
+		max-width: 24em;
 	}
 
 textarea {
-	max-width: 500px;
-	height: 10em;
+	width: 70%;	
+	max-width: 36em;
+	height: 12.6em;
 }
 	textarea.condensed {
 		width: 40%;
-		height: 5em;
-		max-width: 300px;
+		height: 6.3em;
+		max-width: 24em;
 	}
