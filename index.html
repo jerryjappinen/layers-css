@@ -12,7 +12,11 @@
 		<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 
 		<link rel="stylesheet" href="layers.css" screen="media">
+		<link rel="stylesheet" href="layers-responsive.css" screen="media">
 		<style type="text/css">
+			html {
+				font-size: 1.1em;
+			}
 			body {
 				margin: 0 auto;
 				padding-top: 4%;
@@ -20,12 +24,13 @@
 				width: 80%;
 				max-width: 33em;
 				min-width: 20em;
-				font-size: 1.1em;
 				background-color: black;
 				color: white;
 				text-align: center;
 				font-weight: 200;
 			}
+
+			/*Elements*/
 			h1 {
 				min-width: 281px;
 				height: 110px;
@@ -34,16 +39,30 @@
 				background-repeat: no-repeat;
 				background-position: 50% 50%;
 			}
+			ul.inline li {
+				margin-right: 0.7em;
+				margin-left: 0.7em;
+			}
+			ul.inline li.first {
+				margin-left: 0;
+			}
+			ul.inline li.last {
+				margin-right: 0;
+			}
+
+			/*Text*/
+			.discreet {
+				font-size: 0.9em;
+				color: #666;
+			}
+
+			/*Links*/
 			a {
 				display: inline-block;
 				padding: 0 0.3em 0.1em 0.3em;
 				font-size: 2.1em;
 				color: #00d5ff;
 				text-decoration: none;
-			}
-			.discreet {
-				font-size: 0.9em;
-				color: #666;
 			}
 			.discreet a {
 				font-size: 1em;
@@ -61,16 +80,6 @@
 			.discreet a.discreet {
 				text-decoration: none;
 				font-size: 1em;
-			}
-			ul.inline li {
-				margin-right: 0.7em;
-				margin-left: 0.7em;
-			}
-			ul.inline li.first {
-				margin-left: 0;
-			}
-			ul.inline li.last {
-				margin-right: 0;
 			}
 		</style>
 	</head>
