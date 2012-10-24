@@ -14,13 +14,13 @@ body {
 
 /*Font families*/
 html {
-	font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", sans-serif;
+	font-family: "Segoe UI", "Lucida Grande", "Ubuntu", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 blockquote, q {
-	font-family: "Georgia", serif;
+	font-family: "Droid Serif", "Georgia", serif;
 }
 pre, code, kbd, samp {
-	font-family: monospace;
+	font-family: "Monaco", "Segoe UI Mono", "Droid Sans Mono", "Consolas", monospace;
 }
 
 /*Sizes*/	
