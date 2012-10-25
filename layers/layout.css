@@ -147,12 +147,51 @@
 	.column.fourth {
 		width: 25%;
 	}
+		.column.twofourths {
+			width: 50%;
+		}
+		.column.threefourths {
+			width: 75%;
+		}
 	.column.fifth {
 		width: 20%;
 	}
+		.column.twofifths {
+			width: 40%;
+		}
+		.column.threefifths {
+			width: 60%;
+		}
+		.column.fourfifths {
+			width: 80%;
+		}
 	.column.tenth {
 		width: 10%;
 	}
+		.column.twotenths {
+			width: 20%;
+		}
+		.column.threetenths {
+			width: 30%;
+		}
+		.column.fourtenths {
+			width: 40%;
+		}
+		.column.fivetenths {
+			width: 50%;
+		}
+		.column.sixtenths {
+			width: 60%;
+		}
+		.column.seventenths {
+			width: 70%;
+		}
+		.column.eighttenths {
+			width: 80%;
+		}
+		.column.ninetenths {
+			width: 90%;
+		}
 
 
 

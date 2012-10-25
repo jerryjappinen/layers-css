@@ -13,7 +13,7 @@ function minify($string) {
 
 // Choose what to include
 $root = '../';
-if (isset($_GET['path'])) {
+if (isset($_GET['path']) and is_dir($root.$_GET['path'].'/')) {
 	$path = $root.$_GET['path'].'/';
 } else {
 	$path = $root;
@@ -34,7 +34,7 @@ foreach (rglob($path.'*') as $value) {
 if (isset($_GET['save'])) {
 	$name = basename($path);
 	if (empty($name)) {
-		$name = 'layers-all';
+		$name = 'layers_all';
 	}
 	file_put_contents($root.$name.'.css', $output);
 }
