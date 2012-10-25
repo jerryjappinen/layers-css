@@ -35,6 +35,8 @@
 				font-weight: 200;
 			}
 
+
+
 			/*Blocks*/
 			h1 {
 				min-width: 281px;
@@ -55,13 +57,40 @@
 				margin-right: 0;
 			}
 
+
+
+			/*Text*/
+			.discreet {
+				color: #666;
+				font-size: 0.8em;
+				font-weight: normal;
+			}
+			a {
+				color: #cc7700;
+				text-decoration: none;
+			}
+				a:hover {
+					text-decoration: underline;
+				}
+
+			/*Text links*/
+			.discreet a.discreet {
+				color: inherit;
+				font-size: 1em;
+				text-decoration: underline;
+			}
+				.discreet a.discreet:hover {
+					text-decoration: none;
+				}
+
+
+
 			/*Button links*/
 			a.button {
 				display: inline-block;
 				padding: 0 0.3em 0.1em 0.3em;
 				font-size: 2.1em;
 				color: #00c0e6;
-				text-decoration: none;
 				-webkit-transition-property: all;
 				-webkit-transition-duration: 0.1s;
 				-webkit-transition-delay: 0;
@@ -75,34 +104,13 @@
 				a.button:hover, a.button:focus {
 					padding-top: 0.1em;
 					padding-bottom: 0.2em;
+					text-decoration: none;
 				}
 					a.button:active {
 						padding-top: 0;
 						padding-bottom: 0;
 					}
 
-			/*Text*/
-			.discreet {
-				font-size: 0.8em;
-				color: #666;
-				font-weight: normal;
-			}
-
-			/*Text links*/
-			.discreet a {
-				color: inherit;
-				text-decoration: underline;
-			}
-				.discreet a:hover {
-					text-decoration: none;
-				}
-			.discreet a.discreet {
-				font-size: 1em;
-				text-decoration: none;
-			}
-				.discreet a.discreet:hover {
-					text-decoration: underline;
-				}
 		</style>
 	</head>
 
@@ -116,16 +124,16 @@
 			<p class="squeeze-bottom"><a href="layers.css" target="_blank" class="button">get layers.css</a></p>
 
 			<ul class="close discreet inline">
-<li class="first"><a href="demos/about.html" target="_blank" class="discreet">demo</a></li>
-<li><a href="layers/" target="_blank" class="discreet">pick &amp; choose</a></li>
-<li><a href="readme.txt" target="_blank" class="discreet">readme</a></li>
-<li class="last"><a href="layers-responsive.css" target="_blank" class="discreet">responsive adjustments</a></li>
+<li class="first"><a href="demos/about.html" target="_blank">demo</a></li>
+<li><a href="layers/" target="_blank">pick &amp; choose</a></li>
+<li><a href="readme.txt" target="_blank">readme</a></li>
+<li class="last"><a href="layers-responsive.css" target="_blank">responsive adjustments</a></li>
 			</ul>
 		</div>
 
 		<p>Includes resets, sensible defaults and fluid grid in &lt;10 kb. Take only what you want. No rounded corners, colors, requirements or dependencies.</p>
 
-		<p class="discreet">Source and contributions on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank">Bitbucket</a>. Shared with love by <a href="https://twitter.com/Eiskis" target="_blank">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank">eiskis.net</a>. Email to <a href="mailto:eiskis@gmail.com" target="_blank">eiskis@gmail.com</a> / call <a href="tel:++385 40 7188776">+385 40 7188776</a> for questions, answers or a hot date.</p>
+		<p class="discreet">Source and contributions on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" class="discreet">Bitbucket</a>. Shared with love by <a href="https://twitter.com/Eiskis" target="_blank" class="discreet">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank" class="discreet">eiskis.net</a>. Email to <a href="mailto:eiskis@gmail.com" target="_blank" class="discreet">eiskis@gmail.com</a> / call <a href="tel:++385 40 7188776" class="discreet">+385 40 7188776</a> for questions, answers or a hot date.</p>
 
 	</body>
 
