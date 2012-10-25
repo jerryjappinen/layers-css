@@ -67,9 +67,23 @@
 				display: inline-block;
 				padding: 0 0.3em 0.1em 0.3em;
 				font-size: 2.1em;
-				color: #00d5ff;
+				color: #00c0e6;
 				text-decoration: none;
+
+				-webkit-transition-property: all;
+				-webkit-transition-duration: 0.1s;
+				-webkit-transition-delay: 0;
+				-moz-transition-property: all;
+				-moz-transition-duration: 0.1s;
+				-moz-transition-delay: 0;
+				transition-property: all;
+				transition-duration: 0.1s;
+				transition-delay: 0;
 			}
+				a:hover {
+					padding-top: 0.1em;
+					padding-bottom: 0.2em;
+				}
 			.discreet a {
 				font-size: 1em;
 				color: inherit;
@@ -77,15 +91,16 @@
 				padding: 0;
 				text-decoration: underline;
 			}
-			a.discreet {
-				font-size: 0.9em;
-				display: inline;
-				padding: 0;
-			}
+				.discreet a:hover {
+					text-decoration: none;
+				}
 			.discreet a.discreet {
 				text-decoration: none;
 				font-size: 1em;
 			}
+				.discreet a.discreet:hover {
+					text-decoration: underline;
+				}
 		</style>
 	</head>
 
@@ -106,7 +121,7 @@
 			</ul>
 		</div>
 
-		<p>Includes resets, sensible defaults and fluid grid. Take only what you want. No rounded corners, colors, requirements or dependencies.</p>
+		<p>Includes resets, sensible defaults and fluid grid in &lt;10 kb. Take only what you want. No rounded corners, colors, requirements or dependencies.</p>
 
 		<p class="discreet">Source and contributions on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank">Bitbucket</a>. Shared with love by <a href="https://twitter.com/Eiskis" target="_blank">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank">eiskis.net</a>. Email to <a href="mailto:eiskis@gmail.com" target="_blank">eiskis@gmail.com</a> / call <a href="tel:++385 40 7188776">+385 40 7188776</a> for questions, answers or a hot date.</p>
 
