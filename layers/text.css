@@ -19,9 +19,8 @@ pre, code, kbd, samp {
 	font-family: "Monaco", "Segoe UI Mono", "Droid Sans Mono", "Consolas", monospace;
 }
 
-/*Sizes*/	
-html {
-	font-size: 1em;
+/*Sizes*/
+body {
 	line-height: 1.4;
 }
 h1, h2, h3 {
