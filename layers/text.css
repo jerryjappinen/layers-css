@@ -1,9 +1,5 @@
 /*Overall rhythm*/
 body {
-	-ms-word-break: break-all;
-	-epub-word-break: break-all;
-	word-break: break-all;
-
 	word-break: break-word;
 
 	-webkit-hyphens: auto;
@@ -24,7 +20,7 @@ pre, code, kbd, samp {
 }
 
 /*Sizes*/	
-html, body {
+html {
 	font-size: 1em;
 	line-height: 1.4;
 }

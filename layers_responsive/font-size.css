@@ -2,7 +2,7 @@
 /*Smaller font size*/
 @media handheld, only screen and (max-width: 740px) {
 
-	body {
+	html {
 		font-size: 0.85em;
 		-webkit-text-size-adjust: none;
 	}
