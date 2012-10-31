@@ -35,7 +35,7 @@
 .reset {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	border-width: 0;
 }
 	ul.reset, ol.reset {
 		list-style-type: none;

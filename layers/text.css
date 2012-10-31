@@ -7,6 +7,9 @@ body {
 	-epub-hyphens: auto;
 	hyphens: auto;
 }
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
+	word-break: normal;
+}
 
 /*Font families*/
 html {

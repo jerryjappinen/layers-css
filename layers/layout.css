@@ -263,7 +263,7 @@ ul.inline, ol.inline {
 	ul.inline.right, ol.inline.right {
 		text-align: right;
 	}
-		ul.inline li, ol.inline li {
+		ul.inline > li, ol.inline > li {
 			display: inline-block;
 		}
 ul.block, ol.block {
@@ -273,7 +273,7 @@ ul.block, ol.block {
 	ul.block.right, ol.block.right {
 		text-align: right;
 	}
-		ul.block li, ol.block li {
+		ul.block > li, ol.block > li {
 			float: left;
 			clear: none;
 		}

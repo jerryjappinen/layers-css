@@ -92,11 +92,12 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
-input, select, textarea {
+input, select, textarea, button {
 	font-family: inherit;
 }
 button, input, select, textarea, pre, code, kbd, samp {
 	font-size: inherit;
+	font-weight: inherit;
 }
 mark, strong {
 	font-weight: bold;
