@@ -5,14 +5,13 @@ include_once 'include.php';
 function minify($string) {
 	$string = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $string);
 	$string = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '	', '	'), '', $string);
-	$string = str_replace(array(" {", "{ ", "; ", ": ", " :", " ,", ", ", ";}"), array("{", "{", ";", ":", ":", ",", ",", "}"), $string);
-	return $string;
+	return str_replace(array(" {", "{ ", "; ", ": ", " :", " ,", ", ", ";}"), array("{", "{", ";", ":", ":", ",", ",", "}"), $string);
 }
 
 
 
 // Choose what to include
-$root = '../';
+$root = '../layers/';
 if (isset($_GET['path']) and is_dir($root.$_GET['path'].'/')) {
 	$path = $root.$_GET['path'].'/';
 } else {
@@ -34,7 +33,7 @@ foreach (rglob($path.'*') as $value) {
 if (isset($_GET['save'])) {
 	$name = basename($path);
 	if (empty($name)) {
-		$name = 'layers_all';
+		$name = 'all';
 	}
 	file_put_contents($root.$name.'.css', $output);
 }

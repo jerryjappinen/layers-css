@@ -14,8 +14,8 @@
 		<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 
 		<!-- Base styles -->
-		<link rel="stylesheet" href="layers.css" media="screen">
-		<link rel="stylesheet" href="layers_responsive.css" media="screen">
+		<link rel="stylesheet" href="layers/base.css" media="screen">
+		<link rel="stylesheet" href="layers/responsive.css" media="screen">
 
 		<!-- Page style -->
 		<style type="text/css">
@@ -40,7 +40,7 @@
 			/*Left-aligned layout*/
 			body.alternate {
 				width: 65%;
-				max-width: 26em;
+				max-width: 30em;
 				min-width: 0;
 				padding-left: 10%;
 				padding-right: 25%;
@@ -63,9 +63,11 @@
 
 			/*Blocks*/
 			h1 {
-				height: 110px;
 				margin-bottom: 1.4em;
 				line-height: 1em;
+			}
+			h1 img {
+				max-width: 80%;
 			}
 			ul.inline li {
 				margin-right: 0.3em;
@@ -146,14 +148,14 @@
 
 		<h1 class="squeeze-top"><a href="layers.css" target="_blank"><img src="logo.gif" alt="Layers CSS" title="Layers CSS"></a></h1>
 
-		<h4>...is a minimum-interference CSS pack to help you build <em>your</em> look on the web. You're the one who decides what web looks like, not Twitter.</h4>
+		<h4>...is an unobtrusive CSS pack to help you build <em>your</em> look on the web. You're the one who decides what web looks like, not Twitter.</h4>
 
 		<div class="buffer-top buffer-bottom">
-			<p class="squeeze-bottom"><a href="layers.css" target="_blank" class="button">get layers.css</a></p>
-			<ul class="close discreet inline"><li class="first"><a href="demos/about.html" target="_blank">demo</a></li><li><a href="layers/" target="_blank">pick &amp; choose</a></li><li><a href="readme.txt" target="_blank">readme</a></li><li class="last"><a href="layers-responsive.css" target="_blank">responsive adjustments</a></li></ul>
+			<p class="squeeze-bottom"><a href="layers/base.css" target="_blank" class="button">get layers.css</a></p>
+			<ul class="close discreet inline"><li class="first"><a href="demos/basics.html" target="_blank">demo</a></li><li><a href="layers/" target="_blank">pick &amp; choose</a></li><li><a href="readme.txt" target="_blank">readme</a></li><li class="last"><a href="layers/responsive.css" target="_blank">responsive adjustments</a></li></ul>
 		</div>
 
-		<p>Includes resets, sensible defaults and fluid grid in &lt;10 kb. Take only what you want. No rounded corners, colors, requirements or dependencies.</p>
+		<p>Includes resets, sensible defaults and fluid grid in &lt;10 kb. Take only what you want. No rounded corners, colors, requirements, dependencies or any other bullshit.</p>
 
 		<p class="discreet">Source and contributions on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" class="discreet">Bitbucket</a>. Shared with love by <a href="https://twitter.com/Eiskis" target="_blank" class="discreet">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank" class="discreet">eiskis.net</a>. Email to <a href="mailto:eiskis@gmail.com" target="_blank" class="discreet">eiskis@gmail.com</a> / call <a href="tel:++385 40 7188776" class="discreet">+385 40 7188776</a> for questions, answers or a hot date.</p>
 
