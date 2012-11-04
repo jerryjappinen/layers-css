@@ -15,7 +15,7 @@
 
 		<!-- Base styles -->
 		<link rel="stylesheet" href="layers.css" media="screen">
-		<link rel="stylesheet" href="layers-responsive.css" media="screen">
+		<link rel="stylesheet" href="layers_responsive.css" media="screen">
 
 		<!-- Page style -->
 		<style type="text/css">
@@ -65,25 +65,22 @@
 			h1 {
 				height: 110px;
 				margin-bottom: 1.4em;
+				line-height: 1em;
 			}
-				h1 a {
-					display: inline-block;
-					line-height: 110px;
-				}
-				h1 a img {
-					width: 281px;
-					height: 110px;
-				}
 			ul.inline li {
-				margin-right: 0.7em;
-				margin-left: 0.7em;
+				margin-right: 0.3em;
+				margin-left: 0.3em;
 			}
-			ul.inline li.first {
-				margin-left: 0;
-			}
-			ul.inline li.last {
-				margin-right: 0;
-			}
+				ul.inline > li.first {
+					margin-left: -0.5em;
+				}
+				ul.inline > li.last {
+					margin-right: 0;
+				}
+				ul.inline > li > a {
+					display: inline-block;
+					padding: 0.4em 0.5em;
+				}
 
 
 
@@ -145,7 +142,7 @@
 		</style>
 	</head>
 
-	<body>
+	<body class="alternate">
 
 		<h1 class="squeeze-top"><a href="layers.css" target="_blank"><img src="logo.gif" alt="Layers CSS" title="Layers CSS"></a></h1>
 
@@ -153,13 +150,7 @@
 
 		<div class="buffer-top buffer-bottom">
 			<p class="squeeze-bottom"><a href="layers.css" target="_blank" class="button">get layers.css</a></p>
-
-			<ul class="close discreet inline">
-				<li class="first"><a href="demos/about.html" target="_blank">demo</a></li>
-				<li><a href="layers/" target="_blank">pick &amp; choose</a></li>
-				<li><a href="readme.txt" target="_blank">readme</a></li>
-				<li class="last"><a href="layers-responsive.css" target="_blank">responsive adjustments</a></li>
-			</ul>
+			<ul class="close discreet inline"><li class="first"><a href="demos/about.html" target="_blank">demo</a></li><li><a href="layers/" target="_blank">pick &amp; choose</a></li><li><a href="readme.txt" target="_blank">readme</a></li><li class="last"><a href="layers-responsive.css" target="_blank">responsive adjustments</a></li></ul>
 		</div>
 
 		<p>Includes resets, sensible defaults and fluid grid in &lt;10 kb. Take only what you want. No rounded corners, colors, requirements or dependencies.</p>
