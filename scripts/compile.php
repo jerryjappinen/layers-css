@@ -38,5 +38,5 @@ if (isset($_GET['save'])) {
 	file_put_contents($root.$name.'.css', $output);
 }
 
-echo $output;
+echo $output."\n";
 ?>
