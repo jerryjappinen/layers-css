@@ -25,7 +25,6 @@
 			body {
 				width: 80%;
 				max-width: 33em;
-				min-width: 20em;
 				margin: 0 auto;
 				padding-top: 4%;
 				padding-bottom: 2%;
@@ -41,10 +40,15 @@
 			body.alternate {
 				width: 65%;
 				max-width: 30em;
-				min-width: 0;
 				padding-left: 10%;
-				padding-right: 25%;
 				text-align: left;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@media handheld, only screen and (max-width: 50em) {
+				body.alternate {
+					width: 80%;
+				}
 			}
 			.alternate h1 {
 				padding-left: 0;
@@ -99,6 +103,9 @@
 				a:hover {
 					text-decoration: underline;
 				}
+			h4, a.button {
+				-webkit-font-smoothing: antialiased;
+			}
 
 			/*Text links*/
 			.discreet a.discreet {
@@ -115,18 +122,20 @@
 			/*Button links*/
 			a.button {
 				display: inline-block;
-				padding: 0 0.3em 0.1em 0.3em;
+				padding: 0.1em 0.3em 0.2em 0.3em;
 				font-size: 2.1em;
 				color: #00c0e6;
 			}
 				a.button:hover, a.button:focus {
-					padding-top: 0.1em;
-					padding-bottom: 0.2em;
+					padding-top: 0.05em;
+					padding-bottom: 0.35em;
 					text-decoration: none;
+					color: #88ddee;
 				}
 					a.button:active {
-						padding-top: 0;
-						padding-bottom: 0;
+						padding-top: 0.1em;
+						padding-bottom: 0.2em;
+						color: #00c0e6;
 					}
 
 			p, h1, a {
@@ -146,9 +155,9 @@
 
 	<body class="alternate">
 
-		<h1 class="squeeze-top"><a href="layers.css" target="_blank"><img src="logo.gif" alt="Layers CSS" title="Layers CSS"></a></h1>
+		<h1 class="squeeze-top"><a href="layers/base.css" target="_blank"><img src="logo.gif" alt="Layers CSS" title="Layers CSS"></a></h1>
 
-		<h4>...is an unobtrusive CSS pack to help you build <em>your</em> look on the web. You're the one who decides what web looks like, not Twitter.</h4>
+		<h4>...is an unobtrusive no-bullshit CSS pack to help you build <em>your</em> the look you want on the web.</h4>
 
 		<div class="buffer-top buffer-bottom">
 			<p class="squeeze-bottom"><a href="layers/base.css" target="_blank" class="button">get layers.css</a></p>
@@ -157,7 +166,7 @@
 
 		<p>Includes resets, sensible defaults and fluid grid in &lt;10 kb. Take only what you want. No rounded corners, colors, requirements, dependencies or any other bullshit.</p>
 
-		<p class="discreet">Source and contributions on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" class="discreet">Bitbucket</a>. Shared with love by <a href="https://twitter.com/Eiskis" target="_blank" class="discreet">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank" class="discreet">eiskis.net</a>. Email to <a href="mailto:eiskis@gmail.com" target="_blank" class="discreet">eiskis@gmail.com</a> / call <a href="tel:++385 40 7188776" class="discreet">+385 40 7188776</a> for questions, answers or a hot date.</p>
+		<p class="discreet">Source and contributions on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" class="discreet">Bitbucket</a>. Shared by <a href="https://twitter.com/Eiskis" target="_blank" class="discreet">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank" class="discreet">eiskis.net</a>. Email to <a href="mailto:eiskis@gmail.com" target="_blank" class="discreet">eiskis@gmail.com</a> / call <a href="tel:++385 40 7188776" class="discreet">+385 40 7188776</a> for questions, answers or a hot date.</p>
 
 
 
@@ -182,7 +191,7 @@
 					}
 				}
 
-			}
+			};
 			window.addEventListener('keydown', messWithUsersHead, false);
 		</script>
 
