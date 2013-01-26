@@ -28,6 +28,11 @@ pre {
 
 
 
+/*Max-widths*/
+img, iframe {
+	max-width: 100%;
+}
+
 /*Lists*/
 ul {
 	list-style: disc;

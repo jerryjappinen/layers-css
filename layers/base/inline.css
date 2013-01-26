@@ -1,9 +1,4 @@
 
-/*Images*/
-img {
-	max-width: 100%;
-}
-
 /*Form elements*/
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
 	width: 70%;	

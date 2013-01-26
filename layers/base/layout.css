@@ -137,12 +137,12 @@
 	}
 
 	/*Alternative columns without gutters*/
-	.column.half, .column.fourth, .column.fifth, .column.tenth {
+	.column.full, .column.half, .column.fourth, .column.fifth, .column.tenth {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	.column.half {
-		width: 50%;
+	.column.full {
+		width: 100%;
 	}
 	.column.fourth {
 		width: 25%;
