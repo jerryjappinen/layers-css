@@ -15,7 +15,6 @@ footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
 	border-width: 0;
 	border-style: solid;
-	background-repeat: no-repeat;
 	clear: both;
 }
 img {
