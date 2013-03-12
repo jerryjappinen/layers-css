@@ -95,33 +95,36 @@ caption, th, td {
 
 /*Forms & interaction*/
 
-/*Use the same box-model in all browsers*/
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
+/*Use the same box-model and sizing in all browsers*/
+input[type="submit"], input[type="button"], input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], textarea, button {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
+	line-height: inherit;
+}
+
+/*Use sensible alignments*/
+button, input, select {
+	vertical-align: baseline;
+	*vertical-align: middle;
 }
 textarea {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
+	vertical-align: top;
 }
-a, label, button {
+
+/*Use sensible cursors*/
+body {
+	cursor: default;
+}
+a, label, button, input[type="submit"], input[type="button"], input[type="reset"] {
 	cursor: pointer;
 }
-	input[type="submit"], input[type="button"], input[type="reset"] {
-		cursor: pointer;
-	}
-	.disabled button, .disabled label, .disabled a, button.disabled, label.disabled, a.disabled {
+	.disabled button, .disabled label, .disabled a,
+	button.disabled, label.disabled, a.disabled,
+	.disabled input[type="submit"], .disabled input[type="button"], .disabled input[type="reset"],
+	input[type="submit"].disabled, input[type="button"].disabled, input[type="reset"].disabled {
 		cursor: default;
 	}
 	a[disabled], button[disabled], input[disabled] {
 		cursor: default;
 	}
-textarea {
-	vertical-align: top;
-}
-button, input, select {
-	vertical-align: baseline;
-	*vertical-align: middle;
-}
