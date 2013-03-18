@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<style type="text/css">@-ms-viewport{width: device-width;}</style>
+		
+		<title>Example doc with Layers CSS</title>
+		<meta name="author" content="Eiskis">
+		<meta name="application-name" content="Layers CSS">
+		<link rel="shortcut icon" href="../logo.ico" type="image/x-icon">
+
+		<!-- Layers -->
+		<link rel="stylesheet" href="../layers/base/_normalize.css" media="screen">
+		<link rel="stylesheet" href="../layers/base/elements.css" media="screen">
+		<link rel="stylesheet" href="../layers/base/inline.css" media="screen">
+		<link rel="stylesheet" href="../layers/base/layout.css" media="screen">
+		<link rel="stylesheet" href="../layers/base/text.css" media="screen">
+		<link rel="stylesheet" href="../layers/base/tools.css" media="screen">
+
+		<!-- Responsive adjustments -->
+		<link rel="stylesheet" href="../layers/responsive/break-grid.css" media="screen">
+		<link rel="stylesheet" href="../layers/responsive/font-size.css" media="screen">
+
+		<!-- Extras -->
+		<link rel="stylesheet" href="../colors/light.css" media="screen">
+
+		<!-- Custom CSS -->
+		<style type="text/css">
+
+			body {
+				margin: 0 auto;
+				max-width: 70em;
+				padding: 4% 8%;
+			}
+
+		</style>
+		
+	</head>
+
+	<body>
+
+		<h1>Layers example</h1>
+
+		<!-- General info -->
+		<p>Here's a clean CSS package that makes it easy to pick the stuff that <em>you</em> need, without having to override things. It doesn't choose a visual style or color scheme for you, it just gives you tools. Native input elements preserved, no dependencies or requirements.</p>
+		<p class="discreet"><strong>Hint!</strong> This page uses only stock <code>layers</code> extended by the styles visible in the document headers. Take a look at the source code to see what's added.</p>
+	
+
+
+		<!--  -->
+		<h1 class="close-top">Forms</h1>
+
+		<div class="column six">
+			
+			<form action="">
+
+				<p><button>Normal button</button> <input type="button" value="Input button"> <input type="submit" value="Input submit"> <input type="reset" value="Input reset"></p>
+				
+			</form>
+
+		</div>
+
+
+		<!--  -->
+		<h1>lists.</h1>
+
+		<p class="discreet">ul</p>
+
+		<ul>
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li><a href="#">Three</a></li>
+			<li><a href="#">Four</a></li>
+		</ul>
+
+		<p class="discreet">ul.plain</p>
+
+		<ul class="plain">
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li><a href="#">Three</a></li>
+			<li><a href="#">Four</a></li>
+		</ul>
+
+		<p class="discreet">ul.inline</p>
+
+		<ul class="inline">
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li><a href="#">Three</a></li>
+			<li><a href="#">Four</a></li>
+		</ul>
+
+		<p class="discreet">ol.inline.right</p>
+
+		<ol class="inline right">
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li><a href="#">Three</a></li>
+			<li><a href="#">Four</a></li>
+		</ol>
+
+		<p class="discreet">ul.inline.push-left.close + ul.inline.push-right.close</p>
+
+		<ul class="inline push-left close">
+			<li class="close-right"><a href="#">One</a></li>
+			<li class="close-right"><a href="#">Two</a></li>
+			<li class="close-right"><a href="#">Three</a></li>
+			<li class="close-right"><a href="#">Four</a></li>
+		</ul>
+		<ul class="inline push-right close">
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li><a href="#">Three</a></li>
+			<li><a href="#">Four</a></li>
+		</ul>
+		<div class="clear"></div>
+
+		<p class="discreet">ul.block.push-left.close + ul.block.push-right.close</p>
+
+		<ul class="block push-left close">
+			<li class="close-right"><a href="#">One</a></li>
+			<li class="close-right"><a href="#">Two</a></li>
+			<li class="close-right"><a href="#">Three</a></li>
+			<li class="close-right"><a href="#">Four</a></li>
+		</ul>
+		<ul class="block push-right close">
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li><a href="#">Three</a></li>
+			<li><a href="#">Four</a></li>
+		</ul>
+		<div class="clear"></div>
+
+
+
+		<!--  -->
+		<h1>tables.</h1>
+
+		<table>
+			<caption>table</caption>
+			<thead>
+				<tr>
+					<th>Heading</th>
+					<th>Heading</th>
+					<th>Heading</th>
+					<th>Heading</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+				</tr>
+				<tr>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="plain">
+			<caption>table.plain</caption>
+			<thead>
+				<tr>
+					<th>Heading</th>
+					<th>Heading</th>
+					<th>Heading</th>
+					<th>Heading</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+				</tr>
+				<tr>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+				</tr>
+				<tr>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</body>
+
+</html>

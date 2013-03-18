@@ -14,10 +14,10 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 textarea {
 	width: 70%;	
 	max-width: 36em;
-	height: 12.6em;
+	height: 11.2em;
 }
 	textarea.condensed {
 		width: 40%;
-		height: 6.3em;
+		height: 4.2em;
 		max-width: 24em;
 	}

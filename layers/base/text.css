@@ -22,32 +22,14 @@ pre, code, kbd, samp {
 	font-size: 0.8em;
 	font-family: "Monaco", "Segoe UI Mono", "Droid Sans Mono", "Consolas", monospace;
 }
+	pre code, pre kbd, pre samp {
+		font-size: 1em;
+	}
 
 /*Sizes*/
-body {
-	line-height: 1.4;
-}
 h1, h2, h3 {
 	text-rendering: optimizeLegibility;
 }
-h1 {
-	font-size: 2em;
-}
-h2 {
-	font-size: 1.8em;
-}
-h3 {
-	font-size: 1.5em;
-}
-h4 {
-	font-size: 1.2em;
-}
-h5, h6 {
-	font-size: 1em;
-}
-big {
-	font-size: 1.2em;
-}
-small {
-	font-size: 0.8em;
+body {
+	line-height: 1.4;
 }

@@ -1,18 +1,12 @@
 
-/*Verticality*/
-h1, h2, h3, h4, h5, h6 {
-	margin-top: 1.4em;
-	margin-bottom: 0.7em;
+/*Nested lists*/
+ul ul, ul ol, ol ol, ol ul {
+	margin-top: 0;
 }
-p, ul, ol, table, pre, blockquote {
-	margin-top: 0.7em;
-	margin-bottom: 1.4em;
-}
-	ul ul, ul ol, ol ol, ol ul {
-		margin-top: 0;
-	}
-dl {
-	margin-bottom: 1.4em;
+
+/*Definition lists*/
+dd {
+	margin-bottom: 0;
 }
 dt {
 	margin-top: 0.7em;
@@ -27,10 +21,10 @@ caption {
 th, td {
 	padding: 0.7em;
 }
-	.squeeze th, .squeeze td, table table th, table table td {
+	.squeeze th, .squeeze td, th.squeeze, td.squeeze, table table th, table table td {
 		padding: 0.35em;
 	}
-	.plain th, .plain td {
+	.plain th, .plain td, th.plain, td.plain {
 		padding: 0;
 	}
 
