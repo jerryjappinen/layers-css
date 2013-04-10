@@ -29,12 +29,9 @@ table th, .zebra tr.even td {
 body {
 	color: #222;
 }
-a {
+a, a:visited {
 	color: #0080bf;
 }
-	a:visited {
-		color: #860886;
-	}
 
 /*Alterations*/
 .discreet, .disabled {
