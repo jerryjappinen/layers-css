@@ -1,0 +1,93 @@
+
+/*Rhythm*/
+body {
+	line-height: 1.34;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1.34em;
+	margin-bottom: 0.67em;
+}
+p, ul, ol, table, pre, blockquote {
+	margin-top: 0.67em;
+	margin-bottom: 1.34em;
+}
+	ul ul, ul ol, ol ol, ol ul {
+		margin-top: 0;
+	}
+dl {
+	margin-bottom: 1.34em;
+}
+dt {
+	margin-top: 0.67em;
+	margin-bottom: 0;
+}
+dd {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+/*Nested lists*/
+ul ul, ul ol, ol ol, ol ul {
+	margin-top: 0;
+}
+
+
+
+/*Tables*/
+caption {
+	margin-bottom: 0.67em;
+}
+th, td {
+	padding: 0.67em;
+}
+	.squeeze th, .squeeze td, th.squeeze, td.squeeze, table table th, table table td {
+		padding: 0.335em;
+	}
+	.plain th, .plain td, th.plain, td.plain {
+		padding: 0;
+	}
+
+
+
+/*Form elements*/
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
+	width: 80%;	
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
+	max-width: 24em;
+}
+	input[type="text"].squeeze, input[type="password"].squeeze, input[type="email"].squeeze, input[type="url"].squeeze, input[type="search"].squeeze, input[type="tel"].squeeze {
+		width: 40%;
+		max-width: 16em;
+	}
+textarea {
+	width: 80%;	
+	max-width: 36em;
+	height: 10.72em;
+}
+	textarea.squeeze {
+		width: 40%;
+		height: 4.02em;
+		max-width: 24em;
+	}
+
+
+
+/*Condensed blocks*/
+h1.squeeze, h2.squeeze, h3.squeeze, h4.squeeze, h5.squeeze, h6.squeeze, 
+h1.squeeze-top , h2.squeeze-top, h3.squeeze-top, h4.squeeze-top, h5.squeeze-top, h6.squeeze-top {
+	margin-top: 0.67em;
+}
+p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeeze,
+p.squeeze-top, ul.squeeze-top, ol.squeeze-top, table.squeeze-top, pre.squeeze-top, blockquote.squeeze-top {
+	margin-top: 0.335em;
+}
+h1.squeeze, h2.squeeze, h3.squeeze, h4.squeeze, h5.squeeze, h6.squeeze, 
+h1.squeeze-bottom , h2.squeeze-bottom, h3.squeeze-bottom, h4.squeeze-bottom, h5.squeeze-bottom, h6.squeeze-bottom {
+	margin-bottom: 0.335em;
+}
+p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeeze,
+p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pre.squeeze-bottom, blockquote.squeeze-bottom {
+	margin-bottom: 0.67em;
+}

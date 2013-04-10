@@ -19,8 +19,8 @@ blockquote, q {
 	font-family: "Droid Serif", "Georgia", serif;
 }
 pre, code, kbd, samp {
-	font-size: 0.8em;
 	font-family: "Monaco", "Segoe UI Mono", "Droid Sans Mono", "Consolas", monospace;
+	font-size: 0.9em;
 }
 	pre code, pre kbd, pre samp {
 		font-size: 1em;
@@ -29,7 +29,4 @@ pre, code, kbd, samp {
 /*Sizes*/
 h1, h2, h3 {
 	text-rendering: optimizeLegibility;
-}
-body {
-	line-height: 1.4;
 }

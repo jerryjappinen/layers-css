@@ -6,28 +6,24 @@ h1, h2, h3, h4, h5, h6,
 table, th, tr, td, thead, tbody, tfoot, caption, 
 img, 
 form, fieldset, legend, label {
-	border-color: #e6e6e6;
+	border-color: #e0e0e0;
 }
 
 /*Background colors*/
 body {
 	background-color: #fff;
 }
-pre, table {
-	background-color: #f2f2f2;
+pre, table td, table th {
 	border-width: 1px;
 }
 
 /*Tables*/
 table th, .zebra tr.even td {
-	background-color: #e6e6e6;
+	background-color: #f2f2f2;
 }
-	table table {
-		background-color: #e6e6e6;
+	table table .zebra tr.even td, table table th {
+		background-color: #f2f2f2;
 	}
-		table table .zebra tr.even td, table table th {
-			background-color: #f2f2f2;
-		}
 
 /*Text colors*/
 body {

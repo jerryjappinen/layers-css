@@ -3,7 +3,7 @@
 @media handheld, only screen and (max-width: 740px) {
 
 	body {
-		font-size: 0.85em;
+		font-size: 0.9em;
 		-webkit-text-size-adjust: none;
 	}
 

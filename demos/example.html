@@ -15,9 +15,8 @@
 
 		<!-- Layers -->
 		<link rel="stylesheet" href="../layers/base/_normalize.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/elements.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/inline.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/layout.css" media="screen">
+		<link rel="stylesheet" href="../layers/base/grid.css" media="screen">
+		<link rel="stylesheet" href="../layers/base/rhythm.css" media="screen">
 		<link rel="stylesheet" href="../layers/base/text.css" media="screen">
 		<link rel="stylesheet" href="../layers/base/tools.css" media="screen">
 
@@ -26,19 +25,10 @@
 		<link rel="stylesheet" href="../layers/responsive/font-size.css" media="screen">
 
 		<!-- Extras -->
-		<link rel="stylesheet" href="../colors/light.css" media="screen">
+		<link rel="stylesheet" href="../extras/frame.css" media="screen">	<!-- Paddings for page body -->
+		<link rel="stylesheet" href="../extras/light.css" media="screen">	<!-- Light color scheme -->
+		<link rel="stylesheet" href="../extras/metro.css" media="screen">	<!-- Metro look -->
 
-		<!-- Custom CSS -->
-		<style type="text/css">
-
-			body {
-				margin: 0 auto;
-				max-width: 70em;
-				padding: 4% 8%;
-			}
-
-		</style>
-		
 	</head>
 
 	<body>
@@ -47,26 +37,16 @@
 
 		<!-- General info -->
 		<p>Here's a clean CSS package that makes it easy to pick the stuff that <em>you</em> need, without having to override things. It doesn't choose a visual style or color scheme for you, it just gives you tools. Native input elements preserved, no dependencies or requirements.</p>
-		<p class="discreet"><strong>Hint!</strong> This page uses only stock <code>layers</code> extended by the styles visible in the document headers. Take a look at the source code to see what's added.</p>
 	
 
 
-		<!--  -->
-		<h1 class="close-top">Forms</h1>
+		<h2>Forms</h2>
 
-		<div class="column six">
-			
-			<form action="">
-
-				<p><button>Normal button</button> <input type="button" value="Input button"> <input type="submit" value="Input submit"> <input type="reset" value="Input reset"></p>
-				
-			</form>
-
-		</div>
+		<p><button>Normal button</button> <input type="button" value="Input button"> <input type="submit" value="Input submit"> <input type="reset" value="Input reset"></p>
 
 
-		<!--  -->
-		<h1>lists.</h1>
+
+		<h2>Lists</h2>
 
 		<p class="discreet">ul</p>
 
@@ -139,7 +119,7 @@
 
 
 		<!--  -->
-		<h1>tables.</h1>
+		<h1>Tables</h1>
 
 		<table>
 			<caption>table</caption>
@@ -164,6 +144,32 @@
 					<td>Cell</td>
 					<td>Cell</td>
 				</tr>
+				<tr>
+					<td rowspan ="3" colspan="3">
+						<table>
+							<tr>
+								<th colspan="3">Table within cell</th>
+							</tr>
+							<tr>
+								<td>Cell within cell</td>
+								<td>Cell within cell</td>
+								<td>Cell within cell</td>
+							</tr>
+							<tr>
+								<td>Cell within cell</td>
+								<td>Cell within cell</td>
+								<td>Cell within cell</td>
+							</tr>
+						</table>
+					</td>
+					<td>Cell</td>
+				</tr>
+				<tr>
+					<td>Cell</td>
+				</tr>
+				<tr>
+					<td>Cell</td>
+				</tr>
 			</tbody>
 		</table>
 
@@ -184,6 +190,26 @@
 					<td>Cell</td>
 					<td>Cell</td>
 				</tr>
+				<tr>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+					<td>Cell</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="reset">
+			<caption>table.reset</caption>
+			<thead>
+				<tr>
+					<th>Heading</th>
+					<th>Heading</th>
+					<th>Heading</th>
+					<th>Heading</th>
+				</tr>
+			</thead>
+			<tbody>
 				<tr>
 					<td>Cell</td>
 					<td>Cell</td>

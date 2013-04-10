@@ -1,0 +1,9 @@
+
+html {
+	font-size: 0.9em;
+}
+body {
+	margin: 0 auto;
+	max-width: 70em;
+	padding: 2% 8% 6% 8%;
+}

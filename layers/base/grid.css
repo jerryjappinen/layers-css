@@ -144,6 +144,9 @@
 	.column.full {
 		width: 100%;
 	}
+		.column.half {
+			width: 50%;
+		}
 	.column.fourth {
 		width: 25%;
 	}

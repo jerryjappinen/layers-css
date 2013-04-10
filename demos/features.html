@@ -15,9 +15,8 @@
 
 		<!-- Layers -->
 		<link rel="stylesheet" href="../layers/base/_normalize.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/elements.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/inline.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/layout.css" media="screen">
+		<link rel="stylesheet" href="../layers/base/grid.css" media="screen">
+		<link rel="stylesheet" href="../layers/base/rhythm.css" media="screen">
 		<link rel="stylesheet" href="../layers/base/text.css" media="screen">
 		<link rel="stylesheet" href="../layers/base/tools.css" media="screen">
 
@@ -25,48 +24,31 @@
 		<link rel="stylesheet" href="../layers/responsive/break-grid.css" media="screen">
 		<link rel="stylesheet" href="../layers/responsive/font-size.css" media="screen">
 
+		<!-- Extras -->
+		<link rel="stylesheet" href="../extras/frame.css" media="screen">	<!-- Paddings for page body -->
+		<link rel="stylesheet" href="../extras/light.css" media="screen">	<!-- Light color scheme -->
+		<link rel="stylesheet" href="../extras/metro.css" media="screen">	<!-- Metro look -->
+
 		<style type="text/css">
 
 			/*Overall look*/
-			ul, ol {
-				color: white;
-			}
-			a {
-				color: #00c0e6;
-			}
 			.column p, .custom p {
 				text-align: center;
 			}
 				.column.reset p {
 					text-align: inherit;
 				}
-			.discreet {
-				font-size: inherit;
-				color: #777;
-			}
-			h1, h2, h3, h4 {
-				-webkit-font-smoothing: antialiased;
-			}
-
-			/*Layout frame*/
-			body {
-				max-width: 55em;
-				margin: 0 auto;
-				padding: 3% 5% 7% 5%;
-				background-color: #000;
-				color: white;
-			}
 
 			/*Colorize columns for clarity*/
 			.column, ul, ol, .custom {
-				background-color: #333;
+				background-color: #eee;
 			}
-				.column.fluid > .container {
-					background-color: #555;
+				.colored {
+					background-color: #ddd;
 				}
-				.column.fixed {
-					background-color: #555;
-				}
+			code {
+				color: #e01b6a;
+			}
 
 			/*Custom stacked container dimensions*/
 			.custom {
@@ -82,136 +64,134 @@
 				}
 
 		</style>
-		
+
 	</head>
 
 	<body>
 
+		<h1>Layers example</h1>
+
 		<!-- General info -->
-		<p>Here's a clean CSS package that makes it easy to pick the stuff that <em>you</em> need, without having to override things. It doesn't choose a visual style or color scheme for you, it just gives you tools. Native input elements preserved, no dependencies or requirements.</p>
-		<p class="discreet"><strong>Hint!</strong> This page uses only stock <code>layers</code> extended by the styles visible in the document headers. Take a look at the source code to see what's added.</p>
+		<p>Here's a clean CSS package that makes it easy to pick the stuff that <em>you</em> need, without having to override things. It doesn't choose a visual style or color scheme for you, it just gives you tools. Native input elements preserved, no dependencies or requirements. Please note that the <strong>color scheme is on this page is included in extras</strong>, the main release doesn't include any colors. Take a look at the source code to see what's added.</p>
 	
 
 
 		<!--  -->
-		<h1 class="close-top">fluid grid</h1>
+		<h1>Fluid grid</h1>
 
-		<h3>I think you get the idea.</h3>
+		<p>Columns within columns work without wrappers. You probably want to <code>.clear</code> them afterwards.</p>
 
 		<div class="column eight">
-			<p>.column.eight</p>
+			<p><code>.column.eight</code></p>
 		</div>
 		<div class="column four last">
-			<p>.column.four last</p>
+			<p><code>.column.four last</code></p>
 		</div>
 
 		<div class="column four first">
-			<p>.column.four.first</p>
+			<p><code>.column.four.first</code></p>
 		</div>
 		<div class="column three push-two">
-			<p>.column.three.push-two</p>
+			<p><code>.column.three.push-two</code></p>
 		</div>
 		<div class="column three last">
-			<p>.column.two.last</p>
+			<p><code>.column.two.last</code></p>
 		</div>
 
 		<div class="column right six first">
-			<p>.column.right.six.first</p>
+			<p><code>.column.right.six.first</code></p>
 		</div>
 		<div class="column right three">
-			<p>.column.three.right</p>
+			<p><code>.column.three.right</code></p>
 		</div>
 		<div class="column right three last">
-			<p>.column.three.right</p>
+			<p><code>.column.three.right</code></p>
 		</div>
 
 		<div class="clear"></div>
 
-		<p class="discreet">Columns within columns work just fine.</p>
 
 
-
-		<!--  -->
-		<h3>no gutters.</h3>
+		<h3>Columns without gutters</h3>
 
 		<div class="column six close-right">
-			<p>.column.six.close-right</p>
+			<p><code>.column.six.close-right</code></p>
+		</div>
+
+		<div class="column three close-right colored">
+			<p><code>.column.three.close-right</code></p>
 		</div>
 
 		<div class="column three close-right">
-			<p>.column.three.close-right</p>
-		</div>
-
-		<div class="column three close-right">
-			<p>.column.three.close-right</p>
+			<p><code>.column.three.close-right</code></p>
 		</div>
 
 		<div class="column half first">
-			<p>.column.half.first</p>
+			<p><code>.column.half.first</code></p>
+		</div>
+
+		<div class="column fourth colored">
+			<p><code>.column.fourth</code></p>
 		</div>
 
 		<div class="column fourth">
-			<p>.column.fourth</p>
-		</div>
-
-		<div class="column fourth">
-			<p>.column.fourth</p>
+			<p><code>.column.fourth</code></p>
 		</div>
 		<div class="clear"></div>
 
 
 
 		<!--  -->
-		<h3>fixed-fluid combination.</h3>
+		<h3>Fixed-fluid column combination.</h3>
 
 		<div class="column fluid">
-			<div class="container">
-				<p>.column.fluid > .container</p>
+			<div class="container colored">
+				<p><code>.column.fluid > .container</code></p>
 			</div>
 		</div>
 
-		<div class="column fixed">
-			<p>.column.fixed</p>
+		<div class="column fixed colored">
+			<p><code>.column.fixed</code></p>
 		</div>
 		<div class="clear"></div>
 
 		<div class="column fluid left">
-			<div class="container">
-				<p>.column.fluid.left > .container</p>
+			<div class="container colored">
+				<p><code>.column.fluid.left > .container</code></p>
 			</div>
 		</div>
 
-		<div class="column fixed right">
-			<p>.column.fixed.right</p>
+		<div class="column fixed right colored">
+			<p><code>.column.fixed.right</code></p>
 		</div>
 		<div class="clear"></div>
 
-		<p class="discreet">Very handy for combining images with a fluid grid. You can adjust the size of the fixed-width in steps with media queries.</p>
+		<p>One part gets a fixed width, the other side fills the rest. Very handy for combining images with a fluid grid. You can adjust the size of the fixed-width in steps with media queries.</p>
 
 
 
 		<!--  -->
-		<h3>custom stacks.</h3>
+		<h3>Custom stacks</h3>
 
-		<p class="discreet">Custom fixed width/height added.</p>
+		<p>Custom fixed width/height added.</p>
 
 		<div class="push-left custom">
-			<p>.push-left.custom</p>
+			<p><code>.push-left.custom</code></p>
 		</div>
 		<div class="push-left custom">
-			<p>.push-left.custom</p>
+			<p><code>.push-left.custom</code></p>
 		</div>
 		<div class="push-left custom">
-			<p>.push-left.custom</p>
+			<p><code>.push-left.custom</code></p>
 		</div>
 		<div class="clear"></div>
 
 
 
 		<!--  -->
-		<h1>common tools.</h1>
+		<h1>Common tools</h1>
 
-		<p class="discreet">You can automatically use these as mixins in <em>LESS</em>.</p>
+		<p>You can automatically use these as mixins in <em>LESS</em>.</p>
 
 		<div class="column four">
 			<div class="buffer">
@@ -223,17 +203,16 @@
 					<dt><code>.buffer</code></dt>
 					<dd>Add comfortable paddings</dd>
 				</dl>
-
-				<p>Add directions to specify (<code>.close-top</code>, <code>.squeeze-right</code>...)</p>
+				<p>Directions work as modifiers (<code>.close-top</code>, <code>.squeeze-right</code>...)</p>
 			</div>
 		</div>
 
 		<div class="column four">
 			<dl class="buffer">
 				<dt><code>.clear</code></dt>
-				<dd>Clear shit (<code>clear: both;</code>)</dd>
+				<dd>Clear stuff (<code>clear: both;</code>)</dd>
 				<dt><code>.hidden</code></dt>
-				<dd>Hide shit (<code>display: none;</code>)</dd>
+				<dd>Hide stuff (<code>display: none;</code>)</dd>
 				<dt><code>.dry</code></dt>
 				<dd>Move inline content where only Hubble can see it</dd>
 			</dl>
@@ -254,9 +233,9 @@
 
 
 		<!--  -->
-		<h1>lists.</h1>
+		<h1>Lists</h1>
 
-		<p class="discreet">ul</p>
+		<p><code>ul</code></p>
 
 		<ul>
 			<li><a href="#">One</a></li>
@@ -265,7 +244,7 @@
 			<li><a href="#">Four</a></li>
 		</ul>
 
-		<p class="discreet">ul.plain</p>
+		<p><code>ul.plain</code></p>
 
 		<ul class="plain">
 			<li><a href="#">One</a></li>
@@ -274,7 +253,7 @@
 			<li><a href="#">Four</a></li>
 		</ul>
 
-		<p class="discreet">ul.inline</p>
+		<p><code>ul.inline</code></p>
 
 		<ul class="inline">
 			<li><a href="#">One</a></li>
@@ -283,7 +262,7 @@
 			<li><a href="#">Four</a></li>
 		</ul>
 
-		<p class="discreet">ol.inline.right</p>
+		<p><code>ol.inline.right</code></p>
 
 		<ol class="inline right">
 			<li><a href="#">One</a></li>
@@ -292,7 +271,7 @@
 			<li><a href="#">Four</a></li>
 		</ol>
 
-		<p class="discreet">ul.inline.push-left.close + ul.inline.push-right.close</p>
+		<p><code>ul.inline.push-left.close + ul.inline.push-right.close</code></p>
 
 		<ul class="inline push-left close">
 			<li class="close-right"><a href="#">One</a></li>
@@ -308,7 +287,7 @@
 		</ul>
 		<div class="clear"></div>
 
-		<p class="discreet">ul.block.push-left.close + ul.block.push-right.close</p>
+		<p><code>ul.block.push-left.close + ul.block.push-right.close</code></p>
 
 		<ul class="block push-left close">
 			<li class="close-right"><a href="#">One</a></li>
@@ -327,10 +306,10 @@
 
 
 		<!--  -->
-		<h1>tables.</h1>
+		<h1>Tables</h1>
 
 		<table>
-			<caption>table</caption>
+			<caption>Plain <code>table</code> has collapsed borders, 100% width and common-sense paddings for cells. This is a table caption, by the way.</caption>
 			<thead>
 				<tr>
 					<th>Heading</th>
@@ -356,7 +335,7 @@
 		</table>
 
 		<table class="plain">
-			<caption>table.plain</caption>
+			<caption><code>table.plain</code> collapses everything.</caption>
 			<thead>
 				<tr>
 					<th>Heading</th>

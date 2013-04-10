@@ -47,10 +47,10 @@ Feel free to edit e.g. the breaking point for columns. You want to write more co
 
 
 
-Colors
+Extras
 ------
 
 None of the other files contain any color scheme declarations. You have an empty canvas for your look.
 
-If you want to just get a usable page out, fast, you can add one of the included, separate color files.
-	<link rel="stylesheet" href="colors/light.css">
+If you want to just get a usable page out, fast, you can add one of the included, separate color files from extras.
+	<link rel="stylesheet" href="extras/light.css">

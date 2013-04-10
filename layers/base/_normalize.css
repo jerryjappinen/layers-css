@@ -121,7 +121,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
-h1, h2, h3, h4, h5, h6, strong, dt, mark {
+h1, h2, h3, h4, h5, h6, strong, dt, mark, th {
 	font-weight: bold;
 }
 
@@ -222,9 +222,6 @@ abbr[title], dfn[title] {
 a, label, button, input[type="submit"], input[type="button"], input[type="reset"] {
 	cursor: pointer;
 }
-a:focus {
-    outline: thin dotted;
-}
 	.disabled button, .disabled label, .disabled a,
 	button.disabled, label.disabled, a.disabled,
 	.disabled input[type="submit"], .disabled input[type="button"], .disabled input[type="reset"],
@@ -233,4 +230,12 @@ a:focus {
 	}
 	a[disabled], button[disabled], input[disabled] {
 		cursor: default;
+	}
+
+/*Consistent outlines*/
+a:focus {
+    outline: thin dotted;
+}
+	a:active, a:hover {
+	    outline: 0;
 	}
