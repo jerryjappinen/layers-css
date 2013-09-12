@@ -74,7 +74,7 @@
 		<!--  -->
 		<h1>Fluid grid</h1>
 
-		<p>Columns within columns work fine. No wrappers are required. You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too.</p>
+		<p>You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too. No wrappers are required. Columns within columns work fine.</p>
 
 		<div class="column eight">
 			<p><code>.column.eight</code></p>
@@ -148,11 +148,13 @@
 		<!--  -->
 		<h3>Fixed-fluid column combination</h3>
 
-		<p>One part gets a fixed width, the other side fills the rest. Very handy for combining images with a fluid grid. You can adjust the size of the fixed-width in steps with media queries.</p>
+		<p>One part gets a fixed width, the other side fills the rest. Very handy for combining images with a fluid grid. Multiple combinations can be nested. The fluid column always comes first in markup.</p>
+
+		<p>You can adjust the size of the fixed-width in steps with media queries, or break the combination completely.</p>
 
 		<div class="column fluid">
-			<div class="column-container colored">
-				<p><code>.column.fluid > .column-container</code></p>
+			<div class="column-content colored">
+				<p><code>.column.fluid > .column-content</code></p>
 			</div>
 		</div>
 
@@ -161,11 +163,13 @@
 		</div>
 		<div class="clear"></div>
 
-		<p>You can stack this from the <code>.right</code>, too.</p>
+
+
+		<p>You can also stack this starting from the <code>.right</code>.</p>
 
 		<div class="column fluid right">
-			<div class="column-container colored">
-				<p><code>.column.fluid.right > .column-container</code></p>
+			<div class="column-content colored">
+				<p><code>.column.fluid.right > .column-content</code></p>
 			</div>
 		</div>
 
@@ -174,10 +178,36 @@
 		</div>
 		<div class="clear"></div>
 
+		<h5>Generic</h5>
+
+		<div class="column six">
+			<dl class="buffer">
+				<dt><code>.clear</code></dt>
+				<dd>Clear stuff (<code>clear: both;</code>)</dd>
+				<dt><code>.hidden</code></dt>
+				<dd>Hide stuff (<code>display: none;</code>)</dd>
+				<dt><code>.dry</code></dt>
+				<dd>Move inline content away from view</dd>
+			</dl>
+		</div>
+
+		<div class="column six last">
+			<dl class="buffer">
+				<dd></dd>
+				<dt><code>.border-box</code></dt>
+				<dd>Switch to this box-sizing mode in all browsers.</dd>
+				<dt><code>.float-left</code>, <code>.float-right</code></dt>
+				<dd>Float an element, remove clearing.</dd>
+			</dl>
+		</div>
+		<div class="clear"></div>
+
 
 
 		<!--  -->
 		<h1>Common tools</h1>
+
+		<h5>Margins &amp; spacing</h5>
 
 		<div class="column six">
 			<div class="buffer">
@@ -224,29 +254,24 @@
 
 		<p>Psst! You can automatically use these as mixins in <em>LESS</em>.</p>
 
-		<div class="column six">
-			<dl class="buffer">
-				<dt><code>.clear</code></dt>
-				<dd>Clear stuff (<code>clear: both;</code>)</dd>
-				<dt><code>.hidden</code></dt>
-				<dd>Hide stuff (<code>display: none;</code>)</dd>
-				<dt><code>.dry</code></dt>
-				<dd>Move inline content away from view</dd>
-			</dl>
-		</div>
 
-		<div class="column six last">
-			<dl class="buffer">
-				<dt><code>.reset</code></dt>
-				<dd>Remove margins, paddings, borders etc.</dd>
-				<dd></dd>
-				<dt><code>.border-box</code></dt>
-				<dd>Switch to this box-sizing mode in all browsers.</dd>
-				<dt><code>.float-left</code>, <code>.float-right</code></dt>
-				<dd>Float an element, remove clearing.</dd>
-			</dl>
-		</div>
-		<div class="clear"></div>
+
+		<h5>Extend</h5>
+
+		<p>This is the CSS you to adjust the size of the fixed column.</p>
+
+		<pre class="buffer">
+/*Fixed column width*/
+.column.fluid > .column-content {
+	margin-right: 10em;
+}
+.column.fluid.right > .column-content {
+	margin-left: 10em;
+}
+.column.fixed {
+	width: 10em;
+}
+</pre>
 
 
 

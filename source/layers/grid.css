@@ -276,22 +276,28 @@
 	margin-left: 0;
 	margin-right: 0;
 }
-	.column.fluid > .column-container {
-		margin-left: 10em;
-	}
-	.column.fixed {
-		clear: none;
-		float: left;
-		margin-right: 0;
-		margin-left: -100%;
-		width: 10em;
-	}
+.column.fixed {
+	clear: none;
+	float: right;
+	margin-right: 0;
+	margin-left: -100%;
+}
 
-	/*Reverse stacking*/
-	.column.fluid.right > .column-container {
-		margin-left: 0;
-		margin-right: 10em;
-	}
-	.column.fixed.right {
-		float: right;
-	}
+/*Reverse stacking*/
+.column.fluid.right > .column-content {
+	margin-right: 0;
+}
+.column.fixed.right {
+	float: left;
+}
+
+/*Fixed column width*/
+.column.fluid > .column-content {
+	margin-right: 10em;
+}
+.column.fluid.right > .column-content {
+	margin-left: 10em;
+}
+.column.fixed {
+	width: 10em;
+}
