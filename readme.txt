@@ -2,7 +2,7 @@
 Layers CSS
 Minimum-interference collection of reset and default styles
 
-Docs and demos at http://eiskis.net/layers/
+See the reference docs at http://eiskis.net/layers/
 Bitbucket project at https://bitbucket.org/Eiskis/layers-css
 
 By Jerry Jäppinen
@@ -21,11 +21,9 @@ To get it all, use the single-file compilation:
 	<link rel="stylesheet" href="layers/base.css">
 
 You can also pick and choose what you want (in alphabetical order):
-	<link rel="stylesheet" href="layers/base/_reset.css">
-	<link rel="stylesheet" href="layers/base/defaults.css">
-	<link rel="stylesheet" href="layers/base/elements.css">
-	<link rel="stylesheet" href="layers/base/inline.css">
-	<link rel="stylesheet" href="layers/base/layout.css">
+	<link rel="stylesheet" href="layers/base/_normalize.css">
+	<link rel="stylesheet" href="layers/base/grid.css">
+	<link rel="stylesheet" href="layers/base/rhythm.css">
 	<link rel="stylesheet" href="layers/base/text.css">
 	<link rel="stylesheet" href="layers/base/tools.css">
 
