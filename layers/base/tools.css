@@ -9,7 +9,7 @@
 
 
 
-/*Hide text content*/
+/*Dry element of its content*/
 .dry {
 	text-indent: -9999em;
 	direction: ltr;
@@ -27,55 +27,29 @@
 
 
 /*Make an element fill all available space*/
-.fill {
-	display: block;
-	width: 100%;
-	height: 100%;
+ul.reset, ol.reset {
+	list-style-type: none;
 }
-.reset {
-	margin: 0;
-	padding: 0;
-	border-width: 0;
+ul.plain, ol.plain {
+	padding-left: 0;
+	list-style-type: none;
 }
-	ul.reset, ol.reset {
-		list-style-type: none;
-	}
-	ul.plain, ol.plain {
-		padding-left: 0;
-		list-style-type: none;
-	}
 
 
 
 /*Spacing and closing*/
-.close {
+.reset {
 	margin: 0;
 }
-	.close-top {
+	.reset-top {
 		margin-top: 0;
 	}
-	.close-right {
+	.reset-right {
 		margin-right: 0;
 	}
-	.close-bottom {
+	.reset-bottom {
 		margin-bottom: 0;
 	}
-	.close-left {
+	.reset-left {
 		margin-left: 0;
-	}
-
-.spacing {
-	margin: 1.34em;
-}
-	.spacing-top {
-		margin-top: 1.34em;
-	}
-	.spacing-right {
-		margin-right: 1.34em;
-	}
-	.spacing-bottom {
-		margin-bottom: 1.34em;
-	}
-	.spacing-left {
-		margin-left: 1.34em;
 	}

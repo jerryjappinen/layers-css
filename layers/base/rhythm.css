@@ -91,3 +91,52 @@ p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeez
 p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pre.squeeze-bottom, blockquote.squeeze-bottom {
 	margin-bottom: 0.67em;
 }
+
+/*Content areas*/
+.buffer {
+	padding: 1em 2em 2em 2em;
+}
+	.buffer-top {
+		padding-top: 1em;
+	}
+	.buffer-right {
+		padding-right: 2em;
+	}
+	.buffer-bottom {
+		padding-bottom: 2em;
+	}
+	.buffer-left {
+		padding-left: 2em;
+	}
+.no-buffer {
+	padding: 0;
+}
+	.no-buffer-top {
+		padding-top: 0;
+	}
+	.no-buffer-right {
+		padding-right: 0;
+	}
+	.no-buffer-bottom {
+		padding-bottom: 0;
+	}
+	.no-buffer-left {
+		padding-left: 0;
+	}
+
+/*Revert to default margins*/
+.default-margin {
+	margin: 1.34em;
+}
+	.default-margin-top {
+		margin-top: 1.34em;
+	}
+	.default-margin-right {
+		margin-right: 1.34em;
+	}
+	.default-margin-bottom {
+		margin-bottom: 1.34em;
+	}
+	.default-margin-left {
+		margin-left: 1.34em;
+	}

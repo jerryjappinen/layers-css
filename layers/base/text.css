@@ -19,7 +19,7 @@ blockquote, q {
 	font-family: "Droid Serif", "Georgia", serif;
 }
 pre, code, kbd, samp {
-	font-family: "Monaco", "Segoe UI Mono", "Droid Sans Mono", "Consolas", monospace;
+	font-family: "Menlo", "Monaco", "Segoe UI Mono", "Droid Sans Mono", "Consolas", monospace;
 	font-size: 0.9em;
 }
 	pre code, pre kbd, pre samp {

@@ -17,14 +17,14 @@
 		margin-left: 0;
 		margin-right: 3.8%;
 	}
-		.column.last, .column.twelve, .column.close, .column.close-right {
+		.column.last, .column.twelve, .column.reset {
 			margin-right: 0;
 		}
 	.column.one.right, .column.two.right, .column.three.right, .column.four.right, .column.five.right, .column.six.right, .column.seven.right, .column.eight.right, .column.nine.right, .column.ten.right, .column.eleven.right, .column.twelve.right {
 		margin-right: 0;
 		margin-left: 3.8%;
 	}
-		.column.right.last, .column.right.twelve, .column.right.close-left, .column.right.close {
+		.column.right.last, .column.right.twelve, .column.right.reset {
 			margin-left: 0;
 		}
 
@@ -67,74 +67,107 @@
 	}
 
 	/*Fluid columns without gutters*/
-	.column.one.close-right, .column.one.close-left, .column.one.close {
+	.column.one.reset {
 		width: 8.3%;
 	}
-	.column.two.close-right, .column.two.close-left, .column.two.close {
+	.column.two.reset {
 		width: 16.65%;
 	}
-	.column.three.close-right, .column.three.close-left, .column.three.close {
+	.column.three.reset {
 		width: 25%;
 	}
-	.column.four.close-right, .column.four.close-left, .column.four.close {
+	.column.four.reset {
 		width: 33.3%;
 	}
-	.column.five.close-right, .column.five.close-left, .column.five.close {
+	.column.five.reset {
 		width: 41.65%;
 	}
-	.column.six.close-right, .column.six.close-left, .column.six.close {
+	.column.six.reset {
 		width: 50%;
 	}
-	.column.seven.close-right, .column.seven.close-left, .column.seven.close {
+	.column.seven.reset {
 		width: 58.3%;
 	}
-	.column.eight.close-right, .column.eight.close-left, .column.eight.close {
+	.column.eight.reset {
 		width: 66.6%;
 	}
-	.column.nine.close-right, .column.nine.close-left, .column.nine.close {
+	.column.nine.reset {
 		width: 75%;
 	}
-	.column.ten.close-right, .column.ten.close-left, .column.ten.close {
+	.column.ten.reset {
 		width: 83.35%;
 	}
-	.column.eleven.close-right, .column.eleven.close-left, .column.eleven.close {
+	.column.eleven.reset {
 		width: 91.7%;
 	}
 
-	/*Shift columns to the right*/
+	/*Shift columns*/
 	.column.push-one {
 		margin-left: 8.65%;
 	}
+		.column.right.push-one {
+			margin-right: 8.65%;
+		}
 	.column.push-two {
 		margin-left: 17.25%;
-	}
+		}
+		.column.right.push-two {
+			margin-right: 17.25%;
+		}
 	.column.push-three {
 		margin-left: 25.85%;
-	}
+		}
+		.column.right.push-three {
+			margin-right: 25.85%;
+		}
 	.column.push-four {
 		margin-left: 34.55%;
-	}
+		}
+		.column.right.push-four {
+			margin-right: 34.55%;
+		}
 	.column.push-five {
 		margin-left: 43.25%;
-	}
+		}
+		.column.right.push-five {
+			margin-right: 43.25%;
+		}
 	.column.push-six {
 		margin-left: 51.8%;
-	}
+		}
+		.column.right.push-six {
+			margin-right: 51.8%;
+		}
 	.column.push-seven {
 		margin-left: 60.55%;
-	}
+		}
+		.column.right.push-seven {
+			margin-right: 60.55%;
+		}
 	.column.push-eight {
 		margin-left: 69.2%;
-	}
+		}
+		.column.right.push-eight {
+			margin-right: 69.2%;
+		}
 	.column.push-nine {
 		margin-left: 77.85%;
-	}
+		}
+		.column.right.push-nine {
+			margin-right: 77.85%;
+		}
 	.column.push-ten {
 		margin-left: 86.5%;
-	}
+		}
+		.column.right.push-ten {
+			margin-right: 86.5%;
+		}
 	.column.push-eleven {
 		margin-left: 95.15%;
-	}
+		}
+		.column.right.push-eleven {
+			margin-right: 95.15%;
+		}
 
 	/*Alternative columns without gutters*/
 	.column.full, .column.half, .column.fourth, .column.fifth, .column.tenth {
@@ -198,7 +231,7 @@
 
 
 
-/*Fixed-width column among fluid ones*/
+/*Fixed-width column with another column taking rest of the available space (fixed on the left)*/
 .column.fluid {
 	clear: none;
 	float: left;
@@ -206,8 +239,10 @@
 	margin-left: 0;
 	margin-right: 0;
 }
-	.column.fluid > .container {
-		margin-left: 11em;
+
+	/*The expanding div needs a child container*/
+	.column.fluid > .column-container {
+		margin-left: 10em;
 	}
 	.column.fixed {
 		clear: none;
@@ -216,31 +251,14 @@
 		margin-left: -100%;
 		width: 10em;
 	}
-		.column.fluid.left > .container {
-			margin-left: 0;
-			margin-right: 11em;
-		}
-		.column.fixed.right {
-			float: right;
-		}
 
-
-
-/*Content areas*/
-.buffer {
-	padding: 1em 2em 2em 2em;
-}
-	.buffer-top {
-		padding-top: 1em;
+	/*Fixed column on the right*/
+	.column.fluid.right > .column-container {
+		margin-left: 0;
+		margin-right: 10em;
 	}
-	.buffer-right {
-		padding-right: 2em;
-	}
-	.buffer-bottom {
-		padding-bottom: 2em;
-	}
-	.buffer-left {
-		padding-left: 2em;
+	.column.fixed.right {
+		float: right;
 	}
 
 
