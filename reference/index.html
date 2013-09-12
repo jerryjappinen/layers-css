@@ -178,6 +178,26 @@
 		</div>
 		<div class="clear"></div>
 
+		<h5>Extend</h5>
+
+		<p>This is the CSS you to adjust the size of the fixed column.</p>
+
+		<pre class="buffer">
+
+/*Fixed column width*/
+.column.fluid > .column-content {
+	margin-right: 10em;
+}
+.column.fluid.right > .column-content {
+	margin-left: 10em;
+}
+.column.fixed {
+	width: 10em;
+}
+</pre>
+
+
+
 		<h5>Generic</h5>
 
 		<div class="column six">
@@ -253,25 +273,6 @@
 		<div class="clear"></div>
 
 		<p>Psst! You can automatically use these as mixins in <em>LESS</em>.</p>
-
-
-
-		<h5>Extend</h5>
-
-		<p>This is the CSS you to adjust the size of the fixed column.</p>
-
-		<pre class="buffer">
-/*Fixed column width*/
-.column.fluid > .column-content {
-	margin-right: 10em;
-}
-.column.fluid.right > .column-content {
-	margin-left: 10em;
-}
-.column.fixed {
-	width: 10em;
-}
-</pre>
 
 
 
