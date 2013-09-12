@@ -240,7 +240,7 @@ a, label, button, input[type="submit"], input[type="button"], input[type="reset"
 
 /*Consistent outlines*/
 a:focus {
-    outline: thin dotted;
+    outline-style: dotted;
 }
 	a:active, a:hover {
 	    outline: 0;
