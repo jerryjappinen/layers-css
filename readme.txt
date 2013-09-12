@@ -1,21 +1,21 @@
 
 Layers CSS
-Minimum-interference collection of reset and default styles
+==========
 
-See the reference docs at http://eiskis.net/layers/
-Bitbucket project at https://bitbucket.org/Eiskis/layers-css
+A minimum-interference collection of common-sense default styles.
 
-By Jerry Jäppinen
-Released under the MIT license
-eiskis@gmail.com
-http://eiskis.net/
-@Eiskis
+- Reference docs at http://eiskis.net/layers/
+- Bitbucket project at https://bitbucket.org/Eiskis/layers-css
+- Authored by Jerry Jäppinen
+	- Released under the MIT license
+	- eiskis@gmail.com
+	- http://eiskis.net/
+	- @Eiskis
 
 
 
-
-Usage
-=====
+Get started
+===========
 
 To get it all, use the single-file compilation:
 	<link rel="stylesheet" href="release/layers.css">
@@ -43,7 +43,7 @@ and in individual files:
 	<link rel="stylesheet" href="source/responsive/break-grid.css">
 	<link rel="stylesheet" href="source/responsive/font-size.css">
 
-Feel free to edit e.g. the breaking point for columns. You want to write more complex degradation declarations, this is just a start.
+Feel free to edit the breaking points, for example. You want to write more complex degradation declarations, this is just a start.
 
 
 
@@ -54,3 +54,5 @@ None of the other files contain any color scheme declarations. You have an empty
 
 If you want to just get a usable page out, fast, you can add one of the included, separate color files from extras.
 	<link rel="stylesheet" href="extras/light.css">
+
+
