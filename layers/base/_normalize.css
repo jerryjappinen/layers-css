@@ -135,7 +135,7 @@ a {
 input, select, textarea, button {
 	font-family: inherit;
 }
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], select, textarea, pre, code, kbd, samp {
+input[type=""], input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], select, textarea, pre, code, kbd, samp {
 	font-size: inherit;
 }
 button, input, select, textarea, pre, code, kbd, samp {
@@ -168,7 +168,7 @@ blockquote, q {
 /*Forms & interaction*/
 
 /*Use the same box-model and sizing in all browsers*/
-button, input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], textarea {
+button, input[type=""], input:not([type]), input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], textarea {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
