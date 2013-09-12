@@ -1,0 +1,39 @@
+
+/*List layouts*/
+
+
+
+/*Modified lists*/
+ul.plain, ol.plain {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+
+
+/*Inline lists*/
+ul.inline, ol.inline {
+	list-style: none;
+	padding-left: 0;
+}
+	ul.inline.right, ol.inline.right {
+		text-align: right;
+	}
+		ul.inline > li, ol.inline > li {
+			display: inline-block;
+		}
+
+
+
+/*Horizontal lists with block elements*/
+ul.collapse, ol.collapse {
+	list-style: none;
+	padding-left: 0;
+}
+	ul.collapse.right, ol.collapse.right {
+		text-align: right;
+	}
+		ul.collapse > li, ol.collapse > li {
+			float: left;
+			clear: none;
+		}

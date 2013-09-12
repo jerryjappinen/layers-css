@@ -1,4 +1,19 @@
 
+
+
+/*Force floats*/
+.float-left, .float-right {
+	clear: none;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+
+
 /*Utilities for common CSS-based behavior*/
 .clear {
 	clear: both;
@@ -23,33 +38,3 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
-
-
-/*Make an element fill all available space*/
-ul.reset, ol.reset {
-	list-style-type: none;
-}
-ul.plain, ol.plain {
-	padding-left: 0;
-	list-style-type: none;
-}
-
-
-
-/*Spacing and closing*/
-.reset {
-	margin: 0;
-}
-	.reset-top {
-		margin-top: 0;
-	}
-	.reset-right {
-		margin-right: 0;
-	}
-	.reset-bottom {
-		margin-bottom: 0;
-	}
-	.reset-left {
-		margin-left: 0;
-	}

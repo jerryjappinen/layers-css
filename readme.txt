@@ -22,7 +22,9 @@ To get it all, use the single-file compilation:
 
 You can also pick and choose what you want (in alphabetical order):
 	<link rel="stylesheet" href="source/layers/_normalize.css">
+	<link rel="stylesheet" href="source/layers/forms.css">
 	<link rel="stylesheet" href="source/layers/grid.css">
+	<link rel="stylesheet" href="source/layers/lists.css">
 	<link rel="stylesheet" href="source/layers/rhythm.css">
 	<link rel="stylesheet" href="source/layers/text.css">
 	<link rel="stylesheet" href="source/layers/tools.css">

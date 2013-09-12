@@ -1,5 +1,5 @@
 
-/*Content columns (12-based)*/
+/*Column basics (12-based fluid grid)*/
 .column {
 	clear: none;
 	float: left;
@@ -12,222 +12,259 @@
 		float: right;
 	}
 
-	/*Fluid columns with gutter*/
-	.column.one, .column.two, .column.three, .column.four, .column.five, .column.six, .column.seven, .column.eight, .column.nine, .column.ten, .column.eleven, .column.twelve {
-		margin-left: 0;
-		margin-right: 3.8%;
-	}
-		.column.last, .column.twelve, .column.reset {
-			margin-right: 0;
-		}
-	.column.one.right, .column.two.right, .column.three.right, .column.four.right, .column.five.right, .column.six.right, .column.seven.right, .column.eight.right, .column.nine.right, .column.ten.right, .column.eleven.right, .column.twelve.right {
+
+
+/*Fluid columns*/
+.column.one,
+	.column.two,
+	.column.three,
+	.column.four,
+	.column.five,
+	.column.six,
+	.column.seven,
+	.column.eight,
+	.column.nine,
+	.column.ten,
+	.column.eleven,
+	.column.twelve
+{
+	margin-left: 0;
+	margin-right: 3.8%;
+}
+	.column.last, .column.twelve, .column.reset {
 		margin-right: 0;
-		margin-left: 3.8%;
-	}
-		.column.right.last, .column.right.twelve, .column.right.reset {
-			margin-left: 0;
-		}
-
-	/*Fluid columns with gutter*/
-	.column.one {
-		width: 4.85%;
-	}
-	.column.two {
-		width: 13.45%;
-	}
-	.column.three {
-		width: 22.05%;
-	}
-	.column.four {
-		width: 30.75%;
-	}
-	.column.five {
-		width: 39.45%;
-	}
-	.column.six {
-		width: 48%;
-	}
-	.column.seven {
-		width: 56.75%;
-	}
-	.column.eight {
-		width: 65.4%;
-	}
-	.column.nine {
-		width: 74.05%;
-	}
-	.column.ten {
-		width: 82.7%;
-	}
-	.column.eleven {
-		width: 91.35%;
-	}
-	.column.twelve {
-		width: 100%;
 	}
 
-	/*Fluid columns without gutters*/
-	.column.one.reset {
-		width: 8.3%;
+/*Reverse stacking*/
+.column.one.right,
+	.column.two.right,
+	.column.three.right,
+	.column.four.right,
+	.column.five.right,
+	.column.six.right,
+	.column.seven.right,
+	.column.eight.right,
+	.column.nine.right,
+	.column.ten.right,
+	.column.eleven.right,
+	.column.twelve.right
+{
+	margin-right: 0;
+	margin-left: 3.8%;
+}
+	.column.right.last, .column.right.twelve, .column.right.reset {
+		margin-left: 0;
 	}
-	.column.two.reset {
-		width: 16.65%;
+
+
+
+/*Fluid column widths*/
+.column.one {
+	width: 4.85%;
+}
+.column.two {
+	width: 13.45%;
+}
+.column.three {
+	width: 22.05%;
+}
+.column.four {
+	width: 30.75%;
+}
+.column.five {
+	width: 39.45%;
+}
+.column.six {
+	width: 48%;
+}
+.column.seven {
+	width: 56.75%;
+}
+.column.eight {
+	width: 65.4%;
+}
+.column.nine {
+	width: 74.05%;
+}
+.column.ten {
+	width: 82.7%;
+}
+.column.eleven {
+	width: 91.35%;
+}
+.column.twelve {
+	width: 100%;
+}
+
+
+
+/*No gutters*/
+.column.one.reset {
+	width: 8.3%;
+}
+.column.two.reset {
+	width: 16.65%;
+}
+.column.three.reset {
+	width: 25%;
+}
+.column.four.reset {
+	width: 33.3%;
+}
+.column.five.reset {
+	width: 41.65%;
+}
+.column.six.reset {
+	width: 50%;
+}
+.column.seven.reset {
+	width: 58.3%;
+}
+.column.eight.reset {
+	width: 66.6%;
+}
+.column.nine.reset {
+	width: 75%;
+}
+.column.ten.reset {
+	width: 83.35%;
+}
+.column.eleven.reset {
+	width: 91.7%;
+}
+
+
+
+/*Shift columns*/
+.column.push-one {
+	margin-left: 8.65%;
+}
+	.column.right.push-one {
+		margin-right: 8.65%;
 	}
-	.column.three.reset {
-		width: 25%;
+.column.push-two {
+	margin-left: 17.25%;
+}
+	.column.right.push-two {
+		margin-right: 17.25%;
 	}
-	.column.four.reset {
-		width: 33.3%;
+.column.push-three {
+	margin-left: 25.85%;
+}
+	.column.right.push-three {
+		margin-right: 25.85%;
 	}
-	.column.five.reset {
-		width: 41.65%;
+.column.push-four {
+	margin-left: 34.55%;
+}
+	.column.right.push-four {
+		margin-right: 34.55%;
 	}
-	.column.six.reset {
+.column.push-five {
+	margin-left: 43.25%;
+}
+	.column.right.push-five {
+		margin-right: 43.25%;
+	}
+.column.push-six {
+	margin-left: 51.8%;
+}
+	.column.right.push-six {
+		margin-right: 51.8%;
+	}
+.column.push-seven {
+	margin-left: 60.55%;
+}
+	.column.right.push-seven {
+		margin-right: 60.55%;
+	}
+.column.push-eight {
+	margin-left: 69.2%;
+}
+	.column.right.push-eight {
+		margin-right: 69.2%;
+	}
+.column.push-nine {
+	margin-left: 77.85%;
+}
+	.column.right.push-nine {
+		margin-right: 77.85%;
+	}
+.column.push-ten {
+	margin-left: 86.5%;
+}
+	.column.right.push-ten {
+		margin-right: 86.5%;
+	}
+.column.push-eleven {
+	margin-left: 95.15%;
+}
+	.column.right.push-eleven {
+		margin-right: 95.15%;
+	}
+
+
+
+/*No gutters, proportional keywords*/
+.column.full, .column.half, .column.fourth, .column.fifth, .column.tenth {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.column.full {
+	width: 100%;
+}
+.column.half {
+	width: 50%;
+}
+.column.fourth {
+	width: 25%;
+}
+	.column.twofourths {
 		width: 50%;
 	}
-	.column.seven.reset {
-		width: 58.3%;
-	}
-	.column.eight.reset {
-		width: 66.6%;
-	}
-	.column.nine.reset {
+	.column.threefourths {
 		width: 75%;
 	}
-	.column.ten.reset {
-		width: 83.35%;
+.column.fifth {
+	width: 20%;
+}
+	.column.twofifths {
+		width: 40%;
 	}
-	.column.eleven.reset {
-		width: 91.7%;
+	.column.threefifths {
+		width: 60%;
 	}
-
-	/*Shift columns*/
-	.column.push-one {
-		margin-left: 8.65%;
+	.column.fourfifths {
+		width: 80%;
 	}
-		.column.right.push-one {
-			margin-right: 8.65%;
-		}
-	.column.push-two {
-		margin-left: 17.25%;
-		}
-		.column.right.push-two {
-			margin-right: 17.25%;
-		}
-	.column.push-three {
-		margin-left: 25.85%;
-		}
-		.column.right.push-three {
-			margin-right: 25.85%;
-		}
-	.column.push-four {
-		margin-left: 34.55%;
-		}
-		.column.right.push-four {
-			margin-right: 34.55%;
-		}
-	.column.push-five {
-		margin-left: 43.25%;
-		}
-		.column.right.push-five {
-			margin-right: 43.25%;
-		}
-	.column.push-six {
-		margin-left: 51.8%;
-		}
-		.column.right.push-six {
-			margin-right: 51.8%;
-		}
-	.column.push-seven {
-		margin-left: 60.55%;
-		}
-		.column.right.push-seven {
-			margin-right: 60.55%;
-		}
-	.column.push-eight {
-		margin-left: 69.2%;
-		}
-		.column.right.push-eight {
-			margin-right: 69.2%;
-		}
-	.column.push-nine {
-		margin-left: 77.85%;
-		}
-		.column.right.push-nine {
-			margin-right: 77.85%;
-		}
-	.column.push-ten {
-		margin-left: 86.5%;
-		}
-		.column.right.push-ten {
-			margin-right: 86.5%;
-		}
-	.column.push-eleven {
-		margin-left: 95.15%;
-		}
-		.column.right.push-eleven {
-			margin-right: 95.15%;
-		}
-
-	/*Alternative columns without gutters*/
-	.column.full, .column.half, .column.fourth, .column.fifth, .column.tenth {
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.column.full {
-		width: 100%;
-	}
-		.column.half {
-			width: 50%;
-		}
-	.column.fourth {
-		width: 25%;
-	}
-		.column.twofourths {
-			width: 50%;
-		}
-		.column.threefourths {
-			width: 75%;
-		}
-	.column.fifth {
+.column.tenth {
+	width: 10%;
+}
+	.column.twotenths {
 		width: 20%;
 	}
-		.column.twofifths {
-			width: 40%;
-		}
-		.column.threefifths {
-			width: 60%;
-		}
-		.column.fourfifths {
-			width: 80%;
-		}
-	.column.tenth {
-		width: 10%;
+	.column.threetenths {
+		width: 30%;
 	}
-		.column.twotenths {
-			width: 20%;
-		}
-		.column.threetenths {
-			width: 30%;
-		}
-		.column.fourtenths {
-			width: 40%;
-		}
-		.column.fivetenths {
-			width: 50%;
-		}
-		.column.sixtenths {
-			width: 60%;
-		}
-		.column.seventenths {
-			width: 70%;
-		}
-		.column.eighttenths {
-			width: 80%;
-		}
-		.column.ninetenths {
-			width: 90%;
-		}
+	.column.fourtenths {
+		width: 40%;
+	}
+	.column.fivetenths {
+		width: 50%;
+	}
+	.column.sixtenths {
+		width: 60%;
+	}
+	.column.seventenths {
+		width: 70%;
+	}
+	.column.eighttenths {
+		width: 80%;
+	}
+	.column.ninetenths {
+		width: 90%;
+	}
 
 
 
@@ -239,8 +276,6 @@
 	margin-left: 0;
 	margin-right: 0;
 }
-
-	/*The expanding div needs a child container*/
 	.column.fluid > .column-container {
 		margin-left: 10em;
 	}
@@ -252,7 +287,7 @@
 		width: 10em;
 	}
 
-	/*Fixed column on the right*/
+	/*Reverse stacking*/
 	.column.fluid.right > .column-container {
 		margin-left: 0;
 		margin-right: 10em;
@@ -260,41 +295,3 @@
 	.column.fixed.right {
 		float: right;
 	}
-
-
-
-/*Force floats*/
-.push-left, .push-right {
-	clear: none;
-}
-.push-left {
-	float: left;
-}
-.push-right {
-	float: right;
-}
-
-
-
-/*List layouts*/
-ul.inline, ol.inline {
-	list-style: none;
-	padding-left: 0;
-}
-	ul.inline.right, ol.inline.right {
-		text-align: right;
-	}
-		ul.inline > li, ol.inline > li {
-			display: inline-block;
-		}
-ul.block, ol.block {
-	list-style: none;
-	padding-left: 0;
-}
-	ul.block.right, ol.block.right {
-		text-align: right;
-	}
-		ul.block > li, ol.block > li {
-			float: left;
-			clear: none;
-		}
