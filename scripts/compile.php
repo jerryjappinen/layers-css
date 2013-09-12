@@ -11,11 +11,12 @@ function minify($string) {
 
 
 // Choose what to include
-$root = '../layers/';
-if (isset($_GET['path']) and is_dir($root.$_GET['path'].'/')) {
-	$path = $root.$_GET['path'].'/';
+$sourcePath = '../source/';
+$releasePath = '../release/';
+if (isset($_GET['path']) and is_dir($sourcePath.$_GET['path'].'/')) {
+	$path = $sourcePath.$_GET['path'].'/';
 } else {
-	$path = $root;
+	$path = $sourcePath;
 }
 
 
@@ -35,7 +36,7 @@ if (isset($_GET['save'])) {
 	if (empty($name)) {
 		$name = 'all';
 	}
-	file_put_contents($root.$name.'.css', $output);
+	file_put_contents($releasePath.$name.'.css', $output);
 }
 
 echo $output."\n";

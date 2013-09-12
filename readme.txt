@@ -18,28 +18,28 @@ Usage
 =====
 
 To get it all, use the single-file compilation:
-	<link rel="stylesheet" href="layers/base.css">
+	<link rel="stylesheet" href="release/layers.css">
 
 You can also pick and choose what you want (in alphabetical order):
-	<link rel="stylesheet" href="layers/base/_normalize.css">
-	<link rel="stylesheet" href="layers/base/grid.css">
-	<link rel="stylesheet" href="layers/base/rhythm.css">
-	<link rel="stylesheet" href="layers/base/text.css">
-	<link rel="stylesheet" href="layers/base/tools.css">
+	<link rel="stylesheet" href="source/layers/_normalize.css">
+	<link rel="stylesheet" href="source/layers/grid.css">
+	<link rel="stylesheet" href="source/layers/rhythm.css">
+	<link rel="stylesheet" href="source/layers/text.css">
+	<link rel="stylesheet" href="source/layers/tools.css">
 
-If you use an autoloader (e.g. asset pipeline in Rails), you can just include the whole base directory.
+If you use an autoloader (e.g. asset pipeline in Rails), you can just include the whole directory.
 
 
 
 Responsive adjustments
 ----------------------
 
-All responsive adjustments are included in separate stylesheets:
-	<link rel="stylesheet" href="layers/responsive/break-grid.css">
-	<link rel="stylesheet" href="layers/responsive/font-size.css">
+All responsive adjustments are included in separate from the main release:
+	<link rel="stylesheet" href="release/responsive.css">
 
-or in one file:
-	<link rel="stylesheet" href="layers/responsive.css">
+and in individual files:
+	<link rel="stylesheet" href="source/responsive/break-grid.css">
+	<link rel="stylesheet" href="source/responsive/font-size.css">
 
 Feel free to edit e.g. the breaking point for columns. You want to write more complex degradation declarations, this is just a start.
 

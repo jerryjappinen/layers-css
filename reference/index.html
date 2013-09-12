@@ -13,17 +13,20 @@
 		<meta name="application-name" content="Layers CSS">
 		<link rel="shortcut icon" href="../logo.ico" type="image/x-icon">
 
-		<!-- Layers -->
-		<link rel="stylesheet" href="../layers/base/_normalize.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/grid.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/rhythm.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/text.css" media="screen">
-		<link rel="stylesheet" href="../layers/base/tools.css" media="screen">
+		<!-- Layers & responsive adjustments -->
+		<link rel="stylesheet" href="../source/layers/_normalize.css" media="screen">
+		<link rel="stylesheet" href="../source/layers/grid.css" media="screen">
+		<link rel="stylesheet" href="../source/layers/rhythm.css" media="screen">
+		<link rel="stylesheet" href="../source/layers/text.css" media="screen">
+		<link rel="stylesheet" href="../source/layers/tools.css" media="screen">
+		<link rel="stylesheet" href="../source/responsive/break-grid.css" media="screen">
+		<link rel="stylesheet" href="../source/responsive/font-size.css" media="screen">
 
-		<!-- Responsive adjustments -->
-		<link rel="stylesheet" href="../layers/responsive/break-grid.css" media="screen">
-		<link rel="stylesheet" href="../layers/responsive/font-size.css" media="screen">
-
+		<!-- Release version -->
+<!-- 
+		<link rel="stylesheet" href="../release/layers.css" media="screen">
+		<link rel="stylesheet" href="../release/responsive.css" media="screen">
+ -->
 		<!-- Extras -->
 		<link rel="stylesheet" href="../extras/frame.css" media="screen">	<!-- Paddings for page body -->
 		<link rel="stylesheet" href="../extras/light.css" media="screen">	<!-- Light color scheme -->
@@ -201,8 +204,6 @@
 		<!--  -->
 		<h1>Common tools</h1>
 
-		<p>You can automatically use these as mixins in <em>LESS</em>.</p>
-
 		<div class="column four">
 			<div class="buffer">
 				<dl>
@@ -245,6 +246,8 @@
 			</dl>
 		</div>
 		<div class="clear"></div>
+
+		<p>Psst! You can automatically use these as mixins in <em>LESS</em>.</p>
 
 
 
@@ -322,23 +325,10 @@
 
 
 		<!--  -->
-		<h1>Forms</h1>
-
-		<p>Native input element styles are left alone.</p>
-
-		<form action="">
-			<p><input type="text" placeholder="Placeholder"></p>
-			<p><input type="text" value="Existing value"></p>
-			<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
-		</form>
-
-
-
-		<!--  -->
 		<h1>Tables</h1>
 
 		<table>
-			<caption>Plain <code>table</code> has collapsed borders, 100% width and common-sense paddings for cells. This is a table caption, by the way.</caption>
+			<caption>A <code>table</code> has collapsed borders, 100% width and common-sense paddings for cells. (This is a table <code>caption</code>, by the way.)</caption>
 			<thead>
 				<tr>
 					<th>Heading</th>
@@ -394,6 +384,19 @@
 				</tr>
 			</tbody>
 		</table>
+
+
+
+		<!--  -->
+		<h1>Forms</h1>
+
+		<p>Native input element styles are left alone.</p>
+
+		<form action="">
+			<p><input type="text" placeholder="Placeholder"></p>
+			<p><input type="text" value="Existing value"></p>
+			<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
+		</form>
 
 	</body>
 
