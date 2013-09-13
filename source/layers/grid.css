@@ -5,9 +5,9 @@
 	margin: 0 auto;
 	max-width: 70em;
 }
-.row-content.buffer {	
-	padding: 2% 8% 6% 8%;
-}
+	.row-content.buffer {	
+		padding: 2% 8% 6% 8%;
+	}
 
 /*Column basics (12-based fluid grid)*/
 .column {
@@ -15,7 +15,7 @@
 	float: left;
 	min-height: 1px;
 }
-	.column.first, .column.twelve {
+	.column.first, .column.full, .column.twelve {
 		clear: both;
 	}
 	.column.right {
@@ -35,13 +35,12 @@
 	.column.eight,
 	.column.nine,
 	.column.ten,
-	.column.eleven,
-	.column.twelve
+	.column.eleven
 {
 	margin-left: 0;
 	margin-right: 3.8%;
 }
-	.column.last, .column.twelve, .column.reset {
+	.column.last, .column.reset {
 		margin-right: 0;
 	}
 
@@ -56,15 +55,19 @@
 	.column.eight.right,
 	.column.nine.right,
 	.column.ten.right,
-	.column.eleven.right,
-	.column.twelve.right
+	.column.eleven.right
 {
 	margin-right: 0;
 	margin-left: 3.8%;
 }
-	.column.right.last, .column.right.twelve, .column.right.reset {
+	.column.right.last, .column.right.reset {
 		margin-left: 0;
 	}
+
+/*Full-width column*/
+.column.full, .column.twelve {
+	width: 100%;
+}
 
 
 
@@ -101,9 +104,6 @@
 }
 .column.eleven {
 	width: 91.35%;
-}
-.column.twelve {
-	width: 100%;
 }
 
 
@@ -220,61 +220,39 @@
 	margin-left: 0;
 	margin-right: 0;
 }
-
-.column.full {
-	width: 100%;
+.column.ninetenths {
+	width: 90%;
 }
-.column.half {
+.column.fourfifths, .column.eighttenths, {
+	width: 80%;
+}
+.column.threefourths {
+	width: 75%;
+}
+.column.seventenths {
+	width: 70%;
+}
+.column.threefifths, .column.sixtenths {
+	width: 60%;
+}
+.column.half, .column.twofourths, .column.fivetenths {
 	width: 50%;
+}
+.column.twofifths, .column.fourtenths {
+	width: 40%;
+}
+.column.threetenths {
+	width: 30%;
 }
 .column.fourth {
 	width: 25%;
 }
-	.column.twofourths {
-		width: 50%;
-	}
-	.column.threefourths {
-		width: 75%;
-	}
-.column.fifth {
+.column.fifth, .column.twotenths {
 	width: 20%;
 }
-	.column.twofifths {
-		width: 40%;
-	}
-	.column.threefifths {
-		width: 60%;
-	}
-	.column.fourfifths {
-		width: 80%;
-	}
 .column.tenth {
 	width: 10%;
 }
-	.column.twotenths {
-		width: 20%;
-	}
-	.column.threetenths {
-		width: 30%;
-	}
-	.column.fourtenths {
-		width: 40%;
-	}
-	.column.fivetenths {
-		width: 50%;
-	}
-	.column.sixtenths {
-		width: 60%;
-	}
-	.column.seventenths {
-		width: 70%;
-	}
-	.column.eighttenths {
-		width: 80%;
-	}
-	.column.ninetenths {
-		width: 90%;
-	}
 
 
 

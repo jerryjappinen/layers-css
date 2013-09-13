@@ -28,7 +28,7 @@ $output = '/*
 Layers CSS'.($name === 'responsive' ? ' responsive adjustments' : '').' by Jerry Jäppinen
 Released under the MIT license
 http://eiskis.net/layers
-Compiled from source on '.date('Y-m-d H:i e') .'
+'.date('Y-m-d H:i e') .'
 */
 ';
 foreach (rglob($sourcePath.$name.'/'.'*') as $value) {
