@@ -45,6 +45,11 @@
 				.colored {
 					background-color: #ddd;
 				}
+
+			.grid .column {
+				text-align: center;
+			}
+
 			code {
 				font-size: 0.8em;
 				color: #e01b6a;
@@ -78,45 +83,106 @@
 
 			</div>
 		</div>
-		<div class="row">
-			<div class="row-content buffer">
+
+		<div class="row grid">
+			<div class="row-content buffer-left buffer-right buffer-top">
 
 				<!--  -->
 				<h1>Fluid grid</h1>
 
-				<p>You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too. No wrappers are required. Columns within columns work fine. Use n/12 keywords as class names like this:</p>
+				<p>You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too. Columns are stacked from left to right, no wrappers are required. Columns within columns work fine.</p>
 
-				<div class="column eight">
-					<p><code>.column.eight</code></p>
+				<p>Use n/12 or fractional keywords as class names, like this:</p>
+
+				<div class="column six">
+					<p><code>.column.six</code></p>
 				</div>
-				<div class="column four last">
+				<div class="column six last">
+					<p><code>.column.six.last</code></p>
+				</div>
+				<div class="clear"></div>
+
+
+
+				<div class="column four colored">
+					<p><code>.column.four</code></p>
+				</div>
+				<div class="column four colored">
+					<p><code>.column.four</code></p>
+				</div>
+				<div class="column four last colored">
 					<p><code>.column.four.last</code></p>
 				</div>
 				<div class="clear"></div>
 
+
+
+				<div class="column three">
+					<p><code>.column.three</code></p>
+				</div>
+				<div class="column three">
+					<p><code>.column.three</code></p>
+				</div>
+				<div class="column fourth">
+					<p><code>.column.fourth</code></p>
+				</div>
+				<div class="column fourth last">
+					<p><code>.column.fourth.last</code></p>
+				</div>
+				<div class="clear"></div>
+
+
+
+				<div class="column one colored">
+					<p><code>.one</code></p>
+				</div>
+				<div class="column one colored">
+					<p><code>.one</code></p>
+				</div>
+				<div class="column one colored">
+					<p><code>.one</code></p>
+				</div>
+				<div class="column twofourths colored">
+					<p><code>.twofourths</code></p>
+				</div>
+				<div class="column one colored">
+					<p><code>.one</code></p>
+				</div>
+				<div class="column one colored">
+					<p><code>.one</code></p>
+				</div>
+				<div class="column one last colored">
+					<p><code>.one.last</code></p>
+				</div>
+				<div class="clear"></div>
+
+
+
 				<p>You can <code>.push-</code> columns.</p>
 
-				<div class="column four">
-					<p><code>.column.four</code></p>
+				<div class="column four push-two">
+					<p><code>.column.four.<strong>push-two</strong></code></p>
 				</div>
-				<div class="column three push-two">
-					<p><code>.column.three.push-two</code></p>
+				<div class="column two">
+					<p><code>.column.two</code></p>
 				</div>
-				<div class="column three last">
+				<div class="column two last">
 					<p><code>.column.two.last</code></p>
 				</div>
 				<div class="clear"></div>
 
+
+
 				<p>If you want to start the stack from the <code>.right</code>:</p>
 
 				<div class="column right five">
-					<p><code>.column.right.five</code></p>
+					<p><code>.column.<strong>right</strong>.five</code></p>
 				</div>
-				<div class="column right three push-two">
-					<p><code>.column.right.three.push-two</code></p>
+				<div class="column right three">
+					<p><code>.column.<strong>right</strong>.three</code></p>
 				</div>
 				<div class="column right two last">
-					<p><code>.column.right.two</code></p>
+					<p><code>.column.<strong>right</strong>.two</code></p>
 				</div>
 
 				<div class="clear"></div>
@@ -125,31 +191,26 @@
 
 				<h3>Without gutters</h3>
 
-				<p>Proportional keywords:</p>
+				<p><code>.reset</code> columns to remove gutter space:</p>
 
-				<div class="column half first">
-					<p><code>.column.half.first</code></p>
+				<div class="column half reset colored">
+					<p><code>.column.half.reset</code></p>
 				</div>
-
-				<div class="column fourth colored">
-					<p><code>.column.fourth</code></p>
+				<div class="column three reset">
+					<p><code>.column.three.reset</code></p>
 				</div>
-
-				<div class="column fourth">
-					<p><code>.column.fourth</code></p>
-				</div>
-				<div class="clear"></div>
-
-				<p>n/12 keywords:</p>
-
-				<div class="column six reset">
-					<p><code>.column.six.reset</code></p>
-				</div>
-
 				<div class="column three reset colored">
 					<p><code>.column.three.reset</code></p>
 				</div>
+				<div class="clear"></div>
 
+
+				<div class="column three reset push-one">
+					<p><code>.column.three.reset.push-one</code></p>
+				</div>
+				<div class="column four reset colored">
+					<p><code>.column.four.reset</code></p>
+				</div>
 				<div class="column three reset">
 					<p><code>.column.three.reset</code></p>
 				</div>
@@ -231,7 +292,13 @@
 
 				<p>You can naturally use e.g. the <code>section</code> element for the rows, Layers targets only the class names.</p>
 
+			</div>
+		</div>
 
+
+
+		<div class="row tools">
+			<div class="row-content buffer-left buffer-right buffer-bottom">
 
 				<!--  -->
 				<h1>Common tools</h1>
