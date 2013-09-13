@@ -11,11 +11,11 @@ function minify($string) {
 
 
 // Choose what to include
-$root = '../layers/';
-if (isset($_GET['path']) and is_dir($root.$_GET['path'].'/')) {
-	$path = $root.$_GET['path'].'/';
-} else {
-	$path = $root;
+$sourcePath = '../source/';
+$releasePath = '../release/';
+$name = 'layers';
+if (isset($_GET['path']) and is_dir($sourcePath.$_GET['path'].'/')) {
+	$name = $_GET['path'];
 }
 
 
@@ -23,19 +23,21 @@ if (isset($_GET['path']) and is_dir($root.$_GET['path'].'/')) {
 // Content type header
 header('Content-Type: text/css; charset: UTF-8');
 
-// Include all files
-$output = '';
-foreach (rglob($path.'*') as $value) {
+// Include files
+$output = '/*
+Layers CSS'.($name === 'responsive' ? ' responsive adjustments' : '').' by Jerry Jäppinen
+Released under the MIT license
+http://eiskis.net/layers
+Compiled from source on '.date('Y-m-d H:i e') .'
+*/
+';
+foreach (rglob($sourcePath.$name.'/'.'*') as $value) {
 	$output .= minify(file_get_contents($value));
 }
 
 // Save compilation file
 if (isset($_GET['save'])) {
-	$name = basename($path);
-	if (empty($name)) {
-		$name = 'all';
-	}
-	file_put_contents($root.$name.'.css', $output);
+	file_put_contents($releasePath.$name.'.css', $output);
 }
 
 echo $output."\n";

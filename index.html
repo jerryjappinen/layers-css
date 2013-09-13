@@ -14,8 +14,8 @@
 		<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 
 		<!-- Base styles -->
-		<link rel="stylesheet" href="layers/base.css" media="screen">
-		<link rel="stylesheet" href="layers/responsive.css" media="screen">
+		<link rel="stylesheet" href="release/layers.css" media="screen">
+		<link rel="stylesheet" href="release/responsive.css" media="screen">
 
 		<!-- Page style -->
 		<style type="text/css">
@@ -73,17 +73,17 @@
 			h1 img {
 				max-width: 80%;
 			}
-			ul.inline li {
+			ul.collapse li {
 				margin-right: 0.3em;
 				margin-left: 0.3em;
 			}
-				ul.inline > li.first {
+				ul.collapse > li.first {
 					margin-left: -0.5em;
 				}
-				ul.inline > li.last {
+				ul.collapse > li.last {
 					margin-right: 0;
 				}
-				ul.inline > li > a {
+				ul.collapse > li > a {
 					display: inline-block;
 					padding: 0.4em 0.5em;
 				}
@@ -155,13 +155,25 @@
 
 	<body class="alternate">
 
-		<h1 class="squeeze-top"><a href="layers/base.css" target="_blank"><img src="logo.gif" alt="Layers CSS" title="Layers CSS"></a></h1>
+		<h1 class="squeeze-top"><a href="./"><img src="logo.gif" alt="Layers CSS" title="Layers CSS"></a></h1>
 
 		<h4>...is an unobtrusive, no-bullshit CSS pack to help you build the look you want on the web. You can stop overriding things now.</h4>
 
 		<div class="buffer-top buffer-bottom">
-			<p class="squeeze-bottom"><a href="layers/base.css" target="_blank" class="button">get layers.css</a></p>
-			<ul class="close discreet inline"><li class="first"><a href="demos/features.html" target="_blank">demo</a></li><li><a href="layers/" target="_blank">pick &amp; choose</a></li><li><a href="readme.txt" target="_blank">readme</a></li><li class="last"><a href="layers/responsive.css" target="_blank">responsive adjustments</a></li></ul>
+
+			<p class="squeeze-bottom"><a href="release/layers.css" target="_blank" class="button">get layers.css</a></p>
+
+			<ul class="reset discreet collapse">
+				<li class="first"><a href="reference/" target="_blank">reference &amp; demo</a></li>
+				<li><a href="release/responsive.css" target="_blank">responsive adjustments</a></li>
+				<li class="last"><a href="extras/" target="_blank">extras</a></li>
+			</ul>
+
+			<ul class="reset discreet collapse">
+				<li class="first"><a href="source/" target="_blank">pick &amp; choose</a></li>
+				<li class="last"><a href="readme.txt" target="_blank">readme</a></li>
+			</ul>
+
 		</div>
 
 		<p>Includes normalizations, sensible defaults and fluid grid in &lt;10 kb. Take only what you want. No rounded corners, colors, requirements, dependencies or any other bullshit.</p>

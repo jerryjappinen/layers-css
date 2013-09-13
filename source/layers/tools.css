@@ -1,0 +1,40 @@
+
+
+
+/*Force floats*/
+.float-left, .float-right {
+	clear: none;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+
+
+/*Utilities for common CSS-based behavior*/
+.clear {
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+
+
+
+/*Dry element of its content*/
+.dry {
+	text-indent: -9999em;
+	direction: ltr;
+}
+
+
+
+/*Include padding and border in dimensions*/
+.border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

@@ -173,6 +173,7 @@ button, input[type=""], input:not([type]), input[type="submit"], input[type="res
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 	line-height: inherit;
+	display: inline-block;
 }
 
 /*Make search fields consistent with text fields on Webkit*/
@@ -199,6 +200,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /*Style clickable inputs consistently on all webkits*/
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
+}
+
+/*Buttons have center-aligned text*/
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    text-align: center;
 }
 
 /*Use sensible alignments*/
@@ -234,7 +240,7 @@ a, label, button, input[type="submit"], input[type="button"], input[type="reset"
 
 /*Consistent outlines*/
 a:focus {
-    outline: thin dotted;
+    outline-style: dotted;
 }
 	a:active, a:hover {
 	    outline: 0;

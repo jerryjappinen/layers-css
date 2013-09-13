@@ -11,9 +11,14 @@ p, ul, ol, table, pre, blockquote {
 	margin-top: 0.67em;
 	margin-bottom: 1.34em;
 }
+
+	/*Nested lists*/
 	ul ul, ul ol, ol ol, ol ul {
 		margin-top: 0;
+		margin-bottom: 0.67em;
 	}
+
+/*Definition lists*/
 dl {
 	margin-bottom: 1.34em;
 }
@@ -26,13 +31,6 @@ dd {
 	margin-bottom: 0;
 	margin-left: 0;
 }
-
-/*Nested lists*/
-ul ul, ul ol, ol ol, ol ul {
-	margin-top: 0;
-}
-
-
 
 /*Tables*/
 caption {
@@ -48,33 +46,7 @@ th, td {
 		padding: 0;
 	}
 
-
-
-/*Form elements*/
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type=""], input:not([type]) {
-	width: 80%;	
-}
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type=""], input:not([type]) {
-	max-width: 24em;
-}
-	input[type="text"].squeeze, input[type="password"].squeeze, input[type="email"].squeeze, input[type="url"].squeeze, input[type="search"].squeeze, input[type="tel"].squeeze, input[type=""].squeeze, input:not([type]).squeeze {
-		width: 40%;
-		max-width: 16em;
-	}
-textarea {
-	width: 80%;	
-	max-width: 36em;
-	height: 10.72em;
-}
-	textarea.squeeze {
-		width: 40%;
-		height: 4.02em;
-		max-width: 24em;
-	}
-
-
-
-/*Condensed blocks*/
+/*Headings*/
 h1.squeeze, h2.squeeze, h3.squeeze, h4.squeeze, h5.squeeze, h6.squeeze, 
 h1.squeeze-top , h2.squeeze-top, h3.squeeze-top, h4.squeeze-top, h5.squeeze-top, h6.squeeze-top {
 	margin-top: 0.67em;
@@ -90,4 +62,64 @@ h1.squeeze-bottom , h2.squeeze-bottom, h3.squeeze-bottom, h4.squeeze-bottom, h5.
 p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeeze,
 p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pre.squeeze-bottom, blockquote.squeeze-bottom {
 	margin-bottom: 0.67em;
+}
+
+
+
+/*Spacing*/
+.push, .push-top {
+	margin-top: 1.34em;
+}
+.push, .push-right {
+	margin-right: 1.34em;
+}
+.push, .push-bottom {
+	margin-bottom: 1.34em;
+}
+.push, .push-left {
+	margin-left: 1.34em;
+}
+
+/*No spacing*/
+.reset, .reset-top {
+	margin-top: 0;
+}
+.reset, .reset-right {
+	margin-right: 0;
+}
+.reset, .reset-bottom {
+	margin-bottom: 0;
+}
+.reset, .reset-left {
+	margin-left: 0;
+}
+
+
+
+/*Buffers*/
+.buffer, .buffer-top {
+	padding-top: 1em;
+}
+.buffer, .buffer-right {
+	padding-right: 2em;
+}
+.buffer, .buffer-bottom {
+	padding-bottom: 2em;
+}
+.buffer, .buffer-left {
+	padding-left: 2em;
+}
+
+/*No buffers*/
+.no-buffer, .no-buffer-top {
+	padding-top: 0;
+}
+.no-buffer, .no-buffer-right {
+	padding-right: 0;
+}
+.no-buffer, .no-buffer-bottom {
+	padding-bottom: 0;
+}
+.no-buffer, .no-buffer-left {
+	padding-left: 0;
 }

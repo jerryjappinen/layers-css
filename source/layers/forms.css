@@ -1,0 +1,54 @@
+
+/*Form elements*/
+
+/*Dimensions*/
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type=""], input:not([type]) {
+	width: 60%;	
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type=""], input:not([type]) {
+	max-width: 20em;
+}
+	input[type="text"].squeeze, input[type="password"].squeeze, input[type="email"].squeeze, input[type="url"].squeeze, input[type="search"].squeeze, input[type="tel"].squeeze, input[type=""].squeeze, input:not([type]).squeeze {
+		width: 40%;
+		max-width: 14em;
+	}
+textarea {
+	width: 60%;	
+	max-width: 32em;
+	height: 10.72em;
+}
+	textarea.squeeze {
+		width: 40%;
+		height: 4.02em;
+		max-width: 20em;
+	}
+
+
+
+/*Resets*/
+button.plain, input.plain {
+	border-width: 0;
+	border-style: solid;
+	background-color: transparent;
+	padding: 0;
+}
+	button.plain, input[type="submit"].plain, input[type="button"].plain, input[type="reset"].plain {
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+
+
+/*Explicit padding for input elements*/
+input.buffer, input.buffer-top {
+	padding-top: 0.35em;
+}
+input.buffer, input.buffer-right {
+	padding-right: 0.6em;
+}
+input.buffer, input.buffer-bottom {
+	padding-bottom: 0.4em;
+}
+input.buffer, input.buffer-left {
+	padding-left: 0.6em;
+}
