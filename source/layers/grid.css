@@ -1,6 +1,19 @@
 
+/*Change box model for grid elements*/
+.row, .column {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
 /*Rows with buffer space*/
-/*.row {}*/
+.row {
+	width: 100%;
+	clear: both;
+	float: none;
+}
 .row-content {
 	margin: 0 auto;
 	max-width: 70em;
@@ -27,9 +40,6 @@
 	clear: none;
 	float: left;
 	min-height: 1px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 	.column.first,
 	.column.full,
