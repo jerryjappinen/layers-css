@@ -73,17 +73,17 @@
 			h1 img {
 				max-width: 80%;
 			}
-			ul.inline li {
+			ul.collapse li {
 				margin-right: 0.3em;
 				margin-left: 0.3em;
 			}
-				ul.inline > li.first {
+				ul.collapse > li.first {
 					margin-left: -0.5em;
 				}
-				ul.inline > li.last {
+				ul.collapse > li.last {
 					margin-right: 0;
 				}
-				ul.inline > li > a {
+				ul.collapse > li > a {
 					display: inline-block;
 					padding: 0.4em 0.5em;
 				}
@@ -163,7 +163,16 @@
 
 			<p class="squeeze-bottom"><a href="release/layers.css" target="_blank" class="button">get layers.css</a></p>
 
-			<ul class="close discreet inline"><li class="first"><a href="reference/" target="_blank">reference &amp; demo</a></li><li><a href="release/responsive.css" target="_blank">responsive adjustments</a></li><li><a href="extras/" target="_blank">extras</a></li><li><a href="source/" target="_blank">pick &amp; choose</a></li><li class="last"><a href="readme.txt" target="_blank">readme</a></li></ul>
+			<ul class="reset discreet collapse">
+				<li class="first"><a href="reference/" target="_blank">reference &amp; demo</a></li>
+				<li><a href="release/responsive.css" target="_blank">responsive adjustments</a></li>
+				<li class="last"><a href="extras/" target="_blank">extras</a></li>
+			</ul>
+
+			<ul class="reset discreet collapse">
+				<li class="first"><a href="source/" target="_blank">pick &amp; choose</a></li>
+				<li class="last"><a href="readme.txt" target="_blank">readme</a></li>
+			</ul>
 
 		</div>
 

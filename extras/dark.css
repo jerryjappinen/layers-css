@@ -13,13 +13,13 @@ form, fieldset, legend, label {
 body {
 	background-color: #111;
 }
-pre, table {
+table {
 	background-color: #333;
 	border-width: 1px;
 }
 
 /*Tables*/
-table th, .zebra tr.even td {
+pre, table th, .zebra tr.even td {
 	background-color: #444;
 }
 	table table {

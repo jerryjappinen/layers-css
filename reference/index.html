@@ -54,411 +54,448 @@
 				background-color: #ddd;
 			}
 
+			.dark {
+				background-color: #111;
+				color: #fff;
+			}
+
 		</style>
 
 	</head>
 
 	<body>
+		<div class="row dark">
+			<div class="row-content buffer">
 
-		<h1>Layers CSS reference</h1>
+				<h1 class="squeeze-top">Layers CSS reference</h1>
 
-		<!-- General info -->
-		<p>Here's a clean CSS package that makes it easy to pick the stuff that <em>you</em> need, without having to override things. It doesn't choose a visual style or color scheme for you, it just gives you tools. Native input elements preserved, no dependencies or requirements. (Non-semantic class names: they work, deal with it.)</p>
+				<!-- General info -->
+				<p>Here's a clean CSS package that makes it easy to pick the stuff that <em>you</em> need, without having to override things. It doesn't choose a visual style or color scheme for you, it just gives you tools. Native input elements preserved, no dependencies or requirements. (Non-semantic class names: they work, deal with it.)</p>
 
-		<p>Please note that the <strong>color scheme is on this page is included in extras</strong>, the main release doesn't include any colors. Some background colors are added for clarity. Take a look at the source code to learn more.</p>
+				<p>Please note that the <strong>color scheme is on this page is included in extras</strong>, the main release doesn't include any colors. Some background colors are added for clarity. Take a look at the source code to learn more.</p>
 
-		<p><a href="all.html" target="_blank">Look here</a> to see how native elements look with nothing but Layers CSS loaded.</p>
+				<p><a href="all.html" target="_blank">Look here</a> to see how native elements look with nothing but Layers CSS loaded.</p>
 
-
-
-		<!--  -->
-		<h1>Fluid grid</h1>
-
-		<p>You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too. No wrappers are required. Columns within columns work fine.</p>
-
-		<div class="column eight">
-			<p><code>.column.eight</code></p>
-		</div>
-		<div class="column four last">
-			<p><code>.column.four last</code></p>
-		</div>
-		<div class="clear"></div>
-
-		<p>You can <code>.push-</code> columns.</p>
-
-		<div class="column four">
-			<p><code>.column.four</code></p>
-		</div>
-		<div class="column three push-two">
-			<p><code>.column.three.push-two</code></p>
-		</div>
-		<div class="column three last">
-			<p><code>.column.two.last</code></p>
-		</div>
-		<div class="clear"></div>
-
-		<p>If you want to start the stack from the <code>.right</code>:</p>
-
-		<div class="column right five">
-			<p><code>.column.right.five</code></p>
-		</div>
-		<div class="column right two push-two">
-			<p><code>.column.right.two.push-two</code></p>
-		</div>
-		<div class="column right three last">
-			<p><code>.column.right.three</code></p>
-		</div>
-
-		<div class="clear"></div>
-
-
-
-		<h3>Without gutters</h3>
-
-		<div class="column six reset">
-			<p><code>.column.six.reset</code></p>
-		</div>
-
-		<div class="column three reset colored">
-			<p><code>.column.three.reset</code></p>
-		</div>
-
-		<div class="column three reset">
-			<p><code>.column.three.reset</code></p>
-		</div>
-		<div class="clear"></div>
-
-		<p>You can also use proportional keywords:</p>
-
-		<div class="column half first">
-			<p><code>.column.half.first</code></p>
-		</div>
-
-		<div class="column fourth colored">
-			<p><code>.column.fourth</code></p>
-		</div>
-
-		<div class="column fourth">
-			<p><code>.column.fourth</code></p>
-		</div>
-		<div class="clear"></div>
-
-
-
-		<!--  -->
-		<h3>Fixed-fluid column combination</h3>
-
-		<p>One part gets a fixed width, the other side fills the rest. Very handy for combining images with a fluid grid. Multiple combinations can be nested. The fluid column always comes first in markup.</p>
-
-		<p>You can adjust the size of the fixed-width in steps with media queries, or break the combination completely.</p>
-
-		<div class="column fluid">
-			<div class="column-content colored">
-				<p><code>.column.fluid > .column-content</code></p>
 			</div>
 		</div>
+		<div class="row">
+			<div class="row-content buffer">
 
-		<div class="column fixed colored">
-			<p><code>.column.fixed</code></p>
-		</div>
-		<div class="clear"></div>
+				<!--  -->
+				<h1>Fluid grid</h1>
+
+				<p>You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too. No wrappers are required. Columns within columns work fine. Use n/12 keywords as class names like this:</p>
+
+				<div class="column eight">
+					<p><code>.column.eight</code></p>
+				</div>
+				<div class="column four last">
+					<p><code>.column.four.last</code></p>
+				</div>
+				<div class="clear"></div>
+
+				<p>You can <code>.push-</code> columns.</p>
+
+				<div class="column four">
+					<p><code>.column.four</code></p>
+				</div>
+				<div class="column three push-two">
+					<p><code>.column.three.push-two</code></p>
+				</div>
+				<div class="column three last">
+					<p><code>.column.two.last</code></p>
+				</div>
+				<div class="clear"></div>
+
+				<p>If you want to start the stack from the <code>.right</code>:</p>
+
+				<div class="column right five">
+					<p><code>.column.right.five</code></p>
+				</div>
+				<div class="column right three push-two">
+					<p><code>.column.right.three.push-two</code></p>
+				</div>
+				<div class="column right two last">
+					<p><code>.column.right.two</code></p>
+				</div>
+
+				<div class="clear"></div>
 
 
 
-		<p>You can also stack this starting from the <code>.right</code>.</p>
+				<h3>Without gutters</h3>
 
-		<div class="column fluid right">
-			<div class="column-content colored">
-				<p><code>.column.fluid.right > .column-content</code></p>
-			</div>
-		</div>
+				<p>Proportional keywords:</p>
 
-		<div class="column fixed right colored">
-			<p><code>.column.fixed.right</code></p>
-		</div>
-		<div class="clear"></div>
+				<div class="column half first">
+					<p><code>.column.half.first</code></p>
+				</div>
 
-		<h5>Extend</h5>
+				<div class="column fourth colored">
+					<p><code>.column.fourth</code></p>
+				</div>
 
-		<p>This is the CSS you to adjust the size of the fixed column.</p>
+				<div class="column fourth">
+					<p><code>.column.fourth</code></p>
+				</div>
+				<div class="clear"></div>
 
-		<pre class="buffer">
+				<p>n/12 keywords:</p>
+
+				<div class="column six reset">
+					<p><code>.column.six.reset</code></p>
+				</div>
+
+				<div class="column three reset colored">
+					<p><code>.column.three.reset</code></p>
+				</div>
+
+				<div class="column three reset">
+					<p><code>.column.three.reset</code></p>
+				</div>
+				<div class="clear"></div>
+
+
+
+				<!--  -->
+				<h3>Fixed-fluid column combination</h3>
+
+				<p>One part gets a fixed width, the other side fills the rest. Very handy for combining images with a fluid grid. Multiple combinations can be nested. The fluid column always comes first in markup.</p>
+
+				<p>You can adjust the size of the fixed-width in steps with media queries, or break the combination completely.</p>
+
+				<div class="column fluid">
+					<div class="column-content colored">
+						<p><code>.column.fluid > .column-content</code></p>
+					</div>
+				</div>
+
+				<div class="column fixed colored">
+					<p><code>.column.fixed</code></p>
+				</div>
+				<div class="clear"></div>
+
+
+
+				<p>You can also stack this starting from the <code>.right</code>.</p>
+
+				<div class="column fluid right">
+					<div class="column-content colored">
+						<p><code>.column.fluid.right > .column-content</code></p>
+					</div>
+				</div>
+
+				<div class="column fixed right colored">
+					<p><code>.column.fixed.right</code></p>
+				</div>
+				<div class="clear"></div>
+
+				<h5>Extend</h5>
+
+				<p>This is the CSS you to adjust the size of the fixed column.</p>
+
+				<pre class="buffer dark">
 
 /*Fixed column width*/
+.column.fixed {
+	width: 10em;
+}
 .column.fluid > .column-content {
 	margin-right: 10em;
 }
 .column.fluid.right > .column-content {
 	margin-left: 10em;
 }
-.column.fixed {
-	width: 10em;
-}
 </pre>
 
+				<h3>Rows</h3>
 
+				<p><code>.row-content</code> is aligned to the center of the parent. <code>.buffer</code> also gives its content breathing room. You can easily set up a full-bleed site with alternating background styling for each section with this HTMl:</p>
 
-		<h5>Generic</h5>
+				<pre class="buffer dark">
 
-		<div class="column six">
-			<dl class="buffer">
-				<dt><code>.clear</code></dt>
-				<dd>Clear stuff (<code>clear: both;</code>)</dd>
-				<dt><code>.hidden</code></dt>
-				<dd>Hide stuff (<code>display: none;</code>)</dd>
-				<dt><code>.dry</code></dt>
-				<dd>Move inline content away from view</dd>
-			</dl>
-		</div>
+&lt;!-- First section (custom styling for .my-first-row) --&gt;
+&lt;div class="my-first-row"&gt;
+	&lt;div class="row-content buffer"&gt;
+		&lt;!-- Your content --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 
-		<div class="column six last">
-			<dl class="buffer">
-				<dd></dd>
-				<dt><code>.border-box</code></dt>
-				<dd>Switch to this box-sizing mode in all browsers.</dd>
-				<dt><code>.float-left</code>, <code>.float-right</code></dt>
-				<dd>Float an element, remove clearing.</dd>
-			</dl>
-		</div>
-		<div class="clear"></div>
+&lt;!-- Another section (different custom styling for .my-second-row) --&gt;
+&lt;div class="my-second-row"&gt;
+	&lt;div class="row-content"&gt;
+		&lt;!-- Your content --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+				<p>You can naturally use e.g. the <code>section</code> element for the rows, Layers targets only the class names.</p>
 
 
 
-		<!--  -->
-		<h1>Common tools</h1>
-
-		<h5>Margins &amp; spacing</h5>
-
-		<div class="column six">
-			<div class="buffer">
-
-				<dl>
-					<dt><code>.reset</code></dt>
-					<dd>Reset margins to 0</dd>
-					<dt><code>.squeeze</code></dt>
-					<dd>Use smaller margins (half of the default)</dd>
-					<dt><code>.margin</code></dt>
-					<dd>Add default margins</dd>
-				</dl>
-
-				<p>Directions work as modifiers:</p>
-
-				<ul>
-					<li><code>.reset-top, .reset-bottom</code></li>
-					<li><code>.squeeze-right</code></li>
-					<li><code>.margin-top</code></li>
-				</ul>
-
-			</div>
-		</div>
-		<div class="column six last">
-			<div class="buffer">
-
-				<dl>
-					<dt><code>.buffer</code></dt>
-					<dd>Add comfortable paddings (like in this box)</dd>
-					<dt><code>.no-buffer</code></dt>
-					<dd>Remove any paddings</dd>
-				</dl>
-
-				<p>Directions work as modifiers:</p>
-
-				<ul>
-					<li><code>.buffer-left.buffer-right</code></li>
-					<li><code>.no-buffer-top</code></li>
-				</ul>
-
-			</div>
-		</div>
-		<div class="clear"></div>
-
-		<p>Psst! You can automatically use these as mixins in <em>LESS</em>.</p>
+				<!--  -->
+				<h1>Common tools</h1>
 
 
 
-		<!--  -->
-		<h1>Lists</h1>
+				<h5>Generic</h5>
 
-		<div class="column six">
+				<div class="column six">
+					<dl class="buffer">
+						<dt><code>.clear</code></dt>
+						<dd>Clear stuff (<code>clear: both;</code>)</dd>
+						<dt><code>.hidden</code></dt>
+						<dd>Hide stuff (<code>display: none;</code>)</dd>
+						<dt><code>.dry</code></dt>
+						<dd>Move inline content away from view</dd>
+					</dl>
+				</div>
 
-			<p><code>ul</code></p>
+				<div class="column six last">
+					<dl class="buffer">
+						<dd></dd>
+						<dt><code>.border-box</code></dt>
+						<dd>Switch to this box-sizing mode in all browsers.</dd>
+						<dt><code>.float-left</code>, <code>.float-right</code></dt>
+						<dd>Float an element, remove clearing.</dd>
+					</dl>
+				</div>
+				<div class="clear"></div>
 
-			<ul>
-				<li>One</li>
-				<li>Two</li>
-				<li>Three
+				<h5>Margins &amp; spacing</h5>
+
+				<div class="column six">
+					<div class="buffer">
+
+						<dl>
+							<dt><code>.reset</code></dt>
+							<dd>Reset margins to 0</dd>
+							<dt><code>.squeeze</code></dt>
+							<dd>Use smaller margins (half of the default)</dd>
+							<dt><code>.margin</code></dt>
+							<dd>Add default margins</dd>
+						</dl>
+
+						<p>Directions work as modifiers:</p>
+
+						<ul>
+							<li><code>.reset-top, .reset-bottom</code></li>
+							<li><code>.squeeze-right</code></li>
+							<li><code>.margin-top</code></li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="column six last">
+					<div class="buffer">
+
+						<dl>
+							<dt><code>.buffer</code></dt>
+							<dd>Add comfortable paddings (like in this box)</dd>
+							<dt><code>.no-buffer</code></dt>
+							<dd>Remove any paddings</dd>
+						</dl>
+
+						<p>Directions work as modifiers:</p>
+
+						<ul>
+							<li><code>.buffer-left.buffer-right</code></li>
+							<li><code>.no-buffer-top</code></li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="clear"></div>
+
+				<p>Psst! You can automatically use these as mixins in <em>LESS</em>.</p>
+
+
+
+				<!--  -->
+				<h1>Lists</h1>
+
+				<div class="column six">
+
+					<p><code>ul</code></p>
+
 					<ul>
-						<li>A</li>
-						<li>B</li>
-						<li>C</li>
-						<li>D</li>
+						<li>One</li>
+						<li>Two</li>
+						<li>Three
+							<ul>
+								<li>A</li>
+								<li>B</li>
+								<li>C</li>
+								<li>D</li>
+							</ul>
+						</li>
+						<li>Four</li>
 					</ul>
-				</li>
-				<li>Four</li>
-			</ul>
 
-		</div>
+				</div>
 
-		<div class="column six last">
+				<div class="column six last">
 
-			<p><code>ol</code></p>
+					<p><code>ol</code></p>
 
-			<ol>
-				<li>One</li>
-				<li>Two</li>
-				<li>Three
 					<ol>
-						<li>A</li>
-						<li>B</li>
-						<li>C</li>
-						<li>D</li>
+						<li>One</li>
+						<li>Two</li>
+						<li>Three
+							<ol>
+								<li>A</li>
+								<li>B</li>
+								<li>C</li>
+								<li>D</li>
+							</ol>
+						</li>
+						<li>Four</li>
 					</ol>
-				</li>
-				<li>Four</li>
-			</ol>
 
+				</div>
+				<div class="clear"></div>
+
+				<p><code>ul.plain</code></p>
+
+				<ul class="plain">
+					<li>One</li>
+					<li>Two</li>
+					<li>Three</li>
+					<li>Four</li>
+				</ul>
+
+				<p><code>ul.inline</code> keeps the inline context. Whitespace works accordingly.</p>
+
+				<ul class="inline">
+					<li>One</li>
+					<li>Two</li>
+					<li>Three</li>
+					<li>Four</li>
+				</ul>
+
+				<p><code>ol.inline.right</code></p>
+
+				<ol class="inline right">
+					<li>One</li>
+					<li>Two</li>
+					<li>Three</li>
+					<li>Four</li>
+				</ol>
+
+				<p>Horizontal lists with block list items: <code>ul.collapse.float-left</code> + <code>ul.collapse.float-right</code></p>
+
+				<ul class="collapse float-left">
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="#">Four</a></li>
+				</ul>
+				<ul class="collapse float-right">
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="#">Four</a></li>
+				</ul>
+				<div class="clear"></div>
+
+
+
+				<!--  -->
+				<h1>Tables</h1>
+
+				<table>
+					<caption>Default <code>table</code> has collapsed borders, 100% width and common-sense paddings for cells. (This is a table <code>caption</code>, by the way.)</caption>
+					<thead>
+						<tr>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+						</tr>
+						<tr>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="squeeze">
+					<caption><code>table.squeeze</code> has smaller cell paddings.</caption>
+					<thead>
+						<tr>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="plain">
+					<caption><code>table.plain</code> collapses everything.</caption>
+					<thead>
+						<tr>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+							<td>Cell</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+
+				<!--  -->
+				<h1>Forms</h1>
+
+				<p>Native input element styles are left alone. Input fields use the same, default box-sizing model as all other elements in all browsers so they're easy to customize.</p>
+
+				<form action="">
+					<p><input type="email" value="email@domain.com"> <input type="password" placeholder="Password"></p>
+					<p><input type="text" value="Disabled field" disabled></p>
+					<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
+				</form>
+
+				<p><code>.plain</code> elements are robbed of their OS-specific default styles (background-color added for clarity).</p>
+
+				<form action="">
+					<p><input type="text" placeholder="Placeholder" value="input.plain" class="plain"> <input type="submit" value="Submit" class="plain"></p>
+				</form>
+
+				<p>Remember, <code>.buffer</code> gives elements breathing room.</p>
+
+				<form action="">
+					<p><input type="text" placeholder="Placeholder" value="input.plain.buffer" class="plain buffer"> <input type="submit" value="Submit" class="plain buffer"></p>
+				</form>
+
+			</div>
 		</div>
-		<div class="clear"></div>
-
-		<p><code>ul.plain</code></p>
-
-		<ul class="plain">
-			<li>One</li>
-			<li>Two</li>
-			<li>Three</li>
-			<li>Four</li>
-		</ul>
-
-		<p><code>ul.inline</code> keeps the inline context. Whitespace works accordingly.</p>
-
-		<ul class="inline">
-			<li>One</li>
-			<li>Two</li>
-			<li>Three</li>
-			<li>Four</li>
-		</ul>
-
-		<p><code>ol.inline.right</code></p>
-
-		<ol class="inline right">
-			<li>One</li>
-			<li>Two</li>
-			<li>Three</li>
-			<li>Four</li>
-		</ol>
-
-		<p>Horizontal lists with block list items: <code>ul.collapse.float-left</code> + <code>ul.collapse.float-right</code></p>
-
-		<ul class="collapse float-left">
-			<li><a href="#">One</a></li>
-			<li><a href="#">Two</a></li>
-			<li><a href="#">Three</a></li>
-			<li><a href="#">Four</a></li>
-		</ul>
-		<ul class="collapse float-right">
-			<li><a href="#">One</a></li>
-			<li><a href="#">Two</a></li>
-			<li><a href="#">Three</a></li>
-			<li><a href="#">Four</a></li>
-		</ul>
-		<div class="clear"></div>
-
-
-
-		<!--  -->
-		<h1>Tables</h1>
-
-		<table>
-			<caption>Default <code>table</code> has collapsed borders, 100% width and common-sense paddings for cells. (This is a table <code>caption</code>, by the way.)</caption>
-			<thead>
-				<tr>
-					<th>Heading</th>
-					<th>Heading</th>
-					<th>Heading</th>
-					<th>Heading</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Cell</td>
-					<td>Cell</td>
-					<td>Cell</td>
-					<td>Cell</td>
-				</tr>
-				<tr>
-					<td>Cell</td>
-					<td>Cell</td>
-					<td>Cell</td>
-					<td>Cell</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<table class="squeeze">
-			<caption><code>table.squeeze</code> has smaller cell paddings.</caption>
-			<thead>
-				<tr>
-					<th>Heading</th>
-					<th>Heading</th>
-					<th>Heading</th>
-					<th>Heading</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Cell</td>
-					<td>Cell</td>
-					<td>Cell</td>
-					<td>Cell</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<table class="plain">
-			<caption><code>table.plain</code> collapses everything.</caption>
-			<thead>
-				<tr>
-					<th>Heading</th>
-					<th>Heading</th>
-					<th>Heading</th>
-					<th>Heading</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Cell</td>
-					<td>Cell</td>
-					<td>Cell</td>
-					<td>Cell</td>
-				</tr>
-			</tbody>
-		</table>
-
-
-
-		<!--  -->
-		<h1>Forms</h1>
-
-		<p>Native input element styles are left alone. Input fields use the same, default box-sizing model as all other elements in all browsers so they're easy to customize.</p>
-
-		<form action="">
-			<p><input type="email" value="email@domain.com"> <input type="password" placeholder="Password"></p>
-			<p><input type="text" value="Disabled field" disabled></p>
-			<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
-		</form>
-
-		<p><code>.plain</code> elements are robbed of their OS-specific default styles (background-color added for clarity).</p>
-
-		<form action="">
-			<p><input type="text" placeholder="Placeholder" value="input.plain" class="plain"> <input type="submit" value="Submit" class="plain"></p>
-		</form>
-
-		<p>Remember, <code>.buffer</code> gives elements breathing room.</p>
-
-		<form action="">
-			<p><input type="text" placeholder="Placeholder" value="input.plain.buffer" class="plain buffer"> <input type="submit" value="Submit" class="plain buffer"></p>
-		</form>
-
 	</body>
 
 </html>

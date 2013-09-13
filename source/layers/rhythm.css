@@ -32,8 +32,6 @@ dd {
 	margin-left: 0;
 }
 
-
-
 /*Tables*/
 caption {
 	margin-bottom: 0.67em;
@@ -48,9 +46,7 @@ th, td {
 		padding: 0;
 	}
 
-
-
-/*Condensed blocks*/
+/*Headings*/
 h1.squeeze, h2.squeeze, h3.squeeze, h4.squeeze, h5.squeeze, h6.squeeze, 
 h1.squeeze-top , h2.squeeze-top, h3.squeeze-top, h4.squeeze-top, h5.squeeze-top, h6.squeeze-top {
 	margin-top: 0.67em;
@@ -70,68 +66,60 @@ p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pr
 
 
 
-/*Add margins*/
-.margin {
-	margin: 1.34em;
+/*Spacing*/
+.push, .push-top {
+	margin-top: 1.34em;
 }
-	.margin-top {
-		margin-top: 1.34em;
-	}
-	.margin-right {
-		margin-right: 1.34em;
-	}
-	.margin-bottom {
-		margin-bottom: 1.34em;
-	}
-	.margin-left {
-		margin-left: 1.34em;
-	}
-.reset {
-	margin: 0;
+.push, .push-right {
+	margin-right: 1.34em;
 }
-	.reset-top {
-		margin-top: 0;
-	}
-	.reset-right {
-		margin-right: 0;
-	}
-	.reset-bottom {
-		margin-bottom: 0;
-	}
-	.reset-left {
-		margin-left: 0;
-	}
+.push, .push-bottom {
+	margin-bottom: 1.34em;
+}
+.push, .push-left {
+	margin-left: 1.34em;
+}
+
+/*No spacing*/
+.reset, .reset-top {
+	margin-top: 0;
+}
+.reset, .reset-right {
+	margin-right: 0;
+}
+.reset, .reset-bottom {
+	margin-bottom: 0;
+}
+.reset, .reset-left {
+	margin-left: 0;
+}
 
 
 
 /*Buffers*/
-.buffer {
-	padding: 1em 2em 2em 2em;
+.buffer, .buffer-top {
+	padding-top: 1em;
 }
-	.buffer-top {
-		padding-top: 1em;
-	}
-	.buffer-right {
-		padding-right: 2em;
-	}
-	.buffer-bottom {
-		padding-bottom: 2em;
-	}
-	.buffer-left {
-		padding-left: 2em;
-	}
-.no-buffer {
-	padding: 0;
+.buffer, .buffer-right {
+	padding-right: 2em;
 }
-	.no-buffer-top {
-		padding-top: 0;
-	}
-	.no-buffer-right {
-		padding-right: 0;
-	}
-	.no-buffer-bottom {
-		padding-bottom: 0;
-	}
-	.no-buffer-left {
-		padding-left: 0;
-	}
+.buffer, .buffer-bottom {
+	padding-bottom: 2em;
+}
+.buffer, .buffer-left {
+	padding-left: 2em;
+}
+
+/*No buffers*/
+.no-buffer, .no-buffer-top {
+	padding-top: 0;
+}
+.no-buffer, .no-buffer-right {
+	padding-right: 0;
+}
+.no-buffer, .no-buffer-bottom {
+	padding-bottom: 0;
+}
+.no-buffer, .no-buffer-left {
+	padding-left: 0;
+}

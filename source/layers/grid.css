@@ -1,4 +1,14 @@
 
+/*Rows with buffer space*/
+/*.row {}*/
+.row-content {
+	margin: 0 auto;
+	max-width: 70em;
+}
+.row-content.buffer {	
+	padding: 2% 8% 6% 8%;
+}
+
 /*Column basics (12-based fluid grid)*/
 .column {
 	clear: none;
