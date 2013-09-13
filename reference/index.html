@@ -46,8 +46,13 @@
 					background-color: #ddd;
 				}
 
-			.grid .column {
+			.grid .column p {
 				text-align: center;
+				margin-top: 0;
+				margin-bottom: 0;
+				padding-top: 0.8em;
+				padding-bottom: 1em;
+				line-height: 1em;
 			}
 
 			code {
@@ -107,8 +112,8 @@
 				<div class="column four colored">
 					<p><code>.column.four</code></p>
 				</div>
-				<div class="column four colored">
-					<p><code>.column.four</code></p>
+				<div class="column third colored">
+					<p><code>.column.third</code></p>
 				</div>
 				<div class="column four last colored">
 					<p><code>.column.four.last</code></p>
@@ -133,11 +138,8 @@
 
 
 
-				<div class="column one colored">
-					<p><code>.one</code></p>
-				</div>
-				<div class="column one colored">
-					<p><code>.one</code></p>
+				<div class="column two colored">
+					<p><code>.two</code></p>
 				</div>
 				<div class="column one colored">
 					<p><code>.one</code></p>
@@ -148,32 +150,26 @@
 				<div class="column one colored">
 					<p><code>.one</code></p>
 				</div>
-				<div class="column one colored">
-					<p><code>.one</code></p>
-				</div>
-				<div class="column one last colored">
-					<p><code>.one.last</code></p>
+				<div class="column two last colored">
+					<p><code>.two.last</code></p>
 				</div>
 				<div class="clear"></div>
 
 
 
-				<p>You can <code>.push-</code> columns.</p>
+				<p>You can <code>.push-</code> columns as well:</p>
 
-				<div class="column four push-two">
-					<p><code>.column.four.<strong>push-two</strong></code></p>
+				<div class="column two push-one">
+					<p><code>.column.two.<strong>push-one</strong></code></p>
 				</div>
-				<div class="column two">
-					<p><code>.column.two</code></p>
-				</div>
-				<div class="column two last">
-					<p><code>.column.two.last</code></p>
+				<div class="column two push-half last">
+					<p><code>.column.two.<strong>push-half</strong>.last</code></p>
 				</div>
 				<div class="clear"></div>
 
 
 
-				<p>If you want to start the stack from the <code>.right</code>:</p>
+				<p>The stack can also start from the <code>.right</code>:</p>
 
 				<div class="column right five">
 					<p><code>.column.<strong>right</strong>.five</code></p>
@@ -226,7 +222,7 @@
 				<p>You can adjust the size of the fixed-width in steps with media queries, or break the combination completely.</p>
 
 				<div class="column fluid">
-					<div class="column-content colored">
+					<div class="column-content" style="background: cyan;">
 						<p><code>.column.fluid > .column-content</code></p>
 					</div>
 				</div>
@@ -238,10 +234,10 @@
 
 
 
-				<p>You can also stack this starting from the <code>.right</code>.</p>
+				<p>You can also stack this starting from the <code>.right</code>:</p>
 
 				<div class="column fluid right">
-					<div class="column-content colored">
+					<div class="column-content" style="background: cyan;">
 						<p><code>.column.fluid.right > .column-content</code></p>
 					</div>
 				</div>
@@ -253,7 +249,7 @@
 
 				<h5>Extend</h5>
 
-				<p>This is the CSS you to adjust the size of the fixed column.</p>
+				<p>This is the CSS you to adjust the size of the fixed column (default is <code>10em</code>):</p>
 
 				<pre class="buffer dark">
 
@@ -273,24 +269,28 @@
 
 				<p><code>.row-content</code> is aligned to the center of the parent. <code>.buffer</code> also gives its content breathing room. You can easily set up a full-bleed site with alternating background styling for each section with this HTMl:</p>
 
-				<pre class="buffer dark">
+				<div class="row-content buffer colored">
+					<div class="column half">
+						<p><code>.row-content.buffer > .column.half</code></p>
+					</div>
+					<div class="column half last">
+						<p><code>.row-content.buffer > .column.half.last</code></p>
+					</div>
+					<div class="clear"></div>
+				</div>
 
-&lt;!-- First section (custom styling for .my-first-row) --&gt;
-&lt;div class="my-first-row"&gt;
-	&lt;div class="row-content buffer"&gt;
-		&lt;!-- Your content --&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
+				<p>Controlling max-width of <code>.row-content</code> works nicely for full-bleed layouts:</p>
 
-&lt;!-- Another section (different custom styling for .my-second-row) --&gt;
-&lt;div class="my-second-row"&gt;
-	&lt;div class="row-content"&gt;
-		&lt;!-- Your content --&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+				<div class="colored">
+					<div class="row-content buffer colored" style="max-width: 30em;">
+						<div class="column full">
+							<p><code>.row-content.buffer > .column.full</code></p>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
 
-				<p>You can naturally use e.g. the <code>section</code> element for the rows, Layers targets only the class names.</p>
+				<p>You can naturally use any element (like <code>section</code> for example) for the rows. You can use rows to build both the overall frame of your site and individual page content. <code>.row-content</code> has a default maximum-width of <code>70em</code>.</p>
 
 			</div>
 		</div>
