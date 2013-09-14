@@ -60,7 +60,7 @@
 				color: #e01b6a;
 			}
 
-			input.plain {
+			input.plain, textarea.plain {
 				background-color: #ddd;
 			}
 
@@ -546,6 +546,7 @@
 				<form action="">
 					<p><input type="email" value="email@domain.com"> <input type="password" placeholder="Password"></p>
 					<p><input type="text" value="Disabled field" disabled></p>
+					<p><textarea>Longer piece of text</textarea></p>
 					<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
 				</form>
 
@@ -553,6 +554,7 @@
 
 				<form action="">
 					<p><input type="text" placeholder="Placeholder" value="input.plain" class="plain"> <input type="submit" value="Submit" class="plain"></p>
+					<p><textarea class="plain squeeze">Longer piece of text (with .squeeze)</textarea></p>
 				</form>
 
 				<p>Remember, <code>.buffer</code> gives elements breathing room.</p>
