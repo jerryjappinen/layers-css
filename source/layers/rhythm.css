@@ -42,7 +42,18 @@ th, td {
 	.squeeze th, .squeeze td, th.squeeze, td.squeeze, table table th, table table td {
 		padding: 0.335em;
 	}
-	.plain th, .plain td, th.plain, td.plain {
+	table.plain th,
+	table.plain td,
+	tr.plain th,
+	tr.plain td,
+	tbody.plain th,
+	tbody.plain td,
+	thead.plain th,
+	thead.plain td,
+	tfoot.plain th,
+	tfoot.plain td,
+	th.plain,
+	td.plain {
 		padding: 0;
 	}
 
