@@ -8,208 +8,785 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<style type="text/css">@-ms-viewport{width: device-width;}</style>
 		
-		<title>Layers CSS</title>
+		<title>Layers CSS reference</title>
 		<meta name="author" content="Jerry Jäppinen">
 		<meta name="application-name" content="Layers CSS">
 		<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 
-		<!-- Base styles -->
+		<!-- Layers & responsive adjustments -->
+		<link rel="stylesheet" href="source/layers/_normalize.css" media="screen">
+		<link rel="stylesheet" href="source/layers/forms.css" media="screen">
+		<link rel="stylesheet" href="source/layers/grid.css" media="screen">
+		<link rel="stylesheet" href="source/layers/lists.css" media="screen">
+		<link rel="stylesheet" href="source/layers/rhythm.css" media="screen">
+		<link rel="stylesheet" href="source/layers/text.css" media="screen">
+		<link rel="stylesheet" href="source/layers/tools.css" media="screen">
+		<link rel="stylesheet" href="source/responsive/break-grid.css" media="screen">
+		<link rel="stylesheet" href="source/responsive/font-size.css" media="screen">
+
+		<!-- Release version -->
+<!-- 
 		<link rel="stylesheet" href="release/layers.css" media="screen">
 		<link rel="stylesheet" href="release/responsive.css" media="screen">
+ -->
+		<!-- Extras -->
+		<link rel="stylesheet" href="extras/frame.css" media="screen">	<!-- Paddings for page body -->
+		<link rel="stylesheet" href="extras/light.css" media="screen">	<!-- Light color scheme -->
+		<link rel="stylesheet" href="extras/metro.css" media="screen">	<!-- Metro look -->
 
-		<!-- Page style -->
+		<!-- Custom styles -->
 		<style type="text/css">
-			html {
-				font-size: 1.2em;
-			}
-			body {
-				width: 80%;
-				max-width: 33em;
-				margin: 0 auto;
-				padding-top: 4%;
-				padding-bottom: 2%;
-				background-color: black;
-				color: white;
-				text-align: center;
-				font-weight: 200;
-			}
 
-
-
-			/*Left-aligned layout*/
-			body.alternate {
-				width: 65%;
-				max-width: 30em;
-				padding-left: 10%;
-				text-align: left;
-				margin-left: 0;
-				margin-right: 0;
-			}
-			@media handheld, only screen and (max-width: 50em) {
-				body.alternate {
-					width: 80%;
-				}
-			}
-			.alternate h1 {
-				padding-left: 0;
-				padding-right: 0;
-			}
-			.alternate a.button {
-				padding-left: 0;
-				padding-right: 0;
-			}
-			.alternate ul.inline li {
-				margin-right: 1.4em;
-				margin-left: 0;
-			}
-
-
-
-			/*Blocks*/
-			h1 {
-				margin-bottom: 1.4em;
-				line-height: 1em;
-			}
-			h1 img {
-				max-width: 80%;
-			}
-			ul.collapse li {
-				margin-right: 0.3em;
-				margin-left: 0.3em;
-			}
-				ul.collapse > li.first {
-					margin-left: -0.5em;
-				}
-				ul.collapse > li.last {
-					margin-right: 0;
-				}
-				ul.collapse > li > a {
-					display: inline-block;
-					padding: 0.4em 0.5em;
-				}
-
-
-
-			/*Text*/
-			.discreet {
-				color: #666;
+			/*Generic*/
+			code {
 				font-size: 0.8em;
-				font-weight: normal;
+				color: #e01b6a;
 			}
-			a {
-				color: #cc7700;
-				text-decoration: none;
+			dl.plain dt {
+				font-weight: inherit;
 			}
-				a:hover {
-					text-decoration: underline;
-				}
-			h4, a.button {
-				-webkit-font-smoothing: antialiased;
-			}
-
-			/*Text links*/
-			.discreet a.discreet {
-				color: inherit;
-				font-size: 1em;
-				text-decoration: underline;
-			}
-				.discreet a.discreet:hover {
-					text-decoration: none;
-				}
-
-
-			.description {
-				font-size: 0.8em;
-			}
-
-
-			/*Button links*/
-			a.button {
-				display: inline-block;
-				padding: 0.1em 0.3em 0.2em 0.3em;
-				font-size: 2.1em;
+			a, a:visited {
 				color: #00c0e6;
 			}
 				a.button:hover, a.button:focus {
-					padding-top: 0.05em;
-					padding-bottom: 0.35em;
-					text-decoration: none;
 					color: #88ddee;
 				}
 					a.button:active {
-						padding-top: 0.1em;
+						color: #00c0e6;
+					}
+			a {
+			    -webkit-transition-duration: 125ms;
+			    -moz-transition-duration: 125ms;
+			    -o-transition-duration: 125ms;
+			    transition-duration: 125ms;
+
+			    -webkit-transition-property: color, border, top, padding;
+			    -moz-transition-property: color, border, top, padding;
+			    -o-transition-property: color, border, top, padding;
+			    transition-property: color, border, top, padding;
+			}
+
+
+
+			/*Colorize columns for clarity*/
+			.reference .column, .reference ul, .reference ol {
+				background-color: #eee;
+			}
+				.reference .colored {
+					background-color: #ddd;
+				}
+
+
+
+			/*Grid*/
+			.row-grid .column p {
+				text-align: center;
+				margin-top: 0;
+				margin-bottom: 0;
+				padding-top: 0.8em;
+				padding-bottom: 1em;
+				line-height: 1em;
+			}
+
+
+
+			/*Forms*/
+			input.plain, textarea.plain {
+				background-color: #ddd;
+			}
+
+
+
+			/*Title row*/
+			.row-title {
+				background-color: #ff4551;
+				color: #fff;
+				text-align: center;
+			}
+			.row-title .row-content.buffer {
+				padding-top: 6%;
+				padding-bottom: 7%;
+			}
+			.row-title .row-content.buffer h1 {
+				line-height: 1.2em;
+				margin-top: 0.7em;
+				margin-bottom: 0.8em;
+			}
+
+
+
+			/*Intro*/
+			.row-intro h1 a, .row-intro h1 img {
+				display: block;
+			}
+			.row-intro h1 img {
+				max-height: 1.4em;
+			}
+			.row-intro p.discreet, .row-intro dd {
+				color: #888;
+			}
+				.row-intro .discreet a {
+					color: inherit;
+					text-decoration: underline;
+				}
+					.row-intro .discreet a:hover, .row-intro .discreet a:focus {
+						color: #fff;
+					}
+
+			/*Download link*/
+			.row-intro h2 {
+				font-size: 1em;
+				color: #888;
+			}
+			.row-intro h2 a {
+				position: relative;
+				display: inline-block;
+				padding: 0.2em 1em 0.3em 1em;
+				margin-right: 0.8em;
+
+				line-height: 2em;
+				font-size: 1.2em;
+				font-weight: 100;
+				text-transform: uppercase;
+
+				background-color: #0094b3;
+				color: #fff;
+				border-color: #1a1a1a;
+			}
+				.row-intro h2 a:hover, .row-intro h2 a:focus {
+					top: -0.2em;
+					border-bottom-width: 0.2em;
+					text-decoration: none;
+					background-color: #00aacc;
+					color: #fff;
+				}
+					.row-intro h2 a:active {
+						top: 0;
+						border-bottom-width: 0;
+						color: #fff;
+					}
+
+			/*Goodies*/
+			.row-intro dt a {
+				display: inline-block;
+				padding: 0.2em;
+				margin-left: -0.2em;
+			}
+			.row-intro dt {
+				margin-top: 1.2em;
+			}
+				.row-intro dt a:hover, .row-intro dt a:focus {
+					padding-top: 0.05em;
+					padding-bottom: 0.35em;
+					text-decoration: none;
+				}
+					.row-intro dt a:active {
+						padding-top: 0.2em;
 						padding-bottom: 0.2em;
+					}
+
+
+
+			/*Dark sections*/
+			.dark {
+				background-color: #1a1a1a;
+				color: #fff;
+				font-weight: 100;
+			}
+			.dark a {
+				text-decoration: none;
+				color: #00c0e6;
+			}
+				.dark a:hover, .dark a:focus {
+					color: #88ddee;
+				}
+					.dark a:active {
 						color: #00c0e6;
 					}
 
-			p, h1, a {
-				-webkit-transition-property: all;
-				-webkit-transition-duration: 0.2s;
-				-webkit-transition-delay: 0;
-				-moz-transition-property: all;
-				-moz-transition-duration: 0.2s;
-				-moz-transition-delay: 0;
-				transition-property: all;
-				transition-duration: 0.2s;
-				transition-delay: 0;
+
+
+			/*Colored sections*/
+			.reference .row {
+				border-top-width: 1em;
+				border-color: #1a1a1a;
 			}
+				.reference .row:first-of-type {
+					border-top-width: 0;
+				}
+
 
 		</style>
+
 	</head>
 
-	<body class="alternate">
+	<body>
 
-		<h1 class="squeeze-top"><a href="./"><img src="logo.gif" alt="Layers CSS" title="Layers CSS"></a></h1>
+		<!-- About Layers -->
+		<div class="row row-intro dark">
+			<div class="row-content buffer">
 
-		<h4>...is an unobtrusive, no-bullshit CSS pack to help you build the look you want on the web. You can stop overriding things now.</h4>
+				<h1 class="squeeze-top"><a href="./"><img src="logo.gif" alt="Layers CSS" title="Layers CSS"></a></h1>
 
-		<div class="buffer-top buffer-bottom">
+				<div class="column half">
 
-			<p class="squeeze-bottom"><a href="release/layers.css" target="_blank" class="button">get layers.css</a></p>
+					<p>A clean, unobtrusive, no-bullshit CSS pack to help you build the look you want on the web. You can stop overriding things now.</p>
 
-			<ul class="reset discreet collapse">
-				<li class="first"><a href="reference/" target="_blank">reference &amp; demo</a></li>
-				<li><a href="release/responsive.css" target="_blank">responsive adjustments</a></li>
-				<li class="last"><a href="extras/" target="_blank">extras</a></li>
-			</ul>
+					<ul>
+						<li>Includes normalizations, sensible defaults, a fluid grid and other tools</li>
+						<li>Preserves native input elements</li>
+						<li>No <code>px</code> definitions</li>
+						<li>No rounded corners, colors or other preset visuals</li>
+						<li>Under 1/10th the size of Bootstrap</li>
+						<li>No dependencies or requirements</li>
+					</ul>
 
-			<ul class="reset discreet collapse">
-				<li class="first"><a href="source/" target="_blank">pick &amp; choose</a></li>
-				<li class="last"><a href="readme.txt" target="_blank">readme</a></li>
-			</ul>
+					<p class="discreet">Maintained on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank">Bitbucket</a> by <a href="https://twitter.com/Eiskis" target="_blank">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank">eiskis.net</a>. <a href="readme.txt" target="_blank">Here's the readme</a>.</p>
 
+					<p class="discreet">Email <a href="mailto:eiskis@gmail.com" target="_blank">eiskis@gmail.com</a> / call <a href="tel:++385 40 7188776">+385 40 7188776</a> for questions, answers or a hot date.</p>
+
+				</div>
+
+				<div class="column half last">
+					<div class="buffer-left">
+
+						<h2 class="reset-top squeeze-bottom"><a href="release/layers.css" target="_blank">Download</a> layers.css, 13 kb minified</h2>
+
+						<dl class="reset plain">
+
+							<dt><a href="release/responsive.css" target="_blank">Responsive adjustments</a></dt>
+							<dd>Break columns and adjust font size on small screens.</dd>
+
+							<dt><a href="extras/" target="_blank">Extras</a></dt>
+							<dd>Default color schemes, typography etc.</dd>
+
+							<dt><a href="source/" target="_blank">Pick &amp; choose</a></dt>
+							<dd>Take the source files you want.</dd>
+<!-- 
+							<dt><a href="readme.txt" target="_blank">Readme</a></dt>
+							<dd>Read instructions</dd>
+ -->
+						</dl>
+
+					</div>
+				</div>
+				<div class="clear"></div>
+
+			</div>
 		</div>
 
-		<p class="description">Includes normalizations, sensible defaults and fluid grid in very small package. Take only what you want. No rounded corners, colors, requirements, dependencies or any other bullshit.</p>
-
-		<p class="discreet">Source and contributions on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" class="discreet">Bitbucket</a>. Shared by <a href="https://twitter.com/Eiskis" target="_blank" class="discreet">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank" class="discreet">eiskis.net</a>. Email to <a href="mailto:eiskis@gmail.com" target="_blank" class="discreet">eiskis@gmail.com</a> / call <a href="tel:++385 40 7188776" class="discreet">+385 40 7188776</a> for questions, answers or a hot date.</p>
 
 
+		<!-- Title -->
+		<div class="row row-title">
+			<div class="row-content buffer">
+				<h1>Reference</h1>
+			</div>
+		</div>
 
-		<!-- Add some magic -->
-		<script type="text/javascript">
-			var messWithUsersHead = function (event) {
 
-				// Catch key
-				if (window.event) { // eg. IE
-					keynum = window.event.keyCode;
-				} else if (event.which) { // eg. Firefox
-					keynum = event.which;
-				}
 
-				// Toggle layout with space key
-				if (keynum == 32) {
-					var body = document.getElementsByTagName('body')[0];
-					if (body.className === '') {
-						body.className = 'alternate';
-					} else {
-						body.className = '';
-					}
-				}
+		<div class="reference">
 
-			};
-			window.addEventListener('keydown', messWithUsersHead, false);
-		</script>
+			<!-- Grid -->
+			<div class="row row-grid">
+				<div class="row-content buffer">
+
+					<!--  -->
+					<h1>Fluid grid</h1>
+
+					<p>You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too. Columns are stacked from left to right, no wrappers are required. Columns within columns work fine.</p>
+
+					<p>Use <strong>n/12</strong> or fractional keywords as class names, like this:</p>
+
+					<div class="column six">
+						<p><code>.column.six</code></p>
+					</div>
+					<div class="column six last">
+						<p><code>.column.six.last</code></p>
+					</div>
+					<div class="clear"></div>
+
+
+
+					<div class="column four colored">
+						<p><code>.column.four</code></p>
+					</div>
+					<div class="column third colored">
+						<p><code>.column.third</code></p>
+					</div>
+					<div class="column four last colored">
+						<p><code>.column.four.last</code></p>
+					</div>
+					<div class="clear"></div>
+
+
+
+					<div class="column three">
+						<p><code>.column.three</code></p>
+					</div>
+					<div class="column three">
+						<p><code>.column.three</code></p>
+					</div>
+					<div class="column fourth">
+						<p><code>.column.fourth</code></p>
+					</div>
+					<div class="column fourth last">
+						<p><code>.column.fourth.last</code></p>
+					</div>
+					<div class="clear"></div>
+
+
+
+					<div class="column two colored">
+						<p><code>.two</code></p>
+					</div>
+					<div class="column one colored">
+						<p><code>.one</code></p>
+					</div>
+					<div class="column twofourths colored">
+						<p><code>.twofourths</code></p>
+					</div>
+					<div class="column one colored">
+						<p><code>.one</code></p>
+					</div>
+					<div class="column two last colored">
+						<p><code>.two.last</code></p>
+					</div>
+					<div class="clear"></div>
+
+
+
+					<p>You can <code>.push-</code> columns as well:</p>
+
+					<div class="column two push-one">
+						<p><code>.column.two.<strong>push-one</strong></code></p>
+					</div>
+					<div class="column two push-half last">
+						<p><code>.column.two.<strong>push-half</strong>.last</code></p>
+					</div>
+					<div class="clear"></div>
+
+
+
+					<p>The stack can also start from the <code>.right</code>:</p>
+
+					<div class="column right five">
+						<p><code>.column.<strong>right</strong>.five</code></p>
+					</div>
+					<div class="column right three">
+						<p><code>.column.<strong>right</strong>.three</code></p>
+					</div>
+					<div class="column right two last">
+						<p><code>.column.<strong>right</strong>.two</code></p>
+					</div>
+
+					<div class="clear"></div>
+
+
+
+					<h3>Without gutters</h3>
+
+					<p><code>.reset</code> columns to remove gutter space:</p>
+
+					<div class="column half reset colored">
+						<p><code>.column.half.reset</code></p>
+					</div>
+					<div class="column three reset">
+						<p><code>.column.three.reset</code></p>
+					</div>
+					<div class="column three reset colored">
+						<p><code>.column.three.reset</code></p>
+					</div>
+					<div class="clear"></div>
+
+
+					<div class="column three reset push-one">
+						<p><code>.column.three.reset.push-one</code></p>
+					</div>
+					<div class="column four reset colored">
+						<p><code>.column.four.reset</code></p>
+					</div>
+					<div class="column three reset">
+						<p><code>.column.three.reset</code></p>
+					</div>
+					<div class="clear"></div>
+
+
+
+					<!--  -->
+					<h3>Fixed-fluid column combination</h3>
+
+					<p>One part gets a fixed width, the other side fills the rest. Very handy for combining images with a fluid grid. Multiple combinations can be nested. The fluid column always comes first in markup.</p>
+
+					<p>You can adjust the size of the fixed-width in steps with media queries, or break the combination completely.</p>
+
+					<div class="column fluid">
+						<div class="column-content">
+							<p><code>.column.fluid > .column-content</code></p>
+						</div>
+					</div>
+
+					<div class="column fixed colored">
+						<p><code>.column.fixed</code></p>
+					</div>
+					<div class="clear"></div>
+
+
+
+					<p>You can also stack this starting from the <code>.right</code>:</p>
+
+					<div class="column fluid right">
+						<div class="column-content">
+							<p><code>.column.fluid.right > .column-content</code></p>
+						</div>
+					</div>
+
+					<div class="column fixed right colored">
+						<p><code>.column.fixed.right</code></p>
+					</div>
+					<div class="clear"></div>
+
+					<h5>Extend</h5>
+
+					<p>This is the CSS you to adjust the size of the fixed column (default is <code>10em</code>):</p>
+
+					<pre class="buffer dark">
+
+/*Fixed column width*/
+.column.fixed {
+	width: 10em;
+}
+.column.fluid > .column-content {
+	margin-right: 10em;
+}
+.column.fluid.right > .column-content {
+	margin-left: 10em;
+}
+</pre>
+
+					<h3>Rows</h3>
+
+					<p><code>.row-content</code> is aligned to the center of the parent. <code>.buffer</code> also gives its content breathing room. You can easily set up a full-bleed site with alternating background styling for each section with this HTMl:</p>
+
+					<div class="row-content buffer colored">
+						<div class="column half">
+							<p><code>.row-content.buffer > .column.half</code></p>
+						</div>
+						<div class="column half last">
+							<p><code>.row-content.buffer > .column.half.last</code></p>
+						</div>
+						<div class="clear"></div>
+					</div>
+
+					<p>Controlling max-width of <code>.row-content</code> works nicely for full-bleed layouts:</p>
+
+					<div class="colored">
+						<div class="row-content buffer colored" style="max-width: 30em;">
+							<div class="column full">
+								<p><code>.row-content.buffer > .column.full</code></p>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+
+					<p>You can naturally use any element (like <code>section</code> for example) for the rows. You can use rows to build both the overall frame of your site and individual page content. <code>.row-content</code> has a default maximum-width of <code>70em</code>.</p>
+
+				</div>
+			</div>
+
+
+
+			<!-- Tools -->
+			<div class="row row-tools lightgrey">
+				<div class="row-content buffer">
+
+					<h1 class="squeeze-top">Common tools</h1>
+
+
+
+					<h5>Generic</h5>
+
+					<div class="column six">
+						<dl class="buffer">
+							<dt><code>.clear</code></dt>
+							<dd>Clear stuff (<code>clear: both;</code>)</dd>
+							<dt><code>.hidden</code></dt>
+							<dd>Hide stuff (<code>display: none;</code>)</dd>
+							<dt><code>.dry</code></dt>
+							<dd>Move inline content away from view</dd>
+						</dl>
+					</div>
+
+					<div class="column six last">
+						<dl class="buffer">
+							<dd></dd>
+							<dt><code>.border-box</code></dt>
+							<dd>Switch to this box-sizing mode in all browsers.</dd>
+							<dt><code>.float-left</code>, <code>.float-right</code></dt>
+							<dd>Float an element, remove clearing.</dd>
+						</dl>
+					</div>
+					<div class="clear"></div>
+
+					<h5>Margins &amp; spacing</h5>
+
+					<div class="column six">
+						<div class="buffer">
+
+							<dl>
+								<dt><code>.reset</code></dt>
+								<dd>Reset margins to 0</dd>
+								<dt><code>.squeeze</code></dt>
+								<dd>Use smaller margins (half of the default)</dd>
+								<dt><code>.margin</code></dt>
+								<dd>Add default margins</dd>
+							</dl>
+
+							<p>Directions work as modifiers:</p>
+
+							<ul>
+								<li><code>.reset-top, .reset-bottom</code></li>
+								<li><code>.squeeze-right</code></li>
+								<li><code>.margin-top</code></li>
+							</ul>
+
+						</div>
+					</div>
+					<div class="column six last">
+						<div class="buffer">
+
+							<dl>
+								<dt><code>.buffer</code></dt>
+								<dd>Add comfortable paddings (like in this box)</dd>
+								<dt><code>.no-buffer</code></dt>
+								<dd>Remove any paddings</dd>
+							</dl>
+
+							<p>Directions work as modifiers:</p>
+
+							<ul>
+								<li><code>.buffer-left.buffer-right</code></li>
+								<li><code>.no-buffer-top</code></li>
+							</ul>
+
+						</div>
+					</div>
+					<div class="clear"></div>
+
+					<p>Psst! You can automatically use these as mixins in <em>LESS</em>.</p>
+
+				</div>
+			</div>
+
+
+
+			<!-- Lists -->
+			<div class="row row-lists">
+				<div class="row-content buffer">
+
+					<h1 class="squeeze-top">Lists</h1>
+
+					<div class="column six">
+
+						<p><code>ul</code></p>
+
+						<ul>
+							<li>One</li>
+							<li>Two</li>
+							<li>Three
+								<ul>
+									<li>A</li>
+									<li>B</li>
+									<li>C</li>
+									<li>D</li>
+								</ul>
+							</li>
+							<li>Four</li>
+						</ul>
+
+					</div>
+
+					<div class="column six last">
+
+						<p><code>ol</code></p>
+
+						<ol>
+							<li>One</li>
+							<li>Two</li>
+							<li>Three
+								<ol>
+									<li>A</li>
+									<li>B</li>
+									<li>C</li>
+									<li>D</li>
+								</ol>
+							</li>
+							<li>Four</li>
+						</ol>
+
+					</div>
+					<div class="clear"></div>
+
+					<p><code>ul.plain</code></p>
+
+					<ul class="plain">
+						<li>One</li>
+						<li>Two</li>
+						<li>Three</li>
+						<li>Four</li>
+					</ul>
+
+					<p><code>ul.inline</code> keeps the inline context. Whitespace works accordingly.</p>
+
+					<ul class="inline">
+						<li>One</li>
+						<li>Two</li>
+						<li>Three</li>
+						<li>Four</li>
+					</ul>
+
+					<p><code>ol.inline.right</code></p>
+
+					<ol class="inline right">
+						<li>One</li>
+						<li>Two</li>
+						<li>Three</li>
+						<li>Four</li>
+					</ol>
+
+					<p>Horizontal lists with block list items: <code>ul.collapse.float-left</code> + <code>ul.collapse.float-right</code></p>
+
+					<ul class="collapse float-left">
+						<li><a href="#">One</a></li>
+						<li><a href="#">Two</a></li>
+						<li><a href="#">Three</a></li>
+						<li><a href="#">Four</a></li>
+					</ul>
+					<ul class="collapse float-right">
+						<li><a href="#">One</a></li>
+						<li><a href="#">Two</a></li>
+						<li><a href="#">Three</a></li>
+						<li><a href="#">Four</a></li>
+					</ul>
+					<div class="clear"></div>
+
+				</div>
+			</div>
+
+
+
+			<!-- Tables -->
+			<div class="row row-tables lightgrey">
+				<div class="row-content buffer">
+
+					<h1 class="squeeze-top">Tables</h1>
+
+					<table>
+						<caption>Default <code>table</code> has collapsed borders, 100% width and common-sense paddings for cells. (This is a table <code>caption</code>, by the way.)</caption>
+						<thead>
+							<tr>
+								<th>Heading</th>
+								<th>Heading</th>
+								<th>Heading</th>
+								<th>Heading</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cell</td>
+								<td>Cell</td>
+								<td>Cell</td>
+								<td>Cell</td>
+							</tr>
+							<tr>
+								<td>Cell</td>
+								<td>Cell</td>
+								<td>Cell</td>
+								<td>Cell</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="squeeze">
+						<caption><code>table.squeeze</code> has smaller cell paddings.</caption>
+						<thead>
+							<tr>
+								<th>Heading</th>
+								<th>Heading</th>
+								<th>Heading</th>
+								<th>Heading</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cell</td>
+								<td>Cell</td>
+								<td>Cell</td>
+								<td>Cell</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="plain">
+						<caption><code>table.plain</code> collapses everything.</caption>
+						<thead>
+							<tr>
+								<th>Heading</th>
+								<th>Heading</th>
+								<th>Heading</th>
+								<th>Heading</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cell</td>
+								<td>Cell</td>
+								<td>Cell</td>
+								<td>Cell</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+
+
+
+			<!-- Forms -->
+			<div class="row row-forms">
+				<div class="row-content buffer-left buffer-right buffer-bottom">
+
+					<h1 class="squeeze-top">Forms</h1>
+
+					<p>Native input element styles are left alone. Input fields use the same, default box-sizing model as all other elements in all browsers so they're easy to customize.</p>
+
+					<form action="">
+						<p><input type="email" value="email@domain.com"> <input type="password" placeholder="Password"></p>
+						<p><input type="text" value="Disabled field" disabled></p>
+						<p><textarea>Longer piece of text</textarea></p>
+						<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
+					</form>
+
+					<p><code>.plain</code> elements are robbed of their OS-specific default styles (background-color added for clarity).</p>
+
+					<form action="">
+						<p><input type="text" placeholder="Placeholder" value="input.plain" class="plain"> <input type="submit" value="Submit" class="plain"></p>
+						<p><textarea class="plain squeeze">Longer piece of text (with .squeeze)</textarea></p>
+					</form>
+
+					<p>Remember, <code>.buffer</code> gives elements breathing room.</p>
+
+					<form action="">
+						<p><input type="text" placeholder="Placeholder" value="input.plain.buffer" class="plain buffer"> <input type="submit" value="Submit" class="plain buffer"></p>
+					</form>
+
+				</div>
+			</div>
+
+
+
+		</div>
 
 	</body>
 
