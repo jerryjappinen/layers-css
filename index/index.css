@@ -127,7 +127,7 @@ h1.pageTitle {
 	font-size: 1em;
 	text-transform: uppercase;
 
-	background-color: #0094b3;
+	background-color: #009ebf;
 	border-color: #12171a;
 	color: #fff;
 }
@@ -135,7 +135,7 @@ h1.pageTitle {
 		top: -0.2em;
 		border-bottom-width: 0.2em;
 		text-decoration: none;
-		background-color: #00aacc;
+		background-color: #00b3d9;
 		color: #fff;
 	}
 		.row-intro h2 a:active {
