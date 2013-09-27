@@ -192,6 +192,27 @@
 
 
 			/*Dark sections*/
+			.row-footer h1, .row-footer p, .row-footer h1 a, .row-footer h1 img {
+				margin-right: auto;
+				margin-left: auto;
+			}
+			.row-footer h1 img {
+				max-height: 0.5em;
+			}
+			.row-footer .row-content {
+				max-width: 34em;
+			}
+			.row-footer .column.fixed {
+				width: 3.7em;
+			}
+			.row-footer .column.fluid.right > .column-content {
+				margin-left: 5em;
+			}
+			.row-footer .column.fluid {
+				margin-bottom: 3em;
+			}
+
+			/*Dark sections*/
 			.dark {
 				background-color: #12171a;
 				color: #fff;
@@ -469,7 +490,7 @@
 
 					<h3>Rows</h3>
 
-					<p><code>.row-content</code> is aligned to the center of the parent. <code>.buffer</code> also gives its content breathing room. You can easily set up a full-bleed site with alternating background styling for each section with this HTMl:</p>
+					<p><code>.row-content</code> is aligned to the center of the parent. <code>.buffer</code> also gives its content breathing room. You can easily set up a full-bleed site with alternating background styling for each section with this HTML:</p>
 
 					<div class="row-content buffer colored">
 						<div class="column half">
@@ -787,8 +808,33 @@
 				</div>
 			</div>
 
+		</div>
 
 
+
+		<div class="row row-footer dark">
+			<div class="row-content buffer">
+
+				<h1><a href="./" class="block"><img src="logo.png" alt="Layers CSS" title="Layers CSS" class="block"></a></h1>
+
+				<!-- <h1 class="squeeze-top">That's it</h1> -->
+
+				<div class="column fluid right">
+					<div class="column-content">
+
+						<p class="squeeze-top">Layers CSS is an open-source project authored by <a href="http://eiskis.net" target="_blank">Jerry Jäppinen</a> and released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
+
+						<p>Contributions are gladly accepted via <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank">Bitbucket</a>. You are welcome to <a href="mailto:eiskis@gmail.com" target="_blank">contact Jerry</a> for any suggestions.</p>
+
+					</div>
+				</div>
+
+				<div class="column fixed right">
+					<p><a href="http://eiskis.net/" target="_blank" class="block"><img src="http://eiskis.net/apps/eiskis/assets/avatar.jpg" alt="Jerry Jäppinen" title="Jerry Jäppinen" class="block"></a></p>
+				</div>
+				<div class="clear"></div>
+
+			</div>
 		</div>
 
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
