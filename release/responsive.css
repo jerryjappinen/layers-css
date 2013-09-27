@@ -2,12 +2,12 @@
 	Layers CSS responsive adjustments by Jerry Jäppinen
 	Released under the MIT license
 	http://eiskis.net/layers
-	2013-09-27 14:31 Europe/Helsinki
+	2013-09-27 14:56 Europe/Helsinki
 	*/
 	
 
 /*Collapse fluid columns*/
-@media handheld, only screen and (max-width: 740px) {
+@media handheld, only screen and (max-width: 40em) {
 	.column.one,
 	.column.two,
 	.column.sixth,
@@ -39,7 +39,7 @@
 }
 
 /*Smaller font size*/
-@media handheld, only screen and (max-width: 740px) {
+@media handheld, only screen and (max-width: 40em) {
 
 	body {
 		font-size: 0.9em;
