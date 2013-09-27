@@ -1,4 +1,53 @@
 
+/*Typography*/
+html {
+	font-family: "Lato", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+h1, h2, h3 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 4em;
+	text-align: center;
+}
+	h1.display {
+		font-size: 5em;
+		font-weight: 100;
+	}
+h1 {
+	font-size: 4em;
+}
+h2 {
+	font-size: 3em;
+}
+h3 {
+	font-size: 2.2em;
+}
+h4 {
+	font-size: 1.4em;
+	font-weight: normal;
+}
+h5 {
+	font-size: 1.2em;
+	font-weight: normal;
+}
+h6 {
+	font-size: 1em;
+}
+@media handheld, only screen and (max-width: 40em) {
+	h1, h1.display {
+		font-size: 3em;
+	}
+	h2 {
+		font-size: 2.5em;
+	}
+	h3 {
+		font-size: 1.8em;
+	}
+}
+
+
 /*Generic*/
 code {
 	font-size: 0.8em;
@@ -30,6 +79,28 @@ a {
 
 
 
+/*Title row*/
+.row-title {
+	background: #ff4551 url(down-dark.png) no-repeat 50% 0;
+	color: #fff;
+}
+
+
+
+/*Separate sections*/
+.reference .row {
+	border-top-width: 1em;
+	border-color: #ff4551;
+	background-image: url(down-red.png);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+}
+	.reference .row:first-of-type {
+		border-top-width: 0;
+	}
+
+
+
 /*Colorize columns for clarity*/
 .reference .column, .reference ul, .reference ol {
 	background-color: #eee;
@@ -55,27 +126,6 @@ a {
 /*Forms*/
 input.plain, textarea.plain {
 	background-color: #ddd;
-}
-
-
-
-/*Title row*/
-.row-title {
-	background-color: #ff4551;
-	background-image: url(down.png);
-	background-repeat: no-repeat;
-	background-position: 50% 0;
-	color: #fff;
-	text-align: center;
-}
-.row-title .row-content.buffer {
-	padding-top: 6%;
-	padding-bottom: 7%;
-}
-.row-title .row-content.buffer h1 {
-	line-height: 1.2em;
-	margin-top: 0.7em;
-	margin-bottom: 0.8em;
 }
 
 
@@ -184,7 +234,7 @@ input.plain, textarea.plain {
 .dark {
 	background-color: #12171a;
 	color: #fff;
-	font-weight: 100;
+	font-weight: 300;
 }
 .dark a {
 	text-decoration: none;
@@ -196,14 +246,3 @@ input.plain, textarea.plain {
 		.dark a:active {
 			color: #00c0e6;
 		}
-
-
-
-/*Colored sections*/
-.reference .row {
-	border-top-width: 1em;
-	border-color: #ff4551;
-}
-	.reference .row:first-of-type {
-		border-top-width: 0;
-	}
