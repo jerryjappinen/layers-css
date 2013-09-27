@@ -172,10 +172,15 @@ a {
 	background: #ff4551 url(down-dark.png) no-repeat 50% 0;
 	color: #fff;
 }
+.row-title .description {
+	margin-bottom: 4.02em;
+	font-weight: 300;
+	text-align: center;
+}
 
 
 
-/*Separate sections*/
+/*All reference sections*/
 .reference .row {
 	border-top-width: 1em;
 	border-color: #ff4551;
@@ -187,18 +192,22 @@ a {
 		border-top-width: 0;
 	}
 
+.reference h3 {
+	margin-top: 2.68em;
+}
+.reference .description {
+	max-width: 50em;
+}
+.reference .description.center {
+	text-align: center;
+}
 
-
-/*Colorize columns for clarity*/
 .reference .column, .reference ul, .reference ol {
 	background-color: #eee;
 }
 	.reference .colored {
 		background-color: #ddd;
 	}
-.reference h3 {
-	margin-top: 2.68em;
-}
 
 
 
@@ -232,8 +241,12 @@ input.plain, textarea.plain {
 .row-footer .row-content {
 	max-width: 34em;
 }
+.row-footer .column img {
+	border-radius: 0.2em;
+	box-shadow: 0 0.1em 0.4em #000;
+}
 .row-footer .column.fixed {
-	width: 3.7em;
+	width: 3.8em;
 }
 .row-footer .column.fluid.right > .column-content {
 	margin-left: 5em;

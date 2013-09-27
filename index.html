@@ -91,7 +91,8 @@
 		<!-- Title -->
 		<div class="row row-title">
 			<div class="row-content buffer even">
-				<h1 class="display squeeze-top">Reference</h1>
+				<h1 class="display squeeze-top reset-bottom">Reference</h1>
+				<p class="description">Colors and visuals below are created by custom styles, not Layers CSS.</p>
 			</div>
 		</div>
 
@@ -106,11 +107,15 @@
 					<!--  -->
 					<h1>Fluid grid</h1>
 
-					<p>You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too. Columns are stacked from left to right, no wrappers are required. Columns within columns work fine.</p>
+					<div class="row-content buffer description">
 
-					<p>Note that you can't strictly control column widths in a fluid grid. The columns don't always amount to 100 % either, as browsers interpret fractional widths differently.</p>
+						<p>You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too. Columns are stacked from left to right, no wrappers are required. Columns within columns work fine.</p>
 
-					<p>Use <strong>n/12</strong> or fractional keywords as class names, like this:</p>
+						<p>Note that you can't strictly control column widths in a fluid grid. The columns don't always amount to 100 % either, as browsers interpret fractional widths differently.</p>
+
+						<p>Use <strong>n/12</strong> or fractional keywords as class names, like this:</p>
+
+					</div>
 
 					<div class="column six">
 						<p><code>.column.six</code></p>
@@ -170,37 +175,56 @@
 
 
 
-					<p>You can <code>.push-</code> columns as well:</p>
+					<div class="row-content buffer-top buffer-right buffer-left even description">
 
-					<div class="column two push-one">
-						<p><code>.column.two.<strong>push-one</strong></code></p>
-					</div>
-					<div class="column two push-half last">
-						<p><code>.column.two.<strong>push-half</strong>.last</code></p>
-					</div>
-					<div class="clear"></div>
+						<p>You can <code>.push-</code> columns to shift them further from their default position:</p>
 
-
-
-					<p>The stack can also start from the <code>.right</code>:</p>
-
-					<div class="column right five">
-						<p><code>.column.<strong>right</strong>.five</code></p>
-					</div>
-					<div class="column right three">
-						<p><code>.column.<strong>right</strong>.three</code></p>
-					</div>
-					<div class="column right two last">
-						<p><code>.column.<strong>right</strong>.two</code></p>
 					</div>
 
-					<div class="clear"></div>
+					<div class="colored">
+
+						<div class="column two push-one">
+							<p><code>.column.two.<strong>push-one</strong></code></p>
+						</div>
+						<div class="column two push-half last">
+							<p><code>.column.two.<strong>push-half</strong>.last</code></p>
+						</div>
+						<div class="clear"></div>
+
+					</div>
 
 
 
-					<h3>Without gutters</h3>
+					<div class="row-content buffer-top buffer-right buffer-left even description">
 
-					<p><code>.reset</code> columns to remove gutter space:</p>
+						<p>You can also start stacking from the <code>.right</code>:</p>
+
+					</div>
+
+					<div class="colored">
+
+						<div class="column right five">
+							<p><code>.column.<strong>right</strong>.five</code></p>
+						</div>
+						<div class="column right three">
+							<p><code>.column.<strong>right</strong>.three</code></p>
+						</div>
+						<div class="column right two last">
+							<p><code>.column.<strong>right</strong>.two</code></p>
+						</div>
+						<div class="clear"></div>
+
+					</div>
+
+
+
+					<div class="row-content buffer even description">
+
+						<h3>No gutters</h3>
+
+						<p><code>.reset</code> columns to remove gutter space:</p>
+
+					</div>
 
 					<div class="column half reset colored">
 						<p><code>.column.half.reset</code></p>
@@ -227,12 +251,15 @@
 
 
 
-					<!--  -->
-					<h3>Fixed-fluid column combination</h3>
+					<div class="row-content buffer even description">
 
-					<p>One part gets a fixed width, the other side fills the rest. Very handy for combining images with a fluid grid. Multiple combinations can be nested. The fluid column always comes first in markup.</p>
+						<h3>Fixed + fluid columns</h3>
 
-					<p>You can adjust the size of the fixed-width in steps with media queries, or break the combination completely.</p>
+						<p>One part gets a fixed width, the other side fills the rest. Very handy for combining images with a fluid grid. Multiple combinations can be nested. The fluid column always comes first in markup.</p>
+
+						<p>You can adjust the size of the fixed-width in steps with media queries, or break the combination completely.</p>
+
+					</div>
 
 					<div class="column fluid">
 						<div class="column-content">
@@ -247,7 +274,11 @@
 
 
 
-					<p>You can also stack this starting from the <code>.right</code>:</p>
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>You can also stack this starting from the <code>.right</code>:</p>
+
+					</div>
 
 					<div class="column fluid right">
 						<div class="column-content">
@@ -260,9 +291,13 @@
 					</div>
 					<div class="clear"></div>
 
-					<h4>Extend</h4>
+					<div class="row-content buffer-top buffer-right buffer-left even description">
 
-					<p>This is the CSS you to adjust the size of the fixed column (default is <code>10em</code>):</p>
+						<h4>Customize</h4>
+
+						<p>This is the CSS you to adjust the size of the fixed column (default is <code>10em</code>):</p>
+
+					</div>
 
 					<pre class="buffer dark">
 
@@ -278,9 +313,15 @@
 }
 </pre>
 
-					<h3>Rows</h3>
 
-					<p><code>.row-content</code> is aligned to the center of the parent. <code>.buffer</code> also gives its content breathing room. You can easily set up a full-bleed site with alternating background styling for each section with this HTML:</p>
+
+					<div class="row-content buffer even description">
+
+						<h3>Rows</h3>
+
+						<p><code>.row-content</code> is aligned to the center of the parent. <code>.buffer</code> also gives its content breathing room. You can easily set up a full-bleed site with alternating background styling for each section with this HTML:</p>
+
+					</div>
 
 					<div class="row-content buffer colored">
 						<div class="column half">
@@ -292,7 +333,11 @@
 						<div class="clear"></div>
 					</div>
 
-					<p>For natural article content, <code>.buffer</code> has less padding on the top (as seen above), but you can use <code>.even</code> buffers, too:</p>
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>For natural article content, <code>.buffer</code> has less padding on the top (as seen above), but you can use <code>.even</code> buffers, too:</p>
+
+					</div>
 
 					<div class="row-content buffer even colored">
 						<div class="column four">
@@ -307,7 +352,11 @@
 						<div class="clear"></div>
 					</div>
 
-					<p>Controlling max-width of <code>.row-content</code> works nicely for full-bleed layouts:</p>
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>Controlling max-width of <code>.row-content</code> works nicely for full-bleed layouts:</p>
+
+					</div>
 
 					<div class="colored">
 						<div class="row-content buffer colored" style="max-width: 30em;">
@@ -318,7 +367,11 @@
 						</div>
 					</div>
 
-					<p>You can naturally use any element (like <code>section</code> for example) for the rows. You can use rows to build both the overall frame of your site and individual page content. <code>.row-content</code> has a default maximum-width of <code>70em</code>.</p>
+					<div class="row-content buffer even description">
+
+						<p>You can naturally use any element (like <code>section</code> for example) for the rows. Use rows to build both the overall frame of your site and smaller pieces of page content. <code>.row-content</code> has a default maximum-width of <code>70em</code>.</p>
+
+					</div>
 
 				</div>
 			</div>
@@ -333,7 +386,13 @@
 
 
 
-					<h4>Generic</h4>
+					<div class="row-content buffer-right buffer-bottom buffer-left even description center">
+
+						<!-- <h4>Everyday snippets</h4> -->
+
+						<p>Psst! You can automatically use these as mixins in <a href="http://lesscss.org/" target="_blank">LESS</a>.</p>
+
+					</div>
 
 					<div class="column six">
 						<dl class="buffer">
@@ -358,7 +417,15 @@
 					</div>
 					<div class="clear"></div>
 
-					<h4>Margins &amp; spacing</h4>
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<h4>Margins &amp; spacing</h4>
+
+						<p>Use a combination of <code>em</code> and <code>%</code> definitions to give your elements natural breathing room.</p>
+
+					</div>
 
 					<div class="column six">
 						<div class="buffer">
@@ -403,8 +470,6 @@
 					</div>
 					<div class="clear"></div>
 
-					<p>Psst! You can automatically use these as mixins in <em>LESS</em>.</p>
-
 				</div>
 			</div>
 
@@ -416,7 +481,7 @@
 
 					<h1>Lists</h1>
 
-					<div class="column six">
+					<div class="column third">
 
 						<p><code>ul</code></p>
 
@@ -436,7 +501,7 @@
 
 					</div>
 
-					<div class="column six last">
+					<div class="column third">
 
 						<p><code>ol</code></p>
 
@@ -455,18 +520,34 @@
 						</ol>
 
 					</div>
-					<div class="clear"></div>
 
-					<p><code>ul.plain</code></p>
+					<div class="column third last">
 
-					<ul class="plain">
-						<li>One</li>
-						<li>Two</li>
-						<li>Three</li>
-						<li>Four</li>
-					</ul>
+						<p><code>ul.plain</code></p>
 
-					<p><code>ul.inline</code> keeps the inline context. Whitespace works accordingly.</p>
+						<ul class="plain">
+							<li>One</li>
+							<li>Two</li>
+							<li>Three
+								<ul>
+									<li>A</li>
+									<li>B</li>
+									<li>C</li>
+									<li>D</li>
+								</ul>
+							</li>
+							<li>Four</li>
+						</ul>
+
+					</div>
+
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p><code>ul.inline</code> keeps the inline context. Whitespace works accordingly.</p>
+
+					</div>
 
 					<ul class="inline">
 						<li>One</li>
@@ -475,7 +556,13 @@
 						<li>Four</li>
 					</ul>
 
-					<p><code>ol.inline.right</code></p>
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p><code>ol.inline.right</code></p>
+
+					</div>
 
 					<ol class="inline right">
 						<li>One</li>
@@ -484,21 +571,31 @@
 						<li>Four</li>
 					</ol>
 
-					<p>Horizontal lists with block list items: <code>ul.collapse.float-left</code> + <code>ul.collapse.float-right</code></p>
 
-					<ul class="collapse float-left">
-						<li><a href="#">One</a></li>
-						<li><a href="#">Two</a></li>
-						<li><a href="#">Three</a></li>
-						<li><a href="#">Four</a></li>
-					</ul>
-					<ul class="collapse float-right">
-						<li><a href="#">One</a></li>
-						<li><a href="#">Two</a></li>
-						<li><a href="#">Three</a></li>
-						<li><a href="#">Four</a></li>
-					</ul>
-					<div class="clear"></div>
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>Horizontal lists, with block list items: <code>ul.collapse.float-left</code> + <code>ul.collapse.float-right</code></p>
+
+					</div>
+
+					<div class="colored">
+
+						<ul class="reset collapse float-left">
+							<li><a href="#">One</a></li>
+							<li><a href="#">Two</a></li>
+							<li><a href="#">Three</a></li>
+							<li><a href="#">Four</a></li>
+						</ul>
+						<ul class="reset collapse float-right">
+							<li><a href="#">One</a></li>
+							<li><a href="#">Two</a></li>
+							<li><a href="#">Three</a></li>
+							<li><a href="#">Four</a></li>
+						</ul>
+						<div class="clear"></div>
+
+					</div>
 
 				</div>
 			</div>
@@ -511,8 +608,15 @@
 
 					<h1>Tables</h1>
 
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>Default <code>table</code> has collapsed borders, 100% width and common-sense paddings for cells.</p>
+
+					</div>
+
 					<table>
-						<caption>Default <code>table</code> has collapsed borders, 100% width and common-sense paddings for cells. (This is a table <code>caption</code>, by the way.)</caption>
 						<thead>
 							<tr>
 								<th>Heading</th>
@@ -536,9 +640,16 @@
 							</tr>
 						</tbody>
 					</table>
+
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p><code>table.squeeze</code> has smaller cell paddings.</p>
+
+					</div>
 
 					<table class="squeeze">
-						<caption><code>table.squeeze</code> has smaller cell paddings.</caption>
 						<thead>
 							<tr>
 								<th>Heading</th>
@@ -557,8 +668,15 @@
 						</tbody>
 					</table>
 
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p><code>table.plain</code> collapses everything.</p>
+
+					</div>
+
 					<table class="plain">
-						<caption><code>table.plain</code> collapses everything.</caption>
 						<thead>
 							<tr>
 								<th>Heading</th>
@@ -576,6 +694,14 @@
 							</tr>
 						</tbody>
 					</table>
+
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>Layers applies no borders or background colors to tables or cells.</p>
+
+					</div>
 
 				</div>
 			</div>
@@ -588,27 +714,37 @@
 
 					<h1>Forms</h1>
 
-					<p>Native input element styles are left alone. Input fields use the same, default box-sizing model as all other elements in all browsers so they're easy to customize.</p>
+					<div class="row-content buffer">
 
-					<form action="">
-						<p><input type="email" value="email@domain.com"> <input type="password" placeholder="Password"></p>
-						<p><input type="text" value="Disabled field" disabled></p>
-						<p><textarea>Longer piece of text</textarea></p>
-						<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
-					</form>
+						<p>Native input element styles are left alone. Input fields use the same, default box-sizing model as all other elements in all browsers so they're easy to customize.</p>
 
-					<p><code>.plain</code> elements are robbed of their OS-specific default styles (background-color added for clarity).</p>
+						<form action="">
+							<p><input type="email" value="email@domain.com"> <input type="password" placeholder="Password"></p>
+							<p><input type="text" value="Disabled field" disabled></p>
+							<p><textarea>Longer piece of text</textarea></p>
+							<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
+						</form>
 
-					<form action="">
-						<p><input type="text" placeholder="Placeholder" value="input.plain" class="plain"> <input type="submit" value="Submit" class="plain"></p>
-						<p><textarea class="plain squeeze">Longer piece of text (with .squeeze)</textarea></p>
-					</form>
 
-					<p>Remember, <code>.buffer</code> gives elements breathing room.</p>
 
-					<form action="">
-						<p><input type="text" placeholder="Placeholder" value="input.plain.buffer" class="plain buffer"> <input type="submit" value="Submit" class="plain buffer"></p>
-					</form>
+						<h3>Customize</h3>
+
+						<p><code>.plain</code> elements are robbed of their OS-specific default styles, so they're a good jumping-off point to your own visuals.</p>
+
+						<form action="">
+							<p><input type="text" placeholder="Placeholder" value="input.plain" class="plain"> <input type="submit" value="Submit" class="plain"></p>
+							<p><textarea class="plain squeeze">Longer piece of text (with .squeeze)</textarea></p>
+						</form>
+
+						<p>Remember, <code>.buffer</code> gives elements breathing room.</p>
+
+						<form action="">
+							<p><input type="text" placeholder="Placeholder" value="input.plain.buffer" class="plain buffer"> <input type="submit" value="Submit" class="plain buffer"></p>
+						</form>
+
+						<p>Grey backgrounds added for clarity.</p>
+
+					</div>
 
 				</div>
 			</div>
