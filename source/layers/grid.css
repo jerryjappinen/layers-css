@@ -22,6 +22,10 @@
 	.row-content.buffer-top {
 		padding-top: 2%;
 	}
+		.row-content.buffer.even,
+		.row-content.buffer-top.even {
+			padding-top: 6%;
+		}
 	.row-content.buffer,
 	.row-content.buffer-right {
 		padding-right: 8%;

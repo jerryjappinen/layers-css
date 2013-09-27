@@ -111,6 +111,9 @@ p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pr
 .buffer, .buffer-top {
 	padding-top: 1em;
 }
+	.buffer.even, .buffer-top.even {
+		padding-top: 2em;
+	}
 .buffer, .buffer-right {
 	padding-right: 2em;
 }
