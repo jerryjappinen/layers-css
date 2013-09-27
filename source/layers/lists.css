@@ -4,10 +4,22 @@
 
 
 /*Modified lists*/
-ul.plain, ol.plain {
+ul.plain,
+ul.plain ul,
+ul.plain ol,
+ol.plain,
+ol.plain ul,
+ol.plain ol {
 	padding-left: 0;
 	list-style-type: none;
 }
+	ul.plain ul,
+	ul.plain ol,
+	ol.plain ul,
+	ol.plain ol {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 
 
 
