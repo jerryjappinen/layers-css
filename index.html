@@ -11,7 +11,7 @@
 		<title>Layers CSS</title>
 		<meta name="author" content="Jerry Jäppinen">
 		<meta name="application-name" content="Layers CSS">
-		<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="index/logo.ico" type="image/x-icon">
 
 		<!-- Release version -->
 		<link rel="stylesheet" href="release/layers.css" media="screen">
@@ -22,217 +22,8 @@
 		<link rel="stylesheet" href="extras/light.css" media="screen">	<!-- Light color scheme -->
 		<link rel="stylesheet" href="extras/metro.css" media="screen">	<!-- Metro look -->
 
-		<!-- Custom styles -->
-		<style type="text/css">
-
-			/*Generic*/
-			code {
-				font-size: 0.8em;
-				color: #e01b6a;
-			}
-			dl.plain dt {
-				font-weight: inherit;
-			}
-			a, a:visited {
-				color: #00c0e6;
-			}
-				a.button:hover, a.button:focus {
-					color: #88ddee;
-				}
-					a.button:active {
-						color: #00c0e6;
-					}
-			a {
-			    -webkit-transition-duration: 125ms;
-			    -moz-transition-duration: 125ms;
-			    -o-transition-duration: 125ms;
-			    transition-duration: 125ms;
-
-			    -webkit-transition-property: color, border, top, margin, padding;
-			    -moz-transition-property: color, border, top, margin, padding;
-			    -o-transition-property: color, border, top, margin, padding;
-			    transition-property: color, border, top, margin, padding;
-			}
-
-
-
-			/*Colorize columns for clarity*/
-			.reference .column, .reference ul, .reference ol {
-				background-color: #eee;
-			}
-				.reference .colored {
-					background-color: #ddd;
-				}
-
-
-
-			/*Grid*/
-			.row-grid .column p {
-				text-align: center;
-				margin-top: 0;
-				margin-bottom: 0;
-				padding-top: 0.8em;
-				padding-bottom: 1em;
-				line-height: 1em;
-			}
-
-
-
-			/*Forms*/
-			input.plain, textarea.plain {
-				background-color: #ddd;
-			}
-
-
-
-			/*Title row*/
-			.row-title {
-				background-color: #ff4551;
-				color: #fff;
-				text-align: center;
-			}
-			.row-title .row-content.buffer {
-				padding-top: 6%;
-				padding-bottom: 7%;
-			}
-			.row-title .row-content.buffer h1 {
-				line-height: 1.2em;
-				margin-top: 0.7em;
-				margin-bottom: 0.8em;
-			}
-
-
-
-			/*Intro*/
-			.row-intro h1 img {
-				max-height: 1.4em;
-			}
-			.row-intro ul li {
-				margin-bottom: 0.24em;
-			}
-			.row-intro p.discreet, .row-intro dd {
-				color: #737b80;
-			}
-				.row-intro .discreet a {
-					color: inherit;
-					text-decoration: underline;
-				}
-					.row-intro .discreet a:hover, .row-intro .discreet a:focus {
-						color: #fff;
-					}
-
-			/*Download link*/
-			.row-intro h2 {
-				font-size: 1em;
-				color: #737b80;
-			}
-			.row-intro h2 a {
-				position: relative;
-				display: inline-block;
-				padding: 0.4em 1.4em 0.4em 1.4em;
-				min-width: 6em;
-				text-align: center;
-				margin-right: 0.8em;
-
-				line-height: 2em;
-				font-size: 1em;
-				font-weight: 100;
-				text-transform: uppercase;
-
-				background-color: #0094b3;
-				border-color: #12171a;
-				color: #fff;
-			}
-				.row-intro h2 a:hover, .row-intro h2 a:focus {
-					top: -0.2em;
-					border-bottom-width: 0.2em;
-					text-decoration: none;
-					background-color: #00aacc;
-					color: #fff;
-				}
-					.row-intro h2 a:active {
-						top: 0;
-						border-bottom-width: 0;
-						color: #fff;
-					}
-
-			/*Goodies*/
-			.row-intro dl {
-				margin-top: 1.8em;
-				border-top-width: 1px;
-				border-color: #2e3133;
-			}
-			.row-intro dt {
-				margin-top: 1.2em;
-			}
-			.row-intro dt a {
-				display: inline-block;
-				padding: 0.2em;
-				margin-left: -0.2em;
-			}
-				.row-intro dt a:hover, .row-intro dt a:focus {
-					padding-top: 0.05em;
-					padding-bottom: 0.35em;
-					text-decoration: none;
-				}
-					.row-intro dt a:active {
-						padding-top: 0.2em;
-						padding-bottom: 0.2em;
-					}
-
-
-
-			/*Dark sections*/
-			.row-footer h1, .row-footer p, .row-footer h1 a, .row-footer h1 img {
-				margin-right: auto;
-				margin-left: auto;
-			}
-			.row-footer h1 img {
-				max-height: 0.5em;
-			}
-			.row-footer .row-content {
-				max-width: 34em;
-			}
-			.row-footer .column.fixed {
-				width: 3.7em;
-			}
-			.row-footer .column.fluid.right > .column-content {
-				margin-left: 5em;
-			}
-			.row-footer .column.fluid {
-				margin-bottom: 3em;
-			}
-
-			/*Dark sections*/
-			.dark {
-				background-color: #12171a;
-				color: #fff;
-				font-weight: 100;
-			}
-			.dark a {
-				text-decoration: none;
-				color: #00c0e6;
-			}
-				.dark a:hover, .dark a:focus {
-					color: #88ddee;
-				}
-					.dark a:active {
-						color: #00c0e6;
-					}
-
-
-
-			/*Colored sections*/
-			.reference .row {
-				border-top-width: 1em;
-				border-color: #ff4551;
-			}
-				.reference .row:first-of-type {
-					border-top-width: 0;
-				}
-
-
-		</style>
+		<!-- This page -->
+		<link rel="stylesheet" href="index/index.css" media="screen">
 
 	</head>
 
@@ -242,7 +33,7 @@
 		<div class="row row-intro dark">
 			<div class="row-content buffer">
 
-				<h1><a href="./" class="block"><img src="logo.png" alt="Layers CSS" title="Layers CSS" class="block"></a></h1>
+				<h1><a href="./" class="block"><img src="index/logo.png" alt="Layers CSS" title="Layers CSS" class="block"></a></h1>
 
 				<div class="column half">
 					<div class="buffer-right">
@@ -310,6 +101,8 @@
 					<h1>Fluid grid</h1>
 
 					<p>You need to mark the last column of the row, and using <code>.clear</code> after rows is a good idea, too. Columns are stacked from left to right, no wrappers are required. Columns within columns work fine.</p>
+
+					<p>Note that you can't strictly control column widths in a fluid grid. The columns don't always amount to 100 % either, as browsers interpret fractional widths differently.</p>
 
 					<p>Use <strong>n/12</strong> or fractional keywords as class names, like this:</p>
 
@@ -806,7 +599,7 @@
 		<div class="row row-footer dark">
 			<div class="row-content buffer">
 
-				<h1><a href="./" class="block"><img src="logo.png" alt="Layers CSS" title="Layers CSS" class="block"></a></h1>
+				<h1><a href="./" class="block"><img src="index/logo.png" alt="Layers CSS" title="Layers CSS" class="block"></a></h1>
 
 				<div class="column fluid right">
 					<div class="column-content">
