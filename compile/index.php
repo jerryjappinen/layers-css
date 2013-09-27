@@ -23,12 +23,12 @@ foreach ($releases as $name) {
 
 	// Author info
 	$prefix = '/*
-	Layers CSS'.($name === 'responsive' ? ' responsive adjustments' : '').' by Jerry Jäppinen
-	Released under the MIT license
-	http://eiskis.net/layers
-	'.date('Y-m-d H:i e') .'
-	*/
-	';
+Layers CSS'.($name === 'responsive' ? ' responsive adjustments' : '').' by Jerry Jäppinen
+Released under the MIT license
+http://eiskis.net/layers
+'.date('Y-m-d H:i e') .'
+*/
+';
 	$minRelease = $prefix.minify($source);
 	$release = $prefix.$source;
 

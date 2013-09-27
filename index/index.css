@@ -169,7 +169,7 @@ a {
 
 /*Title row*/
 .row-title {
-	background: #ff4551 url(down-dark.png) no-repeat 50% 0;
+	background: #ff4551 url(down-dark.png) no-repeat 50% -1px;
 	color: #fff;
 }
 .row-title .description {
@@ -186,7 +186,7 @@ a {
 	border-color: #ff4551;
 	background-image: url(down-red.png);
 	background-repeat: no-repeat;
-	background-position: 50% 0;
+	background-position: 50% -1px;
 }
 	.reference .row:first-of-type {
 		border-top-width: 0;
