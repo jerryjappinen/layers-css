@@ -20,7 +20,7 @@ ul.inline, ol.inline {
 		text-align: right;
 	}
 		ul.inline > li, ol.inline > li {
-			display: inline-block;
+			display: inline;
 		}
 
 

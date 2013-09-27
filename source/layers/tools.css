@@ -24,6 +24,9 @@
 .inline {
 	display: inline;
 }
+	ul.inline, ol.inline {
+		display: block;
+	}
 
 
 

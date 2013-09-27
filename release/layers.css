@@ -2,7 +2,7 @@
 	Layers CSS by Jerry Jäppinen
 	Released under the MIT license
 	http://eiskis.net/layers
-	2013-09-27 12:52 Europe/Helsinki
+	2013-09-27 13:33 Europe/Helsinki
 	*/
 	
 /*Basics*/
@@ -712,7 +712,7 @@ ul.inline, ol.inline {
 		text-align: right;
 	}
 		ul.inline > li, ol.inline > li {
-			display: inline-block;
+			display: inline;
 		}
 
 
@@ -923,6 +923,9 @@ h1, h2, h3 {
 .inline {
 	display: inline;
 }
+	ul.inline, ol.inline {
+		display: block;
+	}
 
 
 
