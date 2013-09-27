@@ -86,7 +86,7 @@ a {
 .row-intro ul li {
 	margin-bottom: 0.24em;
 }
-.row-intro p.discreet, .row-intro dd {
+.row-intro .discreet, .row-intro dd {
 	color: #737b80;
 }
 	.row-intro .discreet a {
@@ -156,6 +156,14 @@ a {
 			padding-top: 0.2em;
 			padding-bottom: 0.2em;
 		}
+.row-intro dt.discreet {
+	float: left;
+	clear: none;
+	margin-right: 2em;
+}
+.row-intro dt.discreet a {
+	text-decoration: none;
+}
 
 
 
