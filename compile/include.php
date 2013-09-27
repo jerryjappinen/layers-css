@@ -2,6 +2,13 @@
 
 // Helpers
 
+// Minify CSS string
+function minify($string) {
+	$string = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $string);
+	$string = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '	', '	'), '', $string);
+	return str_replace(array(" {", "{ ", "; ", ": ", " :", " ,", ", ", ";}"), array("{", "{", ";", ":", ":", ",", ",", "}"), $string);
+}
+
 // Search for directories in a standardized way
 function glob_dir ($path = '') {
 	$temp = glob($path.'*', GLOB_MARK | GLOB_ONLYDIR);
