@@ -48,6 +48,7 @@ h6 {
 }
 
 
+
 /*Generic*/
 code {
 	font-size: 0.8em;
@@ -185,7 +186,7 @@ h1.pageTitle {
 	color: #fff;
 }
 .row-title .description {
-	margin-bottom: 4.02em;
+	margin-bottom: 4em;
 	font-weight: 300;
 	text-align: center;
 }
