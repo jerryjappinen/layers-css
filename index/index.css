@@ -76,6 +76,10 @@ a {
     -o-transition-property: color, border, top, margin, padding;
     transition-property: color, border, top, margin, padding;
 }
+.row {
+	background-repeat: no-repeat;
+	background-position: 50% -1px;
+}
 
 
 
@@ -169,7 +173,8 @@ a {
 
 /*Title row*/
 .row-title {
-	background: #ff4551 url(down-dark.png) no-repeat 50% -1px;
+	background-color: #ff4551;
+	background-image: url(down-dark.png);
 	color: #fff;
 }
 .row-title .description {
@@ -185,8 +190,6 @@ a {
 	border-top-width: 1em;
 	border-color: #ff4551;
 	background-image: url(down-red.png);
-	background-repeat: no-repeat;
-	background-position: 50% -1px;
 }
 	.reference .row:first-of-type {
 		border-top-width: 0;
@@ -202,7 +205,7 @@ a {
 	text-align: center;
 }
 
-.reference .column, .reference ul, .reference ol {
+.reference .column {
 	background-color: #eee;
 }
 	.reference .colored {
@@ -223,6 +226,16 @@ a {
 
 
 
+/*Lists*/
+.row-lists .column {
+	background-color: transparent;
+}
+.row-lists ul, .row-lists ol {
+	background-color: #eee;
+}
+
+
+
 /*Forms*/
 input.plain, textarea.plain {
 	background-color: #ddd;
@@ -231,6 +244,9 @@ input.plain, textarea.plain {
 
 
 /*Dark sections*/
+.row-footer {
+	background-image: url(down-white.png);
+}
 .row-footer h1, .row-footer p, .row-footer h1 a, .row-footer h1 img {
 	margin-right: auto;
 	margin-left: auto;
@@ -238,6 +254,8 @@ input.plain, textarea.plain {
 .row-footer h1 img {
 	max-height: 0.5em;
 }
+
+/*Image & description*/
 .row-footer .row-content {
 	max-width: 34em;
 }
@@ -252,7 +270,7 @@ input.plain, textarea.plain {
 	margin-left: 5em;
 }
 .row-footer .column.fluid {
-	margin-bottom: 3em;
+	margin-bottom: 4em;
 }
 
 /*Dark sections*/
