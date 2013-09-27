@@ -80,13 +80,20 @@ a {
 	background-repeat: no-repeat;
 	background-position: 50% -1px;
 }
+h1.pageTitle {
+	line-height: 1em;
+}
+	h1.pageTitle a, h1.pageTitle a:hover {
+		color: inherit;
+	}
+	h1.pageTitle a small {
+		font-size: 1em;
+		color: #737b80;
+	}
 
 
 
 /*Intro*/
-.row-intro h1 img {
-	max-height: 1.4em;
-}
 .row-intro ul li {
 	margin-bottom: 0.24em;
 }
@@ -246,6 +253,9 @@ input.plain, textarea.plain {
 /*Dark sections*/
 .row-footer {
 	background-image: url(down-white.png);
+}
+.row-footer h1.pageTitle {
+	font-size: 3.5em;
 }
 .row-footer h1, .row-footer p, .row-footer h1 a, .row-footer h1 img {
 	margin-right: auto;
