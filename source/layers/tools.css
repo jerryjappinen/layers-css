@@ -14,6 +14,19 @@
 
 
 
+/*Blocks and inline-blocks*/
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+}
+.inline {
+	display: inline;
+}
+
+
+
 /*Utilities for common CSS-based behavior*/
 .clear {
 	clear: both;
@@ -33,6 +46,11 @@
 
 
 /*Include padding and border in dimensions*/
+.content-box {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
 .border-box {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;

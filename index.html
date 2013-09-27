@@ -116,9 +116,6 @@
 
 
 			/*Intro*/
-			.row-intro h1 a, .row-intro h1 img {
-				display: block;
-			}
 			.row-intro h1 img {
 				max-height: 1.4em;
 			}
@@ -226,7 +223,7 @@
 		<div class="row row-intro dark">
 			<div class="row-content buffer">
 
-				<h1 class="squeeze-top"><a href="./"><img src="logo.gif" alt="Layers CSS" title="Layers CSS"></a></h1>
+				<h1 class="squeeze-top"><a href="./" class="block"><img src="logo.gif" alt="Layers CSS" title="Layers CSS" class="block"></a></h1>
 
 				<div class="column half">
 
@@ -520,9 +517,10 @@
 
 					<div class="column six last">
 						<dl class="buffer">
-							<dd></dd>
-							<dt><code>.border-box</code></dt>
-							<dd>Switch to this box-sizing mode in all browsers.</dd>
+							<dt><code>.border-box</code>, <code>.content-box</code></dt>
+							<dd>Switch box-sizing mode in all browsers.</dd>
+							<dt><code>.block</code>, <code>.inline-block</code>, <code>.inline</code></dt>
+							<dd>Change display property.</dd>
 							<dt><code>.float-left</code>, <code>.float-right</code></dt>
 							<dd>Float an element, remove clearing.</dd>
 						</dl>
