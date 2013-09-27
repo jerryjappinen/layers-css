@@ -1,6 +1,6 @@
 
 /*Smaller font size*/
-@media handheld, only screen and (max-width: 740px) {
+@media handheld, only screen and (max-width: 40em) {
 
 	body {
 		font-size: 0.9em;

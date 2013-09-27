@@ -35,12 +35,12 @@ h5 {
 h6 {
 	font-size: 1em;
 }
-@media handheld, only screen and (max-width: 40em) {
+@media handheld, only screen and (max-width: 30em) {
 	h1, h1.display {
-		font-size: 3em;
+		font-size: 3.5em;
 	}
 	h2 {
-		font-size: 2.5em;
+		font-size: 2.8em;
 	}
 	h3 {
 		font-size: 1.8em;
