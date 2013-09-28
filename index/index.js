@@ -4,6 +4,7 @@ var menuPrev = document.getElementsByClassName('display')[0];
 var firstSection = document.getElementById('grid');
 var downloadLink = document.getElementsByClassName('download')[0];
 var intro = document.getElementsByClassName('row-intro')[0];
+var tabGuard = document.getElementsByClassName('tabGuard')[0];
 
 
 
@@ -11,16 +12,22 @@ var intro = document.getElementsByClassName('row-intro')[0];
 window.fitText(document.getElementById('pageTitle'));
 
 // Highlight download link
+downloadLink.onmouseover = highlightDownload;
+downloadLink.onfocus = highlightDownload;
+downloadLink.onmouseout = removeHighlightDownload;
+downloadLink.onblur = removeHighlightDownload;
 var highlightDownload = function () {
 	addClass(intro, 'highlightDownload');
 };
 var removeHighlightDownload = function () {
 	removeClass(intro, 'highlightDownload');
 };
-downloadLink.onmouseover = highlightDownload;
-downloadLink.onfocus = highlightDownload;
-downloadLink.onmouseout = removeHighlightDownload;
-downloadLink.onblur = removeHighlightDownload;
+
+// Repeat tabindex
+tabGuard.onfocus = function () {
+	downloadLink.focus();
+};
+
 
 
 // Toggle fixed menu

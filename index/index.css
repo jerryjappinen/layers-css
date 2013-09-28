@@ -81,6 +81,15 @@ a {
 	background-repeat: no-repeat;
 	background-position: 50% -1px;
 }
+.invisible {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+
+
+/*Master title*/
 h1.pageTitle {
 	line-height: 1em;
 }
@@ -91,11 +100,6 @@ h1.pageTitle {
 		font-size: 1em;
 		color: #737b80;
 	}
-.pageTitleImage {
-	width: 0;
-	height: 0;
-	overflow: hidden;
-}
 
 
 
