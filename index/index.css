@@ -72,10 +72,10 @@ a {
     -o-transition-duration: 125ms;
     transition-duration: 125ms;
 
-    -webkit-transition-property: background, color, border, top, margin, padding;
-    -moz-transition-property: background, color, border, top, margin, padding;
-    -o-transition-property: background, color, border, top, margin, padding;
-    transition-property: background, color, border, top, margin, padding;
+    -webkit-transition-property: line-height, background, color, border, top, margin, padding;
+    -moz-transition-property: line-height, background, color, border, top, margin, padding;
+    -o-transition-property: line-height, background, color, border, top, margin, padding;
+    transition-property: line-height, background, color, border, top, margin, padding;
 }
 .row {
 	background-repeat: no-repeat;
@@ -205,6 +205,15 @@ h1.pageTitle {
 	font-weight: 300;
 	text-align: center;
 }
+.row-title .description {
+	margin-top: 3.8em;
+	margin-bottom: 4em;
+	color: #ffa6a6;
+}
+
+
+
+/*Menu*/
 #menu {
 	position: absolute;
 	left: 0;
@@ -212,6 +221,8 @@ h1.pageTitle {
 	text-align: center;
 	z-index: 1000;
 	background-color: #ff4551;
+/*	height: 3.0em;
+	line-height: 2.9em;*/
 }
 #menu.fixed {
 	position: fixed;
@@ -224,19 +235,20 @@ h1.pageTitle {
 #menu a {
 	display: inline-block;
 	padding: 0.8em 1.2em 0.9em 1.2em;
+	border-color: #ff4551;
 	text-transform: uppercase;
 	color: #fff;
 	text-decoration: none;
 }
-	#menu a:hover, #menu a:focus {
+	#menu a:hover, #menu a:focus, #menu .selected a {
 		background-color: #ce2930;
-		color: #fff;
 	}
-.row-title .description {
-	margin-top: 3.8em;
-	margin-bottom: 4em;
-	color: #ffa6a6;
-}
+	#menu a:active {
+		padding-top: 0.5em;
+		padding-bottom: 0.6em;
+		border-top-width: 0.3em;
+		border-bottom-width: 0.3em;
+	}
 
 
 
