@@ -1,15 +1,18 @@
 
 var menu = document.getElementById('menu');
+var menuPrev = document.getElementsByClassName('display')[0];
+var firstSection = document.getElementById('grid');
 
 
 
 // Treat headline
 window.fitText(document.getElementById('pageTitle'));
 
+
+
 // Toggle fixed menu
-var firstSection = document.getElementById('grid');
 window.onscroll = function (event) {
-	var togglePoint = firstSection.offsetTop + parseInt(window.getComputedStyle(firstSection).getPropertyValue('border-top-width'), 10);
+	var togglePoint = menuPrev.offsetTop + menuPrev.offsetHeight + getCss(menuPrev, 'margin-bottom');
 	if (document.body.scrollTop > togglePoint) {
 		addClass(menu, 'fixed');
 	} else {
@@ -17,13 +20,16 @@ window.onscroll = function (event) {
 	}
 };
 
+
+
 // Bind menu link behavior
 var menuLinks = menu.getElementsByTagName('a');
 for (var i = 0; i < menuLinks.length; i++) {
 	menuLinks[i].onclick = function (event) {
 		event.preventDefault();
 		var target = document.getElementById(this.getAttribute('href').substring(1));
-		scrollElementTo(document.body, target.offsetTop, 300);
+		var targetPosition = target.offsetTop - menu.offsetHeight + getCss(target, 'border-top-width');
+		scrollElementTo(document.body, targetPosition, 300);
 	};
 }
 
@@ -39,12 +45,18 @@ var scrollElementTo = function (element, target, duration) {
 	setTimeout(function() {
 		element.scrollTop = element.scrollTop + perTick;
 		scrollElementTo(element, target, duration - 2);
-		console.log(target);
 	}, 2);
 
 };
 
-// Toggle class for an element
+
+
+// Foo
+var getCss = function (target, property) {
+	return parseInt(window.getComputedStyle(target).getPropertyValue(property), 10);
+};
+
+// Class toggling
 var addClass = function (element, className) {
 	if (!hasClass(element, className)) {
 		element.className = element.className + ' ' + className;

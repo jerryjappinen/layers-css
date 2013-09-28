@@ -209,18 +209,18 @@ h1.pageTitle {
 	display: inline-block;
 }
 #menu a {
-	display: block;
-	color: inherit;
-	text-decoration: none;
+	display: inline-block;
 	padding: 0.8em 1.2em 0.9em 1.2em;
 	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
 }
 	#menu a:hover, #menu a:focus {
-		color: inherit;
 		background-color: #ce2930;
+		color: #fff;
 	}
 .row-title .description {
-	margin-top: 3.7em;
+	margin-top: 3.8em;
 	margin-bottom: 4em;
 	color: #ffa6a6;
 }
