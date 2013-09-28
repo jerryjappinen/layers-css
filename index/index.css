@@ -67,10 +67,10 @@ a, a:visited {
 			color: #00c0e6;
 		}
 a {
-    -webkit-transition-duration: 125ms;
-    -moz-transition-duration: 125ms;
-    -o-transition-duration: 125ms;
-    transition-duration: 125ms;
+    -webkit-transition-duration: 100ms;
+    -moz-transition-duration: 100ms;
+    -o-transition-duration: 100ms;
+    transition-duration: 100ms;
 
     -webkit-transition-property: line-height, background, color, border, top, margin, padding;
     -moz-transition-property: line-height, background, color, border, top, margin, padding;
@@ -104,6 +104,24 @@ h1.pageTitle {
 
 
 /*Intro*/
+.row-intro h1.pageTitle {
+	font-size: 6em;
+}
+	@media handheld, only screen and (max-width: 60em) {
+		.row-intro h1.pageTitle {
+			font-size: 5em;
+		}
+	}
+	@media handheld, only screen and (max-width: 40em) {
+		.row-intro h1.pageTitle {
+			font-size: 4em;
+		}
+	}
+	@media handheld, only screen and (max-width: 28em) {
+		.row-intro h1.pageTitle {
+			font-size: 3.4em;
+		}
+	}
 .row-intro ul li {
 	margin-bottom: 0.24em;
 }
@@ -234,20 +252,24 @@ h1.pageTitle {
 }
 #menu a {
 	display: inline-block;
-	padding: 0.8em 1.2em 0.9em 1.2em;
+	padding: 0.4em 1.2em 0.5em 1.2em;
 	border-color: #ff4551;
 	text-transform: uppercase;
 	color: #fff;
 	text-decoration: none;
+	border-top-width: 0.5em;
+	border-bottom-width: 0.5em;
 }
-	#menu a:hover, #menu a:focus, #menu .selected a {
+	#menu a:hover, #menu a:focus, #menu a.selected {
 		background-color: #ce2930;
 	}
+		#menu a.selected:hover, #menu a.selected:focus {
+			background-color: #a6191f;
+		}
 	#menu a:active {
-		padding-top: 0.5em;
-		padding-bottom: 0.6em;
-		border-top-width: 0.3em;
-		border-bottom-width: 0.3em;
+		position: relative;
+		top: 0.15em;
+		border-bottom-width: 0.35em;
 	}
 
 
