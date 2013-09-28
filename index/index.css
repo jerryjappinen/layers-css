@@ -252,6 +252,7 @@ h1.pageTitle {
 }
 #menu a {
 	display: inline-block;
+	position: relative;
 	padding: 0.4em 1.2em 0.5em 1.2em;
 	border-color: #ff4551;
 	text-transform: uppercase;
@@ -260,17 +261,23 @@ h1.pageTitle {
 	border-top-width: 0.5em;
 	border-bottom-width: 0.5em;
 }
-	#menu a:hover, #menu a:focus, #menu a.selected {
+	#menu a.selected {
 		background-color: #ce2930;
 	}
+	#menu a:hover, #menu a:focus {
+		top: -0.2em;
+	}
+		#menu a:active {
+			top: 0.15em;
+			border-bottom-width: 0.35em;
+		}
+		#menu a:hover:active, #menu a.selected:hover, #menu a.selected:focus {
+			top: 0;
+			border-bottom-width: 0.5em;
+		}
 		#menu a.selected:hover, #menu a.selected:focus {
 			background-color: #a6191f;
 		}
-	#menu a:active {
-		position: relative;
-		top: 0.15em;
-		border-bottom-width: 0.35em;
-	}
 
 
 
