@@ -72,10 +72,10 @@ a {
     -o-transition-duration: 125ms;
     transition-duration: 125ms;
 
-    -webkit-transition-property: color, border, top, margin, padding;
-    -moz-transition-property: color, border, top, margin, padding;
-    -o-transition-property: color, border, top, margin, padding;
-    transition-property: color, border, top, margin, padding;
+    -webkit-transition-property: background, color, border, top, margin, padding;
+    -moz-transition-property: background, color, border, top, margin, padding;
+    -o-transition-property: background, color, border, top, margin, padding;
+    transition-property: background, color, border, top, margin, padding;
 }
 .row {
 	background-repeat: no-repeat;
@@ -91,6 +91,11 @@ h1.pageTitle {
 		font-size: 1em;
 		color: #737b80;
 	}
+.pageTitleImage {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
 
 
 
@@ -184,11 +189,40 @@ h1.pageTitle {
 	background-color: #ff4551;
 	background-image: url(down-dark.png);
 	color: #fff;
-}
-.row-title .description {
-	margin-bottom: 4em;
 	font-weight: 300;
 	text-align: center;
+}
+#menu {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 1000;
+	background-color: #ff4551;
+}
+#menu.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#menu li {
+	display: inline-block;
+}
+#menu a {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	padding: 0.8em 1.2em 0.9em 1.2em;
+	text-transform: uppercase;
+}
+	#menu a:hover, #menu a:focus {
+		color: inherit;
+		background-color: #ce2930;
+	}
+.row-title .description {
+	margin-top: 3.7em;
+	margin-bottom: 4em;
+	color: #ffa6a6;
 }
 
 
@@ -199,9 +233,6 @@ h1.pageTitle {
 	border-color: #ff4551;
 	background-image: url(down-red.png);
 }
-	.reference .row:first-of-type {
-		border-top-width: 0;
-	}
 
 .reference h3 {
 	margin-top: 2.68em;
