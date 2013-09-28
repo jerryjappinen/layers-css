@@ -2,12 +2,25 @@
 var menu = document.getElementById('menu');
 var menuPrev = document.getElementsByClassName('display')[0];
 var firstSection = document.getElementById('grid');
+var downloadLink = document.getElementsByClassName('download')[0];
+var intro = document.getElementsByClassName('row-intro')[0];
 
 
 
 // Treat headline
 window.fitText(document.getElementById('pageTitle'));
 
+// Highlight download link
+var highlightDownload = function () {
+	addClass(intro, 'highlightDownload');
+};
+var removeHighlightDownload = function () {
+	removeClass(intro, 'highlightDownload');
+};
+downloadLink.onmouseover = highlightDownload;
+downloadLink.focusin = highlightDownload;
+downloadLink.onmouseout = removeHighlightDownload;
+downloadLink.focusout = removeHighlightDownload;
 
 
 // Toggle fixed menu
@@ -44,14 +57,14 @@ var scrollElementTo = function (element, target, duration) {
 
 	setTimeout(function() {
 		element.scrollTop = element.scrollTop + perTick;
-		scrollElementTo(element, target, duration - 2);
-	}, 2);
+		scrollElementTo(element, target, duration - 5);
+	}, 5);
 
 };
 
 
 
-// Foo
+// Helper to read numerical CSS values
 var getCss = function (target, property) {
 	return parseInt(window.getComputedStyle(target).getPropertyValue(property), 10);
 };

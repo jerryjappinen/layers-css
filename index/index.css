@@ -120,6 +120,7 @@ h1.pageTitle {
 	color: #737b80;
 	font-weight: 300;
 	text-transform: none;
+	min-height: 3em;
 }
 .row-intro h2 a {
 	position: relative;
@@ -180,6 +181,14 @@ h1.pageTitle {
 }
 .row-intro dt.discreet a {
 	text-decoration: none;
+}
+
+/*Highlight download*/
+.highlightDownload dt a {
+	color: #737b80;
+}
+.highlightDownload h2 {
+	color: #fff;
 }
 
 
