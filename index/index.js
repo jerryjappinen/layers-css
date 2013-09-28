@@ -18,9 +18,9 @@ var removeHighlightDownload = function () {
 	removeClass(intro, 'highlightDownload');
 };
 downloadLink.onmouseover = highlightDownload;
-downloadLink.focusin = highlightDownload;
+downloadLink.onfocus = highlightDownload;
 downloadLink.onmouseout = removeHighlightDownload;
-downloadLink.focusout = removeHighlightDownload;
+downloadLink.onblur = removeHighlightDownload;
 
 
 // Toggle fixed menu

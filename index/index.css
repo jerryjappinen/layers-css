@@ -84,7 +84,7 @@ a {
 h1.pageTitle {
 	line-height: 1em;
 }
-	h1.pageTitle a, h1.pageTitle a:hover {
+	h1.pageTitle a, h1.pageTitle a:hover, h1.pageTitle a:focus {
 		color: inherit;
 	}
 	h1.pageTitle a small {
