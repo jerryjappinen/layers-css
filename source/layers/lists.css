@@ -31,6 +31,9 @@ ul.inline, ol.inline {
 	ul.inline.right, ol.inline.right {
 		text-align: right;
 	}
+	ul.inline.center, ol.inline.center {
+		text-align: center;
+	}
 		ul.inline > li, ol.inline > li {
 			display: inline;
 		}
