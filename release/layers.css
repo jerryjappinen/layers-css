@@ -2,7 +2,7 @@
 Layers CSS by Jerry Jäppinen
 Released under the MIT license
 http://eiskis.net/layers
-2013-09-28 22:14 Europe/Helsinki
+2013-09-29 11:28 Europe/Helsinki
 */
 
 /*Basics*/
@@ -705,14 +705,26 @@ ul.plain ul,
 ul.plain ol,
 ol.plain,
 ol.plain ul,
-ol.plain ol {
+ol.plain ol,
+ul.inline,
+ol.inline,
+ul.collapse,
+ol.collapse {
 	padding-left: 0;
 	list-style-type: none;
 }
 	ul.plain ul,
 	ul.plain ol,
 	ol.plain ul,
-	ol.plain ol {
+	ol.plain ol,
+	ul.inline ul,
+	ul.inline ol,
+	ol.inline ul,
+	ol.inline ol,
+	ul.collapse ul,
+	ul.collapse ol,
+	ol.collapse ul,
+	ol.collapse ol {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
@@ -720,10 +732,6 @@ ol.plain ol {
 
 
 /*Inline lists*/
-ul.inline, ol.inline {
-	list-style: none;
-	padding-left: 0;
-}
 	ul.inline.right, ol.inline.right {
 		text-align: right;
 	}
@@ -737,17 +745,18 @@ ul.inline, ol.inline {
 
 
 /*Horizontal lists with block elements*/
-ul.collapse, ol.collapse {
-	list-style: none;
-	padding-left: 0;
+ul.collapse.left, ol.collapse.left {
+	float: left;
+	clear: none;
 }
-	ul.collapse.right, ol.collapse.right {
-		text-align: right;
+ul.collapse.right, ol.collapse.right {
+	float: right;
+	clear: none;
+}
+	ul.collapse > li, ol.collapse > li {
+		float: left;
+		clear: none;
 	}
-		ul.collapse > li, ol.collapse > li {
-			float: left;
-			clear: none;
-		}
 
 /*Rhythm*/
 body {
