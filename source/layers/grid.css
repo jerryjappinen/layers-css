@@ -47,11 +47,15 @@
 }
 	.column.first,
 	.column.full,
-	.column.twelve {
+	.column.twelve,
+	.column.center {
 		clear: both;
 	}
 	.column.right {
 		float: right;
+	}
+	.column.center, .column.right.center {
+		float: none;
 	}
 
 
@@ -75,6 +79,12 @@
 	.column.right.reset {
 		margin-left: 0 !important;
 	}
+
+/*Centered columns*/
+.column.center, .column.right.center {
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
 
 
 

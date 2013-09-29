@@ -2,6 +2,6 @@
 Layers CSS responsive adjustments by Jerry Jäppinen
 Released under the MIT license
 http://eiskis.net/layers
-2013-09-29 11:36 Europe/Helsinki
+2013-09-29 11:46 Europe/Helsinki
 */
 @media handheld,only screen and (max-width:40em){.column.one,.column.two,.column.sixth,.column.three,.column.fourth,.column.four,.column.twosixths,.column.third,.column.five,.column.six,.column.half,.column.threesixths,.column.twofourths,.column.seven,.column.eight,.column.foursixths,.column.twothirds,.column.nine,.column.threefourths,.column.ten,.column.fivesixths,.column.eleven{width:auto !important;float:none !important;clear:both !important;margin-right:0 !important;margin-left:0 !important}}@media handheld,only screen and (max-width:40em){body{font-size:0.9em;-webkit-text-size-adjust:none}}
