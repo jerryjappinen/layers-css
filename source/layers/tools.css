@@ -2,14 +2,18 @@
 
 
 /*Force floats*/
-.float-left, .float-right {
+.keep-left, .keep-right {
 	clear: none;
 }
-.float-left {
+.keep-left {
 	float: left;
 }
-.float-right {
+.keep-right {
 	float: right;
+}
+.keep-center {
+	margin-right: auto;
+	margin-left: auto;
 }
 
 

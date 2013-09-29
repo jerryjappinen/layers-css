@@ -126,7 +126,7 @@
 
 						<p>Columns are stacked from left to right, no wrappers are required. Mark the <code>.last</code> column of the row, and use <code>.clear</code> after rows if needed. Columns within columns work just fine.</p>
 
-						<p>Note that you can't strictly control column widths in a fluid grid. The columns don't always amount to 100 % either, as browsers interpret fractional widths differently.</p>
+						<p>Note that you can't strictly control column widths in a fluid grid. The columns don't always amount to 100 % either, as browsers interpret fractional widths differently. Include <a href="https://bitbucket.org/Eiskis/layers-css/raw/tip/release/responsive.css" target="_blank">responsive adjustments</a> to break columns on small screens.</p>
 
 						<p>Use <strong>n/12</strong> or <strong>fractional</strong> keywords as class names, like this:</p>
 
@@ -426,8 +426,8 @@
 							<dd>Switch box-sizing mode in all browsers.</dd>
 							<dt><code>.block</code>, <code>.inline-block</code>, <code>.inline</code></dt>
 							<dd>Change display property.</dd>
-							<dt><code>.float-left</code>, <code>.float-right</code></dt>
-							<dd>Float an element, remove clearing.</dd>
+							<dt><code>.keep-left</code>, <code>.keep-right</code>, <code>.keep-center</code></dt>
+							<dd>Float an element to left or right (removing clearing) or use <code>margin: auto</code> to keep it centered.</dd>
 						</dl>
 					</div>
 					<div class="clear"></div>
