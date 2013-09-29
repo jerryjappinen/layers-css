@@ -178,17 +178,17 @@ button, input[type=""], input:not([type]), input[type="submit"], input[type="res
 
 /*Make search fields consistent with text fields on Webkit*/
 input[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
 }
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 /*Get IE on the line with checkboxes*/
 input[type="checkbox"], input[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
+	box-sizing: border-box;
+	padding: 0;
 }
 
 /*Make button rendering consistent on Firefox 4+*/
@@ -199,12 +199,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 /*Style clickable inputs consistently on all webkits*/
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    -webkit-appearance: button;
+	-webkit-appearance: button;
 }
 
 /*Buttons have center-aligned text*/
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    text-align: center;
+	text-align: center;
 }
 
 /*Use sensible alignments*/
@@ -240,8 +240,8 @@ a, label, button, input[type="submit"], input[type="button"], input[type="reset"
 
 /*Consistent outlines*/
 a:focus {
-    outline-style: dotted;
+	outline-style: dotted;
 }
 	a:active, a:hover {
-	    outline: 0;
+		outline: 0;
 	}
