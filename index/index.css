@@ -86,6 +86,11 @@ a {
 	height: 0;
 	overflow: hidden;
 }
+pre {
+	border: 1px dashed #ccc;
+	background-color: #fafafa;
+	color: #555;
+}
 
 
 
