@@ -264,14 +264,13 @@ h1.pageTitle {
 	border-top-width: 0.5em;
 	border-bottom-width: 0.5em;
 }
-	#menu a.selected {
+	#menu a.selected, #menu a:hover, #menu a:focus {
 		background-color: #ce2930;
 	}
 	#menu a:hover {
 		top: -0.2em;
 	}
 	#menu a:focus {
-		text-shadow: 0 0 0.5em #ffe6e6;
 	}
 		#menu a:active {
 			top: 0.15em;
@@ -303,7 +302,16 @@ h1.pageTitle {
 .reference .description.center {
 	text-align: center;
 }
-
+.sourceDescription a {
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 0.6em 1.2em 0.55em 1.2em;
+	border-width: 1px;
+	border-color: #0080bf;
+	text-decoration: none;
+	font-size: 0.7em;
+}
 .reference .column {
 	background-color: #eee;
 }
