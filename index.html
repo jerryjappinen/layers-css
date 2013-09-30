@@ -404,23 +404,61 @@
 
 						<h3>Rows</h3>
 
-						<p><code>.row-content</code> is aligned to the center of the parent. <code>.buffer</code> also gives its content breathing room. You can easily set up a full-bleed site with alternating background styling for each section with this HTML:</p>
+						<p><code>.rows</code> are also avalable. <code>.row-content</code> is aligned to the center of its parent, and controlling its <strong>max-width</strong> results in a layout that scales down automatically but doesn't get too wide on large screens.</p>
+
+						<p>The default max-width of <code>.row-content</code> is <code>70em</code>, but here it's set to 40em for clarity:</p>
 
 					</div>
 
-					<div class="row-content buffer colored">
-						<div class="column half">
-							<p><code>.row-content.buffer > .column.half</code></p>
+					<div class="row colored">
+						<div class="row-content" style="max-width: 40em;">
+							<div class="column half">
+								<p><code>.row-content > .column.half</code></p>
+							</div>
+							<div class="column half last">
+								<p><code>.row-content > .column.half.last</code></p>
+							</div>
+							<div class="clear"></div>
 						</div>
-						<div class="column half last">
-							<p><code>.row-content.buffer > .column.half.last</code></p>
-						</div>
-						<div class="clear"></div>
 					</div>
+
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/rows.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
+
 
 					<div class="row-content buffer-top buffer-right buffer-left even description">
 
-						<p>For natural article content, <code>.buffer</code> has less padding on the top (as seen above), but you can use <code>.even</code> buffers, too:</p>
+						<p><code>.buffer</code> gives the content some breathing room:</p>
+
+					</div>
+
+					<div class="row colored">
+						<div class="row-content buffer">
+							<div class="column half">
+								<p><code>.row-content.buffer > .column.half</code></p>
+							</div>
+							<div class="column half last">
+								<p><code>.row-content.buffer > .column.half.last</code></p>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/rows-buffer.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>By default, <code>.buffer</code> has less padding on the top (as seen above). This works well for natural article content, but you can use <code>.even</code> buffers, too:</p>
 
 					</div>
 
@@ -437,24 +475,17 @@
 						<div class="clear"></div>
 					</div>
 
-					<div class="row-content buffer-top buffer-right buffer-left even description">
-
-						<p>Controlling max-width of <code>.row-content</code> works nicely for full-bleed layouts:</p>
-
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/rows-evenbuffer.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
-					<div class="colored">
-						<div class="row-content buffer colored" style="max-width: 30em;">
-							<div class="column full">
-								<p><code>.row-content.buffer > .column.full</code></p>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
+
 
 					<div class="row-content buffer even description">
 
-						<p>You can naturally use any element (like <code>section</code> for example) for the rows. Use rows to build both the overall frame of your site and smaller pieces of page content. <code>.row-content</code> has a default maximum-width of <code>70em</code>.</p>
+						<p>You can naturally use any element (like <code>section</code> for example) for the rows. Use rows to build both the overall frame of your site and smaller pieces of page content.</p>
 
 					</div>
 
