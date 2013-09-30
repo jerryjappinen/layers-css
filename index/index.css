@@ -53,7 +53,6 @@ h6 {
 pre {
 	background-color: #fafafa;
 	color: inherit;
-	box-shadow: inset 0 0 0 1px #ff4551;
 }
 code, pre code {
 	font-size: 0.8em;
@@ -305,43 +304,98 @@ h1.pageTitle {
 
 
 /*Source*/
+
+/*Trigger style*/
 .source .trigger {
+	overflow-y: hidden;
 	position: relative;
-	display: inline-block;
+	display: block;
+	padding: 0 5%;
+	text-align: center;
+
 	text-transform: uppercase;
-	padding: 0.6em 1.2em 0.55em 1.2em;
 	text-decoration: none;
 	font-size: 0.8em;
+
+	border-width: 1px;
+	border-color: #00b5d9;
 	background-color: #00b5d9;
 	color: #fff;
 }
 	.source .trigger:hover {
-		background-color: #0080bf;
+		border-color: #0099bf;
+		background-color: #0099bf;
 	}
 	.source .trigger:active {
 		position: relative;
 		top: 0.2em;
 	}
-.sourceContent {
-	overflow: auto;
-	max-height: 30em;
-	margin-top: 1.34em;
-    -webkit-transition-duration: 400ms;
-    -moz-transition-duration: 400ms;
-    -o-transition-duration: 400ms;
-    transition-duration: 400ms;
-    -webkit-transition-property: margin, padding, border-width, max-height, box-shadow;
-    -moz-transition-property: margin, padding, border-width, max-height, box-shadow;
-    -o-transition-property: margin, padding, border-width, max-height, box-shadow;
-    transition-property: margin, padding, border-width, max-height, box-shadow;
+	.source.collapsed .trigger {
+		color: #00b5d9;
+		background-color: transparent;
+	}
+	.source.collapsed .trigger:hover {
+		background-color: #fafafa;
+	}
+
+/*Choose trigger content*/
+.source .trigger {
+	height: 2.6em;
 }
-	.sourceContent.collapsed {
+.source .trigger .hide, .source .trigger .show {
+	position: absolute;
+	display: block;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	height: 2.6em;
+	line-height: 2.7em;
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-property: opacity, top;
+    -moz-transition-property: opacity, top;
+    -o-transition-property: opacity, top;
+    transition-property: opacity, top;
+}
+.source .trigger .hide, .source.collapsed .trigger .show {
+	top: 0;
+	opacity: 1;
+}
+	.source .trigger .show, .source.collapsed .trigger .hide {
+		opacity: 0;
+	}
+	.source .trigger .show {
+		top: 10em;
+	}
+	.source.collapsed .trigger .hide {
+		top: -10em;
+	}
+
+/*Code area*/
+.sourceContent {
+	border-color: #00b5d9;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	overflow: auto;
+	max-height: 24em;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transition-property: padding, border-width, max-height, box-shadow;
+    -moz-transition-property: padding, border-width, max-height, box-shadow;
+    -o-transition-property: padding, border-width, max-height, box-shadow;
+    transition-property: padding, border-width, max-height, box-shadow;
+}
+	.collapsed .sourceContent {
 		overflow-y: hidden;
 		max-height: 0;
-		margin-top: 0;
 		padding-top: 0;
 		padding-bottom: 0;
-		box-shadow: inset 0 0 0 1px transparent;
+		border-bottom-width: 0;
 	}
 
 

@@ -158,11 +158,9 @@ window.onload = function () {
 	for (i = 0; i < sourceContainers.length; i++) {
 		(function () {
 			var parent = sourceContainers[i];
-			var trigger = parent.getElementsByClassName('trigger')[0];
-			var collapsible = parent.getElementsByClassName('sourceContent')[0];
-			trigger.onclick = function (event) {
+			parent.getElementsByClassName('trigger')[0].onclick = function (event) {
 				event.preventDefault();
-				toggleClass(collapsible, 'collapsed');
+				toggleClass(parent, 'collapsed');
 			};
 		})();
 	}
