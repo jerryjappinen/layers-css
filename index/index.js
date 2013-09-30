@@ -161,6 +161,11 @@ window.onload = function () {
 			parent.getElementsByClassName('trigger')[0].onclick = function (event) {
 				event.preventDefault();
 				toggleClass(parent, 'collapsed');
+
+				// Recalculate waypoints (hacky)
+				setTimeout(function () {
+					menuWaypoints = findWaypoints();
+				}, 300);
 			};
 		})();
 	}
