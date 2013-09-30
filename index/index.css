@@ -306,6 +306,9 @@ h1.pageTitle {
 /*Source*/
 
 /*Trigger style*/
+.source {
+	margin-top: 1.34em;
+}
 .source .trigger {
 	overflow-y: hidden;
 	position: relative;
