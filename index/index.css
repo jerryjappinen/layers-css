@@ -50,7 +50,12 @@ h6 {
 
 
 /*Generic*/
-code {
+pre {
+	background-color: #fafafa;
+	color: inherit;
+	box-shadow: inset 0 0 0 1px #ff4551;
+}
+code, pre code {
 	font-size: 0.8em;
 	color: #e01b6a;
 }
@@ -58,24 +63,17 @@ dl.plain dt {
 	font-weight: inherit;
 }
 a, a:visited {
-	color: #00c0e6;
+	color: #00b5d9;
 }
-	a.button:hover, a.button:focus {
-		color: #88ddee;
-	}
-		a.button:active {
-			color: #00c0e6;
-		}
 a {
     -webkit-transition-duration: 100ms;
     -moz-transition-duration: 100ms;
     -o-transition-duration: 100ms;
     transition-duration: 100ms;
-
-    -webkit-transition-property: line-height, background, color, border, top, margin, padding, line-height;
-    -moz-transition-property: line-height, background, color, border, top, margin, padding, line-height;
-    -o-transition-property: line-height, background, color, border, top, margin, padding, line-height;
-    transition-property: line-height, background, color, border, top, margin, padding, line-height;
+    -webkit-transition-property: line-height, background, color, border, top, margin, padding;
+    -moz-transition-property: line-height, background, color, border, top, margin, padding;
+    -o-transition-property: line-height, background, color, border, top, margin, padding;
+    transition-property: line-height, background, color, border, top, margin, padding;
 }
 .row {
 	background-repeat: no-repeat;
@@ -85,11 +83,6 @@ a {
 	width: 0;
 	height: 0;
 	overflow: hidden;
-}
-pre {
-	border: 1px dashed #e01b6a;
-	background-color: #fafafa;
-	color: #555;
 }
 
 
@@ -223,7 +216,7 @@ h1.pageTitle {
 /*Title row*/
 .row-title {
 	background-color: #ff4551;
-	background-image: url(down-dark.png);
+	background-image: url(images/down-dark.png);
 	color: #fff;
 	font-weight: 300;
 	text-align: center;
@@ -290,7 +283,7 @@ h1.pageTitle {
 .reference .row {
 	border-top-width: 1em;
 	border-color: #ff4551;
-	background-image: url(down-red.png);
+	background-image: url(images/down-red.png);
 }
 
 .reference h3 {
@@ -302,16 +295,6 @@ h1.pageTitle {
 .reference .description.center {
 	text-align: center;
 }
-.sourceDescription a {
-	position: relative;
-	display: inline-block;
-	text-transform: uppercase;
-	padding: 0.6em 1.2em 0.55em 1.2em;
-	border-width: 1px;
-	border-color: #0080bf;
-	text-decoration: none;
-	font-size: 0.7em;
-}
 .reference .column {
 	background-color: #eee;
 }
@@ -319,6 +302,47 @@ h1.pageTitle {
 		background-color: #ddd;
 	}
 
+
+
+/*Source*/
+.source .trigger {
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 0.6em 1.2em 0.55em 1.2em;
+	text-decoration: none;
+	font-size: 0.8em;
+	background-color: #00b5d9;
+	color: #fff;
+}
+	.source .trigger:hover {
+		background-color: #0080bf;
+	}
+	.source .trigger:active {
+		position: relative;
+		top: 0.2em;
+	}
+.sourceContent {
+	overflow: auto;
+	max-height: 30em;
+	margin-top: 1.34em;
+    -webkit-transition-duration: 400ms;
+    -moz-transition-duration: 400ms;
+    -o-transition-duration: 400ms;
+    transition-duration: 400ms;
+    -webkit-transition-property: margin, padding, border-width, max-height, box-shadow;
+    -moz-transition-property: margin, padding, border-width, max-height, box-shadow;
+    -o-transition-property: margin, padding, border-width, max-height, box-shadow;
+    transition-property: margin, padding, border-width, max-height, box-shadow;
+}
+	.sourceContent.collapsed {
+		overflow-y: hidden;
+		max-height: 0;
+		margin-top: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		box-shadow: inset 0 0 0 1px transparent;
+	}
 
 
 /*Grid*/
@@ -352,7 +376,7 @@ input.plain, textarea.plain {
 
 /*Dark sections*/
 .row-footer {
-	background-image: url(down-white.png);
+	background-image: url(images/down-white.png);
 }
 .row-footer h1.pageTitle {
 	font-size: 3.5em;

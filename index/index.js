@@ -70,6 +70,13 @@ var getCss = function (target, property) {
 };
 
 // Class toggling
+var toggleClass = function (element, className) {
+	if (hasClass(element, className)) {
+		removeClass(element, className);
+	} else {
+		addClass(element, className);
+	}
+};
 var addClass = function (element, className) {
 	if (!hasClass(element, className)) {
 		element.className = element.className + ' ' + className;
@@ -95,6 +102,7 @@ var intro = document.getElementsByClassName('row-intro')[0];
 var menu = document.getElementById('menu');
 var menuLinks = menu.getElementsByTagName('a');
 var menuPrev = document.getElementsByClassName('display')[0];
+var sourceContainers = document.getElementsByClassName('source');
 var tabGuard = document.getElementsByClassName('tabGuard')[0];
 var menuWaypoints = [];
 
@@ -105,6 +113,7 @@ var menuWaypoints = [];
 */
 
 window.onload = function () {
+	var i;
 
 	// Highlight download link
 	downloadLink.onmouseover = highlightDownload;
@@ -124,7 +133,7 @@ window.onload = function () {
 	};
 
 	// Bind menu links to scrolling
-	for (var i = 0; i < menuLinks.length; i++) {
+	for (i = 0; i < menuLinks.length; i++) {
 		(function () {
 			var j = i;
 			var links = menuLinks;
@@ -144,6 +153,19 @@ window.onload = function () {
 	// Menu waypoints
 	watchWaypoints();
 	window.onscroll = watchWaypoints;
+
+	// Source code previews
+	for (i = 0; i < sourceContainers.length; i++) {
+		(function () {
+			var parent = sourceContainers[i];
+			var trigger = parent.getElementsByClassName('trigger')[0];
+			var collapsible = parent.getElementsByClassName('sourceContent')[0];
+			trigger.onclick = function (event) {
+				event.preventDefault();
+				toggleClass(collapsible, 'collapsed');
+			};
+		})();
+	}
 
 };
 

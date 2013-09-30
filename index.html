@@ -16,6 +16,7 @@
 
 		<!-- This page -->
 		<link rel="stylesheet" href="index/index.css" media="screen">
+		<link rel="stylesheet" href="index/prism.css" media="screen">
 
 
 
@@ -24,13 +25,13 @@
 		<title>Layers CSS</title>
 		<meta name="application-name" content="Layers CSS">
 		<meta name="author" content="Jerry Jäppinen">
-		<link rel="shortcut icon" href="index/logo.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="index/images/logo.ico" type="image/x-icon">
 
 		<meta property="og:title" content="Layers CSS" />
 		<meta property="og:description" content="A lightweight, unobtrusive, style-agnostic CSS pack. Build your look on the web, not Twitter's &ndash; and make it fluid. Comes with no bullshit." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://eiskis.net/layers/" />
-		<meta property="og:image" content="http://eiskis.net/layers/index/layers.png" />
+		<meta property="og:image" content="http://eiskis.net/layers/index/images/layers.png" />
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -46,7 +47,7 @@
 
 				<h1 class="pageTitle squeeze-top"><a href="./">Layers <small>CSS</small></a></h1>
 
-				<p class="pageTitleImage invisible"><img src="index/layers.png" height="480" width="480" alt="Layers CSS" title="Layers CSS"></p>
+				<p class="pageTitleImage invisible"><img src="index/images/layers.png" height="480" width="480" alt="Layers CSS" title="Layers CSS"></p>
 
 				<div class="column half">
 					<div class="buffer-right">
@@ -133,6 +134,9 @@
 
 					</div>
 
+
+
+					<!-- Basic grid example -->
 					<div class="column six">
 						<p><code>.column.six</code></p>
 					</div>
@@ -189,7 +193,11 @@
 					</div>
 					<div class="clear"></div>
 
-					<ul class="sourceDescription inline right"><a href="#">View HTML</a></ul>
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/grid.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
 
 
 
@@ -208,6 +216,12 @@
 							<p><code>.column.half.<strong>center</strong></code></p>
 						</div>
 
+					</div>
+
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/grid-center.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
 
@@ -230,6 +244,12 @@
 
 					</div>
 
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/grid-push.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
 
 
 					<div class="row-content buffer-top buffer-right buffer-left even description">
@@ -248,6 +268,12 @@
 						</div>
 						<div class="clear"></div>
 
+					</div>
+
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/grid-right.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
 
@@ -272,6 +298,7 @@
 					<div class="clear"></div>
 
 
+
 					<div class="column three reset push-one">
 						<p><code>.column.three.reset.push-one</code></p>
 					</div>
@@ -283,8 +310,17 @@
 					</div>
 					<div class="clear"></div>
 
+
+
 					<div class="column half reset center">
 						<p><code>column.half.reset.center</code></p>
+					</div>
+					<div class="clear"></div>
+
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/grid-nogutters.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
 
@@ -310,6 +346,12 @@
 					</div>
 					<div class="clear"></div>
 
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/grid-fixedfluid.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
 
 
 					<div class="row-content buffer-top buffer-right buffer-left even description">
@@ -329,6 +371,14 @@
 					</div>
 					<div class="clear"></div>
 
+					<!-- Source -->
+					<div class="source">
+						<ul class="inline right reset-bottom"><a href="#" class="trigger">HTML source</a></ul>
+						<pre data-src="index/samples/grid-fixedfluid-right.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
+
+
 					<div class="row-content buffer-top buffer-right buffer-left even description">
 
 						<h4>Customize</h4>
@@ -337,9 +387,7 @@
 
 					</div>
 
-					<pre class="buffer">
-
-/*Fixed column width*/
+					<pre class="buffer even"><code class="language-css">/*Fixed column width*/
 .column.fixed {
 	width: 10em;
 }
@@ -348,8 +396,7 @@
 }
 .column.fluid.right > .column-content {
 	margin-left: 10em;
-}
-</pre>
+}</code></pre>
 
 
 
@@ -854,6 +901,7 @@
 		</script>
 
 		<!-- Scripts for this page -->
+		<script type='text/javascript' src='index/prism.js'></script>
 		<script type='text/javascript' src='index/index.js'></script>
 
 		<!-- Web fonts -->

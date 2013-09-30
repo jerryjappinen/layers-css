@@ -3,7 +3,7 @@
 
 /*Dimensions*/
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type=""], input:not([type]) {
-	width: 60%;	
+	width: 60%;
 	max-width: 20em;
 }
 	input[type="text"].squeeze, input[type="password"].squeeze, input[type="email"].squeeze, input[type="url"].squeeze, input[type="search"].squeeze, input[type="tel"].squeeze, input[type=""].squeeze, input:not([type]).squeeze {
@@ -11,7 +11,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 		max-width: 14em;
 	}
 textarea {
-	width: 60%;	
+	width: 60%;
 	max-width: 32em;
 	height: 10.72em;
 }
