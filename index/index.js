@@ -4,16 +4,16 @@
 */
 
 // Scrolling behavior
-var scrollElementTo = function (element, waypoint, duration) {
+var scrollWindow = function (element, waypoint, duration) {
 	if (duration < 1) return;
 
-	var target = menuWaypoints[waypoint];
+	var target = menuWaypoints[waypoint]+1;
 	var difference = target - element.scrollTop;
 	var perTick = difference / duration * 10;
 
+	element.scrollTop = element.scrollTop + perTick;
 	setTimeout(function() {
-		element.scrollTop = element.scrollTop + perTick;
-		scrollElementTo(element, waypoint, duration - 5);
+		scrollWindow(element, waypoint, duration - 5);
 	}, 5);
 
 };
@@ -34,23 +34,47 @@ var findWaypoints = function () {
 	return results;
 };
 
+// Update menu and other elements as the user scrolls
 var watchWaypoints = function () {
 	var i;
+	var scrollPosition = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 
-	// Toggle fixed menu
-	if (document.body.scrollTop > menuWaypoints[0]) {
+	// Toggle fixed menu, we're in sections
+	if (scrollPosition > menuWaypoints[0]) {
 		addClass(menu, 'fixed');
-		for (i = 0; i < menuLinks.length; i++) {
-			if (document.body.scrollTop >= menuWaypoints[i+1] && (i == menuLinks.length-1 || document.body.scrollTop < menuWaypoints[i+2])) {
-				addClass(menuLinks[i], 'selected');
-			} else {
-				removeClass(menuLinks[i], 'selected');
-			}
+		var newWaypoint = 0;
+
+		// Going up
+		if (scrollPosition < menuWaypoints[currentWaypoint]) {
+			newWaypoint = currentWaypoint - 1;
+
+		// Going down, but not past end
+		} else if (currentWaypoint < (menuWaypoints.length-1) && scrollPosition > menuWaypoints[currentWaypoint+1]) {
+			newWaypoint = currentWaypoint + 1;
 		}
+
+		// We changed sections
+		if (newWaypoint > 0) {
+			currentWaypoint = newWaypoint;
+
+			// Choose correct menu item
+			for (i = 0; i < menuLinks.length; i++) {
+				if (i === currentWaypoint-1) {
+					addClass(menuLinks[i], 'selected');
+					menuLinks[i].focus();
+				} else {
+					removeClass(menuLinks[i], 'selected');
+					// menuLinks[i].blur();
+				}
+			}
+
+		}
+
 
 	// Switch selected item
 	} else {
 		removeClass(menu, 'fixed');
+		currentWaypoint = 0;
 		for (i = 0; i < menuLinks.length; i++) {
 			removeClass(menuLinks[i], 'selected');
 		}
@@ -105,6 +129,7 @@ var menuPrev = document.getElementsByClassName('display')[0];
 var sourceContainers = document.getElementsByClassName('source');
 var tabGuard = document.getElementsByClassName('tabGuard')[0];
 var menuWaypoints = [];
+var currentWaypoint = 0;
 
 
 
@@ -139,18 +164,19 @@ window.onload = function () {
 			var links = menuLinks;
 			links[j].onclick = function (event) {
 				event.preventDefault();
-				scrollElementTo(document.body, j+1, 300);
+				scrollWindow(document.body, j+1, 300);
+				scrollWindow(document.documentElement, j+1, 300);
 			};
 		})();
 	}
 
-	// Keep track of menu waypoints
+	// Keep menu waypoints accurate
 	menuWaypoints = findWaypoints();
 	window.onresize = function (event) {
 		menuWaypoints = findWaypoints();
 	};
 
-	// Menu waypoints
+	// Watch waypoints when scrolling
 	watchWaypoints();
 	window.onscroll = watchWaypoints;
 

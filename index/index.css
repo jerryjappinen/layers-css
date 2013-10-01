@@ -256,19 +256,17 @@ h1.pageTitle {
 	border-top-width: 0.5em;
 	border-bottom-width: 0.5em;
 }
-	#menu a.selected, #menu a:hover, #menu a:focus {
+	#menu a.selected {
 		background-color: #ce2930;
 	}
-	#menu a:hover {
+	#menu a:hover, #menu a:focus {
 		top: -0.2em;
-	}
-	#menu a:focus {
 	}
 		#menu a:active {
 			top: 0.15em;
 			border-bottom-width: 0.35em;
 		}
-		#menu a:hover:active, #menu a.selected:hover {
+		#menu a:hover:active, #menu a.selected:hover, #menu a.selected:focus {
 			top: 0;
 			border-bottom-width: 0.5em;
 		}
@@ -324,6 +322,9 @@ h1.pageTitle {
 	border-color: #00b5d9;
 	background-color: #00b5d9;
 	color: #fff;
+
+	letter-spacing: 0.2em;
+	word-spacing: 0.4em;
 }
 	.source .trigger:hover {
 		border-color: #0099bf;

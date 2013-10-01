@@ -504,8 +504,6 @@
 
 					<div class="row-content buffer-right buffer-bottom buffer-left even description center">
 
-						<!-- <h4>Everyday snippets</h4> -->
-
 						<p><strong>Psst!</strong> You can automatically use these as mixins in <a href="http://lesscss.org/" target="_blank">LESS</a>.</p>
 
 					</div>
@@ -559,7 +557,7 @@
 
 							<ul>
 								<li><code>.reset-top, .reset-bottom</code></li>
-								<li><code>.squeeze-right</code></li>
+								<li><code>.squeeze-top</code></li>
 								<li><code>.push-top</code></li>
 							</ul>
 
@@ -706,13 +704,13 @@
 
 					<div class="row-content buffer-top buffer-right buffer-left even description">
 
-						<p>Horizontal lists, with block list items: <code>ul.collapse.left</code> + <code>ul.collapse.right</code></p>
+						<p>You can <code>.collapse</code> lists to make them stack horizontally with block list items. <code>.right</code> works, too. Very handy for menus:</p>
 
 					</div>
 
 					<div class="colored">
 
-						<ul class="reset collapse left">
+						<ul class="reset collapse">
 							<li><a href="#">One</a></li>
 							<li><a href="#">Two</a></li>
 							<li><a href="#">Three</a></li>
@@ -726,6 +724,12 @@
 						</ul>
 						<div class="clear"></div>
 
+					</div>
+
+					<!-- Source -->
+					<div class="source collapsed">
+						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<pre data-src="index/samples/lists-collapse.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
 
