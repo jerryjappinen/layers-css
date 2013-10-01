@@ -69,10 +69,10 @@ a {
     -moz-transition-duration: 100ms;
     -o-transition-duration: 100ms;
     transition-duration: 100ms;
-    -webkit-transition-property: line-height, background, color, border, top, margin, padding;
-    -moz-transition-property: line-height, background, color, border, top, margin, padding;
-    -o-transition-property: line-height, background, color, border, top, margin, padding;
-    transition-property: line-height, background, color, border, top, margin, padding;
+    -webkit-transition-property: line-height, background, color, border-color, border, top, margin, padding;
+    -moz-transition-property: line-height, background, color, border-color, border, top, margin, padding;
+    -o-transition-property: line-height, background, color, border-color, border, top, margin, padding;
+    transition-property: line-height, background, color, border-color, border, top, margin, padding;
 }
 .row {
 	background-repeat: no-repeat;
@@ -325,6 +325,11 @@ h1.pageTitle {
 
 	letter-spacing: 0.2em;
 	word-spacing: 0.4em;
+
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
 }
 	.source .trigger:hover {
 		border-color: #0099bf;
@@ -335,11 +340,12 @@ h1.pageTitle {
 		top: 0.2em;
 	}
 	.source.collapsed .trigger {
+		border-color: #fafafa;
+		background-color: #fafafa;
 		color: #00b5d9;
-		background-color: transparent;
 	}
 	.source.collapsed .trigger:hover {
-		background-color: #fafafa;
+		border-color: #00b5d9;
 	}
 
 /*Choose trigger content*/
