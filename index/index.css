@@ -490,3 +490,11 @@ input.plain, textarea.plain {
 		.dark a:active {
 			color: #00c0e6;
 		}
+.dark ::selection {
+	background-color: #A1ACB3;
+	color: #fff;
+}
+.dark ::-moz-selection {
+	background-color: #A1ACB3;
+	color: #fff;
+}
