@@ -130,6 +130,12 @@ var sourceContainers = document.getElementsByClassName('source');
 var tabGuard = document.getElementsByClassName('tabGuard')[0];
 var menuWaypoints = [];
 var currentWaypoint = 0;
+var highlightDownload = function () {
+	addClass(intro, 'highlightDownload');
+};
+var removeHighlightDownload = function () {
+	removeClass(intro, 'highlightDownload');
+};
 
 
 
@@ -145,12 +151,6 @@ window.onload = function () {
 	downloadLink.onfocus = highlightDownload;
 	downloadLink.onmouseout = removeHighlightDownload;
 	downloadLink.onblur = removeHighlightDownload;
-	var highlightDownload = function () {
-		addClass(intro, 'highlightDownload');
-	};
-	var removeHighlightDownload = function () {
-		removeClass(intro, 'highlightDownload');
-	};
 
 	// Cycle tabindex
 	tabGuard.onfocus = function () {

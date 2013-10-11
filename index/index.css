@@ -3,6 +3,9 @@
 html {
 	font-family: "Lato", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
+body {
+	color: #232d33;
+}
 h1, h2, h3 {
 	font-weight: 700;
 	text-transform: uppercase;
@@ -51,7 +54,7 @@ h6 {
 
 /*Generic*/
 pre {
-	background-color: #fafafa;
+	background-color: #f6f6f6;
 	color: inherit;
 }
 code, pre code {
@@ -340,8 +343,8 @@ h1.pageTitle {
 		top: 0.2em;
 	}
 	.source.collapsed .trigger {
-		border-color: #fafafa;
-		background-color: #fafafa;
+		border-color: #f6f6f6;
+		background-color: #f6f6f6;
 		color: #00b5d9;
 	}
 	.source.collapsed .trigger:hover {
