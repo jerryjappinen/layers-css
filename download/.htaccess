@@ -1,0 +1,30 @@
+
+#
+#   SETTINGS
+#
+
+# Disable directory listings
+# Options -Indexes
+
+# Allow URL rewrites (uncomment "+FollowSymLinks" line if needed on your server)
+# Options +FollowSymLinks
+RewriteEngine on
+
+
+
+#
+#   ENDPOINTS
+#
+
+# Forward to default action
+# RewriteRule ^$ %{REQUEST_URI}site/ [R=301,L]
+
+# Load index.php at root
+# DirectoryIndex foo/index.php
+
+# Respect natural paths
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Actions
+RewriteRule ^/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/?([^/]*)/? \index.php?keywords=$1,$2,$3

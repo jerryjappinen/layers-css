@@ -2,7 +2,7 @@
 Layers CSS by Jerry Jäppinen
 Released under the MIT license
 http://eiskis.net/layers
-2013-10-01 09:54 Europe/Helsinki
+2013-10-15 13:17 Europe/Helsinki
 */
 
 /*Basics*/
@@ -903,6 +903,30 @@ p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pr
 .no-buffer, .no-buffer-left {
 	padding-left: 0;
 }
+
+/*Table gravity*/
+
+/*Horizontal*/
+th.left, td.left {
+	text-align: left;
+}
+	th.right, td.right {
+		text-align: right;
+	}
+	th.center, td.center {
+		text-align: center;
+	}
+
+/*Vertical*/
+th.top, td.top {
+	vertical-align: top;
+}
+	th.vertical-center, td.vertical-center, th.middle, td.middle {
+		vertical-align: middle;
+	}
+	th.bottom, td.bottom {
+		vertical-align: bottom;
+	}
 /*Overall rhythm*/
 body {
 	word-break: break-word;

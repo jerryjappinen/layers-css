@@ -1,0 +1,24 @@
+
+/*Table gravity*/
+
+/*Horizontal*/
+th.left, td.left {
+	text-align: left;
+}
+	th.right, td.right {
+		text-align: right;
+	}
+	th.center, td.center {
+		text-align: center;
+	}
+
+/*Vertical*/
+th.top, td.top {
+	vertical-align: top;
+}
+	th.vertical-center, td.vertical-center, th.middle, td.middle {
+		vertical-align: middle;
+	}
+	th.bottom, td.bottom {
+		vertical-align: bottom;
+	}
