@@ -18,14 +18,17 @@ Get started
 ===========
 
 To get it all, use the single-file compilation:
+
 	<link rel="stylesheet" href="release/layers.css">
 
 You can also pick and choose what you want (in alphabetical order):
+
 	<link rel="stylesheet" href="source/layers/_normalize.css">
 	<link rel="stylesheet" href="source/layers/forms.css">
 	<link rel="stylesheet" href="source/layers/grid.css">
 	<link rel="stylesheet" href="source/layers/lists.css">
 	<link rel="stylesheet" href="source/layers/rhythm.css">
+	<link rel="stylesheet" href="source/layers/tables.css">
 	<link rel="stylesheet" href="source/layers/text.css">
 	<link rel="stylesheet" href="source/layers/tools.css">
 
@@ -37,9 +40,11 @@ Responsive adjustments
 ----------------------
 
 All responsive adjustments are included in separate from the main release:
+
 	<link rel="stylesheet" href="release/responsive.css">
 
 and in individual files:
+
 	<link rel="stylesheet" href="source/responsive/break-grid.css">
 	<link rel="stylesheet" href="source/responsive/font-size.css">
 
