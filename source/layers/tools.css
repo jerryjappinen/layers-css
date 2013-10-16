@@ -35,12 +35,22 @@
 
 
 /*Utilities for common CSS-based behavior*/
-.clear {
-	clear: both;
-}
 .hidden {
 	display: none;
 }
+.clear {
+	clear: both;
+}
+.clear-after:after {
+	content: " ";
+	display: table;
+}
+.clear-after:after {
+	clear: both;
+}
+	.clear-after {
+		*zoom: 1;
+	}
 
 
 

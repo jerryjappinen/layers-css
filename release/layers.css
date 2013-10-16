@@ -2,7 +2,7 @@
 Layers CSS by Jerry Jäppinen
 Released under the MIT license
 http://eiskis.net/layers
-2013-10-16 13:00 Europe/Helsinki
+2013-10-16 17:46 Europe/Helsinki
 */
 
 /*Basics*/
@@ -997,12 +997,22 @@ h1, h2, h3 {
 
 
 /*Utilities for common CSS-based behavior*/
-.clear {
-	clear: both;
-}
 .hidden {
 	display: none;
 }
+.clear {
+	clear: both;
+}
+.clear-after:after {
+	content: " ";
+	display: table;
+}
+.clear-after:after {
+	clear: both;
+}
+	.clear-after {
+		*zoom: 1;
+	}
 
 
 
