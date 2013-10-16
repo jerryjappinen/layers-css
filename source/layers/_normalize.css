@@ -17,6 +17,7 @@ time, mark, audio, video {
 	border-style: solid;
 	border-color: transparent;
 	background: transparent;
+	outline-style: solid;
 	vertical-align: baseline;
 }
 html, body, blockquote, pre, table, form {

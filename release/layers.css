@@ -2,7 +2,7 @@
 Layers CSS by Jerry Jäppinen
 Released under the MIT license
 http://eiskis.net/layers
-2013-10-15 13:17 Europe/Helsinki
+2013-10-16 13:00 Europe/Helsinki
 */
 
 /*Basics*/
@@ -23,6 +23,7 @@ time, mark, audio, video {
 	border-style: solid;
 	border-color: transparent;
 	background: transparent;
+	outline-style: solid;
 	vertical-align: baseline;
 }
 html, body, blockquote, pre, table, form {

@@ -208,53 +208,77 @@
 		<h2>Forms</h2>
 
 		<form action="#">
-
-		<div>
 			<input type="hidden" name="hidden field" value="42">
+
 			<p>This is a form containing various fields (with some initial values (defaults) set, so that you can see how input text looks like without actually typing it):</p>
-		</div>
 
 
-		<h3>Buttons</h3>
 
-		<ul>
-			<li><label>Button: <button name="foo" value="bar">A cool button</button></label></li>
-			<li><label>Reset button: <input type="reset" name="reset" value="Reset" /></button></label></li>
-		</ul>
+			<h3>Buttons</h3>
 
-		<div><label for="f1">Single-line text input field: <input id="f1" name="text" size="20" value="Default text."></label></div>
-		<div><label for="f2">Multi-line text input field (textarea):</label><br>
-		<textarea id="f2" name="textarea" rows="2" cols="20">
-		Default text.
-		</textarea></div>
-		<div>The following two radio buttons are inside
-		a <code>fieldset</code> element with a <code>legend</code>:</div>
-		<fieldset>
-		<legend>Legend</legend>
-		<div><label for="f3"><input id="f3" type="radio" name="radio" value="1"> Radio button 1</label></div>
-		<div><label for="f4"><input id="f4" type="radio" name="radio" value="2" checked> Radio button 2 (initially checked)</label></div>
-		</fieldset>
-		<fieldset>
-		<legend>Check those that apply</legend>
-		<div><label for="f5"><input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label></div>
-		<div><label for="f6"><input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label></div>
-		</fieldset>
-		<div><label for="f10">A <code>select</code> element with <code>size="1"</code>
-		(dropdown box):
-		<select id="f10" name="select1" size="1">
-		<option>one
-		<option selected>two (default)
-		<option>three
-		</select></label></div>
-		<div><label for="f11">A <code>select</code> element with <code>size="3"</code>
-		(listbox):</label><br>
-		<select id="f11" name="select2" size="3">
-		<option>one
-		<option selected>two (default)
-		<option>three
-		</select></div>
-		<div><label for="f99">Submit button:
-		<input id="f99" type="submit" name="submit" value="Just a test"></label></div>
+			<ul>
+				<li><label>Button: <button name="foo" value="bar">A cool button</button></label></li>
+				<li><label>Reset button: <input type="reset" name="reset" value="Reset" /></button></label></li>
+			</ul>
+
+
+
+			<h3>Text input</h3>
+
+			<p><label for="f1">Single-line text input field: <input id="f1" name="text" size="20" value="Default text"></label></p>
+
+			<p><label for="f2">Multi-line text input field (textarea):</label><br>
+
+			<p><textarea id="f2" name="textarea" rows="2" cols="20">Default text</textarea></p>
+
+
+
+			<h3>Other input elements</h3>
+
+			<p>The following two radio buttons are inside a <code>fieldset</code> element with a <code>legend</code>:</p>
+
+			<fieldset>
+
+				<legend>Legend</legend>
+				<p><label for="f3"><input id="f3" type="radio" name="radio" value="1"> Radio button 1</label></p>
+				<p><label for="f4"><input id="f4" type="radio" name="radio" value="2" checked> Radio button 2 (initially checked)</label></p>
+
+			</fieldset>
+
+			<fieldset>
+
+				<legend>Check those that apply</legend>
+				<p><label for="f5"><input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label></p>
+				<p><label for="f6"><input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label></p>
+
+			</fieldset>
+
+			<p>
+				<label for="f10">
+					A <code>select</code> element with <code>size="1"</code> (dropdown box):
+
+					<select id="f10" name="select1" size="1">
+						<option>one
+						<option selected>two (default)
+						<option>three
+					</select>
+				</label>
+			</p>
+
+			<p>
+				<label for="f11">A <code>select</code> element with <code>size="3"</code> (listbox):</label>
+				<br>
+
+				<select id="f11" name="select2" size="3">
+					<option>one
+					<option selected>two (default)
+					<option>three
+				</select>
+
+			</p>
+
+			<p><label for="f99">Submit button: <input id="f99" type="submit" name="submit" value="Just a test"></label></p>
+
 		</form>
 
 
@@ -264,7 +288,9 @@
 		<p>The following table has a caption. The first row and the first column contain table header cells (<code>th</code> elements) only; other cells are data cells (<code>td</code> elements), with <code>align="right"</code> attributes:</p>
 
 		<table summary="Each row names a Nordic country and specifies its total area and land area, in square kilometers">
+
 			<caption>Sample table: Areas of the Nordic countries, in sq km</caption>
+
 			<tr>
 				<th scope="col">Country</th>
 				<th scope="col">Total area</th>
@@ -295,6 +321,7 @@
 				<td>449,964</td>
 				<td>410,928</td>
 			</tr>
+
 		</table>
 
 
@@ -302,7 +329,9 @@
 		<hr title="Information about this document">
 
 		<address>
+
 			<p>This document is based on the sample document of <a href="http://www.cs.tut.fi/~jkorpela/" title="Jukka Korpela" hreflang="en" lang="fi" target="_blank">Jukka Korpela</a></p>
+
 		</address>
 
 	</body>
