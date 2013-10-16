@@ -442,10 +442,41 @@ h1.pageTitle {
 
 /*Tables*/
 .row-tables .gravity td {
-	height: 8em;
-	width: 33.3%;
-	border-color: #acb8bf;
+	width: 29.3%;
+	height: 4em;
+	padding: 2%;
+	border-color: #d5dbde;
+	background-image: url(images/gravity.png);
+	background-repeat: no-repeat;
+	background-position: -10px -10px;
 }
+	.row-tables .gravity .center {
+		background-position: 50% -10px;
+	}
+	.row-tables .gravity .right {
+		background-image: url(images/gravity-e.png);
+		background-position: 100% -10px;
+	}
+	.row-tables .gravity .middle, .row-tables .gravity .vertical-center {
+		background-position: -10px 50%;
+	}
+	.row-tables .gravity .middle.center, .row-tables .gravity .vertical-center.center {
+		background-image: none;
+	}
+	.row-tables .gravity .middle.right, .row-tables .gravity .vertical-center.right {
+		background-position: 100% 50%;
+	}
+	.row-tables .gravity .bottom {
+		background-image: url(images/gravity-s.png);
+		background-position: -10px 100%;
+	}
+	.row-tables .gravity .bottom.center {
+		background-position: 50% 100%;
+	}
+	.row-tables .gravity .bottom.right {
+		background-image: url(images/gravity-se.png);
+		background-position: 100% 100%;
+	}
 
 
 
