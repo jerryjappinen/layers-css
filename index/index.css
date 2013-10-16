@@ -451,26 +451,28 @@ h1.pageTitle {
 	background-position: -10px -10px;
 }
 	.row-tables .gravity .center {
-		background-position: 50% -10px;
+		background-position: 50% -13px;
 	}
 	.row-tables .gravity .right {
-		background-image: url(images/gravity-e.png);
-		background-position: 100% -10px;
+		background-image: url(images/gravity-ne.png);
+		background-position: 100% 0;
 	}
 	.row-tables .gravity .middle, .row-tables .gravity .vertical-center {
-		background-position: -10px 50%;
+		background-position: -13px 50%;
 	}
 	.row-tables .gravity .middle.center, .row-tables .gravity .vertical-center.center {
 		background-image: none;
 	}
 	.row-tables .gravity .middle.right, .row-tables .gravity .vertical-center.right {
+		background-image: url(images/gravity-e.png);
 		background-position: 100% 50%;
 	}
 	.row-tables .gravity .bottom {
-		background-image: url(images/gravity-s.png);
-		background-position: -10px 100%;
+		background-image: url(images/gravity-sw.png);
+		background-position: 0 100%;
 	}
 	.row-tables .gravity .bottom.center {
+		background-image: url(images/gravity-s.png);
 		background-position: 50% 100%;
 	}
 	.row-tables .gravity .bottom.right {
