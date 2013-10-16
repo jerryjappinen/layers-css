@@ -44,8 +44,6 @@
 .clear-after:after {
 	content: " ";
 	display: table;
-}
-.clear-after:after {
 	clear: both;
 }
 	.clear-after {
