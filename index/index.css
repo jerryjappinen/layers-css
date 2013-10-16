@@ -444,6 +444,7 @@ h1.pageTitle {
 .row-tables .gravity td {
 	height: 8em;
 	width: 33.3%;
+	border-color: #acb8bf;
 }
 
 
