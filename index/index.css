@@ -68,14 +68,14 @@ a, a:visited {
 	color: #00b5d9;
 }
 a {
-    -webkit-transition-duration: 100ms;
-    -moz-transition-duration: 100ms;
-    -o-transition-duration: 100ms;
-    transition-duration: 100ms;
-    -webkit-transition-property: line-height, background, color, border-color, border, top, margin, padding;
-    -moz-transition-property: line-height, background, color, border-color, border, top, margin, padding;
-    -o-transition-property: line-height, background, color, border-color, border, top, margin, padding;
-    transition-property: line-height, background, color, border-color, border, top, margin, padding;
+	-webkit-transition-duration: 100ms;
+	-moz-transition-duration: 100ms;
+	-o-transition-duration: 100ms;
+	transition-duration: 100ms;
+	-webkit-transition-property: line-height, background, color, border-color, border, top, margin, padding;
+	-moz-transition-property: line-height, background, color, border-color, border, top, margin, padding;
+	-o-transition-property: line-height, background, color, border-color, border, top, margin, padding;
+	transition-property: line-height, background, color, border-color, border, top, margin, padding;
 }
 .row {
 	background-repeat: no-repeat;
@@ -107,6 +107,12 @@ h1.pageTitle {
 .row-intro h1.pageTitle {
 	font-size: 6em;
 }
+	.row-intro h1.pageTitle a {
+		-webkit-transition-duration: 0ms;
+		-moz-transition-duration: 0ms;
+		-o-transition-duration: 0ms;
+		transition-duration: 0ms;
+	}
 	@media handheld, only screen and (max-width: 60em) {
 		.row-intro h1.pageTitle {
 			font-size: 5em;
@@ -329,10 +335,10 @@ h1.pageTitle {
 	letter-spacing: 0.2em;
 	word-spacing: 0.4em;
 
-    -webkit-transition-duration: 200ms;
-    -moz-transition-duration: 200ms;
-    -o-transition-duration: 200ms;
-    transition-duration: 200ms;
+	-webkit-transition-duration: 200ms;
+	-moz-transition-duration: 200ms;
+	-o-transition-duration: 200ms;
+	transition-duration: 200ms;
 }
 	.source .trigger:hover {
 		border-color: #0099bf;
@@ -363,14 +369,14 @@ h1.pageTitle {
 	left: 0;
 	height: 2.6em;
 	line-height: 2.7em;
-    -webkit-transition-duration: 200ms;
-    -moz-transition-duration: 200ms;
-    -o-transition-duration: 200ms;
-    transition-duration: 200ms;
-    -webkit-transition-property: opacity, top;
-    -moz-transition-property: opacity, top;
-    -o-transition-property: opacity, top;
-    transition-property: opacity, top;
+	-webkit-transition-duration: 200ms;
+	-moz-transition-duration: 200ms;
+	-o-transition-duration: 200ms;
+	transition-duration: 200ms;
+	-webkit-transition-property: opacity, top;
+	-moz-transition-property: opacity, top;
+	-o-transition-property: opacity, top;
+	transition-property: opacity, top;
 }
 .source .trigger .hide, .source.collapsed .trigger .show {
 	top: 0;
@@ -394,14 +400,14 @@ h1.pageTitle {
 	border-left-width: 1px;
 	overflow: auto;
 	max-height: 24em;
-    -webkit-transition-duration: 300ms;
-    -moz-transition-duration: 300ms;
-    -o-transition-duration: 300ms;
-    transition-duration: 300ms;
-    -webkit-transition-property: padding, border-width, max-height, box-shadow;
-    -moz-transition-property: padding, border-width, max-height, box-shadow;
-    -o-transition-property: padding, border-width, max-height, box-shadow;
-    transition-property: padding, border-width, max-height, box-shadow;
+	-webkit-transition-duration: 300ms;
+	-moz-transition-duration: 300ms;
+	-o-transition-duration: 300ms;
+	transition-duration: 300ms;
+	-webkit-transition-property: padding, border-width, max-height, box-shadow;
+	-moz-transition-property: padding, border-width, max-height, box-shadow;
+	-o-transition-property: padding, border-width, max-height, box-shadow;
+	transition-property: padding, border-width, max-height, box-shadow;
 }
 	.collapsed .sourceContent {
 		overflow-y: hidden;
@@ -434,8 +440,16 @@ h1.pageTitle {
 
 
 
+/*Tables*/
+.row-tables .gravity td {
+	height: 8em;
+	width: 33.3%;
+}
+
+
+
 /*Forms*/
-input.plain, textarea.plain {
+.row-forms input.plain, .row-forms textarea.plain {
 	background-color: #ddd;
 }
 
