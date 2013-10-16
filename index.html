@@ -87,7 +87,7 @@
 
 							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/src/tip/source/layers?at=default" target="_blank" tabindex="5">Source code</a></dt>
 
-							<dt class="discreet"><a href="demo.html" target="_blank" tabindex="6">Demo with only layers.css</a></dt>
+							<dt class="discreet"><a href="demo.html" target="_blank" tabindex="6">Demo page with only layers.css</a></dt>
 
 						</dl>
 						<div class="clear"></div>
@@ -128,9 +128,9 @@
 
 					<div class="row-content buffer description">
 
-						<p>Columns are stacked from left to right, no wrappers are required. Mark the <code>.last</code> column of the row, and use <code>.clear</code> after rows (or <code>.clear-after</code> the parent) if needed. Columns within columns work just fine.</p>
+						<p>Columns are stacked from left to right, no wrappers are required. Mark the <code>.last</code> column of the row, and use <code>.clear</code> after rows (or <code>.clear-after</code> the parent) if needed. Columns within columns work just fine. Include <a href="https://bitbucket.org/Eiskis/layers-css/raw/tip/release/responsive.css" target="_blank">responsive adjustments</a> to break all columns on small screens, or use your own media queries.</p>
 
-						<p>Note that you can't strictly control column widths in a fluid grid. The columns don't always amount to 100 % either, as browsers interpret fractional widths differently. Include <a href="https://bitbucket.org/Eiskis/layers-css/raw/tip/release/responsive.css" target="_blank">responsive adjustments</a> to break columns on small screens.</p>
+						<p><strong>Note!</strong> Browsers interpret fractional widths differently, so you can't control fluid column widths per pixel.</p>
 
 						<p>Use <strong>n/12</strong> or <strong>fractional</strong> keywords as class names, like this:</p>
 
@@ -513,7 +513,9 @@
 					<div class="column six">
 						<dl class="buffer">
 							<dt><code>.clear</code></dt>
-							<dd>Clear stuff (<code>clear: both;</code>)</dd>
+							<dd>Clear floating elements from above</dd>
+							<dt><code>.clear-after</code></dt>
+							<dd>Clear floating child elements after closing parent</dd>
 							<dt><code>.hidden</code></dt>
 							<dd>Hide stuff (<code>display: none;</code>)</dd>
 							<dt><code>.dry</code></dt>
