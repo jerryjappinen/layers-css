@@ -71,11 +71,12 @@ var watchWaypoints = function () {
 		}
 
 
-	// Switch selected item
+	// We're up in the intro of Timo
 	} else {
 		removeClass(menu, 'fixed');
 		currentWaypoint = 0;
 		for (i = 0; i < menuLinks.length; i++) {
+			menuLinks[i].blur();
 			removeClass(menuLinks[i], 'selected');
 		}
 	}
