@@ -610,7 +610,7 @@ h1.pageTitle {
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 	}
-	.browser, .browser .content {
+	.browser, .browser .content, .browser, .browser iframe {
 		-webkit-border-bottom-left-radius: 0.25em;
 		-webkit-border-bottom-right-radius: 0.25em;
 		-moz-border-radius-bottomleft: 0.25em;
@@ -747,7 +747,22 @@ h1.pageTitle {
 		background-color: #fff;
 	}
 	.browser .content, .browser .content iframe {
-		height: 30em;
+		height: 40em;
+	}
+	@media handheld, only screen and (max-height: 50em) {
+		.browser .content, .browser .content iframe {
+			height: 30em;
+		}
+	}
+	@media handheld, only screen and (max-height: 40em) {
+		.browser .content, .browser .content iframe {
+			height: 20em;
+		}
+	}
+	@media handheld, only screen and (max-height: 30em) {
+		.browser .content, .browser .content iframe {
+			height: 15em;
+		}
 	}
 
 
