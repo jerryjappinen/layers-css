@@ -18,6 +18,22 @@
 
 
 
+/*Positioning*/
+.static {
+	position: static;
+}
+.relative {
+	position: relative;
+}
+.absolute {
+	position: static;
+}
+.fixed {
+	position: fixed;
+}
+
+
+
 /*Blocks and inline-blocks*/
 .block {
 	display: block;
