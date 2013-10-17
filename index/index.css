@@ -89,6 +89,33 @@ a {
 
 
 
+/*Dark sections*/
+.dark {
+	background-color: #12171a;
+	color: #fff;
+	font-weight: 300;
+}
+.dark a {
+	text-decoration: none;
+	color: #00c0e6;
+}
+	.dark a:hover, .dark a:focus {
+		color: #88ddee;
+	}
+		.dark a:active {
+			color: #00c0e6;
+		}
+.dark ::selection {
+	background-color: #A1ACB3;
+	color: #fff;
+}
+.dark ::-moz-selection {
+	background-color: #A1ACB3;
+	color: #fff;
+}
+
+
+
 /*Master title*/
 h1.pageTitle {
 	line-height: 1em;
@@ -489,10 +516,153 @@ h1.pageTitle {
 
 
 
-/*Dark sections*/
-.row-footer {
-	background-image: url(images/down-white.png);
+/*Demo*/
+.row-samples {
+	background-image: url(images/wallpaper.jpg);
+	background-position: 50% 50%;
+	background-repeat: repeat;
+	background-size: cover;
 }
+.row-samples .row-content {
+	background-position: 50% -1px;
+	background-image: url(images/down-white.png);
+	background-repeat: no-repeat;
+}
+	@media handheld, only screen and (max-width: 60em) {
+		.row-samples .row-content.buffer.even {
+			padding-top: 10%;
+			padding-bottom: 8%;
+		}
+	}
+	@media handheld, only screen and (max-width: 40em) {
+		.row-samples .row-content.buffer.even {
+			padding-top: 16%;
+			padding-bottom: 10%;
+		}
+	}
+.background-clip {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+}
+	.background-clip .left, .background-clip .right {
+		height: 42px;
+		width: 50%;
+		position: relative;
+		float: left;
+		clear: none;
+	}
+	.background-clip .left {
+		left: -42px;
+	}
+	.background-clip .right {
+		left: 42px;
+	}
+.row-samples .background-clip {
+	background-image: url(images/down-dark-inverted.png);
+}
+	.row-samples .background-clip .left, .row-samples .background-clip .right {
+		background-color: #12171a;
+	}
+
+/*Browser window*/
+.browser {
+	box-shadow: 0 0.4em 2em 0.1em #12171a;
+	border-width: 1px;
+	border-color: rgba(18, 23, 26, 0.6);
+}
+
+	/*Rounded corners*/
+	.browser, .browser .titlebar {
+		-webkit-border-top-left-radius: 0.25em;
+		-webkit-border-top-right-radius: 0.25em;
+		-moz-border-radius-topleft: 0.25em;
+		-moz-border-radius-topright: 0.25em;
+		border-top-left-radius: 0.25em;
+		border-top-right-radius: 0.25em;
+	}
+	.browser, .browser .content {
+		-webkit-border-bottom-left-radius: 0.25em;
+		-webkit-border-bottom-right-radius: 0.25em;
+		-moz-border-radius-bottomleft: 0.25em;
+		-moz-border-radius-bottomright: 0.25em;
+		border-bottom-left-radius: 0.25em;
+		border-bottom-right-radius: 0.25em;
+	}
+
+	/*Title bar*/
+	.browser .titlebar {
+		background-color: #d3d3d3;
+		padding: 0.6em;
+		height: 0.8em;
+		line-height: 0.8em;
+
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e7e7e7), to(#c0c0c0));
+		background-image: -webkit-linear-gradient(#e7e7e7, #c0c0c0);
+		background-image: -moz-linear-gradient(#e7e7e7, #c0c0c0);
+		background-image: -o-linear-gradient(#e7e7e7, #c0c0c0);
+		background-image: linear-gradient(#e7e7e7, #c0c0c0);
+
+		border-color: #696969;
+		border-bottom-width: 1px;
+		box-shadow: inset 0 0 0.1em #f3f3f3;
+	}
+	.browser .titlebar .controls, .browser .titlebar .title {
+		height: 0.8em;
+		position: relative;
+	}
+
+		/*Window controls*/
+		.browser .titlebar .controls {
+			z-index: 10;
+			margin-top: 0.1em;
+		}
+		.browser .titlebar .controls li {
+			width: 0;
+			height: 0;
+			margin-right: 0.25em;
+			padding: 0.25em;
+			overflow: hidden;
+			border-radius: 99em;
+
+			background-color: rgba(0, 0, 0, 0.15);
+			border-width: 1px;
+			border-color: rgba(0, 0, 0, 0.2);
+			box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.2);
+		}
+			.browser .titlebar .controls li:hover {
+				background-color: rgba(0, 0, 0, 0.25);
+			}
+
+		/*Window title*/
+		.browser .titlebar .title {
+			top: -1em;
+			text-align: center;
+			font-size: 0.9em;
+			font-weight: normal;
+			text-transform: none;
+			color: #555;
+			text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+
+		}
+			.browser .titlebar .title a {
+				color: inherit;
+			}
+			.browser .titlebar .title a:hover {
+				color: #222;
+			}
+
+	/*Content*/
+	.browser .content {
+		background-color: #fff;
+	}
+	.browser .content, .browser .content iframe {
+		height: 30em;
+	}
+
+
+
+/*Footer*/
 .row-footer h1.pageTitle {
 	font-size: 3.5em;
 }
@@ -522,27 +692,4 @@ h1.pageTitle {
 	margin-bottom: 4em;
 }
 
-/*Dark sections*/
-.dark {
-	background-color: #12171a;
-	color: #fff;
-	font-weight: 300;
-}
-.dark a {
-	text-decoration: none;
-	color: #00c0e6;
-}
-	.dark a:hover, .dark a:focus {
-		color: #88ddee;
-	}
-		.dark a:active {
-			color: #00c0e6;
-		}
-.dark ::selection {
-	background-color: #A1ACB3;
-	color: #fff;
-}
-.dark ::-moz-selection {
-	background-color: #A1ACB3;
-	color: #fff;
-}
+

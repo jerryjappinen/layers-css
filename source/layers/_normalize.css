@@ -30,6 +30,9 @@ figure, button, input, select, textarea {
 img, iframe, button, input, select, textarea {
 	max-width: 100%;
 }
+iframe {
+	width: 100%;
+}
 
 
 
