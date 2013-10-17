@@ -681,6 +681,7 @@ h1.pageTitle {
 		padding: 0.6em;
 		height: 0.8em;
 		line-height: 0.8em;
+		overflow: hidden;
 
 		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e7e7e7), to(#c0c0c0));
 		background-image: -webkit-linear-gradient(#e7e7e7, #c0c0c0);
@@ -690,17 +691,17 @@ h1.pageTitle {
 
 		box-shadow: inset 0 0.1em 0.1em #f3f3f3;
 	}
-	.browser .titlebar .controls, .browser .titlebar .title {
+	.browser .windowcontrols, .browser .titlebar .title, .browser .extracontrols {
 		height: 0.8em;
 		position: relative;
 	}
 
 		/*Window controls*/
-		.browser .titlebar .controls {
+		.browser .windowcontrols {
 			z-index: 10;
 			margin-top: 0.1em;
 		}
-		.browser .titlebar .controls li {
+		.browser .windowcontrols li {
 			width: 0;
 			height: 0;
 			margin-right: 0.25em;
@@ -713,7 +714,7 @@ h1.pageTitle {
 			border-color: rgba(0, 0, 0, 0.2);
 			box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.2);
 		}
-			.browser .titlebar .controls li:hover {
+			.browser .windowcontrols li:hover {
 				background-color: rgba(0, 0, 0, 0.25);
 			}
 
@@ -727,12 +728,27 @@ h1.pageTitle {
 			color: #555;
 			text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 		}
-			.browser .titlebar .title a {
-				color: inherit;
+
+		/*Extra controls*/
+		.browser .extracontrols {
+			top: -1.7em;
+		}
+			.browser .extracontrols a {
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				width: 1.0em;
+				height: 1.0em;
+				opacity: 0.8;
 			}
-			.browser .titlebar .title a:hover {
-				color: #222;
+			.browser .extracontrols a:hover {
+				opacity: 1;
 			}
+			.browser .extracontrols .open a {
+				background-image: url(images/external.png);
+			}
+				.browser.unloaded .extracontrols .open {
+					display: none;
+				}
 
 
 
