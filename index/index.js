@@ -209,8 +209,10 @@ window.onload = function () {
 			var j = i;
 			var tabs = browserTabs;
 			tabs[j].onclick = function (event) {
-				event.preventDefault();
-				selectBrowserTab(j);
+				if (event.which != 2 && !event.metaKey) {
+					event.preventDefault();
+					selectBrowserTab(j);
+				}
 			};
 		})();
 	}
