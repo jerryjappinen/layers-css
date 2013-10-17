@@ -601,6 +601,9 @@ h1.pageTitle {
 	border-width: 1px;
 	border-color: rgba(18, 23, 26, 0.6);
 }
+.trigger {
+	display: none;
+}
 
 	/*Rounded corners*/
 	.browser, .browser .titlebar {
@@ -619,6 +622,58 @@ h1.pageTitle {
 		border-bottom-left-radius: 0.25em;
 		border-bottom-right-radius: 0.25em;
 	}
+
+	/*Unloaded state*/
+	.browser.unloaded {
+		border-color: transparent;
+		background-color: rgba(18, 23, 26, 0.97);
+	}
+	.browser.unloaded .content {
+		background-color: transparent;
+	}
+	.browser.unloaded .content iframe {
+		display: none;
+	}
+	.browser.unloaded .trigger {
+		display: block;
+		height: 100%;
+		width: 90%;
+		padding-top: 7.8em;
+		padding-right: 5%;
+		padding-left: 5%;
+		text-align: center;
+
+		color: #393d40;
+		font-size: 1.8em;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		font-weight: 200;
+		line-height: 1.8;
+	}
+		.browser .trigger .limit {
+			display: inline-block;
+			max-width: 16em;
+		}
+		.browser.unloaded .trigger:hover {
+			color: #737b80;
+		}
+		@media handheld, only screen and (max-height: 50em) {
+			.browser.unloaded .trigger {
+				padding-top: 6em;
+			}
+		}
+		@media handheld, only screen and (max-height: 40em) {
+			.browser.unloaded .trigger {
+				padding-top: 3.6em;
+			}
+		}
+		@media handheld, only screen and (max-height: 30em) {
+			.browser.unloaded .trigger {
+				padding-top: 2.4em;
+			}
+		}
+
+
 
 	/*Title bar*/
 	.browser .titlebar {
@@ -713,12 +768,18 @@ h1.pageTitle {
 			border-color: #555;
 			border-top-width: 1px;
 
+			-webkit-transition-duration: 25ms;
+			-moz-transition-duration: 25ms;
+			-o-transition-duration: 25ms;
+			transition-duration: 25ms;
+
 			-webkit-border-bottom-left-radius: 0.4em;
 			-webkit-border-bottom-right-radius: 0.4em;
 			-moz-border-radius-bottomleft: 0.4em;
 			-moz-border-radius-bottomright: 0.4em;
 			border-bottom-left-radius: 0.4em;
 			border-bottom-right-radius: 0.4em;
+
 		}
 			.browser .tabbar a:hover {
 				background-color: #a0a0a0;
