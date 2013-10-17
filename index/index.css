@@ -545,15 +545,16 @@ h1.pageTitle {
 
 
 /*Demo*/
-.row-samples {
+.reference > .row-samples {
 	background-image: url(images/wallpaper.jpg);
 	background-position: 50% 50%;
 	background-repeat: repeat;
 	background-size: cover;
+	box-shadow: inset 0 0.5em 7em rgba(18, 23, 26, 0.6);
 }
 .row-samples .row-content {
 	background-position: 50% -1px;
-	background-image: url(images/down-white.png);
+	background-image: url(images/down-red.png);
 	background-repeat: no-repeat;
 }
 	@media handheld, only screen and (max-width: 60em) {
@@ -709,6 +710,8 @@ h1.pageTitle {
 			color: inherit;
 			font-weight: 700;
 			box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.15);
+			border-color: #555;
+			border-top-width: 1px;
 
 			-webkit-border-bottom-left-radius: 0.4em;
 			-webkit-border-bottom-right-radius: 0.4em;
@@ -721,7 +724,7 @@ h1.pageTitle {
 				background-color: #a0a0a0;
 			}
 			.browser .tabbar .selected a {
-				border-color: #555;
+				border-top-color: #888;
 				border-right-width: 1px;
 				border-bottom-width: 1px;
 				border-left-width: 1px;
