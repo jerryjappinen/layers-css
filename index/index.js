@@ -98,7 +98,8 @@ var selectBrowserTab = function (index) {
 
 // Load document into fake browser
 var loadSample = function (url) {
-	browserSandbox.src=url;
+	browserSandbox.src = url;
+	browserLink.href = url;
 };
 
 
@@ -157,6 +158,7 @@ var browser = document.getElementsByClassName('browser')[0];
 var browserTabs = browser.getElementsByClassName('tabbar')[0].getElementsByTagName('a');
 var browserSandbox = browser.getElementsByTagName('iframe')[0];
 var browserTrigger = browser.getElementsByClassName('trigger')[0];
+var browserLink = browser.getElementsByClassName('extracontrols')[0].getElementsByClassName('open')[0].getElementsByTagName('a')[0];
 
 var menuPrev = document.getElementsByClassName('display')[0];
 var sourceContainers = document.getElementsByClassName('source');
@@ -217,7 +219,7 @@ window.onload = function () {
 	browserTrigger.onclick = function (event) {
 		event.preventDefault();
 		selectBrowserTab(0);
-	}
+	};
 
 	// Keep menu waypoints accurate
 	menuWaypoints = findWaypoints();
