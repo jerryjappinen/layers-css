@@ -1,5 +1,5 @@
 
-/*Light color scheme*/
+/*Dark color scheme*/
 html, body, div, blockquote, pre, 
 p, ol, ul, li, dl, dt, dd, 
 h1, h2, h3, h4, h5, h6, 
@@ -13,27 +13,23 @@ form, fieldset, legend, label {
 body {
 	background-color: #111;
 }
-table {
-	background-color: #333;
+table td, table th {
 	border-width: 1px;
 }
 
 /*Tables*/
-pre, table th, .zebra tr.even td {
+pre, table th, .zebra .even td {
 	background-color: #444;
 }
 	table table {
 		background-color: #444;
 	}
-		table table .zebra tr.even td, table table th {
+		table table .zebra .even td, table table th {
 			background-color: #333;
 		}
 
 /*Text colors*/
 body {
-	color: #fafafa;
-}
-h1, h2, h3, h4, h5 {
 	color: #fafafa;
 }
 a {
