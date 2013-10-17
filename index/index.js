@@ -83,6 +83,23 @@ var watchWaypoints = function () {
 
 };
 
+// Toggle browser tabs
+var selectBrowserTab = function (index) {
+	for (var i = 0; i < browserTabs.length; i++) {
+		if (i === index) {
+			loadSample(browserTabs[i].getAttribute('href'));
+			addClass(browserTabs[i].parentNode, 'selected');
+		} else {
+			removeClass(browserTabs[i].parentNode, 'selected');
+		}
+	}
+};
+
+// Load document into fake browser
+var loadSample = function (url) {
+	browserSandbox.src=url;
+};
+
 
 
 /**
@@ -119,13 +136,26 @@ var hasClass = function (element, className) {
 
 
 /**
+* Browser tabs
+*/
+
+
+
+/**
 * Document skeleton & configs
 */
+
 var downloadLink = document.getElementsByClassName('download')[0];
 var firstSection = document.getElementById('grid');
 var intro = document.getElementsByClassName('row-intro')[0];
+
 var menu = document.getElementById('menu');
 var menuLinks = menu.getElementsByTagName('a');
+
+var browser = document.getElementsByClassName('browser')[0];
+var browserTabs = browser.getElementsByClassName('tabbar')[0].getElementsByTagName('a');
+var browserSandbox = browser.getElementsByTagName('iframe')[0];
+
 var menuPrev = document.getElementsByClassName('display')[0];
 var sourceContainers = document.getElementsByClassName('source');
 var tabGuard = document.getElementsByClassName('tabGuard')[0];
@@ -171,15 +201,24 @@ window.onload = function () {
 		})();
 	}
 
+	// Bind browser tab links to change sample
+	for (i = 0; i < browserTabs.length; i++) {
+		(function () {
+			var j = i;
+			var tabs = browserTabs;
+			tabs[j].onclick = function (event) {
+				event.preventDefault();
+				selectBrowserTab(j);
+			};
+		})();
+	}
+
 	// Keep menu waypoints accurate
 	menuWaypoints = findWaypoints();
 	window.onresize = function (event) {
 		menuWaypoints = findWaypoints();
+		watchWaypoints();
 	};
-
-	// Watch waypoints when scrolling
-	watchWaypoints();
-	window.onscroll = watchWaypoints;
 
 	// Source code previews
 	for (i = 0; i < sourceContainers.length; i++) {
@@ -196,6 +235,10 @@ window.onload = function () {
 			};
 		})();
 	}
+
+	// Watch waypoints when scrolling
+	watchWaypoints();
+	window.onscroll = watchWaypoints;
 
 };
 

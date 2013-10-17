@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<style type="text/css">@-ms-viewport{width: device-width;}</style>
+
+		<title>Simple layout &ndash; Layers CSS demo</title>
+
+		<!-- Layers -->
+		<link rel="stylesheet" href="../release/layers.min.css" media="screen">
+		<link rel="stylesheet" href="../release/responsive.min.css" media="screen">
+
+		<!-- Custom styles -->
+		<style type="text/css">
+
+			body {
+				background-color: #f3f3f3;
+			}
+
+			.row-header, .row-footer {
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 1.6em;
+			}
+
+			.row-header {
+				background-color: #52a3cc;
+				color: #fff;
+			}
+
+			section .column {
+				background-color: #fff;
+				box-shadow: 0 0.4em 1.4em #dfdfdf;
+			}
+
+			.row-footer {
+				color: #52a3cc;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+
+
+		<!-- Header -->
+		<header class="row row-header">
+			<div class="row-content buffer even">
+
+				<h1 class="squeeze-top">Layout kickstart</h1>
+
+				<p class="buffer-right buffer-left">This is based on layers, with a small set of custom styles.</p>
+
+			</div>
+		</header>
+
+
+
+		<!-- Body content -->
+		<section class="row row-introduction">
+			<div class="row-content buffer-top buffer-right buffer-left clear-after">
+
+				<div class="column push-top push-bottom buffer third">
+
+					<p>As you can see, results aren't unexpected. This demonstrates the natural state of common elements.</p>
+
+				</div>
+				<div class="column push-top push-bottom buffer third">
+
+					<p>As you can see, results aren't unexpected. This demonstrates the natural state of common elements.</p>
+
+				</div>
+				<div class="column push-top push-bottom buffer third last">
+
+					<p>As you can see, results aren't unexpected. This demonstrates the natural state of common elements.</p>
+
+				</div>
+
+			</div>
+		</section>
+
+
+
+		<!-- Footer -->
+		<footer class="row row-footer">
+			<div class="row-content buffer even">
+
+				<p>Check the source.</p>
+
+			</div>
+		</footer>
+
+
+
+	</body>
+
+</html>

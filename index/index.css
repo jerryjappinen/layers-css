@@ -292,6 +292,32 @@ h1.pageTitle {
 	border-top-width: 0.5em;
 	border-bottom-width: 0.5em;
 }
+	@media handheld, only screen and (max-width: 55em) {
+		#menu a {
+			padding-right: 1em;
+			padding-left: 1em;
+		}
+	}
+	@media handheld, only screen and (max-width: 40em) {
+		#menu a {
+			font-size: 1.1em;
+			padding-right: 0.8em;
+			padding-left: 0.8em;
+		}
+	}
+	@media handheld, only screen and (max-width: 30em) {
+		#menu a {
+			font-size: 0.85em;
+			padding-right: 0.8em;
+			padding-left: 0.8em;
+		}
+	}
+	@media handheld, only screen and (max-width: 25em) {
+		#menu a {
+			padding-right: 0.55em;
+			padding-left: 0.55em;
+		}
+	}
 	#menu a.selected {
 		background-color: #ce2930;
 	}
@@ -441,7 +467,9 @@ h1.pageTitle {
 		max-height: 0;
 		padding-top: 0;
 		padding-bottom: 0;
+		border-top-width: 0;
 		border-bottom-width: 0;
+		border-color: transparent;
 	}
 
 
@@ -544,6 +572,7 @@ h1.pageTitle {
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-position: 50% 100%;
+	overflow-x: hidden;
 }
 	.background-clip .left, .background-clip .right {
 		height: 42px;
@@ -603,9 +632,7 @@ h1.pageTitle {
 		background-image: -o-linear-gradient(#e7e7e7, #c0c0c0);
 		background-image: linear-gradient(#e7e7e7, #c0c0c0);
 
-		border-color: #696969;
-		border-bottom-width: 1px;
-		box-shadow: inset 0 0 0.1em #f3f3f3;
+		box-shadow: inset 0 0.1em 0.1em #f3f3f3;
 	}
 	.browser .titlebar .controls, .browser .titlebar .title {
 		height: 0.8em;
@@ -651,6 +678,69 @@ h1.pageTitle {
 			.browser .titlebar .title a:hover {
 				color: #222;
 			}
+
+
+
+	/*Tabs*/
+	.browser .tabbar {
+		position: relative;
+		z-index: 10;
+		background-color: #999;
+		font-size: 0.7em;
+		color: #444;
+		text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+		box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.3);
+	}
+		.browser .tabbar li {
+			text-align: center;
+			position: relative;
+			width: 50%;
+			float: left;
+			clear: none;
+		}
+		.browser .tabbar li.selected {
+			z-index: 10;
+		}
+		.browser .tabbar a {
+			display: block;
+			width: 100%;
+			padding-top: 0.6em;
+			padding-bottom: 0.5em;
+			color: inherit;
+			font-weight: 700;
+			box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.15);
+
+			-webkit-border-bottom-left-radius: 0.4em;
+			-webkit-border-bottom-right-radius: 0.4em;
+			-moz-border-radius-bottomleft: 0.4em;
+			-moz-border-radius-bottomright: 0.4em;
+			border-bottom-left-radius: 0.4em;
+			border-bottom-right-radius: 0.4em;
+		}
+			.browser .tabbar a:hover {
+				background-color: #a0a0a0;
+			}
+			.browser .tabbar .selected a {
+				border-color: #555;
+				border-right-width: 1px;
+				border-bottom-width: 1px;
+				border-left-width: 1px;
+
+				box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.05);
+				background-color: #b0b0b0;
+				color: #222;
+			}
+				.browser .tabbar .first.selected a {
+					border-left-width: 0;
+				}
+				.browser .tabbar .last.selected a {
+					border-right-width: 0;
+				}
+				.browser .tabbar .selected a:hover {
+					background-color: #bbb;
+				}
+
+
 
 	/*Content*/
 	.browser .content {
