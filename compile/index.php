@@ -5,11 +5,20 @@ include_once 'include.php';
 
 // Choose what to include
 $releases = array('layers', 'responsive');
+$readmePath = '../readme.md';
 $sourcePath = '../source/';
 $releasePath = '../release/';
+$title = 'Layers CSS';
 $save = false;
 if (in_array($_SERVER['SERVER_ADDR'], array('127.0.0.1', '::1')) and !isset($_GET['dontsave'])) {
 	$save = true;
+}
+
+// Find title with version info (first line in readme)
+$readme = trim(file_get_contents($readmePath));
+$readme = str_replace('# ', '', substr($readme, 0, strpos($readme, "\n")));
+if (strpos($readme, $title) !== false) {
+	$title = $readme;
 }
 
 // Release each script
@@ -23,8 +32,8 @@ foreach ($releases as $name) {
 
 	// Author info
 	$prefix = '/*
-Layers CSS'.($name === 'responsive' ? ' responsive adjustments' : '').' by Jerry Jäppinen
-Released under the MIT license
+'.$title.' '.($name === 'responsive' ? ' responsive adjustments' : '').'
+Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
 '.date('Y-m-d H:i e') .'
 */
