@@ -22,10 +22,19 @@ p, ul, ol, table, pre, blockquote {
 dl {
 	margin-bottom: 1.34em;
 }
+	dl.plain {
+		margin-top: 0.67em;
+	}
+		dl.reset, dl.reset-top {
+			margin-top: 0;
+		}
 dt {
 	margin-top: 0.67em;
 	margin-bottom: 0;
 }
+	dl.plain dt {
+		margin-top: 0;
+	}
 dd {
 	margin-top: 0;
 	margin-bottom: 0;

@@ -35,6 +35,11 @@ ol.collapse ol {
 	margin-bottom: 0;
 }
 
+/*Plain definition lists*/
+dl.plain dt {
+	font-weight: inherit;
+}
+
 /*Inline lists*/
 ul.inline.right, ol.inline.right {
 	text-align: right;
