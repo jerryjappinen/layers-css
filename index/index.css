@@ -61,9 +61,6 @@ code, pre code {
 	font-size: 0.8em;
 	color: #e01b6a;
 }
-dl.plain dt {
-	font-weight: inherit;
-}
 a, a:visited {
 	color: #00b5d9;
 }
@@ -171,11 +168,14 @@ h1.pageTitle {
 
 /*Download link*/
 .row-intro h2 {
+	min-height: 3em;
+	padding-bottom: 1.6em;
+	border-bottom-width: 1px;
+	border-color: #2e3133;
 	font-size: 1em;
 	color: #737b80;
 	font-weight: 300;
 	text-transform: none;
-	min-height: 3em;
 }
 .row-intro h2 a {
 	position: relative;
@@ -207,12 +207,8 @@ h1.pageTitle {
 		}
 
 /*Goodies*/
-.row-intro dl {
-	margin-top: 1.8em;
-	border-top-width: 1px;
-	border-color: #2e3133;
-}
 .row-intro dt {
+	font-weight: inherit;
 	margin-top: 1.2em;
 }
 .row-intro dt a {
@@ -422,22 +418,22 @@ h1.pageTitle {
 	left: 0;
 	height: 2.6em;
 	line-height: 2.7em;
-	-webkit-transition-duration: 200ms;
-	-moz-transition-duration: 200ms;
-	-o-transition-duration: 200ms;
-	transition-duration: 200ms;
-	-webkit-transition-property: opacity, top;
-	-moz-transition-property: opacity, top;
-	-o-transition-property: opacity, top;
-	transition-property: opacity, top;
+	-webkit-transition-duration: 250ms;
+	-moz-transition-duration: 250ms;
+	-o-transition-duration: 250ms;
+	transition-duration: 250ms;
+	-webkit-transition-property: top;
+	-moz-transition-property: top;
+	-o-transition-property: top;
+	transition-property: top;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
 }
 .source .trigger .hide, .source.collapsed .trigger .show {
 	top: 0;
-	opacity: 1;
 }
-	.source .trigger .show, .source.collapsed .trigger .hide {
-		opacity: 0;
-	}
 	.source .trigger .show {
 		top: 10em;
 	}
@@ -453,14 +449,19 @@ h1.pageTitle {
 	border-left-width: 1px;
 	overflow: auto;
 	max-height: 24em;
-	-webkit-transition-duration: 300ms;
-	-moz-transition-duration: 300ms;
-	-o-transition-duration: 300ms;
-	transition-duration: 300ms;
+	-webkit-transition-duration: 250ms;
+	-moz-transition-duration: 250ms;
+	-o-transition-duration: 250ms;
+	transition-duration: 250ms;
 	-webkit-transition-property: padding, border-width, max-height, box-shadow;
 	-moz-transition-property: padding, border-width, max-height, box-shadow;
 	-o-transition-property: padding, border-width, max-height, box-shadow;
 	transition-property: padding, border-width, max-height, box-shadow;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+
 }
 	.collapsed .sourceContent {
 		overflow-y: hidden;
@@ -489,7 +490,7 @@ h1.pageTitle {
 .row-lists .column {
 	background-color: transparent;
 }
-.row-lists ul, .row-lists ol {
+.row-lists ul, .row-lists ol, .row-lists dl {
 	background-color: #eee;
 }
 

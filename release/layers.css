@@ -1,8 +1,8 @@
 /*
-Layers CSS 1.0 
+Layers CSS 1.0.1 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2013-10-18 12:29 Europe/Helsinki
+2013-10-22 12:17 Europe/Helsinki
 */
 
 /*Basics*/
@@ -746,26 +746,31 @@ ol.collapse ol {
 	margin-bottom: 0;
 }
 
+/*Plain definition lists*/
+dl.plain dt {
+	font-weight: inherit;
+}
+
 /*Inline lists*/
-ul.inline.right, ol.inline.right {
+ul.inline.right, ol.inline.right, dl.inline.right {
 	text-align: right;
 }
-ul.inline.center, ol.inline.center {
+ul.inline.center, ol.inline.center, dl.inline.center {
 	text-align: center;
 }
-	ul.inline > li, ol.inline > li {
+	ul.inline > li, ol.inline > li, dl.inline > dt, dl.inline > dd {
 		display: inline;
 	}
 
 /*Horizontal lists with block elements*/
-ul.collapse, ol.collapse {
+ul.collapse, ol.collapse, dl.collapse {
 	float: left;
 	clear: none;
 }
-	ul.collapse.right, ol.collapse.right {
+	ul.collapse.right, ol.collapse.right, dl.collapse.right {
 		float: right;
 	}
-		ul.collapse > li, ol.collapse > li {
+		ul.collapse > li, ol.collapse > li, dl.collapse > dt, dl.collapse > dd {
 			float: left;
 			clear: none;
 		}
@@ -793,10 +798,19 @@ p, ul, ol, table, pre, blockquote {
 dl {
 	margin-bottom: 1.34em;
 }
+	dl.plain {
+		margin-top: 0.67em;
+	}
+		dl.reset, dl.reset-top {
+			margin-top: 0;
+		}
 dt {
 	margin-top: 0.67em;
 	margin-bottom: 0;
 }
+	dl.plain > dt, dl.inline > dt, dl.collapse > dt {
+		margin-top: 0;
+	}
 dd {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -1010,7 +1024,7 @@ h1, h2, h3 {
 .inline {
 	display: inline;
 }
-	ul.inline, ol.inline {
+	ul.inline, ol.inline, dl.inline {
 		display: block;
 	}
 

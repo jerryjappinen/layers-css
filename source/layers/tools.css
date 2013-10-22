@@ -44,7 +44,7 @@
 .inline {
 	display: inline;
 }
-	ul.inline, ol.inline {
+	ul.inline, ol.inline, dl.inline {
 		display: block;
 	}
 

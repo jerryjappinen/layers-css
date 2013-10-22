@@ -28,7 +28,7 @@
 		<link rel="shortcut icon" href="index/images/logo.ico" type="image/x-icon">
 
 		<meta property="og:title" content="Layers CSS" />
-		<meta property="og:description" content="A lightweight, unobtrusive, style-agnostic CSS pack. Build your look on the web, not Twitter's &ndash; and make it fluid. Comes with no bullshit." />
+		<meta property="og:description" content="A lightweight, unobtrusive, style-agnostic CSS pack. Build your look on the web, not Twitter's &ndash; and build it fluid. Comes with no bullshit." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://eiskis.net/layers/" />
 		<meta property="og:image" content="http://eiskis.net/layers/index/images/layers.png" />
@@ -52,7 +52,7 @@
 				<div class="column half">
 					<div class="buffer-right">
 
-						<p>Lightweight. Unobtrusive. Style-agnostic. Build <em>your</em> look on the web, not Twitter's &ndash; and make it fluid. Layers CSS is aimed for practical use and comes with zero bullshit.</p>
+						<p>Lightweight. Unobtrusive. Style-agnostic. Build <em>your</em> look on the web, not Twitter's &ndash; and build it fluid. Layers CSS is aimed for practical use and comes with zero bullshit.</p>
 
 						<ul>
 							<li>Normalizations &amp; sensible defaults</li>
@@ -73,19 +73,21 @@
 				<div class="column half last">
 					<div class="buffer-right">
 
-						<h2><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="download" tabindex="1">Download 1.0</a> layers.min.css, 14 kb</h2>
+						<h2><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="download" tabindex="1">Download 1.0.1</a> layers.min.css, 15 kb</h2>
 
-						<dl class="plain">
+						<dl class="">
 
 							<dt><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/responsive.min.css" target="_blank" tabindex="2">Responsive adjustments</a></dt>
-							<dd>Break columns and adjust font size on small screens.</dd>
+							<dd>Break all columns, adjust font size on small screens.</dd>
 
 							<dt><a href="https://bitbucket.org/Eiskis/layers-css/src/default/extras/" target="_blank" tabindex="3">Extras</a></dt>
 							<dd>Default color schemes, typography etc.</dd>
 
-							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/responsive.css" target="_blank" tabindex="4">Development version</a></dt>
+							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.css" target="_blank" tabindex="4">Development version</a></dt>
 
-							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/src/tip/source/layers" target="_blank" tabindex="5">Source code</a></dt>
+							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="5">Changelog</a></dt>
+
+							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/src/tip/source/layers" target="_blank" tabindex="6">Source code</a></dt>
 
 						</dl>
 						<div class="clear"></div>
@@ -105,9 +107,9 @@
 
 				<h1 class="display squeeze-top reset-bottom">Reference</h1>
 
-				<ul id="menu" class="plain reset"><li><a href="#grid" tabindex="6">Grid</a></li><li><a href="#tools" tabindex="7">Tools</a></li><li><a href="#lists" tabindex="8">Lists</a></li><li><a href="#tables" tabindex="9">Tables</a></li><li><a href="#forms" tabindex="10">Forms</a></li><li><a href="#samples" tabindex="11">Samples</a></li></ul>
+				<ul id="menu" class="plain reset"><li><a href="#grid" tabindex="7">Grid</a></li><li><a href="#tools" tabindex="8">Tools</a></li><li><a href="#lists" tabindex="9">Lists</a></li><li><a href="#tables" tabindex="10">Tables</a></li><li><a href="#forms" tabindex="11">Forms</a></li><li><a href="#samples" tabindex="12">Samples</a></li></ul>
 
-				<p class="invisible"><a href="#" class="tabGuard" tabindex="12">Tab guard</a></p>
+				<p class="invisible"><a href="#" class="tabGuard" tabindex="13">Tab guard</a></p>
 
 				<p class="description">Colors and visuals below are created by custom styles, not Layers CSS.</p>
 
@@ -615,7 +617,7 @@
 
 					<div class="column third">
 
-						<p><code>ul</code></p>
+						<p>Unordered list: <code>ul</code></p>
 
 						<ul>
 							<li>One</li>
@@ -625,7 +627,6 @@
 									<li>A</li>
 									<li>B</li>
 									<li>C</li>
-									<li>D</li>
 								</ul>
 							</li>
 							<li>Four</li>
@@ -635,7 +636,7 @@
 
 					<div class="column third">
 
-						<p><code>ol</code></p>
+						<p>Ordered list: <code>ol</code></p>
 
 						<ol>
 							<li>One</li>
@@ -645,7 +646,6 @@
 									<li>A</li>
 									<li>B</li>
 									<li>C</li>
-									<li>D</li>
 								</ol>
 							</li>
 							<li>Four</li>
@@ -655,7 +655,29 @@
 
 					<div class="column third last">
 
-						<p><code>ul.plain</code></p>
+						<p>Definition list: <code>dl</code></p>
+
+						<dl>
+							<dt>Definiendum</dt>
+							<dd>Definiens</dd>
+							<dd>Definiens</dd>
+							<dd>Definiens</dd>
+
+							<dt>Definiendum</dt>
+
+							<dt>Definiendum</dt>
+							<dd>Definiens</dd>
+
+						</dl>
+
+					</div>
+					<div class="clear"></div>
+
+
+
+					<div class="column four push-two">
+
+						<p><code>ul</code>/<code>ol.plain</code></p>
 
 						<ul class="plain">
 							<li>One</li>
@@ -665,7 +687,6 @@
 									<li>A</li>
 									<li>B</li>
 									<li>C</li>
-									<li>D</li>
 								</ul>
 							</li>
 							<li>Four</li>
@@ -673,11 +694,30 @@
 
 					</div>
 
+					<div class="column four last">
+
+						<p><code>dl.plain</code></p>
+
+						<dl class="plain">
+							<dt>Definiendum</dt>
+							<dd>Definiens</dd>
+							<dd>Definiens</dd>
+							<dd>Definiens</dd>
+
+							<dt>Definiendum</dt>
+
+							<dt>Definiendum</dt>
+							<dd>Definiens</dd>
+
+						</dl>
+
+					</div>
+
 
 
 					<div class="row-content buffer-top buffer-right buffer-left even description">
 
-						<p><code>ul.inline</code> keeps the inline context. Whitespace works accordingly.</p>
+						<p><code>ul</code>/<code>ol</code>/<code>dl.inline</code> keeps the inline context. Whitespace works accordingly.</p>
 
 					</div>
 
@@ -696,27 +736,27 @@
 
 					</div>
 
-					<ul class="inline center">
-						<li>One</li>
-						<li>Two</li>
-						<li>Three</li>
-						<li>Four</li>
-					</ul>
-
-
-
-					<div class="row-content buffer-top buffer-right buffer-left even description">
-
-						<p><code>ol.inline.right</code></p>
-
-					</div>
-
-					<ol class="inline right">
+					<ol class="inline center">
 						<li>One</li>
 						<li>Two</li>
 						<li>Three</li>
 						<li>Four</li>
 					</ol>
+
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p><code>dl.inline.right</code></p>
+
+					</div>
+
+					<dl class="inline plain right">
+						<dt>One</dt>
+						<dt>Two</dt>
+						<dt>Three</dt>
+						<dt>Four</dt>
+					</dl>
 
 
 

@@ -35,26 +35,31 @@ ol.collapse ol {
 	margin-bottom: 0;
 }
 
+/*Plain definition lists*/
+dl.plain dt {
+	font-weight: inherit;
+}
+
 /*Inline lists*/
-ul.inline.right, ol.inline.right {
+ul.inline.right, ol.inline.right, dl.inline.right {
 	text-align: right;
 }
-ul.inline.center, ol.inline.center {
+ul.inline.center, ol.inline.center, dl.inline.center {
 	text-align: center;
 }
-	ul.inline > li, ol.inline > li {
+	ul.inline > li, ol.inline > li, dl.inline > dt, dl.inline > dd {
 		display: inline;
 	}
 
 /*Horizontal lists with block elements*/
-ul.collapse, ol.collapse {
+ul.collapse, ol.collapse, dl.collapse {
 	float: left;
 	clear: none;
 }
-	ul.collapse.right, ol.collapse.right {
+	ul.collapse.right, ol.collapse.right, dl.collapse.right {
 		float: right;
 	}
-		ul.collapse > li, ol.collapse > li {
+		ul.collapse > li, ol.collapse > li, dl.collapse > dt, dl.collapse > dd {
 			float: left;
 			clear: none;
 		}
