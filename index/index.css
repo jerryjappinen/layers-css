@@ -551,6 +551,9 @@ h1.pageTitle {
 	background-position: 50% 50%;
 	background-repeat: repeat;
 	background-size: cover;
+
+	-webkit-box-shadow: inset 0 0.5em 7em rgba(18, 23, 26, 0.6);
+	-moz-box-shadow: inset 0 0.5em 7em rgba(18, 23, 26, 0.6);
 	box-shadow: inset 0 0.5em 7em rgba(18, 23, 26, 0.6);
 }
 .row-samples .row-content {
@@ -595,12 +598,35 @@ h1.pageTitle {
 	.row-samples .background-clip .left, .row-samples .background-clip .right {
 		background-color: #12171a;
 	}
+.row-samples .footnote {
+	text-align: center;
+	text-shadow: 0 0.1em 0.4em #000;
+}
+	.row-samples .footnote code {
+		display: inline-block;
+		padding: 0.15em 0.3em 0.1em 0.3em;
+		margin-right: 0.2em;
+		margin-left: 0.3em;
+		background-color: #fff;
+		text-shadow: none;
+
+		-webkit-border-radius: 0.25em;
+		-moz-border-radius: 0.25em;
+		border-radius: 0.25em;
+
+		-webkit-box-shadow: 0 0.1em 0.3em #000;
+		-moz-box-shadow: 0 0.1em 0.3em #000;
+		box-shadow: 0 0.1em 0.3em #000;
+	}
 
 /*Browser window*/
 .browser {
-	box-shadow: 0 0.4em 2em 0.1em #12171a;
 	border-width: 1px;
 	border-color: rgba(18, 23, 26, 0.6);
+
+	-webkit-box-shadow: 0 0.4em 2em 0.1em #12171a;
+	-moz-box-shadow: 0 0.4em 2em 0.1em #12171a;
+	box-shadow: 0 0.4em 2em 0.1em #12171a;
 }
 .trigger {
 	display: none;
@@ -638,7 +664,7 @@ h1.pageTitle {
 	.browser.unloaded .trigger {
 		display: block;
 		height: 100%;
-		width: 90%;
+		width: 100%;
 		padding-top: 7.8em;
 		padding-right: 5%;
 		padding-left: 5%;
@@ -686,6 +712,8 @@ h1.pageTitle {
 		background-image: -o-linear-gradient(#e7e7e7, #c0c0c0);
 		background-image: linear-gradient(#e7e7e7, #c0c0c0);
 
+		-webkit-box-shadow: inset 0 0.1em 0.1em #f3f3f3;
+		-moz-box-shadow: inset 0 0.1em 0.1em #f3f3f3;
 		box-shadow: inset 0 0.1em 0.1em #f3f3f3;
 	}
 	.browser .titlebar td {
@@ -713,6 +741,9 @@ h1.pageTitle {
 			background-color: rgba(0, 0, 0, 0.15);
 			border-width: 1px;
 			border-color: rgba(0, 0, 0, 0.2);
+
+			-webkit-box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.2);
+			-moz-box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.2);
 			box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.2);
 		}
 			.browser .windowcontrols li:hover {
@@ -760,6 +791,9 @@ h1.pageTitle {
 		font-size: 0.8em;
 		color: #444;
 		text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+
+		-webkit-box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.3);
+		-moz-box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.3);
 		box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.3);
 	}
 		.browser .tabbar li {
@@ -779,9 +813,13 @@ h1.pageTitle {
 			padding-bottom: 0.4em;
 			color: inherit;
 			font-weight: 700;
-			box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.15);
+
 			border-color: #555;
 			border-top-width: 1px;
+
+			-webkit-box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.15);
+			-moz-box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.15);
+			box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.15);
 
 			-webkit-transition-duration: 25ms;
 			-moz-transition-duration: 25ms;
@@ -805,9 +843,12 @@ h1.pageTitle {
 				border-bottom-width: 1px;
 				border-left-width: 1px;
 
-				box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.05);
 				background-color: #b0b0b0;
 				color: #222;
+
+				-webkit-box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.05);
+				-moz-box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.05);
+				box-shadow: inset 0 0.3em 0.2em rgba(0, 0, 0, 0.05);
 			}
 				.browser .tabbar .first.selected a {
 					border-left-width: 0;
@@ -864,6 +905,9 @@ h1.pageTitle {
 }
 .row-footer .column img {
 	border-radius: 0.2em;
+
+	-webkit-box-shadow: 0 0.1em 0.4em #000;
+	-moz-box-shadow: 0 0.1em 0.4em #000;
 	box-shadow: 0 0.1em 0.4em #000;
 }
 .row-footer .column.fixed {
