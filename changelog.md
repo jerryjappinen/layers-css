@@ -1,6 +1,8 @@
 
 # Layers CSS changelog
 
+Latest official changelog is available on the web at [bitbucket.org/Eiskis/layers-css](https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md).
+
 
 
 ## 1.0.1 - Tuesday October 22, 2013
@@ -18,6 +20,6 @@ Definition lists added to reference documentation as well.
 
 
 
-## 1.0.0 - Friday October 18, 2013
+## 1.0 - Friday October 18, 2013
 
 First formal release. Latest additions include `.clear-after` and positioning tools.
