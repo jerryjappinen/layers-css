@@ -168,11 +168,14 @@ h1.pageTitle {
 
 /*Download link*/
 .row-intro h2 {
+	min-height: 3em;
+	padding-bottom: 1.6em;
+	border-bottom-width: 1px;
+	border-color: #2e3133;
 	font-size: 1em;
 	color: #737b80;
 	font-weight: 300;
 	text-transform: none;
-	min-height: 3em;
 }
 .row-intro h2 a {
 	position: relative;
@@ -204,12 +207,8 @@ h1.pageTitle {
 		}
 
 /*Goodies*/
-.row-intro dl {
-	margin-top: 1.8em;
-	border-top-width: 1px;
-	border-color: #2e3133;
-}
 .row-intro dt {
+	font-weight: inherit;
 	margin-top: 1.2em;
 }
 .row-intro dt a {
