@@ -1,5 +1,5 @@
 
-# Layers CSS 1.0.1
+# Layers CSS 1.0.2
 
 A minimum-interference collection of common-sense default styles.
 

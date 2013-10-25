@@ -1,8 +1,8 @@
 /*
-Layers CSS 1.0.1 
+Layers CSS 1.0.2 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2013-10-22 12:17 Europe/Helsinki
+2013-10-25 14:56 Europe/Helsinki
 */
 
 /*Basics*/
@@ -147,6 +147,7 @@ input, select, textarea, button {
 }
 input[type=""], input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], select, textarea, pre, code, kbd, samp {
 	font-size: inherit;
+	line-height: inherit;
 }
 button, input, select, textarea, pre, code, kbd, samp {
 	font-weight: inherit;
@@ -178,11 +179,11 @@ blockquote, q {
 /*Forms & interaction*/
 
 /*Use the same box-model and sizing in all browsers*/
-button, input[type=""], input:not([type]), input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], textarea {
+button, input[type="submit"], input[type="reset"], input[type="button"],
+input[type=""], input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], textarea {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
-	line-height: inherit;
 	display: inline-block;
 }
 
@@ -288,6 +289,7 @@ button.plain, input.plain, textarea.plain {
 	padding: 0;
 }
 	button.plain, input[type="submit"].plain, input[type="button"].plain, input[type="reset"].plain {
+		line-height: inherit;
 		font-size: inherit;
 		font-family: inherit;
 	}
