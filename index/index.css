@@ -867,6 +867,7 @@ h1.pageTitle {
 	/*Content*/
 	.browser .content {
 		background-color: #fff;
+		overflow: hidden;
 	}
 	.browser .content, .browser .content iframe {
 		height: 40em;
