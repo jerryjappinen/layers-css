@@ -801,9 +801,12 @@ h1.pageTitle {
 		.browser .tabbar li {
 			text-align: center;
 			position: relative;
-			width: 50%;
+			width: 33%;
 			float: left;
 			clear: none;
+		}
+		.browser .tabbar li.first {
+			width: 34%;
 		}
 		.browser .tabbar li.selected {
 			z-index: 10;
