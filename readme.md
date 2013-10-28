@@ -1,15 +1,15 @@
 
-# Layers CSS 1.0.1
+# Layers CSS 1.0.2
 
 A minimum-interference collection of common-sense default styles.
 
 - Reference docs at [eiskis.net/layers](http://eiskis.net/layers/)
 - Bitbucket project at [bitbucket.org/Eiskis/layers-css](https://bitbucket.org/Eiskis/layers-css)
+- Released under the MIT license
 - Authored by Jerry Jäppinen
-	- Released under the MIT license
 	- [eiskis@gmail.com](mailto:eiskis@gmail.com)
 	- [eiskis.net](http://eiskis.net/)
-	- @Eiskis
+	- [@Eiskis](https://twitter.com/Eiskis)
 
 
 

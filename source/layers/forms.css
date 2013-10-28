@@ -31,6 +31,7 @@ button.plain, input.plain, textarea.plain {
 	padding: 0;
 }
 	button.plain, input[type="submit"].plain, input[type="button"].plain, input[type="reset"].plain {
+		line-height: inherit;
 		font-size: inherit;
 		font-family: inherit;
 	}

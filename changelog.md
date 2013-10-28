@@ -5,6 +5,12 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
+## 1.0.2 - Friday October 25, 2013
+
+Only `.plain` buttons inherit line-height.
+
+
+
 ## 1.0.1 - Tuesday October 22, 2013
 
 List tools now work with definition lists, too. The following markups now work and make sense:
