@@ -727,7 +727,7 @@ h1.pageTitle {
 
 		/*Window controls*/
 		.browser .windowcontrols {
-			width: 2.5em;
+			width: 3.2em;
 			padding: 0.4em 0 0.4em 0.8em;
 		}
 		.browser .windowcontrols li {
@@ -764,7 +764,7 @@ h1.pageTitle {
 
 		/*Extra controls*/
 		.browser .extracontrols {
-			width: 2.5em;
+			width: 4em;
 		}
 			.browser .extracontrols a {
 				background-position: 50% 50%;
