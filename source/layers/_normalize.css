@@ -12,7 +12,7 @@ article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
 	clear: both;
-	outline: 0;
+	outline-width: 0;
 	border-width: 0;
 	border-style: solid;
 	border-color: transparent;
