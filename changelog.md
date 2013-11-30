@@ -5,6 +5,12 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
+## 1.0.3 - Saturday November 30, 2013
+
+Setting `outline-width` to 0 properly in `_normalize.css`.
+
+
+
 ## 1.0.2 - Friday October 25, 2013
 
 Only `.plain` buttons inherit line-height.
