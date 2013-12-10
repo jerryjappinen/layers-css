@@ -230,7 +230,7 @@ abbr[title], dfn[title] {
 	text-decoration: underline;
 	cursor: help;
 }
-a, label, button, input[type="submit"], input[type="button"], input[type="reset"] {
+a, label, button, input[type="submit"], input[type="button"], input[type="reset"], input[type="radio"], input[type="checkbox"], select, option, input[type='image'], input[type='file'] {
 	cursor: pointer;
 }
 	.disabled button, .disabled label, .disabled a,
