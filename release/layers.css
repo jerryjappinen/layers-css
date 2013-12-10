@@ -1,8 +1,8 @@
 /*
-Layers CSS 1.0.3 
+Layers CSS 1.0.4 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2013-11-30 17:01 Europe/Berlin
+2013-12-10 09:53 Europe/Berlin
 */
 
 /*Basics*/
@@ -236,7 +236,7 @@ abbr[title], dfn[title] {
 	text-decoration: underline;
 	cursor: help;
 }
-a, label, button, input[type="submit"], input[type="button"], input[type="reset"] {
+a, label, button, input[type="submit"], input[type="button"], input[type="reset"], input[type="radio"], input[type="checkbox"], select, option, input[type='image'], input[type='file'] {
 	cursor: pointer;
 }
 	.disabled button, .disabled label, .disabled a,

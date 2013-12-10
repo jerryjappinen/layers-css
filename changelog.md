@@ -5,6 +5,12 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
+## 1.0.4 - Tuesday December 10, 2013
+
+Updated default cursor for input elements in `_normalize.css`.
+
+
+
 ## 1.0.3 - Saturday November 30, 2013
 
 Setting `outline-width` to 0 properly in `_normalize.css`.
