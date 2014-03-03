@@ -13,7 +13,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 
 /*Font families*/
 html {
-	font-family: "Segoe UI", "Lucida Grande", "Ubuntu", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Lucida Grande", "Ubuntu", "Roboto", "Arial", sans-serif;
 }
 blockquote, q {
 	font-family: "Droid Serif", "Georgia", serif;

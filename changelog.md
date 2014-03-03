@@ -5,6 +5,12 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
+## 1.0.5 - Monday March 3, 2014
+
+Fixed `.absolute` positioning bug in `tools.css`. Prioritizing Helvetica over Lucida Grande as default font.
+
+
+
 ## 1.0.4 - Tuesday December 10, 2013
 
 Updated default cursor for input elements in `_normalize.css`.
