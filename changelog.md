@@ -5,6 +5,14 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
+## 1.0.6 - Saturday April 5, 2014
+
+Switched width and max-width on text fields in `forms.css`. They're more intuitive and easier to override this way.
+
+`.plain` inputs and buttons inherit text color.
+
+
+
 ## 1.0.5 - Monday March 3, 2014
 
 Fixed `.absolute` positioning bug in `tools.css`. Prioritizing Helvetica over Lucida Grande as default font.
