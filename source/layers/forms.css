@@ -4,20 +4,18 @@
 /*Dimensions*/
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type=""], input:not([type]) {
 	width: 20em;
-	max-width: 60%;
+	max-width: 90%;
 }
 	input[type="text"].squeeze, input[type="password"].squeeze, input[type="email"].squeeze, input[type="url"].squeeze, input[type="search"].squeeze, input[type="tel"].squeeze, input[type=""].squeeze, input:not([type]).squeeze {
 		width: 14em;
-		max-width: 40%;
 	}
 textarea {
 	width: 32em;
-	max-width: 60%;
+	max-width: 90%;
 	height: 10.72em;
 }
 	textarea.squeeze {
 		width: 20em;
-		max-width: 40%;
 		height: 4.02em;
 	}
 
