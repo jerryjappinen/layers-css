@@ -1,6 +1,6 @@
 
 /**
-* Custom behavior
+* Scrolling and menu watching
 */
 
 // Scrolling behavior
@@ -152,7 +152,6 @@ var browserTrigger = browser.getElementsByClassName('trigger')[0];
 var browserLink = browser.getElementsByClassName('extracontrols')[0].getElementsByClassName('open')[0].getElementsByTagName('a')[0];
 
 var sourceContainers = document.getElementsByClassName('source');
-var tabGuard = document.getElementsByClassName('tabGuard')[0];
 var menuWaypoints = [];
 var currentWaypoint = 0;
 
@@ -162,80 +161,93 @@ var currentWaypoint = 0;
 * App
 */
 
-var app = function () {
+var DownloadManager = function () {
 	var self = this;
 
 	// Default values
 	self.defaults = {
-		sizes: {
-			pixels: [360, 768, 1024, 1440],
-			ems: [30, 45, 60, 75]
-		},
-		unit: 'pixels'
+		em: [30, 45, 60, 75],
+		px: [360, 768, 1024, 1440]
 	};
 
 	// Constants
-	self.maxBreakpoints = 6;
+	self.breakpointNames = ['tiny', 'small', 'medium', 'large', 'huge', 'extra'];
 	self.coreSize = 15.9;
-	self.responsiveAdjustmentSize = 6.5;
+	self.breakpointSize = 6.5;
 	self.compressionRatio = 0.7;
 
 	// Active parameters
-	self.pixels = ko.observableArray(self.defaults.sizes.pixels);
-	self.ems = ko.observableArray(self.defaults.sizes.ems);
-	self.sortedPixels = ko.computed(function () {
-		return self.pixels().sort(function (a, b) {
-			return a > b;
-		});
-	});
-	self.sortedEms = ko.computed(function () {
-		return self.ems().sort(function (a, b) {
-			return a > b;
-		});
-	});
-	self.unit = ko.observable(self.defaults.unit);
-
-	// Computed active parameters
-	self.possibleUnits = (function () {
-		var results = [];
-		for (var key in self.defaults.sizes) {
-			results.push(key);
+	self.breakpoints = ko.observableArray((function () {
+		var results = [];
+		for (var i = 0; i < self.breakpointNames.length; i++) {
+			results.push(new Breakpoint(self.breakpointNames[i], (self.defaults.em[i] ? self.defaults.em[i] : 0), (self.defaults.px[i] ? self.defaults.px[i] : 0)));
 		}
 		return results;
-	})();
+	})());
 
-	self.responsiveAdjustmentCount = ko.computed(function () {
-		return self[self.unit()]().length;
+	// Computed active parameters
+	self.maxBreakpoints = ko.computed(function () {
+		return self.breakpointNames.length;
+	});
+
+	self.breakpointCount = ko.computed(function () {
+		return self.breakpoints().length;
 	});
 
 	self.estimatedSize = ko.computed(function () {
-		return Math.floor(self.coreSize + self.responsiveAdjustmentCount() * self.responsiveAdjustmentSize);
+		return Math.floor(self.coreSize + self.breakpointCount() * self.breakpointSize);
 	});
 
 	self.estimatedSizeCompressed = ko.computed(function () {
 		return Math.floor(self.compressionRatio * self.estimatedSize());
 	});
 
-	// Behavior
-	self.addBreakpoint = function () {
-		var units = self[self.unit()]();
-		self[self.unit()].push(units[units.length-1] + 100);
-		return self;
+};
+
+var Breakpoint = function (name, em, px) {
+	var self = this;
+
+	self.em = ko.observable(em > 0 ? em : 0);
+	self.px = ko.observable(px > 0 ? px : 0);
+	self.name = ko.observable(name);
+
+	self.em.subscribe(function (newValue) {
+		if (newValue !== parseInt(newValue)) {
+			self.em(parseInt(newValue));
+		} else if (newValue < 0) {
+			self.em(Math.abs(newValue));
+		}
+	});
+
+	self.px.subscribe(function (newValue) {
+		if (newValue !== parseInt(newValue)) {
+			self.px(parseInt(newValue));
+		} else if (newValue < 0) {
+			self.px(Math.abs(newValue));
+		}
+	});
+
+	self.selectedUnit = ko.observable('px');
+
+	self.isEmpty = ko.computed(function () {
+		return self.selectedUnit() === 'px' ? (self.px() <= 0) : (self.em() <= 0);
+	});
+
+	self.css = ko.computed(function () {
+		return self.selectedUnit() + (self.isEmpty() ? ' empty' : '');
+	});
+
+	self.empty = function () {
+		return self.selectedUnit() === 'px' ? self.px(0) : self.em(0);
 	};
 
-	self.changeUnit = function () {
-		var units = self.possibleUnits;
-		if (self.unit() !== units[0]) {
-			self.unit(units[0]);
-		} else {
-			self.unit(units[1]);
-		}
-		return self;
+	self.toggle = function () {
+		return self.selectedUnit() === 'px' ? self.selectedUnit('em') : self.selectedUnit('px');
 	};
 
 };
 
-app = new app();
+var app = new DownloadManager();
 
 
 

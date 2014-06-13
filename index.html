@@ -78,44 +78,22 @@
 
 				<div class="download limit">
 
-					<h2>Download</h2>
+					<h2>Customize breakpoints</h2>
 
-					<div class="column medium-third first">
+					<ul class="plain keep-center breakpoints" data-bind="foreach: breakpoints">
+						<li class="column reset medium-third small-half" data-bind="css: css"><label class="transition em"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: em"></label><label class="transition px"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: px"></label><a href="." data-bind="click: toggle"><code class="transition px">px</code> <code class="transition em">em</code></a></li>
+					</ul>
+					<div class="clear"></div>
 
-						<dl>
+					<div class="go">
 
-						</dl>
-
-					</div>
-
-					<div class="column medium-twothirds medium-last breakpoints">
-
-						<p><a class="toggle" href="." data-bind="click: changeUnit">Customize breakpoints in <em data-bind="css: { selected: $root.unit() === 'pixels' }">pixels</em> or <em data-bind="css: { selected: $root.unit() === 'ems' }">ems</em></span>:</a></p>
-
-						<ul class="reset collapse" data-bind="css: { hidden: unit() !== 'ems' }">
-							<!-- ko foreach: sortedEms -->
-							<li><input type="text" class="plain text" data-bind="value: $data"></li>
-							<!-- /ko -->
-							<li data-bind="css: { hidden: ($root.ems().length >= $root.maxBreakpoints) }"><a href="." data-bind="click: addBreakpoint">+</a></li>
-						</ul>
-
-						<ul class="reset collapse" data-bind="css: { hidden: unit() !== 'pixels' }">
-							<!-- ko foreach: sortedPixels -->
-							<li><input type="text" class="plain text" data-bind="value: $data"></li>
-							<!-- /ko -->
-							<li data-bind="css: { hidden: ($root.pixels().length >= $root.maxBreakpoints) }"><a href="." data-bind="click: addBreakpoint">+</a></li>
-						</ul>
-
-						<div class="clear"></div>
-
-						<p><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="button" tabindex="1">Download 1.0.7</a></p>
+						<p><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="button" tabindex="1">Download 1.1</a></p>
 
 						<p class="discreet">Estimated size: <span data-bind="text: estimatedSize"></span> kb uncompressed</p>
 
-					</div>
-					<div class="clear"></div>
+						<p class="discreet extras"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.css" target="_blank" tabindex="4">Development version</a> <a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="5">Changelog</a> <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" tabindex="6">Source code</a></p>
 
-					<p class="discreet extras"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.css" target="_blank" tabindex="4">Development version</a> <a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="5">Changelog</a> <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" tabindex="6">Source code</a></p>
+					</div>
 
 				</div>
 

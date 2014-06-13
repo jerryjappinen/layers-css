@@ -156,105 +156,124 @@ h1.pageTitle {
 .row-intro {
 	line-height: 1.6;
 }
-.row-intro .discreet, .row-intro dd {
+.row-intro .discreet {
 	color: #737b80;
 }
-	.row-intro .discreet a {
-		color: inherit;
-	}
-		.row-intro .discreet a:hover, .row-intro .discreet a:focus {
-			color: #fff;
-		}
 
 .row-intro .excerpt {
 	font-size: 1.4em;
 }
 
-.row-intro .excerpt a {
+.row-intro .excerpt .discreet a {
+	color: inherit;
 	text-decoration: underline;
 }
+	.row-intro .excerpt .discreet a:hover {
+		color: #fff;
+	}
 
 /*Download*/
-.download {
+.download h2 {
+	text-align: center;
+	font-weight: 900;
 }
-	.download h2 {
-		text-align: center;
-		font-weight: 900;
-	}
-	.download .column.first {
-		text-align: right;
-	}
+.download .button {
+	font-size: 1.4em;
+	min-width: 9em;
+}
 .button, .dark .button {
 	position: relative;
 	display: inline-block;
 	padding: 0.4em 1.4em 0.4em 1.4em;
-	min-width: 6em;
 	text-align: center;
-	margin-right: 0.8em;
 
 	line-height: 2em;
-	font-size: 1em;
 	text-transform: uppercase;
 
-	background-color: #009ebf;
+	background-color: #00b3d9;
 	color: #fff;
 }
 	.button:hover, .button:focus, .dark .button:hover, .dark .button:focus {
 		text-decoration: none;
-		background-color: #00b3d9;
+		background-color: #0089a6;
 		color: #fff;
 	}
 		.button:active {
-			background-color: #009ebf;
+			background-color: #00b3d9;
 			color: #fff;
 		}
-.breakpoints .toggle {
-	display: inline-block;
-	margin-left: -0.6em;
-	padding: 0.6em;
-	color: #737b80;
-}
-	.breakpoints .toggle:hover {
-		color: #fff;
-	}
-	.breakpoints .toggle em {
-		font-style: inherit;
-	}
-	.breakpoints .toggle .selected {
-		color: #fff;
-		text-decoration: underline;
-	}
 
 /*Inputs*/
-.breakpoints li {
-	margin-right: 1em;
+.breakpoints {
+	max-width: 55em;
 }
-	.breakpoints input.plain.text {
-		width: 2.2em;
-		padding: 0.6em;
-		border-bottom-width: 1px;
+.breakpoints li {
+	margin-bottom: 0.6em;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+}
+	.breakpoints .empty {
+		color: #737b80;
+	}
+	.breakpoints .em label.px, .breakpoints .px label.em {
+		display: none;
+	}
+	.breakpoints .em code.px, .breakpoints .px code.em {
+		color: #737b80;
+	}
+	.breakpoints .name {
+		display: inline-block;
+		width: 5em;
+	}
+	.breakpoints label {
+		display: inline-block;
 		border-color: #2e3133;
+		border-bottom-width: 1px;
+	}
+		.breakpoints label:hover, {
+			border-color: #fff;
+		}
+	.breakpoints input.text {
+		width: 2.4em;
+		padding: 0.6em;
 		text-align: center;
 	}
-	.breakpoints input.plain.text:focus {
-		outline: 0;
-		border-color: #fff;
-	}
-	.breakpoints li a {
+		.breakpoints input.text:hover, .breakpoints input.text:focus {
+			outline: 0;
+			border-color: #fff;
+		}
+		.breakpoints input.text:hover {
+			cursor: pointer;
+		}
+		.breakpoints input.text:focus {
+			cursor: text;
+			background-color: rgba(255, 255, 255, 0.05);
+		}
+	.breakpoints a {
 		display: inline-block;
-		padding: 0.6em;
-		font-weight: bold;
+		margin-left: 0.4em;
+		padding: 0.2em 0.4em 0.4em 0.4em;
+		color: inherit;
+		border-radius: 0.1em;
 	}
+		.breakpoints a:hover {
+			background-color: rgba(255, 255, 255, 0.05);
+		}
 
-/*Goodies*/
-.extras {
+/*Go*/
+.go {
 	text-align: center;
+	margin-top: 2.8em;
 }
 .extras a {
 	display: inline-block;
 	padding: 0.6em;
 	text-decoration: none;
+	color: #737b80;
 }
+	.extras a:hover {
+		color: #fff;
+	}
 
 
 
