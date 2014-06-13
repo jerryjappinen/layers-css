@@ -1,8 +1,8 @@
 /*
-Layers CSS 1.0.4 
+Layers CSS 1.0.6 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2013-12-10 09:53 Europe/Berlin
+2014-04-10 13:32 UTC
 */
 
 /*Basics*/
@@ -261,28 +261,27 @@ a:focus {
 
 /*Dimensions*/
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type=""], input:not([type]) {
-	width: 60%;
-	max-width: 20em;
+	width: 20em;
+	max-width: 90%;
 }
 	input[type="text"].squeeze, input[type="password"].squeeze, input[type="email"].squeeze, input[type="url"].squeeze, input[type="search"].squeeze, input[type="tel"].squeeze, input[type=""].squeeze, input:not([type]).squeeze {
-		width: 40%;
-		max-width: 14em;
+		width: 14em;
 	}
 textarea {
-	width: 60%;
-	max-width: 32em;
+	width: 32em;
+	max-width: 90%;
 	height: 10.72em;
 }
 	textarea.squeeze {
-		width: 40%;
+		width: 20em;
 		height: 4.02em;
-		max-width: 20em;
 	}
 
 
 
 /*Resets*/
 button.plain, input.plain, textarea.plain {
+	color: inherit;
 	border-width: 0;
 	border-style: solid;
 	background-color: transparent;
@@ -963,7 +962,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 
 /*Font families*/
 html {
-	font-family: "Segoe UI", "Lucida Grande", "Ubuntu", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Lucida Grande", "Ubuntu", "Roboto", "Arial", sans-serif;
 }
 blockquote, q {
 	font-family: "Droid Serif", "Georgia", serif;
@@ -1008,7 +1007,7 @@ h1, h2, h3 {
 	position: relative;
 }
 .absolute {
-	position: static;
+	position: absolute;
 }
 .fixed {
 	position: fixed;

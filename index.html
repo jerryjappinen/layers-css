@@ -16,7 +16,6 @@
 
 		<!-- This page -->
 		<link rel="stylesheet" href="index/index.css" media="screen">
-		<link rel="stylesheet" href="index/prism.css" media="screen">
 
 
 
@@ -73,7 +72,7 @@
 				<div class="column half last">
 					<div class="buffer-right">
 
-						<h2><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="download" tabindex="1">Download 1.0.4</a> layers.min.css, 15 kb</h2>
+						<h2><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="download" tabindex="1">Download 1.0.6</a> layers.min.css, 15 kb</h2>
 
 						<dl class="">
 
@@ -132,41 +131,41 @@
 
 						<p><strong>Note!</strong> Browsers have to do rounding with fractional column/gutter widths, so you can't always control fluid grid per pixel.</p>
 
-						<p>Use <strong>n/12</strong> or <strong>fractional</strong> keywords as class names, like this:</p>
+						<p>Use <strong>fractional</strong> keywords as class names to control the width of each column, like this:</p>
 
 					</div>
 
 
 
 					<!-- Basic grid example -->
-					<div class="column six">
-						<p><code>.column.six</code></p>
+					<div class="column half">
+						<p><code>.column.half</code></p>
 					</div>
-					<div class="column six last">
-						<p><code>.column.six.last</code></p>
+					<div class="column half last">
+						<p><code>.column.half.last</code></p>
 					</div>
 					<div class="clear"></div>
 
 
 
-					<div class="column four colored">
-						<p><code>.column.four</code></p>
+					<div class="column third colored">
+						<p><code>.column.third</code></p>
 					</div>
 					<div class="column third colored">
 						<p><code>.column.third</code></p>
 					</div>
-					<div class="column four last colored">
-						<p><code>.column.four.last</code></p>
+					<div class="column third last colored">
+						<p><code>.column.third.last</code></p>
 					</div>
 					<div class="clear"></div>
 
 
 
-					<div class="column three">
-						<p><code>.column.three</code></p>
+					<div class="column fourth">
+						<p><code>.column.fourth</code></p>
 					</div>
-					<div class="column three">
-						<p><code>.column.three</code></p>
+					<div class="column fourth">
+						<p><code>.column.fourth</code></p>
 					</div>
 					<div class="column fourth">
 						<p><code>.column.fourth</code></p>
@@ -178,27 +177,60 @@
 
 
 
-					<div class="column two colored">
-						<p><code>.two</code></p>
-					</div>
-					<div class="column one colored">
-						<p><code>.one</code></p>
-					</div>
-					<div class="column twofourths colored">
-						<p><code>.twofourths</code></p>
-					</div>
-					<div class="column one colored">
-						<p><code>.one</code></p>
-					</div>
-					<div class="column two last colored">
-						<p><code>.two.last</code></p>
-					</div>
-					<div class="clear"></div>
-
 					<!-- Source -->
 					<div class="source collapsed">
 						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid.html" class="sourceContent reset buffer even"></pre>
+					</div>
+
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>You can also use traditional <strong>n/12</strong> keywords to control widths:</p>
+
+					</div>
+
+
+					<!-- First row -->
+					<div class="column twelve colored">
+						<p><code>.column.twelve</code></p>
+					</div>
+					<div class="clear"></div>
+
+					<!-- Second row -->
+					<div class="column six">
+						<p><code>.column.six</code></p>
+					</div>
+					<div class="column three">
+						<p><code>.column.three</code></p>
+					</div>
+					<div class="column three last">
+						<p><code>.column.three</code></p>
+					</div>
+					<div class="clear"></div>
+
+					<!-- Third row -->
+					<div class="column one colored">
+						<p><code>.one</code></p>
+					</div>
+					<div class="column two colored">
+						<p><code>.column.two</code></p>
+					</div>
+					<div class="column four colored">
+						<p><code>.column.four</code></p>
+					</div>
+					<div class="column five last colored">
+						<p><code>.column.five.last</code></p>
+					</div>
+					<div class="clear"></div>
+
+
+
+					<!-- Source -->
+					<div class="source collapsed">
+						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<pre data-src="index/samples/grid-traditional.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
 
@@ -1073,6 +1105,16 @@
 			</div>
 		</div>
 
+		<!-- Scripts for this page -->
+		<script type='text/javascript' src='index/index.js'></script>
+
+		<!-- Web fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+
+		<!-- Code highlighting -->
+		<script type='text/javascript' src='index/prism.js'></script>
+		<link rel="stylesheet" href="index/prism.css" media="screen">
+
 
 		<!-- Twitter button -->
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -1086,13 +1128,6 @@
 			ga('create', 'UA-3911404-8', 'eiskis.net');
 			ga('send', 'pageview');
 		</script>
-
-		<!-- Scripts for this page -->
-		<script type='text/javascript' src='index/prism.js'></script>
-		<script type='text/javascript' src='index/index.js'></script>
-
-		<!-- Web fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 
 	</body>
 
