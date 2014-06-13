@@ -5,7 +5,7 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
-## 1.0.7 - Sunday June 15, 2014
+## 1.1.0 - Sunday June 15, 2014
 
 Resetting border-radius in `.plain` inputs and buttons.
 

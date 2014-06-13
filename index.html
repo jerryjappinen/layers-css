@@ -44,56 +44,80 @@
 		<div class="row row-intro dark">
 			<div class="row-content buffer">
 
-				<h1 class="pageTitle squeeze-top"><a href="./">Layers <small>CSS</small></a></h1>
+				<h1 class="pageTitle squeeze"><a href="./">Layers <small>CSS</small></a></h1>
 
 				<p class="pageTitleImage invisible"><img src="index/images/layers.png" height="480" width="480" alt="Layers CSS" title="Layers CSS"></p>
 
-				<div class="column half">
-					<div class="buffer-right">
+				<div class="column medium-half excerpt">
 
-						<p>Lightweight. Unobtrusive. Style-agnostic. Build <em>your</em> look on the web, not Twitter's &ndash; and build it fluid. Layers CSS is aimed for practical use and comes with zero bullshit.</p>
+					<p class="squeeze-top">Lightweight. Unobtrusive. Style-agnostic. Build <em>your</em> look on the web, not Twitter's &ndash; and build it fluid. Layers CSS is aimed for practical use and comes with zero bullshit.</p>
 
-						<ul>
-							<li>Normalizations &amp; sensible defaults</li>
-							<li>Fluid grid + layout tools</li>
-							<li>Preserves native form styles by default</li>
-							<li>No <code>px</code> definitions</li>
-							<li>No colors, no borders, no rounded corners</li>
-							<li>No dependencies</li>
-						</ul>
+					<p class="discreet">Developed by <a href="https://twitter.com/Eiskis" target="_blank">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank">eiskis.net</a>.</p>
 
-						<p class="discreet">Maintained on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank">Bitbucket</a> by <a href="https://twitter.com/Eiskis" target="_blank">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank">eiskis.net</a>.</p>
+					<p><a href="https://twitter.com/share?url=http%3A%2F%2Feiskis.net%2Flayers&amp;related=Eiskis&amp;via=Eiskis&amp;hashtags=layerscss&amp;text=Layers%20CSS%20-%20A%20clean,%20no-bullshit%20CSS%20pack" target="_blank">Share this on Twitter</a></p>
 
-						<p class="reset-bottom"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://eiskis.net/layers" data-text="Layers CSS - A clean, no-bullshit CSS pack" data-via="Eiskis" data-size="large" data-related="Eiskis" data-count="none" data-hashtags="layerscss">Tweet</a></p>
+					<!-- <p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://eiskis.net/layers" data-text="Layers CSS - A clean, no-bullshit CSS pack" data-via="Eiskis" data-size="large" data-related="Eiskis" data-count="none" data-hashtags="layerscss">Share this on Twitter</a></p> -->
 
-					</div>
 				</div>
 
-				<div class="column half last">
-					<div class="buffer-right">
+				<div class="column medium-half medium-last">
 
-						<h2><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="download" tabindex="1">Download 1.0.6</a> layers.min.css, 15 kb</h2>
+					<ul class="features">
+						<li>Normalizations &amp; sensible defaults</li>
+						<li>Fluid grid + layout tools</li>
+						<li>Preserves native form styles by default</li>
+						<li>No <code>px</code> definitions</li>
+						<li>No colors, no borders, no rounded corners</li>
+						<li>No dependencies</li>
+					</ul>
+					<div class="clear"></div>
 
-						<dl class="">
+				</div>
 
-							<dt><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/responsive.min.css" target="_blank" tabindex="2">Responsive adjustments</a></dt>
-							<dd>Break all columns, adjust font size on small screens.</dd>
-<!-- 
-							<dt><a href="https://bitbucket.org/Eiskis/layers-css/src/default/extras/" target="_blank" tabindex="3">Extras</a></dt>
-							<dd>Default color schemes, typography etc.</dd>
- -->
-							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.css" target="_blank" tabindex="4">Development version</a></dt>
+				<div class="clear"></div>
 
-							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="5">Changelog</a></dt>
+				<div class="download limit">
 
-							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/src/tip/source/layers" target="_blank" tabindex="6">Source code</a></dt>
+					<h2>Download</h2>
+
+					<div class="column medium-third first">
+
+						<dl>
 
 						</dl>
-						<div class="clear"></div>
 
 					</div>
+
+					<div class="column medium-twothirds medium-last breakpoints">
+
+						<p><a class="toggle" href="." data-bind="click: changeUnit">Customize breakpoints in <em data-bind="css: { selected: $root.unit() === 'pixels' }">pixels</em> or <em data-bind="css: { selected: $root.unit() === 'ems' }">ems</em></span>:</a></p>
+
+						<ul class="reset collapse" data-bind="css: { hidden: unit() !== 'ems' }">
+							<!-- ko foreach: sortedEms -->
+							<li><input type="text" class="plain text" data-bind="value: $data"></li>
+							<!-- /ko -->
+							<li data-bind="css: { hidden: ($root.ems().length >= $root.maxBreakpoints) }"><a href="." data-bind="click: addBreakpoint">+</a></li>
+						</ul>
+
+						<ul class="reset collapse" data-bind="css: { hidden: unit() !== 'pixels' }">
+							<!-- ko foreach: sortedPixels -->
+							<li><input type="text" class="plain text" data-bind="value: $data"></li>
+							<!-- /ko -->
+							<li data-bind="css: { hidden: ($root.pixels().length >= $root.maxBreakpoints) }"><a href="." data-bind="click: addBreakpoint">+</a></li>
+						</ul>
+
+						<div class="clear"></div>
+
+						<p><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="button" tabindex="1">Download 1.0.7</a></p>
+
+						<p class="discreet">Estimated size: <span data-bind="text: estimatedSize"></span> kb uncompressed</p>
+
+					</div>
+					<div class="clear"></div>
+
+					<p class="discreet extras"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.css" target="_blank" tabindex="4">Development version</a> <a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="5">Changelog</a> <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" tabindex="6">Source code</a></p>
+
 				</div>
-				<div class="clear"></div>
 
 			</div>
 		</div>
@@ -108,7 +132,7 @@
 
 				<ul id="menu" class="plain reset"><li><a href="#grid" tabindex="7">Grid</a></li><li><a href="#tools" tabindex="8">Tools</a></li><li><a href="#lists" tabindex="9">Lists</a></li><li><a href="#tables" tabindex="10">Tables</a></li><li><a href="#forms" tabindex="11">Forms</a></li><li><a href="#samples" tabindex="12">Samples</a></li></ul>
 
-				<p class="invisible"><a href="#" class="tabGuard" tabindex="13">Tab guard</a></p>
+				<p class="invisible"><a href="." class="tabGuard" tabindex="13">Tab guard</a></p>
 
 				<p class="description">Colors and visuals below are created by custom styles, not Layers CSS.</p>
 
@@ -179,7 +203,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
@@ -229,7 +253,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-traditional.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
@@ -254,7 +278,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-center.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -280,7 +304,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-push.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -306,7 +330,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-right.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -353,7 +377,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-nogutters.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -382,7 +406,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-fixedfluid.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -407,7 +431,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-fixedfluid-right.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -458,7 +482,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/rows.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -484,7 +508,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/rows-buffer.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -511,7 +535,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/rows-evenbuffer.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -801,16 +825,16 @@
 					<div class="colored">
 
 						<ul class="reset collapse">
-							<li><a href="#">One</a></li>
-							<li><a href="#">Two</a></li>
-							<li><a href="#">Three</a></li>
-							<li><a href="#">Four</a></li>
+							<li><a href=".">One</a></li>
+							<li><a href=".">Two</a></li>
+							<li><a href=".">Three</a></li>
+							<li><a href=".">Four</a></li>
 						</ul>
 						<ul class="reset collapse right">
-							<li><a href="#">One</a></li>
-							<li><a href="#">Two</a></li>
-							<li><a href="#">Three</a></li>
-							<li><a href="#">Four</a></li>
+							<li><a href=".">One</a></li>
+							<li><a href=".">Two</a></li>
+							<li><a href=".">Three</a></li>
+							<li><a href=".">Four</a></li>
 						</ul>
 						<div class="clear"></div>
 
@@ -818,7 +842,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/lists-collapse.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
@@ -964,7 +988,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/tables-alignments.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
@@ -1105,19 +1129,24 @@
 			</div>
 		</div>
 
+
+
+		<!-- Ko -->
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+
 		<!-- Scripts for this page -->
-		<script type='text/javascript' src='index/index.js'></script>
+		<script type="text/javascript" src="index/index.js"></script>
 
 		<!-- Web fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
 
 		<!-- Code highlighting -->
-		<script type='text/javascript' src='index/prism.js'></script>
+		<script type="text/javascript" src="index/prism.js"></script>
 		<link rel="stylesheet" href="index/prism.css" media="screen">
 
 
 		<!-- Twitter button -->
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
 
 		<!-- Google analytics -->
 		<script>

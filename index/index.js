@@ -71,7 +71,7 @@ var watchWaypoints = function () {
 		}
 
 
-	// We're up in the intro of Timo
+	// We're up there
 	} else {
 		removeClass(menu, 'fixed');
 		currentWaypoint = 0;
@@ -138,21 +138,12 @@ var hasClass = function (element, className) {
 
 
 /**
-* Browser tabs
-*/
-
-
-
-/**
 * Document skeleton & configs
 */
 
-var downloadLink = document.getElementsByClassName('download')[0];
-var firstSection = document.getElementById('grid');
-var intro = document.getElementsByClassName('row-intro')[0];
-
 var menu = document.getElementById('menu');
 var menuLinks = menu.getElementsByTagName('a');
+var menuPrev = document.getElementsByClassName('display')[0];
 
 var browser = document.getElementsByClassName('browser')[0];
 var browserTabs = browser.getElementsByClassName('tabbar')[0].getElementsByTagName('a');
@@ -160,37 +151,99 @@ var browserSandbox = browser.getElementsByTagName('iframe')[0];
 var browserTrigger = browser.getElementsByClassName('trigger')[0];
 var browserLink = browser.getElementsByClassName('extracontrols')[0].getElementsByClassName('open')[0].getElementsByTagName('a')[0];
 
-var menuPrev = document.getElementsByClassName('display')[0];
 var sourceContainers = document.getElementsByClassName('source');
 var tabGuard = document.getElementsByClassName('tabGuard')[0];
 var menuWaypoints = [];
 var currentWaypoint = 0;
-var highlightDownload = function () {
-	addClass(intro, 'highlightDownload');
-};
-var removeHighlightDownload = function () {
-	removeClass(intro, 'highlightDownload');
-};
 
 
 
 /**
-* App launch & bindings
+* App
 */
 
+var app = function () {
+	var self = this;
+
+	// Default values
+	self.defaults = {
+		sizes: {
+			pixels: [360, 768, 1024, 1440],
+			ems: [30, 45, 60, 75]
+		},
+		unit: 'pixels'
+	};
+
+	// Constants
+	self.maxBreakpoints = 6;
+	self.coreSize = 15.9;
+	self.responsiveAdjustmentSize = 6.5;
+	self.compressionRatio = 0.7;
+
+	// Active parameters
+	self.pixels = ko.observableArray(self.defaults.sizes.pixels);
+	self.ems = ko.observableArray(self.defaults.sizes.ems);
+	self.sortedPixels = ko.computed(function () {
+		return self.pixels().sort(function (a, b) {
+			return a > b;
+		});
+	});
+	self.sortedEms = ko.computed(function () {
+		return self.ems().sort(function (a, b) {
+			return a > b;
+		});
+	});
+	self.unit = ko.observable(self.defaults.unit);
+
+	// Computed active parameters
+	self.possibleUnits = (function () {
+		var results = [];
+		for (var key in self.defaults.sizes) {
+			results.push(key);
+		}
+		return results;
+	})();
+
+	self.responsiveAdjustmentCount = ko.computed(function () {
+		return self[self.unit()]().length;
+	});
+
+	self.estimatedSize = ko.computed(function () {
+		return Math.floor(self.coreSize + self.responsiveAdjustmentCount() * self.responsiveAdjustmentSize);
+	});
+
+	self.estimatedSizeCompressed = ko.computed(function () {
+		return Math.floor(self.compressionRatio * self.estimatedSize());
+	});
+
+	// Behavior
+	self.addBreakpoint = function () {
+		var units = self[self.unit()]();
+		self[self.unit()].push(units[units.length-1] + 100);
+		return self;
+	};
+
+	self.changeUnit = function () {
+		var units = self.possibleUnits;
+		if (self.unit() !== units[0]) {
+			self.unit(units[0]);
+		} else {
+			self.unit(units[1]);
+		}
+		return self;
+	};
+
+};
+
+app = new app();
+
+
+
+/**
+* Init
+*/
 window.onload = function () {
 	var i;
-
-	// Highlight download link
-	downloadLink.onmouseover = highlightDownload;
-	downloadLink.onfocus = highlightDownload;
-	downloadLink.onmouseout = removeHighlightDownload;
-	downloadLink.onblur = removeHighlightDownload;
-
-	// Cycle tabindex
-	tabGuard.onfocus = function () {
-		downloadLink.focus();
-	};
 
 	// Bind menu links to scrolling
 	for (i = 0; i < menuLinks.length; i++) {
@@ -249,6 +302,11 @@ window.onload = function () {
 	// Watch waypoints when scrolling
 	watchWaypoints();
 	window.onscroll = watchWaypoints;
+
+
+
+	// Ko
+	ko.applyBindings(app);
 
 };
 
