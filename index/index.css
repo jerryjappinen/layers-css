@@ -138,17 +138,17 @@ h1.pageTitle {
 		-o-transition-duration: 0ms;
 		transition-duration: 0ms;
 	}
-	@media handheld, only screen and (max-width: 60em) {
+	@media handheld, only screen and (max-width: 1024px) {
 		.row-intro h1.pageTitle {
 			font-size: 5em;
 		}
 	}
-	@media handheld, only screen and (max-width: 40em) {
+	@media handheld, only screen and (max-width: 768px) {
 		.row-intro h1.pageTitle {
 			font-size: 4em;
 		}
 	}
-	@media handheld, only screen and (max-width: 28em) {
+	@media handheld, only screen and (max-width: 360px) {
 		.row-intro h1.pageTitle {
 			font-size: 3.4em;
 		}
@@ -174,9 +174,14 @@ h1.pageTitle {
 
 /*Download*/
 .download h2 {
-	text-align: center;
 	font-weight: 900;
+	text-align: center;
 }
+	@media handheld, only screen and (max-width: 768px) {
+		.download h2 {
+			font-size: 2.2em;
+		}
+	}
 .download .button {
 	font-size: 1.4em;
 	min-width: 9em;
@@ -206,12 +211,18 @@ h1.pageTitle {
 /*Inputs*/
 .breakpoints {
 	max-width: 55em;
+	margin-bottom: 2.2em;
 }
 .breakpoints li {
 	margin-bottom: 0.6em;
 	padding-left: 0.6em;
 	padding-right: 0.6em;
 }
+	.breakpoints .center {
+		max-width: 16em;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	.breakpoints .empty {
 		color: #737b80;
 	}
@@ -223,7 +234,7 @@ h1.pageTitle {
 	}
 	.breakpoints .name {
 		display: inline-block;
-		width: 5em;
+		width: 8em;
 	}
 	.breakpoints label {
 		display: inline-block;
@@ -263,7 +274,14 @@ h1.pageTitle {
 /*Go*/
 .go {
 	text-align: center;
-	margin-top: 2.8em;
+}
+.dispatch {
+	margin-top: 2.2em;
+}
+.go label {
+	padding: 0.6em;
+	margin-left: 0.6em;
+	margin-right: 0.6em;
 }
 .extras a {
 	display: inline-block;

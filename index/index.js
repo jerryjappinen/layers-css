@@ -186,12 +186,15 @@ var DownloadManager = function () {
 	})());
 
 	// Computed active parameters
-	self.maxBreakpoints = ko.computed(function () {
-		return self.breakpointNames.length;
-	});
-
 	self.breakpointCount = ko.computed(function () {
-		return self.breakpoints().length;
+		var count = 0;
+		var breakpoints = self.breakpoints();
+		for (var i = 0; i < breakpoints.length; i++) {
+			if (!breakpoints[i].isEmpty()) {
+				count++;
+			}
+		}
+		return count;
 	});
 
 	self.estimatedSize = ko.computed(function () {
@@ -213,17 +216,21 @@ var Breakpoint = function (name, em, px) {
 
 	self.em.subscribe(function (newValue) {
 		if (newValue !== parseInt(newValue)) {
-			self.em(parseInt(newValue));
-		} else if (newValue < 0) {
-			self.em(Math.abs(newValue));
+			if (newValue > 0) {
+				self.em(parseInt(newValue));
+			} else {
+				self.em(0);
+			}
 		}
 	});
 
 	self.px.subscribe(function (newValue) {
 		if (newValue !== parseInt(newValue)) {
-			self.px(parseInt(newValue));
-		} else if (newValue < 0) {
-			self.px(Math.abs(newValue));
+			if (newValue > 0) {
+				self.px(parseInt(newValue));
+			} else {
+				self.px(0);
+			}
 		}
 	});
 

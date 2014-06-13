@@ -80,14 +80,16 @@
 
 					<h2>Customize breakpoints</h2>
 
-					<ul class="plain keep-center breakpoints" data-bind="foreach: breakpoints">
-						<li class="column reset medium-third small-half" data-bind="css: css"><label class="transition em"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: em"></label><label class="transition px"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: px"></label><a href="." data-bind="click: toggle"><code class="transition px">px</code> <code class="transition em">em</code></a></li>
+					<ul class="plain keep-center clear-after breakpoints" data-bind="foreach: breakpoints">
+						<li class="column reset medium-third small-half" data-bind="css: css"><div class="center"><label class="transition em"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: em"></label><label class="transition px"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: px"></label><a href="." data-bind="click: toggle"><code class="transition px">px</code> <code class="transition em">em</code></a></div></li>
 					</ul>
 					<div class="clear"></div>
 
 					<div class="go">
 
-						<p><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="button" tabindex="1">Download 1.1</a></p>
+						<p><label><input type="checkbox"> Download core only</label><label><input type="checkbox"> Separate files</label></p>
+
+						<p class="dispatch"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="button" tabindex="1">Download 1.1</a></p>
 
 						<p class="discreet">Estimated size: <span data-bind="text: estimatedSize"></span> kb uncompressed</p>
 
