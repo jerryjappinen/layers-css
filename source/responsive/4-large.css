@@ -1,0 +1,362 @@
+
+/*Very wide viewport and up*/
+@media handheld, only screen and (min-width: 1440px) {
+
+	/*Column basics*/
+	.column.large-one,
+	.column.large-two,
+	.column.large-sixth,
+	.column.large-three,
+	.column.large-fourth,
+	.column.large-four,
+	.column.large-twosixths,
+	.column.large-third,
+	.column.large-five,
+	.column.large-six,
+	.column.large-half,
+	.column.large-threesixths,
+	.column.large-twofourths,
+	.column.large-seven,
+	.column.large-eight,
+	.column.large-foursixths,
+	.column.large-twothirds,
+	.column.large-nine,
+	.column.large-threefourths,
+	.column.large-ten,
+	.column.large-fivesixths,
+	.column.large-eleven,
+	.column.large-twelve,
+	.column.large-full {
+		clear: none;
+		float: left;
+		min-height: 1px;
+		margin-left: 0;
+		margin-right: 3.8%;
+	}
+		.column.right.large-one,
+		.column.right.large-two,
+		.column.right.large-sixth,
+		.column.right.large-three,
+		.column.right.large-fourth,
+		.column.right.large-four,
+		.column.right.large-twosixths,
+		.column.right.large-third,
+		.column.right.large-five,
+		.column.right.large-six,
+		.column.right.large-half,
+		.column.right.large-threesixths,
+		.column.right.large-twofourths,
+		.column.right.large-seven,
+		.column.right.large-eight,
+		.column.right.large-foursixths,
+		.column.right.large-twothirds,
+		.column.right.large-nine,
+		.column.right.large-threefourths,
+		.column.right.large-ten,
+		.column.right.large-fivesixths,
+		.column.right.large-eleven,
+		.column.right.large-twelve,
+		.column.right.large-full {
+			margin-right: 0;
+			margin-left: 3.8%;
+		}
+
+	/*Full-width column*/
+	.column.large-full,
+	.column.large-twelve {
+		width: 100%;
+	}
+
+
+
+	/*Fluid column widths*/
+	.column.large-one {
+		width: 4.85%;
+	}
+	.column.large-two,
+	.column.large-sixth {
+		width: 13.45%;
+	}
+	.column.large-three,
+	.column.large-fourth {
+		width: 22.05%;
+	}
+	.column.large-four,
+	.column.large-twosixths,
+	.column.large-third {
+		width: 30.75%;
+	}
+	.column.large-five {
+		width: 39.45%;
+	}
+	.column.large-six,
+	.column.large-half,
+	.column.large-threesixths,
+	.column.large-twofourths {
+		width: 48%;
+	}
+	.column.large-seven {
+		width: 56.75%;
+	}
+	.column.large-eight,
+	.column.large-foursixths,
+	.column.large-twothirds {
+		width: 65.4%;
+	}
+	.column.large-nine,
+	.column.large-threefourths {
+		width: 74.05%;
+	}
+	.column.large-ten,
+	.column.large-fivesixths {
+		width: 82.7%;
+	}
+	.column.large-eleven {
+		width: 91.35%;
+	}
+
+	/*Shift guttered columns*/
+	.column.large-push-one {
+		margin-left: 8.65%;
+	}
+		.column.right.large-push-one {
+			margin-right: 8.65%;
+		}
+	.column.large-push-two,
+	.column.large-push-sixth {
+		margin-left: 17.25%;
+	}
+		.column.right.large-push-two,
+		.column.right.large-push-sixth {
+			margin-right: 17.25%;
+		}
+	.column.large-push-three,
+	.column.large-push-fourth {
+		margin-left: 25.85%;
+	}
+		.column.right.large-push-three,
+		.column.right.large-push-fourth {
+			margin-right: 25.85%;
+		}
+	.column.large-push-four,
+	.column.large-push-twosixths,
+	.column.large-push-third {
+		margin-left: 34.55%;
+	}
+		.column.right.large-push-four,
+		.column.right.large-push-twosixths,
+		.column.right.large-push-third {
+			margin-right: 34.55%;
+		}
+	.column.large-push-five {
+		margin-left: 43.25%;
+	}
+		.column.right.large-push-five {
+			margin-right: 43.25%;
+		}
+	.column.large-push-six,
+	.column.large-push-half,
+	.column.large-push-threesixths,
+	.column.large-push-twofourths {
+		margin-left: 51.8%;
+	}
+		.column.right.large-push-six,
+		.column.right.large-push-half,
+		.column.right.large-push-threesixths,
+		.column.right.large-push-twofourths {
+			margin-right: 51.8%;
+		}
+	.column.large-push-seven {
+		margin-left: 60.55%;
+	}
+		.column.right.large-push-seven {
+			margin-right: 60.55%;
+		}
+	.column.large-push-eight,
+	.column.large-push-foursixths,
+	.column.large-push-twothirds {
+		margin-left: 69.2%;
+	}
+		.column.right.large-push-eight,
+		.column.right.large-push-foursixths,
+		.column.right.large-push-twothirds {
+			margin-right: 69.2%;
+		}
+	.column.large-push-nine,
+	.column.large-push-threefourths {
+		margin-left: 77.85%;
+	}
+		.column.right.large-push-nine,
+		.column.right.large-push-threefourths {
+			margin-right: 77.85%;
+		}
+	.column.large-push-ten,
+	.column.large-push-fivesixths {
+		margin-left: 86.5%;
+	}
+		.column.right.large-push-ten,
+		.column.right.large-push-fivesixths {
+			margin-right: 86.5%;
+		}
+	.column.large-push-eleven {
+		margin-left: 95.15%;
+	}
+		.column.right.large-push-eleven {
+			margin-right: 95.15%;
+		}
+
+
+
+	/*No gutters*/
+	.column.large-one.reset {
+		width: 8.3%;
+	}
+	.column.large-two.reset,
+	.column.large-sixth.reset {
+		width: 16.65%;
+	}
+	.column.large-three.reset,
+	.column.large-fourth.reset {
+		width: 25%;
+	}
+	.column.large-four.reset,
+	.column.large-twosixths.reset,
+	.column.large-third.reset {
+		width: 33.3%;
+	}
+	.column.large-five.reset {
+		width: 41.65%;
+	}
+	.column.large-six.reset,
+	.column.large-half.reset,
+	.column.large-threesixths.reset,
+	.column.large-twofourths.reset {
+		width: 50%;
+	}
+	.column.large-seven.reset {
+		width: 58.3%;
+	}
+	.column.large-eight.reset,
+	.column.large-foursixths.reset,
+	.column.large-twothirds.reset {
+		width: 66.6%;
+	}
+	.column.large-nine.reset,
+	.column.large-threefourths.reset {
+		width: 75%;
+	}
+	.column.large-ten.reset,
+	.column.large-fivesixths.reset {
+		width: 83.35%;
+	}
+	.column.large-eleven.reset {
+		width: 91.7%;
+	}
+
+	/*Shift no-gutter columns*/
+	.column.reset.large-push-one {
+		margin-left: 8.3%;
+	}
+		.column.reset.right.large-push-one {
+			margin-right: 8.3%;
+		}
+	.column.reset.large-push-two,
+	.column.reset.large-push-sixth {
+		margin-left: 16.65%;
+	}
+		.column.reset.right.large-push-two,
+		.column.reset.right.large-push-sixth {
+			margin-right: 16.65%;
+		}
+	.column.reset.large-push-three,
+	.column.reset.large-push-fourth {
+		margin-left: 25%;
+	}
+		.column.reset.right.large-push-three,
+		.column.reset.right.large-push-fourth {
+			margin-right: 25%;
+		}
+	.column.reset.large-push-four,
+	.column.reset.large-push-twosixths,
+	.column.reset.large-push-third {
+		margin-left: 33.3%;
+	}
+		.column.reset.right.large-push-four,
+		.column.reset.right.large-push-twosixths,
+		.column.reset.right.large-push-third {
+			margin-right: 33.3%;
+		}
+	.column.reset.large-push-five {
+		margin-left: 41.65%;
+	}
+		.column.reset.right.large-push-five {
+			margin-right: 41.65%;
+		}
+	.column.reset.large-push-six,
+	.column.reset.large-push-half,
+	.column.reset.large-push-threesixths,
+	.column.reset.large-push-twofourths {
+		margin-left: 50%;
+	}
+		.column.reset.right.large-push-six,
+		.column.right.reset.large-push-half,
+		.column.right.reset.large-push-threesixths,
+		.column.right.reset.large-push-twofourths {
+			margin-right: 50%;
+		}
+	.column.reset.large-push-seven {
+		margin-left: 58.3%;
+	}
+		.column.reset.right.large-push-seven {
+			margin-right: 58.3%;
+		}
+	.column.reset.large-push-eight,
+	.column.reset.large-push-foursixths,
+	.column.reset.large-push-twothirds {
+		margin-left: 66.6%;
+	}
+		.column.reset.right.large-push-eight,
+		.column.reset.right.large-push-foursixths,
+		.column.reset.right.large-push-twothirds {
+			margin-right: 66.6%;
+		}
+	.column.reset.large-push-nine,
+	.column.reset.large-push-threefourths {
+		margin-left: 75%;
+	}
+		.column.reset.right.large-push-nine,
+		.column.reset.right.large-push-threefourths {
+			margin-right: 75%;
+		}
+	.column.reset.large-push-ten,
+	.column.reset.large-push-fivesixths {
+		margin-left: 83.35%;
+	}
+		.column.reset.right.large-push-ten,
+		.column.reset.right.large-push-fivesixths {
+			margin-right: 83.35%;
+		}
+	.column.reset.large-push-eleven {
+		margin-left: 91.7%;
+	}
+		.column.reset.right.large-push-eleven {
+			margin-right: 91.7%;
+		}
+
+	/*Last column in the series*/
+	.column.large-last {
+		margin-right: 0 !important;
+	}
+
+
+
+	/*Break columns after this*/
+	.column.break-large {
+		width: auto !important;
+		float: none !important;
+		clear: both !important;
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+
+}

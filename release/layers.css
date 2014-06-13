@@ -1,8 +1,8 @@
 /*
-Layers CSS 1.0.6 
+Layers CSS 1.0.7 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2014-04-10 13:32 UTC
+2014-06-13 16:29 UTC
 */
 
 /*Basics*/
@@ -350,61 +350,106 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	}
 
 /*Column basics (12-based fluid grid)*/
-.column {
+.column.one,
+.column.two,
+.column.sixth,
+.column.three,
+.column.fourth,
+.column.four,
+.column.twosixths,
+.column.third,
+.column.five,
+.column.six,
+.column.half,
+.column.threesixths,
+.column.twofourths,
+.column.seven,
+.column.eight,
+.column.foursixths,
+.column.twothirds,
+.column.nine,
+.column.threefourths,
+.column.ten,
+.column.fivesixths,
+.column.eleven,
+.column.twelve,
+.column.full {
 	clear: none;
 	float: left;
 	min-height: 1px;
+	margin-left: 0;
+	margin-right: 3.8%;
 }
+	.column.right.one,
+	.column.right.two,
+	.column.right.sixth,
+	.column.right.three,
+	.column.right.fourth,
+	.column.right.four,
+	.column.right.twosixths,
+	.column.right.third,
+	.column.right.five,
+	.column.right.six,
+	.column.right.half,
+	.column.right.threesixths,
+	.column.right.twofourths,
+	.column.right.seven,
+	.column.right.eight,
+	.column.right.foursixths,
+	.column.right.twothirds,
+	.column.right.nine,
+	.column.right.threefourths,
+	.column.right.ten,
+	.column.right.fivesixths,
+	.column.right.eleven,
+	.column.right.twelve,
+	.column.right.full {
+		margin-right: 0;
+		margin-left: 3.8%;
+	}
+
+	.column.right {
+		float: right;
+	}
+
 	.column.first,
 	.column.full,
 	.column.twelve,
 	.column.center {
 		clear: both;
 	}
-	.column.right {
-		float: right;
-	}
+
 	.column.center, .column.right.center {
 		float: none;
 	}
 
-
-
-/*Fluid columns*/
-.column {
-	margin-left: 0;
-	margin-right: 3.8%;
-}
 	.column.last,
 	.column.reset {
 		margin-right: 0 !important;
 	}
 
-/*Reverse stacking*/
-.column.right {
-	margin-right: 0;
-	margin-left: 3.8%;
-}
-	.column.right.last,
-	.column.right.reset {
-		margin-left: 0 !important;
+		.column.right.last,
+		.column.right.reset {
+			margin-left: 0 !important;
+		}
+
+	.column.center,
+	.column.right.center {
+		margin-right: auto !important;
+		margin-left: auto !important;
 	}
 
-/*Centered columns*/
-.column.center, .column.right.center {
-	margin-right: auto !important;
-	margin-left: auto !important;
-}
 
 
+/**
+* Column widths
+*/
 
 /*Full-width column*/
 .column.full,
 .column.twelve {
 	width: 100%;
 }
-
-
 
 /*Fluid column widths*/
 .column.one {

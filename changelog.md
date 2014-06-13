@@ -5,6 +5,18 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
+## 1.0.7 - Sunday June 15, 2014
+
+Resetting border-radius in `.plain` inputs and buttons.
+
+**New responsive adjustments !important;**
+
+The Layers CSS grid now supports columns set to arbitrary break points. The stock responsive adjustments set uses 4 break points.
+
+Regular columns continue to never break unless explicitly set.
+
+
+
 ## 1.0.6 - Saturday April 5, 2014
 
 Switched width and max-width on text fields in `forms.css`. They're more intuitive and easier to override this way.
