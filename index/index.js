@@ -181,7 +181,7 @@ var DownloadManager = function () {
 	self.breakpoints = ko.observableArray((function () {
 		var results = [];
 		for (var i = 0; i < self.breakpointNames.length; i++) {
-			results.push(new Breakpoint(self.breakpointNames[i], (self.defaults.em[i] ? self.defaults.em[i] : 0), (self.defaults.px[i] ? self.defaults.px[i] : 0)));
+			results.push(new Breakpoint(self.breakpointNames[i], i, (self.defaults.em[i] ? self.defaults.em[i] : 0), (self.defaults.px[i] ? self.defaults.px[i] : 0)));
 		}
 		return results;
 	})());
@@ -210,27 +210,36 @@ var DownloadManager = function () {
 
 	// Behavior
 	self.url = ko.computed(function () {
-		var result = [];
-		var breakpoints = self.breakpoints();
-		for (var i = 0; i < breakpoints.length; i++) {
-			var b = breakpoints[i];
-			if (!b.isEmpty()) {
-				result.push('breakpoint' + i + '=' + b.name() + ',' + b[b.unit()]() + b.unit());
+		if (!self.breakpointCount()) {
+			return '';
+		} else {
+
+			var result = [];
+			var breakpoints = self.breakpoints();
+			for (var i = 0; i < breakpoints.length; i++) {
+				var b = breakpoints[i];
+				if (!b.isEmpty()) {
+					result.push('breakpoint' + i + '=' + b.name() + ',' + b[b.unit()]() + b.unit());
+				}
 			}
+			return self.generatorUrl + '?' + result.join('&');
+
 		}
-		return self.generatorUrl + '?' + result.join('&');
 	});
 
 };
 
-var Breakpoint = function (name, em, px) {
+var Breakpoint = function (name, i, em, px) {
 	var self = this;
 
-	self.em = ko.observable(em > 0 ? em : 0);
-	self.px = ko.observable(px > 0 ? px : 0);
+	// Basic parameters
+	self.i = ko.observable(i);
 	self.name = ko.observable(name);
 	self.unit = ko.observable('em');
+	self.em = ko.observable(em > 0 ? em : 0);
+	self.px = ko.observable(px > 0 ? px : 0);
 
+	// Validations
 	self.em.subscribe(function (newValue) {
 		if (newValue !== parseInt(newValue)) {
 			if (newValue > 0) {
@@ -257,6 +266,14 @@ var Breakpoint = function (name, em, px) {
 
 	self.css = ko.computed(function () {
 		return self.unit() + (self.isEmpty() ? ' empty' : '');
+	});
+
+	self.emTabindex = ko.computed(function () {
+		return self.unit() === 'em' ? self.i() + 1: '';
+	});
+
+	self.pxTabindex = ko.computed(function () {
+		return self.unit() === 'px' ? self.i() + 1: '';
 	});
 
 	self.empty = function () {

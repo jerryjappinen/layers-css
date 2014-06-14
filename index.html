@@ -81,15 +81,15 @@
 					<h3 class="discreet">Download &amp; customize</h3>
 
 					<ul class="plain keep-center clear-after breakpoints" data-bind="foreach: breakpoints">
-						<li class="column reset medium-third small-half" data-bind="css: css"><div class="center"><label class="transition em"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: em"></label><label class="transition px"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: px"></label><a href="." data-bind="click: toggle"><code class="transition em">em</code> <code class="transition px">px</code></a></div></li>
+						<li class="column reset medium-third small-half" data-bind="css: css"><div class="center"><label class="transition em"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: em, attr: { tabindex: emTabindex }"></label><label class="transition px"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: px, attr: { tabindex: pxTabindex }"></label><a href="." data-bind="click: toggle"><code class="transition em">em</code> <code class="transition px">px</code></a></div></li>
 					</ul>
 					<div class="clear"></div>
 
 					<div class="go">
 
-						<p><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="button">Download core<span data-bind="css: { hidden: breakpointCount() > 0}"> core</span></a><a href="" data-bind="attr: { href: url }" target="_blank" class="button secondary">Download breakpoints</a></p>
+						<p><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" tabindex="7" class="button">Download core</a><a href="" data-bind="attr: { href: url }, css: { disabled: (breakpointCount() < 1)}" target="_blank" tabindex="8" class="button secondary">Download breakpoints</a></p>
 
-						<p class="discreet">Estimated size <span data-bind="text: estimatedSize"></span> kb uncompressed, <span data-bind="text: estimatedSizeCompressed"></span> kb gzipped. Check out <a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="5">v. 1.1 changelog</a> and <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" tabindex="6">source code</a>.</p>
+						<p class="discreet">Estimated size <span data-bind="text: estimatedSize"></span> kb uncompressed, <span data-bind="text: estimatedSizeCompressed"></span> kb gzipped. Check out <a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="9">v. 1.1 changelog</a> and <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" tabindex="10">source code</a>.</p>
 
 						<p><a href="https://twitter.com/share?url=http%3A%2F%2Feiskis.net%2Flayers&amp;related=Eiskis&amp;via=Eiskis&amp;hashtags=layerscss&amp;text=Layers%20CSS%20-%20A%20clean,%20no-bullshit%20CSS%20pack" target="_blank">Share on Twitter</a></p>
 
@@ -108,9 +108,9 @@
 
 				<h1 class="display squeeze-top reset-bottom">Reference</h1>
 
-				<ul id="menu" class="plain reset"><li><a href="#grid" tabindex="7">Grid</a></li><li><a href="#tools" tabindex="8">Tools</a></li><li><a href="#lists" tabindex="9">Lists</a></li><li><a href="#tables" tabindex="10">Tables</a></li><li><a href="#forms" tabindex="11">Forms</a></li><li><a href="#samples" tabindex="12">Samples</a></li></ul>
+				<ul id="menu" class="plain reset"><li><a href="#grid">Grid</a></li><li><a href="#tools">Tools</a></li><li><a href="#lists">Lists</a></li><li><a href="#tables">Tables</a></li><li><a href="#forms">Forms</a></li><li><a href="#samples">Samples</a></li></ul>
 
-				<p class="invisible"><a href="." class="tabGuard" tabindex="13">Tab guard</a></p>
+				<p class="invisible"><a href="." class="tabGuard">Tab guard</a></p>
 
 				<p class="description">Colors and visuals below are created by custom styles, not Layers CSS.</p>
 
@@ -1164,7 +1164,6 @@
 
 
 		<!-- Libraries -->
-		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
 
 		<!-- Scripts for this page -->

@@ -148,7 +148,16 @@ a, input.plain, .transition {
 		.button:active {
 			color: #fff;
 		}
-
+	.button.disabled, .dark .button.disabled {
+		color: #737b80;
+		background-color: #2e3133;
+	}
+		.button.disabled:hover, .button.disabled:focus, .dark .button.disabled:hover, .dark .button.disabled:focus {
+			-webkit-box-shadow: 0 0 0 transparent;
+			-moz-box-shadow: 0 0 0 transparent;
+			-ms-box-shadow: 0 0 0 transparent;
+			box-shadow: 0 0 0 transparent;
+		}
 
 
 /*Master title*/
