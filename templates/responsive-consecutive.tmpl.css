@@ -1,0 +1,577 @@
+
+@media handheld, only screen and (min-width: {{width}}) {
+
+	/*Roll back default last-in-line behavior*/
+	.column.last.{{name}}-one,
+	.column.last.{{name}}-two,
+	.column.last.{{name}}-sixth,
+	.column.last.{{name}}-three,
+	.column.last.{{name}}-fourth,
+	.column.last.{{name}}-four,
+	.column.last.{{name}}-twosixths,
+	.column.last.{{name}}-third,
+	.column.last.{{name}}-five,
+	.column.last.{{name}}-six,
+	.column.last.{{name}}-half,
+	.column.last.{{name}}-threesixths,
+	.column.last.{{name}}-twofourths,
+	.column.last.{{name}}-seven,
+	.column.last.{{name}}-eight,
+	.column.last.{{name}}-foursixths,
+	.column.last.{{name}}-twothirds,
+	.column.last.{{name}}-nine,
+	.column.last.{{name}}-threefourths,
+	.column.last.{{name}}-ten,
+	.column.last.{{name}}-fivesixths,
+	.column.last.{{name}}-eleven,
+	.column.last.{{name}}-twelve,
+	.column.last.{{name}}-full,
+
+	/*Roll back default last-in-line behavior of the previous break point set*/
+	.column.{{previousName}}-last.{{name}}-one,
+	.column.{{previousName}}-last.{{name}}-two,
+	.column.{{previousName}}-last.{{name}}-sixth,
+	.column.{{previousName}}-last.{{name}}-three,
+	.column.{{previousName}}-last.{{name}}-fourth,
+	.column.{{previousName}}-last.{{name}}-four,
+	.column.{{previousName}}-last.{{name}}-twosixths,
+	.column.{{previousName}}-last.{{name}}-third,
+	.column.{{previousName}}-last.{{name}}-five,
+	.column.{{previousName}}-last.{{name}}-six,
+	.column.{{previousName}}-last.{{name}}-half,
+	.column.{{previousName}}-last.{{name}}-threesixths,
+	.column.{{previousName}}-last.{{name}}-twofourths,
+	.column.{{previousName}}-last.{{name}}-seven,
+	.column.{{previousName}}-last.{{name}}-eight,
+	.column.{{previousName}}-last.{{name}}-foursixths,
+	.column.{{previousName}}-last.{{name}}-twothirds,
+	.column.{{previousName}}-last.{{name}}-nine,
+	.column.{{previousName}}-last.{{name}}-threefourths,
+	.column.{{previousName}}-last.{{name}}-ten,
+	.column.{{previousName}}-last.{{name}}-fivesixths,
+	.column.{{previousName}}-last.{{name}}-eleven,
+	.column.{{previousName}}-last.{{name}}-twelve,
+	.column.{{previousName}}-last.{{name}}-full {
+		margin-right: 3.8%;
+	}
+
+		/*Roll back default last-in-line behavior*/
+		.column.right.last.{{name}}-one,
+		.column.right.last.{{name}}-two,
+		.column.right.last.{{name}}-sixth,
+		.column.right.last.{{name}}-three,
+		.column.right.last.{{name}}-fourth,
+		.column.right.last.{{name}}-four,
+		.column.right.last.{{name}}-twosixths,
+		.column.right.last.{{name}}-third,
+		.column.right.last.{{name}}-five,
+		.column.right.last.{{name}}-six,
+		.column.right.last.{{name}}-half,
+		.column.right.last.{{name}}-threesixths,
+		.column.right.last.{{name}}-twofourths,
+		.column.right.last.{{name}}-seven,
+		.column.right.last.{{name}}-eight,
+		.column.right.last.{{name}}-foursixths,
+		.column.right.last.{{name}}-twothirds,
+		.column.right.last.{{name}}-nine,
+		.column.right.last.{{name}}-threefourths,
+		.column.right.last.{{name}}-ten,
+		.column.right.last.{{name}}-fivesixths,
+		.column.right.last.{{name}}-eleven,
+		.column.right.last.{{name}}-twelve,
+		.column.right.last.{{name}}-full,
+
+		/*Roll back default last-in-line behavior of the previous break point set*/
+		.column.right.{{previousName}}-last.{{name}}-one,
+		.column.right.{{previousName}}-last.{{name}}-two,
+		.column.right.{{previousName}}-last.{{name}}-sixth,
+		.column.right.{{previousName}}-last.{{name}}-three,
+		.column.right.{{previousName}}-last.{{name}}-fourth,
+		.column.right.{{previousName}}-last.{{name}}-four,
+		.column.right.{{previousName}}-last.{{name}}-twosixths,
+		.column.right.{{previousName}}-last.{{name}}-third,
+		.column.right.{{previousName}}-last.{{name}}-five,
+		.column.right.{{previousName}}-last.{{name}}-six,
+		.column.right.{{previousName}}-last.{{name}}-half,
+		.column.right.{{previousName}}-last.{{name}}-threesixths,
+		.column.right.{{previousName}}-last.{{name}}-twofourths,
+		.column.right.{{previousName}}-last.{{name}}-seven,
+		.column.right.{{previousName}}-last.{{name}}-eight,
+		.column.right.{{previousName}}-last.{{name}}-foursixths,
+		.column.right.{{previousName}}-last.{{name}}-twothirds,
+		.column.right.{{previousName}}-last.{{name}}-nine,
+		.column.right.{{previousName}}-last.{{name}}-threefourths,
+		.column.right.{{previousName}}-last.{{name}}-ten,
+		.column.right.{{previousName}}-last.{{name}}-fivesixths,
+		.column.right.{{previousName}}-last.{{name}}-eleven,
+		.column.right.{{previousName}}-last.{{name}}-twelve,
+		.column.right.{{previousName}}-last.{{name}}-full {
+			margin-left: 3.8%;
+		}
+
+
+
+	/*Column basics*/
+	.column.{{name}}-one,
+	.column.{{name}}-two,
+	.column.{{name}}-sixth,
+	.column.{{name}}-three,
+	.column.{{name}}-fourth,
+	.column.{{name}}-four,
+	.column.{{name}}-twosixths,
+	.column.{{name}}-third,
+	.column.{{name}}-five,
+	.column.{{name}}-six,
+	.column.{{name}}-half,
+	.column.{{name}}-threesixths,
+	.column.{{name}}-twofourths,
+	.column.{{name}}-seven,
+	.column.{{name}}-eight,
+	.column.{{name}}-foursixths,
+	.column.{{name}}-twothirds,
+	.column.{{name}}-nine,
+	.column.{{name}}-threefourths,
+	.column.{{name}}-ten,
+	.column.{{name}}-fivesixths,
+	.column.{{name}}-eleven,
+	.column.{{name}}-twelve,
+	.column.{{name}}-full {
+		clear: none;
+		float: left;
+		min-height: 1px;
+		margin-left: 0;
+		margin-right: 3.8%;
+	}
+		.column.right.{{name}}-one,
+		.column.right.{{name}}-two,
+		.column.right.{{name}}-sixth,
+		.column.right.{{name}}-three,
+		.column.right.{{name}}-fourth,
+		.column.right.{{name}}-four,
+		.column.right.{{name}}-twosixths,
+		.column.right.{{name}}-third,
+		.column.right.{{name}}-five,
+		.column.right.{{name}}-six,
+		.column.right.{{name}}-half,
+		.column.right.{{name}}-threesixths,
+		.column.right.{{name}}-twofourths,
+		.column.right.{{name}}-seven,
+		.column.right.{{name}}-eight,
+		.column.right.{{name}}-foursixths,
+		.column.right.{{name}}-twothirds,
+		.column.right.{{name}}-nine,
+		.column.right.{{name}}-threefourths,
+		.column.right.{{name}}-ten,
+		.column.right.{{name}}-fivesixths,
+		.column.right.{{name}}-eleven,
+		.column.right.{{name}}-twelve,
+		.column.right.{{name}}-full {
+			float: right;
+			margin-right: 0;
+			margin-left: 3.8%;
+		}
+
+	/*Full-width column*/
+	.column.{{name}}-full,
+	.column.{{name}}-twelve {
+		width: 100%;
+	}
+
+
+
+	/*Fluid column widths*/
+	.column.{{name}}-one {
+		width: 4.85%;
+	}
+	.column.{{name}}-two,
+	.column.{{name}}-sixth {
+		width: 13.45%;
+	}
+	.column.{{name}}-three,
+	.column.{{name}}-fourth {
+		width: 22.05%;
+	}
+	.column.{{name}}-four,
+	.column.{{name}}-twosixths,
+	.column.{{name}}-third {
+		width: 30.75%;
+	}
+	.column.{{name}}-five {
+		width: 39.45%;
+	}
+	.column.{{name}}-six,
+	.column.{{name}}-half,
+	.column.{{name}}-threesixths,
+	.column.{{name}}-twofourths {
+		width: 48%;
+	}
+	.column.{{name}}-seven {
+		width: 56.75%;
+	}
+	.column.{{name}}-eight,
+	.column.{{name}}-foursixths,
+	.column.{{name}}-twothirds {
+		width: 65.4%;
+	}
+	.column.{{name}}-nine,
+	.column.{{name}}-threefourths {
+		width: 74.05%;
+	}
+	.column.{{name}}-ten,
+	.column.{{name}}-fivesixths {
+		width: 82.7%;
+	}
+	.column.{{name}}-eleven {
+		width: 91.35%;
+	}
+
+	/*Shift guttered columns*/
+	.column.{{name}}-push-one {
+		margin-left: 8.65%;
+	}
+		.column.right.{{name}}-push-one {
+			margin-right: 8.65%;
+		}
+	.column.{{name}}-push-two,
+	.column.{{name}}-push-sixth {
+		margin-left: 17.25%;
+	}
+		.column.right.{{name}}-push-two,
+		.column.right.{{name}}-push-sixth {
+			margin-right: 17.25%;
+		}
+	.column.{{name}}-push-three,
+	.column.{{name}}-push-fourth {
+		margin-left: 25.85%;
+	}
+		.column.right.{{name}}-push-three,
+		.column.right.{{name}}-push-fourth {
+			margin-right: 25.85%;
+		}
+	.column.{{name}}-push-four,
+	.column.{{name}}-push-twosixths,
+	.column.{{name}}-push-third {
+		margin-left: 34.55%;
+	}
+		.column.right.{{name}}-push-four,
+		.column.right.{{name}}-push-twosixths,
+		.column.right.{{name}}-push-third {
+			margin-right: 34.55%;
+		}
+	.column.{{name}}-push-five {
+		margin-left: 43.25%;
+	}
+		.column.right.{{name}}-push-five {
+			margin-right: 43.25%;
+		}
+	.column.{{name}}-push-six,
+	.column.{{name}}-push-half,
+	.column.{{name}}-push-threesixths,
+	.column.{{name}}-push-twofourths {
+		margin-left: 51.8%;
+	}
+		.column.right.{{name}}-push-six,
+		.column.right.{{name}}-push-half,
+		.column.right.{{name}}-push-threesixths,
+		.column.right.{{name}}-push-twofourths {
+			margin-right: 51.8%;
+		}
+	.column.{{name}}-push-seven {
+		margin-left: 60.55%;
+	}
+		.column.right.{{name}}-push-seven {
+			margin-right: 60.55%;
+		}
+	.column.{{name}}-push-eight,
+	.column.{{name}}-push-foursixths,
+	.column.{{name}}-push-twothirds {
+		margin-left: 69.2%;
+	}
+		.column.right.{{name}}-push-eight,
+		.column.right.{{name}}-push-foursixths,
+		.column.right.{{name}}-push-twothirds {
+			margin-right: 69.2%;
+		}
+	.column.{{name}}-push-nine,
+	.column.{{name}}-push-threefourths {
+		margin-left: 77.85%;
+	}
+		.column.right.{{name}}-push-nine,
+		.column.right.{{name}}-push-threefourths {
+			margin-right: 77.85%;
+		}
+	.column.{{name}}-push-ten,
+	.column.{{name}}-push-fivesixths {
+		margin-left: 86.5%;
+	}
+		.column.right.{{name}}-push-ten,
+		.column.right.{{name}}-push-fivesixths {
+			margin-right: 86.5%;
+		}
+	.column.{{name}}-push-eleven {
+		margin-left: 95.15%;
+	}
+		.column.right.{{name}}-push-eleven {
+			margin-right: 95.15%;
+		}
+
+
+
+	/*No gutters*/
+	.column.{{name}}-one.reset {
+		width: 8.3%;
+	}
+	.column.{{name}}-two.reset,
+	.column.{{name}}-sixth.reset {
+		width: 16.65%;
+	}
+	.column.{{name}}-three.reset,
+	.column.{{name}}-fourth.reset {
+		width: 25%;
+	}
+	.column.{{name}}-four.reset,
+	.column.{{name}}-twosixths.reset,
+	.column.{{name}}-third.reset {
+		width: 33.3%;
+	}
+	.column.{{name}}-five.reset {
+		width: 41.65%;
+	}
+	.column.{{name}}-six.reset,
+	.column.{{name}}-half.reset,
+	.column.{{name}}-threesixths.reset,
+	.column.{{name}}-twofourths.reset {
+		width: 50%;
+	}
+	.column.{{name}}-seven.reset {
+		width: 58.3%;
+	}
+	.column.{{name}}-eight.reset,
+	.column.{{name}}-foursixths.reset,
+	.column.{{name}}-twothirds.reset {
+		width: 66.6%;
+	}
+	.column.{{name}}-nine.reset,
+	.column.{{name}}-threefourths.reset {
+		width: 75%;
+	}
+	.column.{{name}}-ten.reset,
+	.column.{{name}}-fivesixths.reset {
+		width: 83.35%;
+	}
+	.column.{{name}}-eleven.reset {
+		width: 91.7%;
+	}
+
+	/*Shift no-gutter columns*/
+	.column.reset.{{name}}-push-one {
+		margin-left: 8.3%;
+	}
+		.column.reset.right.{{name}}-push-one {
+			margin-right: 8.3%;
+		}
+	.column.reset.{{name}}-push-two,
+	.column.reset.{{name}}-push-sixth {
+		margin-left: 16.65%;
+	}
+		.column.reset.right.{{name}}-push-two,
+		.column.reset.right.{{name}}-push-sixth {
+			margin-right: 16.65%;
+		}
+	.column.reset.{{name}}-push-three,
+	.column.reset.{{name}}-push-fourth {
+		margin-left: 25%;
+	}
+		.column.reset.right.{{name}}-push-three,
+		.column.reset.right.{{name}}-push-fourth {
+			margin-right: 25%;
+		}
+	.column.reset.{{name}}-push-four,
+	.column.reset.{{name}}-push-twosixths,
+	.column.reset.{{name}}-push-third {
+		margin-left: 33.3%;
+	}
+		.column.reset.right.{{name}}-push-four,
+		.column.reset.right.{{name}}-push-twosixths,
+		.column.reset.right.{{name}}-push-third {
+			margin-right: 33.3%;
+		}
+	.column.reset.{{name}}-push-five {
+		margin-left: 41.65%;
+	}
+		.column.reset.right.{{name}}-push-five {
+			margin-right: 41.65%;
+		}
+	.column.reset.{{name}}-push-six,
+	.column.reset.{{name}}-push-half,
+	.column.reset.{{name}}-push-threesixths,
+	.column.reset.{{name}}-push-twofourths {
+		margin-left: 50%;
+	}
+		.column.reset.right.{{name}}-push-six,
+		.column.right.reset.{{name}}-push-half,
+		.column.right.reset.{{name}}-push-threesixths,
+		.column.right.reset.{{name}}-push-twofourths {
+			margin-right: 50%;
+		}
+	.column.reset.{{name}}-push-seven {
+		margin-left: 58.3%;
+	}
+		.column.reset.right.{{name}}-push-seven {
+			margin-right: 58.3%;
+		}
+	.column.reset.{{name}}-push-eight,
+	.column.reset.{{name}}-push-foursixths,
+	.column.reset.{{name}}-push-twothirds {
+		margin-left: 66.6%;
+	}
+		.column.reset.right.{{name}}-push-eight,
+		.column.reset.right.{{name}}-push-foursixths,
+		.column.reset.right.{{name}}-push-twothirds {
+			margin-right: 66.6%;
+		}
+	.column.reset.{{name}}-push-nine,
+	.column.reset.{{name}}-push-threefourths {
+		margin-left: 75%;
+	}
+		.column.reset.right.{{name}}-push-nine,
+		.column.reset.right.{{name}}-push-threefourths {
+			margin-right: 75%;
+		}
+	.column.reset.{{name}}-push-ten,
+	.column.reset.{{name}}-push-fivesixths {
+		margin-left: 83.35%;
+	}
+		.column.reset.right.{{name}}-push-ten,
+		.column.reset.right.{{name}}-push-fivesixths {
+			margin-right: 83.35%;
+		}
+	.column.reset.{{name}}-push-eleven {
+		margin-left: 91.7%;
+	}
+		.column.reset.right.{{name}}-push-eleven {
+			margin-right: 91.7%;
+		}
+
+
+
+	/*Last column in the series*/
+	.column.{{name}}-last,
+
+	.column.{{name}}-last.{{name}}-one,
+	.column.{{name}}-last.{{name}}-two,
+	.column.{{name}}-last.{{name}}-sixth,
+	.column.{{name}}-last.{{name}}-three,
+	.column.{{name}}-last.{{name}}-fourth,
+	.column.{{name}}-last.{{name}}-four,
+	.column.{{name}}-last.{{name}}-twosixths,
+	.column.{{name}}-last.{{name}}-third,
+	.column.{{name}}-last.{{name}}-five,
+	.column.{{name}}-last.{{name}}-six,
+	.column.{{name}}-last.{{name}}-half,
+	.column.{{name}}-last.{{name}}-threesixths,
+	.column.{{name}}-last.{{name}}-twofourths,
+	.column.{{name}}-last.{{name}}-seven,
+	.column.{{name}}-last.{{name}}-eight,
+	.column.{{name}}-last.{{name}}-foursixths,
+	.column.{{name}}-last.{{name}}-twothirds,
+	.column.{{name}}-last.{{name}}-nine,
+	.column.{{name}}-last.{{name}}-threefourths,
+	.column.{{name}}-last.{{name}}-ten,
+	.column.{{name}}-last.{{name}}-fivesixths,
+	.column.{{name}}-last.{{name}}-eleven,
+	.column.{{name}}-last.{{name}}-twelve,
+	.column.{{name}}-last.{{name}}-full,
+
+	.column.last.{{name}}-last.{{name}}-one,
+	.column.last.{{name}}-last.{{name}}-two,
+	.column.last.{{name}}-last.{{name}}-sixth,
+	.column.last.{{name}}-last.{{name}}-three,
+	.column.last.{{name}}-last.{{name}}-fourth,
+	.column.last.{{name}}-last.{{name}}-four,
+	.column.last.{{name}}-last.{{name}}-twosixths,
+	.column.last.{{name}}-last.{{name}}-third,
+	.column.last.{{name}}-last.{{name}}-five,
+	.column.last.{{name}}-last.{{name}}-six,
+	.column.last.{{name}}-last.{{name}}-half,
+	.column.last.{{name}}-last.{{name}}-threesixths,
+	.column.last.{{name}}-last.{{name}}-twofourths,
+	.column.last.{{name}}-last.{{name}}-seven,
+	.column.last.{{name}}-last.{{name}}-eight,
+	.column.last.{{name}}-last.{{name}}-foursixths,
+	.column.last.{{name}}-last.{{name}}-twothirds,
+	.column.last.{{name}}-last.{{name}}-nine,
+	.column.last.{{name}}-last.{{name}}-threefourths,
+	.column.last.{{name}}-last.{{name}}-ten,
+	.column.last.{{name}}-last.{{name}}-fivesixths,
+	.column.last.{{name}}-last.{{name}}-eleven,
+	.column.last.{{name}}-last.{{name}}-twelve,
+	.column.last.{{name}}-last.{{name}}-full {
+		margin-right: 0;
+	}
+		.column.right.{{name}}-last,
+
+		.column.right.{{name}}-last.{{name}}-one,
+		.column.right.{{name}}-last.{{name}}-two,
+		.column.right.{{name}}-last.{{name}}-sixth,
+		.column.right.{{name}}-last.{{name}}-three,
+		.column.right.{{name}}-last.{{name}}-fourth,
+		.column.right.{{name}}-last.{{name}}-four,
+		.column.right.{{name}}-last.{{name}}-twosixths,
+		.column.right.{{name}}-last.{{name}}-third,
+		.column.right.{{name}}-last.{{name}}-five,
+		.column.right.{{name}}-last.{{name}}-six,
+		.column.right.{{name}}-last.{{name}}-half,
+		.column.right.{{name}}-last.{{name}}-threesixths,
+		.column.right.{{name}}-last.{{name}}-twofourths,
+		.column.right.{{name}}-last.{{name}}-seven,
+		.column.right.{{name}}-last.{{name}}-eight,
+		.column.right.{{name}}-last.{{name}}-foursixths,
+		.column.right.{{name}}-last.{{name}}-twothirds,
+		.column.right.{{name}}-last.{{name}}-nine,
+		.column.right.{{name}}-last.{{name}}-threefourths,
+		.column.right.{{name}}-last.{{name}}-ten,
+		.column.right.{{name}}-last.{{name}}-fivesixths,
+		.column.right.{{name}}-last.{{name}}-eleven,
+		.column.right.{{name}}-last.{{name}}-twelve,
+		.column.right.{{name}}-last.{{name}}-full,
+
+		.column.right.last.{{name}}-last.{{name}}-one,
+		.column.right.last.{{name}}-last.{{name}}-two,
+		.column.right.last.{{name}}-last.{{name}}-sixth,
+		.column.right.last.{{name}}-last.{{name}}-three,
+		.column.right.last.{{name}}-last.{{name}}-fourth,
+		.column.right.last.{{name}}-last.{{name}}-four,
+		.column.right.last.{{name}}-last.{{name}}-twosixths,
+		.column.right.last.{{name}}-last.{{name}}-third,
+		.column.right.last.{{name}}-last.{{name}}-five,
+		.column.right.last.{{name}}-last.{{name}}-six,
+		.column.right.last.{{name}}-last.{{name}}-half,
+		.column.right.last.{{name}}-last.{{name}}-threesixths,
+		.column.right.last.{{name}}-last.{{name}}-twofourths,
+		.column.right.last.{{name}}-last.{{name}}-seven,
+		.column.right.last.{{name}}-last.{{name}}-eight,
+		.column.right.last.{{name}}-last.{{name}}-foursixths,
+		.column.right.last.{{name}}-last.{{name}}-twothirds,
+		.column.right.last.{{name}}-last.{{name}}-nine,
+		.column.right.last.{{name}}-last.{{name}}-threefourths,
+		.column.right.last.{{name}}-last.{{name}}-ten,
+		.column.right.last.{{name}}-last.{{name}}-fivesixths,
+		.column.right.last.{{name}}-last.{{name}}-eleven,
+		.column.right.last.{{name}}-last.{{name}}-twelve,
+		.column.right.last.{{name}}-last.{{name}}-full {
+			margin-left: 0;
+		}
+
+
+
+	/*Break columns after this*/
+	.column.break-{{name}} {
+		width: auto !important;
+		float: none !important;
+		clear: both !important;
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+
+}

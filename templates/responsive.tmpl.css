@@ -1,5 +1,4 @@
 
-/*small-sized viewport and up*/
 @media handheld, only screen and (min-width: {{width}}) {
 
 	/*Roll back default last-in-line behavior*/
@@ -26,37 +25,9 @@
 	.column.last.{{name}}-fivesixths,
 	.column.last.{{name}}-eleven,
 	.column.last.{{name}}-twelve,
-	.column.last.{{name}}-full,
-
-	/*Roll back default last-in-line behavior of the previous break point set*/
-	.column.{{previousName}}last.{{name}}-one,
-	.column.{{previousName}}last.{{name}}-two,
-	.column.{{previousName}}last.{{name}}-sixth,
-	.column.{{previousName}}last.{{name}}-three,
-	.column.{{previousName}}last.{{name}}-fourth,
-	.column.{{previousName}}last.{{name}}-four,
-	.column.{{previousName}}last.{{name}}-twosixths,
-	.column.{{previousName}}last.{{name}}-third,
-	.column.{{previousName}}last.{{name}}-five,
-	.column.{{previousName}}last.{{name}}-six,
-	.column.{{previousName}}last.{{name}}-half,
-	.column.{{previousName}}last.{{name}}-threesixths,
-	.column.{{previousName}}last.{{name}}-twofourths,
-	.column.{{previousName}}last.{{name}}-seven,
-	.column.{{previousName}}last.{{name}}-eight,
-	.column.{{previousName}}last.{{name}}-foursixths,
-	.column.{{previousName}}last.{{name}}-twothirds,
-	.column.{{previousName}}last.{{name}}-nine,
-	.column.{{previousName}}last.{{name}}-threefourths,
-	.column.{{previousName}}last.{{name}}-ten,
-	.column.{{previousName}}last.{{name}}-fivesixths,
-	.column.{{previousName}}last.{{name}}-eleven,
-	.column.{{previousName}}last.{{name}}-twelve,
-	.column.{{previousName}}last.{{name}}-full {
+	.column.last.{{name}}-full {
 		margin-right: 3.8%;
 	}
-
-		/*Roll back default last-in-line behavior*/
 		.column.right.last.{{name}}-one,
 		.column.right.last.{{name}}-two,
 		.column.right.last.{{name}}-sixth,
@@ -80,33 +51,7 @@
 		.column.right.last.{{name}}-fivesixths,
 		.column.right.last.{{name}}-eleven,
 		.column.right.last.{{name}}-twelve,
-		.column.right.last.{{name}}-full,
-
-		/*Roll back default last-in-line behavior of the previous break point set*/
-		.column.right.{{previousName}}last.{{name}}-one,
-		.column.right.{{previousName}}last.{{name}}-two,
-		.column.right.{{previousName}}last.{{name}}-sixth,
-		.column.right.{{previousName}}last.{{name}}-three,
-		.column.right.{{previousName}}last.{{name}}-fourth,
-		.column.right.{{previousName}}last.{{name}}-four,
-		.column.right.{{previousName}}last.{{name}}-twosixths,
-		.column.right.{{previousName}}last.{{name}}-third,
-		.column.right.{{previousName}}last.{{name}}-five,
-		.column.right.{{previousName}}last.{{name}}-six,
-		.column.right.{{previousName}}last.{{name}}-half,
-		.column.right.{{previousName}}last.{{name}}-threesixths,
-		.column.right.{{previousName}}last.{{name}}-twofourths,
-		.column.right.{{previousName}}last.{{name}}-seven,
-		.column.right.{{previousName}}last.{{name}}-eight,
-		.column.right.{{previousName}}last.{{name}}-foursixths,
-		.column.right.{{previousName}}last.{{name}}-twothirds,
-		.column.right.{{previousName}}last.{{name}}-nine,
-		.column.right.{{previousName}}last.{{name}}-threefourths,
-		.column.right.{{previousName}}last.{{name}}-ten,
-		.column.right.{{previousName}}last.{{name}}-fivesixths,
-		.column.right.{{previousName}}last.{{name}}-eleven,
-		.column.right.{{previousName}}last.{{name}}-twelve,
-		.column.right.{{previousName}}last.{{name}}-full {
+		.column.right.last.{{name}}-full {
 			margin-left: 3.8%;
 		}
 
@@ -167,6 +112,7 @@
 		.column.right.{{name}}-eleven,
 		.column.right.{{name}}-twelve,
 		.column.right.{{name}}-full {
+			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}
@@ -457,32 +403,6 @@
 
 	/*Last column in the series*/
 	.column.{{name}}-last,
-
-	.column.{{name}}-last.{{name}}-one,
-	.column.{{name}}-last.{{name}}-two,
-	.column.{{name}}-last.{{name}}-sixth,
-	.column.{{name}}-last.{{name}}-three,
-	.column.{{name}}-last.{{name}}-fourth,
-	.column.{{name}}-last.{{name}}-four,
-	.column.{{name}}-last.{{name}}-twosixths,
-	.column.{{name}}-last.{{name}}-third,
-	.column.{{name}}-last.{{name}}-five,
-	.column.{{name}}-last.{{name}}-six,
-	.column.{{name}}-last.{{name}}-half,
-	.column.{{name}}-last.{{name}}-threesixths,
-	.column.{{name}}-last.{{name}}-twofourths,
-	.column.{{name}}-last.{{name}}-seven,
-	.column.{{name}}-last.{{name}}-eight,
-	.column.{{name}}-last.{{name}}-foursixths,
-	.column.{{name}}-last.{{name}}-twothirds,
-	.column.{{name}}-last.{{name}}-nine,
-	.column.{{name}}-last.{{name}}-threefourths,
-	.column.{{name}}-last.{{name}}-ten,
-	.column.{{name}}-last.{{name}}-fivesixths,
-	.column.{{name}}-last.{{name}}-eleven,
-	.column.{{name}}-last.{{name}}-twelve,
-	.column.{{name}}-last.{{name}}-full,
-
 	.column.last.{{name}}-last.{{name}}-one,
 	.column.last.{{name}}-last.{{name}}-two,
 	.column.last.{{name}}-last.{{name}}-sixth,
@@ -510,32 +430,6 @@
 		margin-right: 0;
 	}
 		.column.right.{{name}}-last,
-
-		.column.right.{{name}}-last.{{name}}-one,
-		.column.right.{{name}}-last.{{name}}-two,
-		.column.right.{{name}}-last.{{name}}-sixth,
-		.column.right.{{name}}-last.{{name}}-three,
-		.column.right.{{name}}-last.{{name}}-fourth,
-		.column.right.{{name}}-last.{{name}}-four,
-		.column.right.{{name}}-last.{{name}}-twosixths,
-		.column.right.{{name}}-last.{{name}}-third,
-		.column.right.{{name}}-last.{{name}}-five,
-		.column.right.{{name}}-last.{{name}}-six,
-		.column.right.{{name}}-last.{{name}}-half,
-		.column.right.{{name}}-last.{{name}}-threesixths,
-		.column.right.{{name}}-last.{{name}}-twofourths,
-		.column.right.{{name}}-last.{{name}}-seven,
-		.column.right.{{name}}-last.{{name}}-eight,
-		.column.right.{{name}}-last.{{name}}-foursixths,
-		.column.right.{{name}}-last.{{name}}-twothirds,
-		.column.right.{{name}}-last.{{name}}-nine,
-		.column.right.{{name}}-last.{{name}}-threefourths,
-		.column.right.{{name}}-last.{{name}}-ten,
-		.column.right.{{name}}-last.{{name}}-fivesixths,
-		.column.right.{{name}}-last.{{name}}-eleven,
-		.column.right.{{name}}-last.{{name}}-twelve,
-		.column.right.{{name}}-last.{{name}}-full,
-
 		.column.right.last.{{name}}-last.{{name}}-one,
 		.column.right.last.{{name}}-last.{{name}}-two,
 		.column.right.last.{{name}}-last.{{name}}-sixth,
@@ -566,7 +460,7 @@
 
 
 	/*Break columns after this*/
-	.column.break-small {
+	.column.break-{{name}} {
 		width: auto !important;
 		float: none !important;
 		clear: both !important;
