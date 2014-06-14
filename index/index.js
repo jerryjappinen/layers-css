@@ -166,7 +166,7 @@ var DownloadManager = function () {
 
 	// Default values
 	self.defaults = {
-		em: [30, 45, 60, 75],
+		em: [30, 50, 70, 90],
 		px: [360, 768, 1024, 1440]
 	};
 
@@ -213,6 +213,7 @@ var Breakpoint = function (name, em, px) {
 	self.em = ko.observable(em > 0 ? em : 0);
 	self.px = ko.observable(px > 0 ? px : 0);
 	self.name = ko.observable(name);
+	self.selectedUnit = ko.observable('em');
 
 	self.em.subscribe(function (newValue) {
 		if (newValue !== parseInt(newValue)) {
@@ -233,8 +234,6 @@ var Breakpoint = function (name, em, px) {
 			}
 		}
 	});
-
-	self.selectedUnit = ko.observable('px');
 
 	self.isEmpty = ko.computed(function () {
 		return self.selectedUnit() === 'px' ? (self.px() <= 0) : (self.em() <= 0);

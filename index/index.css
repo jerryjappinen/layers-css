@@ -156,6 +156,11 @@ h1.pageTitle {
 .row-intro {
 	line-height: 1.6;
 }
+
+.row-intro .row-content {
+	max-width: 60em;
+}
+
 .row-intro .discreet {
 	color: #737b80;
 }
@@ -173,13 +178,15 @@ h1.pageTitle {
 	}
 
 /*Download*/
-.download h2 {
-	font-weight: 900;
+.download h3 {
+	font-size: 1.4em;
+	font-weight: inherit;
 	text-align: center;
+	color: #737b80;
 }
 	@media handheld, only screen and (max-width: 768px) {
-		.download h2 {
-			font-size: 2.2em;
+		.download h3 {
+			/*font-size: 1.8em;*/
 		}
 	}
 .download .button {
@@ -211,10 +218,11 @@ h1.pageTitle {
 /*Inputs*/
 .breakpoints {
 	max-width: 55em;
-	margin-bottom: 2.2em;
+	margin-top: 2.4em;
+	margin-bottom: 2.6em;
 }
 .breakpoints li {
-	margin-bottom: 0.6em;
+	margin-bottom: 1.8em;
 	padding-left: 0.6em;
 	padding-right: 0.6em;
 }
@@ -241,22 +249,24 @@ h1.pageTitle {
 		border-color: #2e3133;
 		border-bottom-width: 1px;
 	}
-		.breakpoints label:hover, {
-			border-color: #fff;
+		.breakpoints label:hover {
+			border-color: #5c6266;
 		}
 	.breakpoints input.text {
 		width: 2.4em;
 		padding: 0.6em;
 		text-align: center;
+		border-color: #2e3133;
+		border-top-width: 1px;
+		border-right-width: 1px;
+		border-left-width: 1px;
 	}
-		.breakpoints input.text:hover, .breakpoints input.text:focus {
-			outline: 0;
-			border-color: #fff;
-		}
 		.breakpoints input.text:hover {
+			border-color: #5c6266;
 			cursor: pointer;
 		}
 		.breakpoints input.text:focus {
+			outline: 0;
 			cursor: text;
 			background-color: rgba(255, 255, 255, 0.05);
 		}
