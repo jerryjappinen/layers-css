@@ -94,12 +94,9 @@
 	.column.right.eleven,
 	.column.right.twelve,
 	.column.right.full {
+		float: right;
 		margin-right: 0;
 		margin-left: 3.8%;
-	}
-
-	.column.right {
-		float: right;
 	}
 
 	.column.first,
@@ -109,22 +106,15 @@
 		clear: both;
 	}
 
-	.column.center, .column.right.center {
-		float: none;
-	}
-
-	.column.last,
 	.column.reset {
 		margin-right: 0 !important;
 	}
-
-		.column.right.last,
 		.column.right.reset {
 			margin-left: 0 !important;
 		}
 
-	.column.center,
-	.column.right.center {
+	.column.center, .column.right.center {
+		float: none;
 		margin-right: auto !important;
 		margin-left: auto !important;
 	}
@@ -444,4 +434,14 @@
 	}
 	.column.fixed.right {
 		float: left;
+	}
+
+
+
+/*Last in line*/
+.column.last {
+	margin-right: 0;
+}
+	.column.right.last {
+		margin-left: 0;
 	}

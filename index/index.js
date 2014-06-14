@@ -166,15 +166,15 @@ var DownloadManager = function () {
 
 	// Default values
 	self.defaults = {
-		em: [30, 50, 70, 90],
-		px: [360, 768, 1024, 1440]
+		em: [0, 50, 70],
+		px: [0, 768, 1024]
 	};
 
 	// Constants
 	self.breakpointNames = ['tiny', 'small', 'medium', 'large', 'huge', 'extra'];
-	self.coreSize = 15.9;
-	self.breakpointSize = 6.5;
-	self.compressionRatio = 0.7;
+	self.coreSize = 15.5;
+	self.breakpointSize = 12.2;
+	self.compressionRatio = 0.25;
 
 	// Active parameters
 	self.breakpoints = ko.observableArray((function () {

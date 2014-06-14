@@ -2,6 +2,62 @@
 /*Very narrow viewport and up*/
 @media handheld, only screen and (min-width: 360px) {
 
+	/*Roll back default last-in-line behavior*/
+	.column.last.tiny-one,
+	.column.last.tiny-two,
+	.column.last.tiny-sixth,
+	.column.last.tiny-three,
+	.column.last.tiny-fourth,
+	.column.last.tiny-four,
+	.column.last.tiny-twosixths,
+	.column.last.tiny-third,
+	.column.last.tiny-five,
+	.column.last.tiny-six,
+	.column.last.tiny-half,
+	.column.last.tiny-threesixths,
+	.column.last.tiny-twofourths,
+	.column.last.tiny-seven,
+	.column.last.tiny-eight,
+	.column.last.tiny-foursixths,
+	.column.last.tiny-twothirds,
+	.column.last.tiny-nine,
+	.column.last.tiny-threefourths,
+	.column.last.tiny-ten,
+	.column.last.tiny-fivesixths,
+	.column.last.tiny-eleven,
+	.column.last.tiny-twelve,
+	.column.last.tiny-full {
+		margin-right: 3.8%;
+	}
+		.column.right.last.tiny-one,
+		.column.right.last.tiny-two,
+		.column.right.last.tiny-sixth,
+		.column.right.last.tiny-three,
+		.column.right.last.tiny-fourth,
+		.column.right.last.tiny-four,
+		.column.right.last.tiny-twosixths,
+		.column.right.last.tiny-third,
+		.column.right.last.tiny-five,
+		.column.right.last.tiny-six,
+		.column.right.last.tiny-half,
+		.column.right.last.tiny-threesixths,
+		.column.right.last.tiny-twofourths,
+		.column.right.last.tiny-seven,
+		.column.right.last.tiny-eight,
+		.column.right.last.tiny-foursixths,
+		.column.right.last.tiny-twothirds,
+		.column.right.last.tiny-nine,
+		.column.right.last.tiny-threefourths,
+		.column.right.last.tiny-ten,
+		.column.right.last.tiny-fivesixths,
+		.column.right.last.tiny-eleven,
+		.column.right.last.tiny-twelve,
+		.column.right.last.tiny-full {
+			margin-left: 3.8%;
+		}
+
+
+
 	/*Column basics*/
 	.column.tiny-one,
 	.column.tiny-two,
@@ -343,10 +399,63 @@
 			margin-right: 91.7%;
 		}
 
+
+
 	/*Last column in the series*/
-	.column.tiny-last {
+	.column.tiny-last,
+	.column.last.tiny-last.tiny-one,
+	.column.last.tiny-last.tiny-two,
+	.column.last.tiny-last.tiny-sixth,
+	.column.last.tiny-last.tiny-three,
+	.column.last.tiny-last.tiny-fourth,
+	.column.last.tiny-last.tiny-four,
+	.column.last.tiny-last.tiny-twosixths,
+	.column.last.tiny-last.tiny-third,
+	.column.last.tiny-last.tiny-five,
+	.column.last.tiny-last.tiny-six,
+	.column.last.tiny-last.tiny-half,
+	.column.last.tiny-last.tiny-threesixths,
+	.column.last.tiny-last.tiny-twofourths,
+	.column.last.tiny-last.tiny-seven,
+	.column.last.tiny-last.tiny-eight,
+	.column.last.tiny-last.tiny-foursixths,
+	.column.last.tiny-last.tiny-twothirds,
+	.column.last.tiny-last.tiny-nine,
+	.column.last.tiny-last.tiny-threefourths,
+	.column.last.tiny-last.tiny-ten,
+	.column.last.tiny-last.tiny-fivesixths,
+	.column.last.tiny-last.tiny-eleven,
+	.column.last.tiny-last.tiny-twelve,
+	.column.last.tiny-last.tiny-full {
 		margin-right: 0;
 	}
+		.column.right.tiny-last,
+		.column.right.last.tiny-last.tiny-one,
+		.column.right.last.tiny-last.tiny-two,
+		.column.right.last.tiny-last.tiny-sixth,
+		.column.right.last.tiny-last.tiny-three,
+		.column.right.last.tiny-last.tiny-fourth,
+		.column.right.last.tiny-last.tiny-four,
+		.column.right.last.tiny-last.tiny-twosixths,
+		.column.right.last.tiny-last.tiny-third,
+		.column.right.last.tiny-last.tiny-five,
+		.column.right.last.tiny-last.tiny-six,
+		.column.right.last.tiny-last.tiny-half,
+		.column.right.last.tiny-last.tiny-threesixths,
+		.column.right.last.tiny-last.tiny-twofourths,
+		.column.right.last.tiny-last.tiny-seven,
+		.column.right.last.tiny-last.tiny-eight,
+		.column.right.last.tiny-last.tiny-foursixths,
+		.column.right.last.tiny-last.tiny-twothirds,
+		.column.right.last.tiny-last.tiny-nine,
+		.column.right.last.tiny-last.tiny-threefourths,
+		.column.right.last.tiny-last.tiny-ten,
+		.column.right.last.tiny-last.tiny-fivesixths,
+		.column.right.last.tiny-last.tiny-eleven,
+		.column.right.last.tiny-last.tiny-twelve,
+		.column.right.last.tiny-last.tiny-full {
+			margin-left: 0;
+		}
 
 
 
