@@ -27,7 +27,7 @@
 		<link rel="shortcut icon" href="index/images/logo.ico" type="image/x-icon">
 
 		<meta property="og:title" content="Layers CSS" />
-		<meta property="og:description" content="A lightweight, unobtrusive, style-agnostic CSS pack. Build your look on the web, not Twitter's &ndash; and build it fluid. Comes with no bullshit." />
+		<meta property="og:description" content="A lightweight, unobtrusive, style-agnostic CSS pack. Build your look on the web, not Twitter's &ndash; and build it fluid. Comes with zero bullshit." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://eiskis.net/layers/" />
 		<meta property="og:image" content="http://eiskis.net/layers/index/images/layers.png" />
@@ -50,7 +50,7 @@
 
 				<div class="column medium-twothirds small-half excerpt">
 
-					<p class="squeeze-top">Lightweight. Unobtrusive. Style-agnostic. Build <em>your</em> look on the web, not Twitter's &ndash; and build it fluid. Layers CSS is aimed for practical use and comes with zero bullshit.</p>
+					<p class="squeeze-top">Lightweight. Unobtrusive. Style-agnostic. Build <em>your</em> look on the web, not Twitter's &ndash; and build it fluid. Layers CSS is a CSS framework aimed for practical use cases. It comes with a small footprint and zero bullshit.</p>
 
 					<!-- <p class="discreet">Developed by <a href="https://twitter.com/Eiskis" target="_blank">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank">eiskis.net</a>.</p> -->
 
@@ -433,6 +433,60 @@
 .column.fluid.right > .column-content {
 	margin-left: 10em;
 }</code></pre>
+
+
+
+					<div class="row-content buffer even description">
+
+						<h3>Breakpoints</h3>
+
+						<p>Depending on your customizations, you can shoose to .</p>
+
+						<p>The default max-width of <code>.row-content</code> is <code>70em</code>, but here it's set to 40em for clarity:</p>
+
+					</div>
+
+					<div class="row colored">
+						<div class="row-content" style="max-width: 40em;">
+							<div class="column half">
+								<p><code>.row-content > .column.half</code></p>
+							</div>
+							<div class="column half last">
+								<p><code>.row-content > .column.half.last</code></p>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+
+					<!-- Source -->
+					<div class="source collapsed">
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<pre data-src="index/samples/rows.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>You can also <code>.break-</code> columns:</p>
+
+					</div>
+
+					<div class="column large-half medium-full small-third colored">
+						<p><code>.column.large-half.medium-full.small-third</code></p>
+					</div>
+					<div class="column large-fourth medium-half small-twothirds small-last">
+						<p><code>.column.large-fourth.medium-half.small-twothirds.small-last</code></p>
+					</div>
+					<div class="column large-fourth medium-half large-last medium-last colored">
+						<p><code>.column.large-fourth.medium-half.medium-last</code></p>
+					</div>
+					<div class="clear"></div>
+
+					<!-- Source -->
+					<div class="source collapsed">
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<pre data-src="index/samples/rows-buffer.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
 
 
 

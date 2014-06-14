@@ -345,7 +345,7 @@
 
 	/*Last column in the series*/
 	.column.tiny-last {
-		margin-right: 0 !important;
+		margin-right: 0;
 	}
 
 
