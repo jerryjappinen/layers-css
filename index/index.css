@@ -66,14 +66,14 @@ a {
 	color: #00b5d9;
 }
 a, input.plain, .transition {
-	-webkit-transition-duration: 100ms;
-	-moz-transition-duration: 100ms;
-	-o-transition-duration: 100ms;
-	transition-duration: 100ms;
-	-webkit-transition-property: background, color, border-color, top, margin, padding;
-	-moz-transition-property: background, color, border-color, top, margin, padding;
-	-o-transition-property: background, color, border-color, top, margin, padding;
-	transition-property: background, color, border-color, top, margin, padding;
+	-webkit-transition-duration: 150ms;
+	-moz-transition-duration: 150ms;
+	-o-transition-duration: 150ms;
+	transition-duration: 150ms;
+	-webkit-transition-property: background, color, border-color, top, margin, padding, box-shadow;
+	-moz-transition-property: background, color, border-color, top, margin, padding, box-shadow;
+	-o-transition-property: background, color, border-color, top, margin, padding, box-shadow;
+	transition-property: background, color, border-color, top, margin, padding, box-shadow;
 }
 .row {
 	background-repeat: no-repeat;
@@ -169,11 +169,11 @@ h1.pageTitle {
 	font-size: 1.4em;
 }
 
-.row-intro .excerpt .discreet a {
+.row-intro .discreet a {
 	color: inherit;
 	text-decoration: underline;
 }
-	.row-intro .excerpt .discreet a:hover {
+	.row-intro .discreet a:hover {
 		color: #fff;
 	}
 
@@ -182,15 +182,9 @@ h1.pageTitle {
 	font-size: 1.4em;
 	font-weight: inherit;
 	text-align: center;
-	color: #737b80;
 }
-	@media handheld, only screen and (max-width: 768px) {
-		.download h3 {
-			/*font-size: 1.8em;*/
-		}
-	}
 .download .button {
-	font-size: 1.4em;
+	font-size: 1.2em;
 	min-width: 9em;
 }
 .button, .dark .button {
@@ -205,13 +199,20 @@ h1.pageTitle {
 	background-color: #00b3d9;
 	color: #fff;
 }
-	.button:hover, .button:focus, .dark .button:hover, .dark .button:focus {
-		text-decoration: none;
+	.button.secondary, .dark .button.secondary {
 		background-color: #0089a6;
+	}
+	.button:hover, .button:focus, .dark .button:hover, .dark .button:focus {
+		background-color: #0089a6;
+		text-decoration: none;
 		color: #fff;
+
+		-webkit-box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
+		-moz-box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
+		-ms-box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
+		box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
 	}
 		.button:active {
-			background-color: #00b3d9;
 			color: #fff;
 		}
 
@@ -273,6 +274,9 @@ h1.pageTitle {
 			color: #fff;
 			outline: 0;
 			cursor: text;
+			-webkit-box-shadow: inset 0 0 3em rgba(255, 255, 255, 0.05);
+			-moz-box-shadow: inset 0 0 3em rgba(255, 255, 255, 0.05);
+			-ms-box-shadow: inset 0 0 3em rgba(255, 255, 255, 0.05);
 			box-shadow: inset 0 0 3em rgba(255, 255, 255, 0.05);
 		}
 	.breakpoints a {
@@ -288,26 +292,14 @@ h1.pageTitle {
 
 /*Go*/
 .go {
+	margin-top: 2.2em;
 	text-align: center;
 }
-.dispatch {
-	margin-top: 2.2em;
-}
-.go label {
-	padding: 0.6em;
-	margin-left: 0.6em;
-	margin-right: 0.6em;
-}
-.extras a {
-	display: inline-block;
-	padding: 0.6em;
-	text-decoration: none;
-	color: #737b80;
-}
-	.extras a:hover {
-		color: #fff;
+@media handheld, only screen and (max-width: 40em) {
+	.go .button {
+		display: block;
 	}
-
+}
 
 
 /*Title row*/

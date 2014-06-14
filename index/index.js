@@ -209,25 +209,17 @@ var DownloadManager = function () {
 
 
 	// Behavior
-	self.scrape = function () {
-		var result = {};
+	self.url = ko.computed(function () {
+		var result = [];
 		var breakpoints = self.breakpoints();
 		for (var i = 0; i < breakpoints.length; i++) {
 			var b = breakpoints[i];
 			if (!b.isEmpty()) {
-				result['breakpoint' + i] = b.name() + ',' + b[b.unit()]() + b.unit();
+				result.push('breakpoint' + i + '=' + b.name() + ',' + b[b.unit()]() + b.unit());
 			}
 		}
-		return result;
-	};
-
-	self.request = function () {
-		$.get(self.generatorUrl, self.scrape()).then(function (a, b, c) {
-
-		}, function (a, b, c) {
-
-		});
-	};
+		return self.generatorUrl + '?' + result.join('&');
+	});
 
 };
 

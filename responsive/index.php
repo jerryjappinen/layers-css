@@ -113,7 +113,7 @@ foreach ($breakpoints as $name => $value) {
 	$temp = '';
 	if ($previousName) {
 		$temp = $templateConsecutive;
-		$keys[] = 'previousName';
+		$keys[] = '{{previousName}}';
 		$values[] = $previousName;
 	} else {
 		$temp = $template;
@@ -127,8 +127,8 @@ foreach ($breakpoints as $name => $value) {
 header('Content-Type: text/css; charset=utf-8');
 header('HTTP/1.1 200 OK');
 $output = implode("\n\n", $output);
-// echo $prefix.$output;
-echo $prefix.minify($output);
+echo $prefix.$output;
+// echo $prefix.minify($output);
 
 die();
 

@@ -79,7 +79,7 @@
 
 				<div class="download limit" id="download">
 
-					<h3>Customize responsive breakpoints</h3>
+					<h3 class="discreet">Download &amp; customize</h3>
 
 					<ul class="plain keep-center clear-after breakpoints" data-bind="foreach: breakpoints">
 						<li class="column reset medium-third small-half" data-bind="css: css"><div class="center"><label class="transition em"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: em"></label><label class="transition px"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: px"></label><a href="." data-bind="click: toggle"><code class="transition em">em</code> <code class="transition px">px</code></a></div></li>
@@ -88,11 +88,9 @@
 
 					<div class="go">
 
-						<p class="dispatch"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="button" tabindex="1">Download 1.1<span data-bind="css: { hidden: breakpointCount() > 0}"> core</span></a></p>
+						<p><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="button" tabindex="1">Download core<span data-bind="css: { hidden: breakpointCount() > 0}"> core</span></a><a data-bind="attr: { href: url }" target="_blank" class="button secondary">Responsive columns</a></p>
 
-						<p class="discreet">Estimated size <span data-bind="text: estimatedSize"></span> kb uncompressed, <span data-bind="text: estimatedSizeCompressed"></span> kb gzipped</p>
-
-						<p class="discreet extras"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.css" target="_blank" tabindex="4">Development version</a> <a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="5">Changelog</a> <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" tabindex="6">Source code</a></p>
+						<p class="discreet">Estimated size <span data-bind="text: estimatedSize"></span> kb uncompressed, <span data-bind="text: estimatedSizeCompressed"></span> kb gzipped. Check out <a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="5">v. 1.1 changelog</a> and <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" tabindex="6">source code</a>.</p>
 
 					</div>
 
