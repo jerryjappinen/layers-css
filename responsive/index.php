@@ -1,10 +1,9 @@
 <?php
 date_default_timezone_set('UTC');
-include_once 'baseline.php';
-include_once 'include.php';
+include_once '../scripts/baseline.php';
+include_once '../scripts/minify.php';
 
 
-header('Content-Type: text/css; charset=utf-8');
 
 // Locate files
 $readmePath = '../readme.md';
@@ -33,7 +32,18 @@ if (!is_file($template) or !is_file($templateConsecutive)) {
 
 
 // Take input
-$input = array('tiny' => '30em', 'small' => 60);
+$input = array();
+if (isset($_GET)) {
+	for ($i = 0; $i < 9; $i++) { 
+		$temp = array();
+		if (isset($_GET['breakpoint'.$i])) {
+			$temp = explode(',', $_GET['breakpoint'.$i]);
+			if (isset($temp[0]) and isset($temp[1])) {
+				$input[$temp[0]] = $temp[1];
+			}
+		}
+	}
+}
 
 
 
@@ -114,6 +124,8 @@ foreach ($breakpoints as $name => $value) {
 }
 
 // Output string
+header('Content-Type: text/css; charset=utf-8');
+header('HTTP/1.1 200 OK');
 $output = implode("\n\n", $output);
 // echo $prefix.$output;
 echo $prefix.minify($output);

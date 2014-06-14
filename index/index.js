@@ -171,6 +171,7 @@ var DownloadManager = function () {
 	};
 
 	// Constants
+	self.generatorUrl = 'responsive/';
 	self.breakpointNames = ['tiny', 'small', 'medium', 'large', 'huge', 'extra'];
 	self.coreSize = 15.5;
 	self.breakpointSize = 12.2;
@@ -205,6 +206,29 @@ var DownloadManager = function () {
 		return Math.floor(self.compressionRatio * self.estimatedSize());
 	});
 
+
+
+	// Behavior
+	self.scrape = function () {
+		var result = {};
+		var breakpoints = self.breakpoints();
+		for (var i = 0; i < breakpoints.length; i++) {
+			var b = breakpoints[i];
+			if (!b.isEmpty()) {
+				result['breakpoint' + i] = b.name() + ',' + b[b.unit()]() + b.unit();
+			}
+		}
+		return result;
+	};
+
+	self.request = function () {
+		$.get(self.generatorUrl, self.scrape()).then(function (a, b, c) {
+
+		}, function (a, b, c) {
+
+		});
+	};
+
 };
 
 var Breakpoint = function (name, em, px) {
@@ -213,7 +237,7 @@ var Breakpoint = function (name, em, px) {
 	self.em = ko.observable(em > 0 ? em : 0);
 	self.px = ko.observable(px > 0 ? px : 0);
 	self.name = ko.observable(name);
-	self.selectedUnit = ko.observable('em');
+	self.unit = ko.observable('em');
 
 	self.em.subscribe(function (newValue) {
 		if (newValue !== parseInt(newValue)) {
@@ -236,19 +260,19 @@ var Breakpoint = function (name, em, px) {
 	});
 
 	self.isEmpty = ko.computed(function () {
-		return self.selectedUnit() === 'px' ? (self.px() <= 0) : (self.em() <= 0);
+		return self.unit() === 'px' ? (self.px() <= 0) : (self.em() <= 0);
 	});
 
 	self.css = ko.computed(function () {
-		return self.selectedUnit() + (self.isEmpty() ? ' empty' : '');
+		return self.unit() + (self.isEmpty() ? ' empty' : '');
 	});
 
 	self.empty = function () {
-		return (self[self.selectedUnit()] <= 0);
+		return (self[self.unit()] <= 0);
 	};
 
 	self.toggle = function () {
-		return self.selectedUnit() === 'px' ? self.selectedUnit('em') : self.selectedUnit('px');
+		return self.unit() === 'px' ? self.unit('em') : self.unit('px');
 	};
 
 };

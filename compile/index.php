@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('UTC');
-include_once 'baseline.php';
-include_once 'include.php';
+include_once '../scripts/baseline.php';
+include_once '../scripts/minify.php';
 
 
 
