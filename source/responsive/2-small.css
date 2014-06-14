@@ -166,6 +166,7 @@
 		.column.right.small-eleven,
 		.column.right.small-twelve,
 		.column.right.small-full {
+			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}

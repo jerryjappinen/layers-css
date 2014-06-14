@@ -2,11 +2,10 @@
 Layers CSS 1.1.0  responsive adjustments
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2014-06-14 11:21 UTC
+2014-06-14 13:36 UTC
 */
 
-/*Very narrow viewport and up*/
-@media handheld, only screen and (min-width: 360px) {
+@media handheld, only screen and (min-width: 22.5em) {
 
 	/*Roll back default last-in-line behavior*/
 	.column.last.tiny-one,
@@ -119,6 +118,7 @@ http://eiskis.net/layers
 		.column.right.tiny-eleven,
 		.column.right.tiny-twelve,
 		.column.right.tiny-full {
+			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}
@@ -476,8 +476,7 @@ http://eiskis.net/layers
 
 }
 
-/*small-sized viewport and up*/
-@media handheld, only screen and (min-width: 768px) {
+@media handheld, only screen and (min-width: 40em) {
 
 	/*Roll back default last-in-line behavior*/
 	.column.last.small-one,
@@ -644,6 +643,7 @@ http://eiskis.net/layers
 		.column.right.small-eleven,
 		.column.right.small-twelve,
 		.column.right.small-full {
+			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}
@@ -1053,8 +1053,7 @@ http://eiskis.net/layers
 
 }
 
-/*Wide viewport and up*/
-@media handheld, only screen and (min-width: 1024px) {
+@media handheld, only screen and (min-width: 70em) {
 
 	/*Roll back default last-in-line behavior*/
 	.column.last.medium-one,
@@ -1221,6 +1220,7 @@ http://eiskis.net/layers
 		.column.right.medium-eleven,
 		.column.right.medium-twelve,
 		.column.right.medium-full {
+			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}
@@ -1630,8 +1630,7 @@ http://eiskis.net/layers
 
 }
 
-/*Very wide viewport and up*/
-@media handheld, only screen and (min-width: 1440px) {
+@media handheld, only screen and (min-width: 90em) {
 
 	/*Roll back default last-in-line behavior*/
 	.column.last.large-one,
@@ -1798,6 +1797,7 @@ http://eiskis.net/layers
 		.column.right.large-eleven,
 		.column.right.large-twelve,
 		.column.right.large-full {
+			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}

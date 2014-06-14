@@ -2,7 +2,7 @@
 Layers CSS 1.1.0 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2014-06-14 11:21 UTC
+2014-06-14 13:36 UTC
 */
 
 /*Basics*/
@@ -323,11 +323,18 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	width: 100%;
 	clear: both;
 	float: none;
+	*zoom: 1;
 }
 .row-content {
-	margin: 0 auto;
 	max-width: 70em;
+	margin: 0 auto;
+	*zoom: 1;
 }
+	.row:after, .row-content:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
 	.row-content.buffer,
 	.row-content.buffer-top {
 		padding-top: 2%;
@@ -411,8 +418,7 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 
 	.column.first,
 	.column.full,
-	.column.twelve,
-	.column.center {
+	.column.twelve {
 		clear: both;
 	}
 
@@ -422,12 +428,6 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 		.column.right.reset {
 			margin-left: 0 !important;
 		}
-
-	.column.center, .column.right.center {
-		float: none;
-		margin-right: auto !important;
-		margin-left: auto !important;
-	}
 
 
 

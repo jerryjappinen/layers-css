@@ -13,11 +13,18 @@
 	width: 100%;
 	clear: both;
 	float: none;
+	*zoom: 1;
 }
 .row-content {
-	margin: 0 auto;
 	max-width: 70em;
+	margin: 0 auto;
+	*zoom: 1;
 }
+	.row:after, .row-content:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
 	.row-content.buffer,
 	.row-content.buffer-top {
 		padding-top: 2%;

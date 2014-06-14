@@ -1,5 +1,5 @@
 
-@media handheld, only screen and (min-width: 85em) {
+@media handheld, only screen and (min-width: 90em) {
 
 	/*Roll back default last-in-line behavior*/
 	.column.last.large-one,
@@ -166,6 +166,7 @@
 		.column.right.large-eleven,
 		.column.right.large-twelve,
 		.column.right.large-full {
+			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}

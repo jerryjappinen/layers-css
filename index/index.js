@@ -166,7 +166,7 @@ var DownloadManager = function () {
 
 	// Default values
 	self.defaults = {
-		em: [0, 40, 65],
+		em: [0, 40, 70],
 		px: [0, 640, 1024]
 	};
 
