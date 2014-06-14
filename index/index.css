@@ -97,12 +97,17 @@ a, input.plain, .transition {
 	text-decoration: none;
 	color: #00c0e6;
 }
-	.dark a:hover, .dark a:focus {
+	.dark a:hover {
 		color: #88ddee;
 	}
 		.dark a:active {
 			color: #00c0e6;
 		}
+
+.dark .discreet {
+	color: #737b80;
+}
+
 .dark ::selection {
 	background-color: #a1acb3;
 	color: #fff;
@@ -111,6 +116,38 @@ a, input.plain, .transition {
 	background-color: #a1acb3;
 	color: #fff;
 }
+
+
+
+/*Buttons*/
+.button, .dark .button {
+	position: relative;
+	display: inline-block;
+	padding: 0.4em 1.4em 0.4em 1.4em;
+	text-align: center;
+
+	line-height: 2em;
+	text-transform: uppercase;
+
+	background-color: #00b3d9;
+	color: #fff;
+}
+	.button.secondary, .dark .button.secondary {
+		background-color: #0089a6;
+	}
+	.button:hover, .button:focus, .dark .button:hover, .dark .button:focus {
+		background-color: #0089a6;
+		text-decoration: none;
+		color: #fff;
+
+		-webkit-box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
+		-moz-box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
+		-ms-box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
+		box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
+	}
+		.button:active {
+			color: #fff;
+		}
 
 
 
@@ -148,7 +185,7 @@ h1.pageTitle {
 			font-size: 4em;
 		}
 	}
-	@media handheld, only screen and (max-width: 360px) {
+	@media handheld, only screen and (max-width: 440px) {
 		.row-intro h1.pageTitle {
 			font-size: 3.4em;
 		}
@@ -161,60 +198,16 @@ h1.pageTitle {
 	max-width: 60em;
 }
 
-.row-intro .discreet {
-	color: #737b80;
-}
-
 .row-intro .excerpt {
 	font-size: 1.4em;
 }
 
-.row-intro .discreet a {
-	color: inherit;
-	text-decoration: underline;
-}
-	.row-intro .discreet a:hover {
-		color: #fff;
-	}
-
-/*Download*/
-.download h3 {
-	font-size: 1.4em;
+.row-intro h3 {
+	text-align: center;
 	font-weight: inherit;
-	text-align: center;
+	font-size: 1.4em;
 }
-.download .button {
-	font-size: 1.2em;
-	min-width: 9em;
-}
-.button, .dark .button {
-	position: relative;
-	display: inline-block;
-	padding: 0.4em 1.4em 0.4em 1.4em;
-	text-align: center;
 
-	line-height: 2em;
-	text-transform: uppercase;
-
-	background-color: #00b3d9;
-	color: #fff;
-}
-	.button.secondary, .dark .button.secondary {
-		background-color: #0089a6;
-	}
-	.button:hover, .button:focus, .dark .button:hover, .dark .button:focus {
-		background-color: #0089a6;
-		text-decoration: none;
-		color: #fff;
-
-		-webkit-box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
-		-moz-box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
-		-ms-box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
-		box-shadow: inset 0 0 3em rgba(0, 0, 0, 0.5);
-	}
-		.button:active {
-			color: #fff;
-		}
 
 /*Inputs*/
 .breakpoints {
@@ -295,11 +288,15 @@ h1.pageTitle {
 	margin-top: 2.2em;
 	text-align: center;
 }
-@media handheld, only screen and (max-width: 40em) {
 	.go .button {
-		display: block;
+		font-size: 1.2em;
+		min-width: 9em;
 	}
-}
+	@media handheld, only screen and (max-width: 40em) {
+		.go .button {
+			display: block;
+		}
+	}
 
 
 /*Title row*/
