@@ -1,5 +1,5 @@
 
-@media handheld, only screen and (min-width: 1440px) {
+@media handheld, only screen and (min-width: 85em) {
 
 	/*Roll back default last-in-line behavior*/
 	.column.last.large-one,

@@ -1,6 +1,6 @@
 
 /*small-sized viewport and up*/
-@media handheld, only screen and (min-width: {{tiny}}) {
+@media handheld, only screen and (min-width: {{width}}) {
 
 	/*Roll back default last-in-line behavior*/
 	.column.last.{{name}}-one,

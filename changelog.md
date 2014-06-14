@@ -15,6 +15,12 @@ The Layers CSS grid now supports columns set to arbitrary break points. The stoc
 
 Regular columns continue to never break unless explicitly set.
 
+`.center` columns are no longer supported. To reliably center content, you can
+
+1. adjust the `max-width` or a `row-container`,
+2. `.keep-center` a container element while setting a sensible `max-width`, or
+3. `.push-` a `.column` (responsive versions available).
+
 
 
 ## 1.0.6 - Saturday April 5, 2014
