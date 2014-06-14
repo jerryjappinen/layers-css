@@ -166,8 +166,8 @@ var DownloadManager = function () {
 
 	// Default values
 	self.defaults = {
-		em: [0, 50, 70],
-		px: [0, 768, 1024]
+		em: [0, 40, 65],
+		px: [0, 640, 1024]
 	};
 
 	// Constants
@@ -244,7 +244,7 @@ var Breakpoint = function (name, em, px) {
 	});
 
 	self.empty = function () {
-		return self.selectedUnit() === 'px' ? self.px(0) : self.em(0);
+		return (self[self.selectedUnit()] <= 0);
 	};
 
 	self.toggle = function () {

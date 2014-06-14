@@ -237,8 +237,12 @@ h1.pageTitle {
 	.breakpoints .em label.px, .breakpoints .px label.em {
 		display: none;
 	}
+	.breakpoints code {
+		font-weight: bold;
+	}
 	.breakpoints .em code.px, .breakpoints .px code.em {
 		color: #737b80;
+		font-weight: inherit;
 	}
 	.breakpoints .name {
 		display: inline-block;

@@ -1,5 +1,4 @@
 
-/*Very narrow viewport and up*/
 @media handheld, only screen and (min-width: 360px) {
 
 	/*Roll back default last-in-line behavior*/
