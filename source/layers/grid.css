@@ -101,8 +101,7 @@
 
 	.column.first,
 	.column.full,
-	.column.twelve,
-	.column.center {
+	.column.twelve {
 		clear: both;
 	}
 
@@ -112,12 +111,6 @@
 		.column.right.reset {
 			margin-left: 0 !important;
 		}
-
-	.column.center, .column.right.center {
-		float: none;
-		margin-right: auto !important;
-		margin-left: auto !important;
-	}
 
 
 
