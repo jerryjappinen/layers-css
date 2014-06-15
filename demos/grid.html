@@ -30,6 +30,11 @@
 				padding: 1em;
 			}
 
+			.warning, #result.warning {
+				background-color: #e01b6a;
+				color: #fff;
+			}
+
 			#result strong {
 				display: inline-block;
 				margin-left: 1em;
@@ -61,10 +66,6 @@
 				left: 0;
 				width: 2.6em;
 				height: 2.6em;
-				background-color: #e01b6a;
-			}
-
-			.warning {
 				background-color: #e01b6a;
 			}
 
@@ -681,7 +682,13 @@
 
 				}
 
+				// Show results
 				resultContainer.innerHTML = '<strong>' + results.length + ' rows</strong><strong>' + warnings.length + ' warnings</strong><strong>' + window.innerWidth + ' &times; ' + window.innerHeight + '</strong>';
+				if (warnings.length) {
+					addClass(resultContainer, 'warning');
+				} else {
+					removeClass(resultContainer, 'warning');
+				}
 
 			};
 
