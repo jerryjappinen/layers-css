@@ -54,26 +54,39 @@
 				padding: 1em;
 			}
 
-			.row {
+			#test {
+				position: absolute;
+				visibility: hidden;
+				top: 0;
+				left: 0;
+				width: 2.6em;
+				height: 2.6em;
+				background-color: #e01b6a;
+			}
+
+			.warning {
+				background-color: #e01b6a;
 			}
 
 			.column {
-				height: 20px;
-				background-color: #e8c3d2;
+				height: 2.6em;
+				line-height: 2.6em;
+				background-color: rgba(0, 0, 0, 0.2);
+				overflow: hidden;
+				color: #fff;
 			}
 
-			.column:nth-of-type(1) {background-color: #e01b6a;}
-			/*.column:nth-of-type(2) {border: 0 solid #e673a1;}*/
-			.column:nth-of-type(3) {background-color: #e01b6a;}
-			/*.column:nth-of-type(4) {border: 0 solid #e673a1;}*/
-			.column:nth-of-type(5) {background-color: #e01b6a;}
-			/*.column:nth-of-type(6) {border: 0 solid #e673a1;}*/
-			.column:nth-of-type(7) {background-color: #e01b6a;}
-			/*.column:nth-of-type(8) {border: 0 solid #e673a1;}*/
-			.column:nth-of-type(9) {background-color: #e01b6a;}
-			/*.column:nth-of-type(10) {border: 0 solid #e673a1;}*/
-			.column:nth-of-type(11) {background-color: #e01b6a;}
-			/*.column:nth-of-type(12) {border: 0 solid #e673a1;}*/
+			.column:nth-of-type(2n) {
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+
+			.row:nth-of-type(2n) .column {
+				background-color: rgba(0, 0, 0, 0.25);
+			}
+
+			.row:nth-of-type(2n) .column:nth-of-type(2n) {
+				background-color: rgba(0, 0, 0, 0.45);
+			}
 
 		</style>
 
@@ -81,6 +94,7 @@
 
 	<body class="clear-after">
 
+		<div id="test"></div>
 		<p id="result"></p>
 
 
@@ -88,62 +102,62 @@
 		<h1>1/12s</h1>
 
 		<div class="row">
-			<div class="column twelve"></div>
+			<div class="column twelve">12</div>
 		</div>
 
 		<div class="row">
-			<div class="column eleven"></div>
-			<div class="column one last"></div>
+			<div class="column eleven">11</div>
+			<div class="column one last">1</div>
 		</div>
 
 		<div class="row">
-			<div class="column ten"></div>
-			<div class="column two last"></div>
+			<div class="column ten">10</div>
+			<div class="column two last">2</div>
 		</div>
 
 		<div class="row">
-			<div class="column nine"></div>
-			<div class="column three last"></div>
+			<div class="column nine">9</div>
+			<div class="column three last">3</div>
 		</div>
 
 		<div class="row">
-			<div class="column eight"></div>
-			<div class="column four last"></div>
+			<div class="column eight">8</div>
+			<div class="column four last">4</div>
 		</div>
 
 		<div class="row">
-			<div class="column seven"></div>
-			<div class="column five last"></div>
+			<div class="column seven">7</div>
+			<div class="column five last">5</div>
 		</div>
 
 		<div class="row">
-			<div class="column six"></div>
-			<div class="column six last"></div>
+			<div class="column six">6</div>
+			<div class="column six last">6</div>
 		</div>
 
 		<div class="row">
-			<div class="column five"></div>
-			<div class="column seven last"></div>
+			<div class="column five">5</div>
+			<div class="column seven last">7</div>
 		</div>
 
 		<div class="row">
-			<div class="column four"></div>
-			<div class="column eight last"></div>
+			<div class="column four">4</div>
+			<div class="column eight last">8</div>
 		</div>
 
 		<div class="row">
-			<div class="column three"></div>
-			<div class="column nine last"></div>
+			<div class="column three">3</div>
+			<div class="column nine last">9</div>
 		</div>
 
 		<div class="row">
-			<div class="column two"></div>
-			<div class="column ten last"></div>
+			<div class="column two">2</div>
+			<div class="column ten last">10</div>
 		</div>
 
 		<div class="row">
-			<div class="column one"></div>
-			<div class="column eleven last"></div>
+			<div class="column one">1</div>
+			<div class="column eleven last">11</div>
 		</div>
 
 
@@ -151,42 +165,42 @@
 		<h1>Fractionals</h1>
 
 		<div class="row">
-			<div class="column full"></div>
+			<div class="column full">1/1</div>
 		</div>
 
 		<div class="row">
-			<div class="column half"></div>
-			<div class="column half last"></div>
+			<div class="column half">1/2</div>
+			<div class="column half last">1/2</div>
 		</div>
 
 		<div class="row">
-			<div class="column third"></div>
-			<div class="column third"></div>
-			<div class="column third last"></div>
+			<div class="column third">1/3</div>
+			<div class="column third">1/3</div>
+			<div class="column third last">1/3</div>
 		</div>
 
 		<div class="row">
-			<div class="column fourth"></div>
-			<div class="column fourth"></div>
-			<div class="column fourth"></div>
-			<div class="column fourth last"></div>
+			<div class="column fourth">1/4</div>
+			<div class="column fourth">1/4</div>
+			<div class="column fourth">1/4</div>
+			<div class="column fourth last">1/4</div>
 		</div>
 
 		<div class="row">
-			<div class="column fifth"></div>
-			<div class="column fifth"></div>
-			<div class="column fifth"></div>
-			<div class="column fifth"></div>
-			<div class="column fifth last"></div>
+			<div class="column fifth">1/5</div>
+			<div class="column fifth">1/5</div>
+			<div class="column fifth">1/5</div>
+			<div class="column fifth">1/5</div>
+			<div class="column fifth last">1/5</div>
 		</div>
 
 		<div class="row">
-			<div class="column sixth"></div>
-			<div class="column sixth"></div>
-			<div class="column sixth"></div>
-			<div class="column sixth"></div>
-			<div class="column sixth"></div>
-			<div class="column sixth last"></div>
+			<div class="column sixth">1/6</div>
+			<div class="column sixth">1/6</div>
+			<div class="column sixth">1/6</div>
+			<div class="column sixth">1/6</div>
+			<div class="column sixth">1/6</div>
+			<div class="column sixth last">1/6</div>
 		</div>
 
 
@@ -477,6 +491,44 @@
 
 
 
+		<h1>Fixed + fluid</h1>
+
+		<div class="row">
+			<div class="column fluid">
+				<div class="column-content">
+					fluid
+				</div>
+			</div>
+
+			<div class="column fixed">
+				fixed
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="column right fluid">
+				<div class="column-content">
+					fluid
+				</div>
+			</div>
+
+			<div class="column right fixed">
+				fixed
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
 		<h1>.fifths</h1>
 
 		<div class="row">
@@ -567,14 +619,38 @@
 
 		<script type="text/javascript">
 
-			var targetHeight = 20;
+			// Lib
+			var hasClass = function (element, className) {
+				return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+			};
+
+			var addClass = function (element, className) {
+				if (!hasClass(element, className)) {
+					element.className = element.className + ' ' + className;
+				}
+			};
+
+			var removeClass = function (element, className) {
+				if (hasClass(element, className)) {
+					element.className = (' ' + element.className.replace(' ' + className, '')).substring(1);
+				}
+			};
+
+
+
+			// Vars
+			var testContainer = document.getElementById('test');
 			var resultContainer = document.getElementById('result');
 
 			var rows = [];
 			var columns = [];
 			var results = [];
 			var warnings = [];
+			var targetHeight = testContainer.offsetHeight;
 
+
+
+			// Behavior
 			var runTests = function () {
 				console.log('Running tests...');
 
@@ -587,21 +663,31 @@
 
 				// Check height of each row
 				for (var i = 0; i < rows.length; i++) {
-					var height = rows[i].offsetHeight;
+					var row = rows[i];
+					var height = row.offsetHeight;
+
+					// Handle results
+					removeClass(row, 'warning');
 					results.push(height);
+
+					// Warning
 					if (height !== targetHeight) {
+						addClass(row, 'warning');
 						warnings.push({
 							i: i,
 							height: height
 						});
 					}
+
 				}
 
 				resultContainer.innerHTML = '<strong>' + results.length + ' rows</strong><strong>' + warnings.length + ' warnings</strong><strong>' + window.innerWidth + ' &times; ' + window.innerHeight + '</strong>';
 
 			};
 
-			// Run tests when page loads and screen size changes
+
+
+			// Init
 			window.onload = runTests;
 			window.onresize = runTests;
 
