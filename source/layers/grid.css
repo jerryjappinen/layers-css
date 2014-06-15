@@ -49,8 +49,8 @@
 /*Column basics (12-based fluid grid)*/
 .column.one,
 .column.two,
-.column.fifth,
 .column.sixth,
+.column.fifth,
 .column.three,
 .column.fourth,
 .column.four,
@@ -123,10 +123,10 @@
 	}
 
 	.column.reset {
-		margin-right: 0 !important;
+		margin-right: 0;
 	}
 		.column.right.reset {
-			margin-left: 0 !important;
+			margin-left: 0;
 		}
 
 
@@ -467,6 +467,16 @@
 
 
 
+/*Last in line*/
+.column.last {
+	margin-right: 0;
+}
+	.column.right.last {
+		margin-left: 0;
+	}
+
+
+
 /*Fixed-width column with another column taking rest of the available space (fixed on the left)*/
 .column.fluid {
 	clear: none;
@@ -494,14 +504,4 @@
 	}
 	.column.fixed.right {
 		float: left;
-	}
-
-
-
-/*Last in line*/
-.column.last {
-	margin-right: 0;
-}
-	.column.right.last {
-		margin-left: 0;
 	}
