@@ -122,11 +122,11 @@
 		clear: both;
 	}
 
-	.column.reset {
-		margin-right: 0;
+	.column.reset:not(.right) {
+		margin-right: 0 !important;
 	}
 		.column.right.reset {
-			margin-left: 0;
+			margin-left: 0 !important;
 		}
 
 

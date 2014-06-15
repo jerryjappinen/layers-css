@@ -75,6 +75,9 @@
 				background-color: rgba(0, 0, 0, 0.2);
 				overflow: hidden;
 				color: #fff;
+
+				outline: 0 solid transparent;
+				transition: box-shadow 200ms, outline 200ms;
 			}
 
 			.column:nth-of-type(2n) {
@@ -87,6 +90,11 @@
 
 			.row:nth-of-type(2n) .column:nth-of-type(2n) {
 				background-color: rgba(0, 0, 0, 0.45);
+			}
+
+			.column:hover, .row:nth-of-type(2n) .column:hover {
+				outline: 0.2em solid #12171a;
+				box-shadow: 0 0 4em rgba(0, 0, 0, 0.6);
 			}
 
 		</style>
@@ -209,101 +217,101 @@
 		<h1>Resets</h1>
 
 		<div class="row">
-			<div class="column reset twelve"></div>
+			<div class="column reset twelve">12</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset eleven"></div>
-			<div class="column reset one"></div>
+			<div class="column reset eleven">11</div>
+			<div class="column reset one">1</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset ten"></div>
-			<div class="column reset two"></div>
+			<div class="column reset ten">10</div>
+			<div class="column reset two">2</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset nine"></div>
-			<div class="column reset three"></div>
+			<div class="column reset nine">9</div>
+			<div class="column reset three"3></div>
 		</div>
 
 		<div class="row">
-			<div class="column reset eight"></div>
-			<div class="column reset four"></div>
+			<div class="column reset eight">8</div>
+			<div class="column reset four">4</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset seven"></div>
-			<div class="column reset five"></div>
+			<div class="column reset seven">7</div>
+			<div class="column reset five">5</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset six"></div>
-			<div class="column reset six"></div>
+			<div class="column reset six">6</div>
+			<div class="column reset six">6</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset five"></div>
-			<div class="column reset seven"></div>
+			<div class="column reset five">5</div>
+			<div class="column reset seven">7</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset four"></div>
-			<div class="column reset eight"></div>
+			<div class="column reset four">4</div>
+			<div class="column reset eight">8</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset three"></div>
-			<div class="column reset nine"></div>
+			<div class="column reset three">3</div>
+			<div class="column reset nine">9</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset two"></div>
-			<div class="column reset ten"></div>
+			<div class="column reset two">2</div>
+			<div class="column reset ten">10</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset one"></div>
-			<div class="column reset eleven"></div>
+			<div class="column reset one">1</div>
+			<div class="column reset eleven">11</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset full"></div>
+			<div class="column reset full">1/1</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset half"></div>
-			<div class="column reset half"></div>
+			<div class="column reset half">1/2</div>
+			<div class="column reset half">1/2</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset third"></div>
-			<div class="column reset third"></div>
-			<div class="column reset third"></div>
+			<div class="column reset third">1/3</div>
+			<div class="column reset third">1/3</div>
+			<div class="column reset third">1/3</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset fourth"></div>
-			<div class="column reset fourth"></div>
-			<div class="column reset fourth"></div>
-			<div class="column reset fourth"></div>
+			<div class="column reset fourth">1/4</div>
+			<div class="column reset fourth">1/4</div>
+			<div class="column reset fourth">1/4</div>
+			<div class="column reset fourth">1/4</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset fifth"></div>
-			<div class="column reset fifth"></div>
-			<div class="column reset fifth"></div>
-			<div class="column reset fifth"></div>
-			<div class="column reset fifth"></div>
+			<div class="column reset fifth">1/5</div>
+			<div class="column reset fifth">1/5</div>
+			<div class="column reset fifth">1/5</div>
+			<div class="column reset fifth">1/5</div>
+			<div class="column reset fifth">1/5</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset sixth"></div>
-			<div class="column reset sixth"></div>
-			<div class="column reset sixth"></div>
-			<div class="column reset sixth"></div>
-			<div class="column reset sixth"></div>
-			<div class="column reset sixth"></div>
+			<div class="column reset sixth">1/6</div>
+			<div class="column reset sixth">1/6</div>
+			<div class="column reset sixth">1/6</div>
+			<div class="column reset sixth">1/6</div>
+			<div class="column reset sixth">1/6</div>
+			<div class="column reset sixth">1/6</div>
 		</div>
 
 
@@ -311,91 +319,91 @@
 		<h1>Pushes</h1>
 
 		<div class="row">
-			<div class="column push-one last eleven"></div>
+			<div class="column push-one last eleven">11 &gt; 1</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-two last ten"></div>
+			<div class="column push-two last ten">10 &gt; 2</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-three last nine"></div>
+			<div class="column push-three last nine">9 &gt; 3</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-four last eight"></div>
+			<div class="column push-four last eight">8 &gt; 4</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-five last seven"></div>
+			<div class="column push-five last seven">7 &gt; 5</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-six last six"></div>
+			<div class="column push-six last six">6 &gt; 6</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-seven last five"></div>
+			<div class="column push-seven last five">5 &gt; 7</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-eight last four"></div>
+			<div class="column push-eight last four">4 &gt; 8</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-nine last three"></div>
+			<div class="column push-nine last three">3 &gt; 9</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-ten last two"></div>
+			<div class="column push-ten last two">2 &gt; 10</div>
 		</div>
 
 		<div class="row">
-			<div class="column push-eleven last one"></div>
+			<div class="column push-eleven last one">1 &gt; 11</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-one last eleven"></div>
+			<div class="column right push-one last eleven">11 &lt; 1</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-two last ten"></div>
+			<div class="column right push-two last ten">10 &lt; 2</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-three last nine"></div>
+			<div class="column right push-three last nine">9 &lt; 3</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-four last eight"></div>
+			<div class="column right push-four last eight">8 &lt; 4</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-five last seven"></div>
+			<div class="column right push-five last seven">7 &lt; 5</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-six last six"></div>
+			<div class="column right push-six last six">6 &lt; 6</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-seven last five"></div>
+			<div class="column right push-seven last five">5 &lt; 7</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-eight last four"></div>
+			<div class="column right push-eight last four">4 &lt; 8</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-nine last three"></div>
+			<div class="column right push-nine last three">3 &lt; 9</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-ten last two"></div>
+			<div class="column right push-ten last two">2 &lt; 10</div>
 		</div>
 
 		<div class="row">
-			<div class="column right push-eleven last one"></div>
+			<div class="column right push-eleven last one">1 &lt; 11</div>
 		</div>
 
 
@@ -403,91 +411,91 @@
 		<h1>Push resets</h1>
 
 		<div class="row">
-			<div class="column reset push-one eleven"></div>
+			<div class="column reset push-one eleven">11 &gt; 1</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-two ten"></div>
+			<div class="column reset push-two ten">10 &gt; 2</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-three nine"></div>
+			<div class="column reset push-three nine">9 &gt; 3</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-four eight"></div>
+			<div class="column reset push-four eight">8 &gt; 4</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-five seven"></div>
+			<div class="column reset push-five seven">7 &gt; 5</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-six six"></div>
+			<div class="column reset push-six six">6 &gt; 6</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-seven five"></div>
+			<div class="column reset push-seven five">5 &gt; 7</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-eight four"></div>
+			<div class="column reset push-eight four">4 &gt; 8</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-nine three"></div>
+			<div class="column reset push-nine three">3 &gt; 9</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-ten two"></div>
+			<div class="column reset push-ten two">2 &gt; 10</div>
 		</div>
 
 		<div class="row">
-			<div class="column reset push-eleven one"></div>
+			<div class="column reset push-eleven one">1 &gt; 11</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-one eleven"></div>
+			<div class="column reset right push-one eleven">11 &lt; 1</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-two ten"></div>
+			<div class="column reset right push-two ten">10 &lt; 2</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-three nine"></div>
+			<div class="column reset right push-three nine">9 &lt; 3</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-four eight"></div>
+			<div class="column reset right push-four eight">8 &lt; 4</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-five seven"></div>
+			<div class="column reset right push-five seven">7 &lt; 5</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-six six"></div>
+			<div class="column reset right push-six six">6 &lt; 6</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-seven five"></div>
+			<div class="column reset right push-seven five">5 &lt; 7</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-eight four"></div>
+			<div class="column reset right push-eight four">4 &lt; 8</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-nine three"></div>
+			<div class="column reset right push-nine three">3 &lt; 9</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-ten two"></div>
+			<div class="column reset right push-ten two">2 &lt; 10</div>
 		</div>
 
 		<div class="row">
-			<div class="column right reset push-eleven one"></div>
+			<div class="column reset right push-eleven one">1 &lt; 11</div>
 		</div>
 
 
@@ -497,12 +505,12 @@
 		<div class="row">
 			<div class="column fluid">
 				<div class="column-content">
-					fluid
+					Fluid
 				</div>
 			</div>
 
 			<div class="column fixed">
-				fixed
+				Fixed
 			</div>
 		</div>
 
@@ -510,13 +518,398 @@
 		<div class="row">
 			<div class="column right fluid">
 				<div class="column-content">
-					fluid
+					Fluid
 				</div>
 			</div>
 
 			<div class="column right fixed">
-				fixed
+				Fixed
 			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h1>1st-level progressive enhancements</h1>
+
+		<div class="row">
+			<div class="column small-twelve">12</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-eleven">11</div>
+			<div class="column small-one small-last">1</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-ten">10</div>
+			<div class="column small-two small-last">2</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-nine">9</div>
+			<div class="column small-three small-last">3</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-eight">8</div>
+			<div class="column small-four small-last">4</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-seven">7</div>
+			<div class="column small-five small-last">5</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-six">6</div>
+			<div class="column small-six small-last">6</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-five">5</div>
+			<div class="column small-seven small-last">7</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-four">4</div>
+			<div class="column small-eight small-last">8</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-three">3</div>
+			<div class="column small-nine small-last">9</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-two">2</div>
+			<div class="column small-ten small-last">10</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-one">1</div>
+			<div class="column small-eleven small-last">11</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-full">1/1</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-half">1/2</div>
+			<div class="column small-half small-last">1/2</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-third">1/3</div>
+			<div class="column small-third">1/3</div>
+			<div class="column small-third small-last">1/3</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-fourth">1/4</div>
+			<div class="column small-fourth">1/4</div>
+			<div class="column small-fourth">1/4</div>
+			<div class="column small-fourth small-last">1/4</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-fifth">1/5</div>
+			<div class="column small-fifth">1/5</div>
+			<div class="column small-fifth">1/5</div>
+			<div class="column small-fifth">1/5</div>
+			<div class="column small-fifth small-last">1/5</div>
+		</div>
+
+		<div class="row">
+			<div class="column small-sixth">1/6</div>
+			<div class="column small-sixth">1/6</div>
+			<div class="column small-sixth">1/6</div>
+			<div class="column small-sixth">1/6</div>
+			<div class="column small-sixth">1/6</div>
+			<div class="column small-sixth small-last">1/6</div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-twelve">12</div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-eleven">11</div>
+			<div class="column reset small-one">1</div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-ten">10</div>
+			<div class="column reset small-two">2</div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-nine">9</div>
+			<div class="column reset small-three">3</div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-eight">8</div>
+			<div class="column reset small-four">4</div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-seven"></div>
+			<div class="column reset small-five"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-six"></div>
+			<div class="column reset small-six"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-five"></div>
+			<div class="column reset small-seven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-four"></div>
+			<div class="column reset small-eight"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-three"></div>
+			<div class="column reset small-nine"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-two"></div>
+			<div class="column reset small-ten"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-one"></div>
+			<div class="column reset small-eleven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-full"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-half"></div>
+			<div class="column reset small-half"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-third"></div>
+			<div class="column reset small-third"></div>
+			<div class="column reset small-third"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-fourth"></div>
+			<div class="column reset small-fourth"></div>
+			<div class="column reset small-fourth"></div>
+			<div class="column reset small-fourth"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-fifth"></div>
+			<div class="column reset small-fifth"></div>
+			<div class="column reset small-fifth"></div>
+			<div class="column reset small-fifth"></div>
+			<div class="column reset small-fifth"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset small-sixth"></div>
+			<div class="column reset small-sixth"></div>
+			<div class="column reset small-sixth"></div>
+			<div class="column reset small-sixth"></div>
+			<div class="column reset small-sixth"></div>
+			<div class="column reset small-sixth"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-one small-last small-eleven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-two small-last small-ten"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-three small-last small-nine"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-four small-last small-eight"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-five small-last small-seven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-six small-last small-six"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-seven small-last small-five"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-eight small-last small-four"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-nine small-last small-three"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-ten small-last small-two"></div>
+		</div>
+
+		<div class="row">
+			<div class="column push-small-eleven small-last small-one"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-one small-last small-eleven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-two small-last small-ten"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-three small-last small-nine"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-four small-last small-eight"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-five small-last small-seven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-six small-last small-six"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-seven small-last small-five"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-eight small-last small-four"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-nine small-last small-three"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-ten small-last small-two"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right push-small-eleven small-last small-one"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-one small-eleven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-two small-ten"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-three small-nine"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-four small-eight"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-five small-seven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-six small-six"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-seven small-five"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-eight small-four"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-nine small-three"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-ten small-two"></div>
+		</div>
+
+		<div class="row">
+			<div class="column reset push-small-eleven small-one"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-one small-eleven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-two small-ten"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-three small-nine"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-four small-eight"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-five small-seven"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-six small-six"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-seven small-five"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-eight small-four"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-nine small-three"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-ten small-two"></div>
+		</div>
+
+		<div class="row">
+			<div class="column right reset push-small-eleven small-one"></div>
 		</div>
 
 
