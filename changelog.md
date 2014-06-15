@@ -7,7 +7,9 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 ## 1.1.0 - Sunday June 15, 2014
 
-Resetting border-radius in `.plain` inputs and buttons.
+- Resetting border-radius in `.plain` inputs and buttons.
+- Also added `.fifth`-width `.reset` columns.
+- `.row` and `.row-content` clear floats. However, they're still completely optional.
 
 **New responsive adjustments !important;**
 

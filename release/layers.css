@@ -2,7 +2,7 @@
 Layers CSS 1.1.0 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2014-06-14 18:09 UTC
+2014-06-15 18:36 UTC
 */
 
 /*Basics*/
@@ -359,24 +359,29 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 /*Column basics (12-based fluid grid)*/
 .column.one,
 .column.two,
+.column.fifth,
 .column.sixth,
 .column.three,
 .column.fourth,
 .column.four,
+.column.twofifths,
 .column.twosixths,
 .column.third,
 .column.five,
 .column.six,
 .column.half,
+.column.threefifths,
 .column.threesixths,
 .column.twofourths,
 .column.seven,
 .column.eight,
+.column.fourfifths,
 .column.foursixths,
 .column.twothirds,
 .column.nine,
 .column.threefourths,
 .column.ten,
+.column.fivefifths,
 .column.fivesixths,
 .column.eleven,
 .column.twelve,
@@ -389,24 +394,29 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 }
 	.column.right.one,
 	.column.right.two,
+	.column.right.fifth,
 	.column.right.sixth,
 	.column.right.three,
 	.column.right.fourth,
 	.column.right.four,
+	.column.right.twofifths,
 	.column.right.twosixths,
 	.column.right.third,
 	.column.right.five,
 	.column.right.six,
 	.column.right.half,
+	.column.right.threefifths,
 	.column.right.threesixths,
 	.column.right.twofourths,
 	.column.right.seven,
 	.column.right.eight,
+	.column.right.fourfifths,
 	.column.right.foursixths,
 	.column.right.twothirds,
 	.column.right.nine,
 	.column.right.threefourths,
 	.column.right.ten,
+	.column.right.fivefifths,
 	.column.right.fivesixths,
 	.column.right.eleven,
 	.column.right.twelve,
@@ -439,6 +449,20 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.full,
 .column.twelve {
 	width: 100%;
+}
+
+/*Fifth*/
+.column.fifth {
+	width: 16.95%;		/* 16.96 */
+}
+.column.twofifths {
+	width: 37.70%;		/* 33.92 + 3.8 */
+}
+.column.threefifths {
+	width: 58.45%;		/* 50.88 + 3.8 + 3.8 */
+}
+.column.fourfifths {
+	width: 79.20%;		/* 67.84 + 3.8 + 3.8 + 3.8 */
 }
 
 /*Fluid column widths*/
@@ -587,6 +611,9 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.sixth.reset {
 	width: 16.65%;
 }
+.column.fifth.reset {
+	width: 20%;
+}
 .column.three.reset,
 .column.fourth.reset {
 	width: 25%;
@@ -595,6 +622,9 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.twosixths.reset,
 .column.third.reset {
 	width: 33.3%;
+}
+.column.twofifths.reset {
+	width: 40%;
 }
 .column.five.reset {
 	width: 41.65%;
@@ -608,6 +638,9 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.seven.reset {
 	width: 58.3%;
 }
+.column.threefifths.reset {
+	width: 60%;
+}
 .column.eight.reset,
 .column.foursixths.reset,
 .column.twothirds.reset {
@@ -616,6 +649,9 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.nine.reset,
 .column.threefourths.reset {
 	width: 75%;
+}
+.column.fourfifths.reset {
+	width: 80%;
 }
 .column.ten.reset,
 .column.fivesixths.reset {
@@ -640,6 +676,12 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	.column.reset.right.push-sixth {
 		margin-right: 16.65%;
 	}
+.column.reset.push-fifth {
+	margin-left: 20%;
+}
+	.column.reset.right.push-fifth {
+		margin-right: 20%;
+	}
 .column.reset.push-three,
 .column.reset.push-fourth {
 	margin-left: 25%;
@@ -657,6 +699,12 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	.column.reset.right.push-twosixths,
 	.column.reset.right.push-third {
 		margin-right: 33.3%;
+	}
+.column.reset.push-twofifths {
+	margin-left: 40%;
+}
+	.column.reset.right.push-twofifths {
+		margin-right: 40%;
 	}
 .column.reset.push-five {
 	margin-left: 41.65%;
@@ -682,6 +730,12 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	.column.reset.right.push-seven {
 		margin-right: 58.3%;
 	}
+.column.reset.push-threefifths {
+	margin-left: 60%;
+}
+	.column.reset.right.push-threefifths {
+		margin-right: 60%;
+	}
 .column.reset.push-eight,
 .column.reset.push-foursixths,
 .column.reset.push-twothirds {
@@ -699,6 +753,12 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	.column.reset.right.push-nine,
 	.column.reset.right.push-threefourths {
 		margin-right: 75%;
+	}
+.column.reset.push-fourfifths {
+	margin-left: 80%;
+}
+	.column.reset.right.push-fourfifths {
+		margin-right: 80%;
 	}
 .column.reset.push-ten,
 .column.reset.push-fivesixths {
