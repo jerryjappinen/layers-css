@@ -460,7 +460,7 @@
 
 
 	/*Break columns after this*/
-	.column.break-{{name}} {
+	.column.{{name}}-break {
 		width: auto !important;
 		float: none !important;
 		clear: both !important;

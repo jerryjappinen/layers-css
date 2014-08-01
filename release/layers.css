@@ -2,7 +2,7 @@
 Layers CSS 1.1.0 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2014-06-15 19:46 UTC
+2014-08-01 09:22 UTC
 */
 
 /*Basics*/
@@ -464,6 +464,30 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.fourfifths {
 	width: 79.20%;		/* 67.84 + 3.8 + 3.8 + 3.8 */
 }
+	.column.push-fifth {
+		margin-left: 20.45%;
+	}
+		.column.right.push-fifth {
+			margin-right: 20.45%;
+		}
+	.column.push-twofifths {
+		margin-left: 41.50%;
+	}
+		.column.right.push-twofifths {
+			margin-right: 41.50%;
+		}
+	.column.push-threefifths {
+		margin-left: 62.25%;
+	}
+		.column.right.push-threefifths {
+			margin-right: 62.25%;
+		}
+	.column.push-fourfifths {
+		margin-left: 83.00%;
+	}
+		.column.right.push-fourfifths {
+			margin-right: 83.00%;
+		}
 
 /*Fluid column widths*/
 .column.one {

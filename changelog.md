@@ -7,11 +7,19 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 ## 1.1.0 - Sunday June 15, 2014
 
+### To do
+
+- `.small-right`
+- `.small-fifth`
+- Margins on right-aligned, pushed columns should not be overwritten
+
+### Miscellaneous fixes
+
 - Resetting border-radius in `.plain` inputs and buttons.
-- Also added `.fifth`-width `.reset` columns.
+- Also added `.fifth`-width columns.
 - `.row` and `.row-content` clear floats. However, they're still completely optional.
 
-**New responsive adjustments !important;**
+### New responsive adjustments !important;
 
 The Layers CSS grid now supports columns set to arbitrary break points. The stock responsive adjustments set uses 4 break points.
 
