@@ -1,6 +1,11 @@
 
 @media handheld, only screen and (min-width: 70em) {
 
+	/*Width limit*/
+	.limit-medium {
+		max-width: 70em;
+	}
+
 	/*Roll back default last-in-line behavior*/
 	.column.last.medium-fifth,
 	.column.last.medium-twofifths,

@@ -1,5 +1,10 @@
 @media handheld, only screen and (min-width: {{width}}) {
 
+	/*Width limit*/
+	.limit-{{name}} {
+		max-width: {{width}};
+	}
+
 	/*Roll back default last-in-line behavior*/
 	.column.last.{{name}}-fifth,
 	.column.last.{{name}}-twofifths,

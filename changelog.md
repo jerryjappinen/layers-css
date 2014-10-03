@@ -5,7 +5,7 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
-## 1.1.0 - Sunday June 15, 2014
+## 1.1.0 - Sunday October 3, 2014
 
 ### To do
 
@@ -28,6 +28,8 @@ Regular columns continue to never break unless explicitly set.
 1. adjust the `max-width` or a `row-container`,
 2. `.keep-center` a container element while setting a sensible `max-width`, or
 3. `.push-` a `.column` (responsive versions available).
+
+Furthermore, `.limit-` classes based on the breakpoints are now available. Refer to the documentation for more info.
 
 
 
