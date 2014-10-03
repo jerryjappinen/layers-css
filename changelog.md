@@ -9,17 +9,9 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 ### To do
 
-	html, body {
-		width: 100%;
-		height: 100%;
-	}
-
-- `.small-right`
-- `.small-fifth`
-- Margins on right-aligned, pushed columns should not be overwritten
-
 ### Miscellaneous fixes
 
+- `width: 100%; height: 100%;` added to normalizations for `html` and `body`.
 - Some `input` definitions are less specific.
 - Resetting border-radius in `.plain` inputs and buttons.
 - Also added `.fifth`-width columns.
