@@ -1,7 +1,10 @@
-
 @media handheld, only screen and (min-width: {{width}}) {
 
 	/*Roll back default last-in-line behavior*/
+	.column.last.{{name}}-fifth,
+	.column.last.{{name}}-twofifths,
+	.column.last.{{name}}-threefifths,
+	.column.last.{{name}}-fourfifths,
 	.column.last.{{name}}-one,
 	.column.last.{{name}}-two,
 	.column.last.{{name}}-sixth,
@@ -27,7 +30,11 @@
 	.column.last.{{name}}-twelve,
 	.column.last.{{name}}-full,
 
-	/*Roll back default last-in-line behavior of the previous break point set*/
+	/*Roll back last-in-line behavior of the previous break point set*/
+	.column.{{previousName}}-last.{{name}}-fifth,
+	.column.{{previousName}}-last.{{name}}-twofifths,
+	.column.{{previousName}}-last.{{name}}-threefifths,
+	.column.{{previousName}}-last.{{name}}-fourfifths,
 	.column.{{previousName}}-last.{{name}}-one,
 	.column.{{previousName}}-last.{{name}}-two,
 	.column.{{previousName}}-last.{{name}}-sixth,
@@ -56,6 +63,10 @@
 	}
 
 		/*Roll back default last-in-line behavior*/
+		.column.right.last.{{name}}-fifth,
+		.column.right.last.{{name}}-twofifths,
+		.column.right.last.{{name}}-threefifths,
+		.column.right.last.{{name}}-fourfifths,
 		.column.right.last.{{name}}-one,
 		.column.right.last.{{name}}-two,
 		.column.right.last.{{name}}-sixth,
@@ -81,7 +92,11 @@
 		.column.right.last.{{name}}-twelve,
 		.column.right.last.{{name}}-full,
 
-		/*Roll back default last-in-line behavior of the previous break point set*/
+		/*Roll back last-in-line behavior of the previous break point set*/
+		.column.right.{{previousName}}-last.{{name}}-fifth,
+		.column.right.{{previousName}}-last.{{name}}-twofifths,
+		.column.right.{{previousName}}-last.{{name}}-threefifths,
+		.column.right.{{previousName}}-last.{{name}}-fourfifths,
 		.column.right.{{previousName}}-last.{{name}}-one,
 		.column.right.{{previousName}}-last.{{name}}-two,
 		.column.right.{{previousName}}-last.{{name}}-sixth,
@@ -112,6 +127,10 @@
 
 
 	/*Column basics*/
+	.column.{{name}}-fifth,
+	.column.{{name}}-twofifths,
+	.column.{{name}}-threefifths,
+	.column.{{name}}-fourfifths,
 	.column.{{name}}-one,
 	.column.{{name}}-two,
 	.column.{{name}}-sixth,
@@ -142,6 +161,10 @@
 		margin-left: 0;
 		margin-right: 3.8%;
 	}
+		.column.right.{{name}}-fifth,
+		.column.right.{{name}}-twofifths,
+		.column.right.{{name}}-threefifths,
+		.column.right.{{name}}-fourfifths,
 		.column.right.{{name}}-one,
 		.column.right.{{name}}-two,
 		.column.right.{{name}}-sixth,
@@ -170,6 +193,37 @@
 			margin-right: 0;
 			margin-left: 3.8%;
 		}
+		.column.reset.{{name}}-fifth,
+		.column.reset.{{name}}-twofifths,
+		.column.reset.{{name}}-threefifths,
+		.column.reset.{{name}}-fourfifths,
+		.column.reset.{{name}}-one,
+		.column.reset.{{name}}-two,
+		.column.reset.{{name}}-sixth,
+		.column.reset.{{name}}-three,
+		.column.reset.{{name}}-fourth,
+		.column.reset.{{name}}-four,
+		.column.reset.{{name}}-twosixths,
+		.column.reset.{{name}}-third,
+		.column.reset.{{name}}-five,
+		.column.reset.{{name}}-six,
+		.column.reset.{{name}}-half,
+		.column.reset.{{name}}-threesixths,
+		.column.reset.{{name}}-twofourths,
+		.column.reset.{{name}}-seven,
+		.column.reset.{{name}}-eight,
+		.column.reset.{{name}}-foursixths,
+		.column.reset.{{name}}-twothirds,
+		.column.reset.{{name}}-nine,
+		.column.reset.{{name}}-threefourths,
+		.column.reset.{{name}}-ten,
+		.column.reset.{{name}}-fivesixths,
+		.column.reset.{{name}}-eleven,
+		.column.reset.{{name}}-twelve,
+		.column.reset.{{name}}-full {
+			margin-right: 0;
+			margin-left: 0;
+		}
 
 	/*Full-width column*/
 	.column.{{name}}-full,
@@ -178,6 +232,44 @@
 	}
 
 
+
+	/*Fifth*/
+	.column.{{name}}-fifth {
+		width: 16.95%;		/* 16.96 */
+	}
+	.column.{{name}}-twofifths {
+		width: 37.70%;		/* 33.92 + 3.8 */
+	}
+	.column.{{name}}-threefifths {
+		width: 58.45%;		/* 50.88 + 3.8 + 3.8 */
+	}
+	.column.{{name}}-fourfifths {
+		width: 79.20%;		/* 67.84 + 3.8 + 3.8 + 3.8 */
+	}
+		.column.{{name}}-push-fifth {
+			margin-left: 20.45%;
+		}
+			.column.{{name}}-right.push-fifth {
+				margin-right: 20.45%;
+			}
+		.column.{{name}}-push-twofifths {
+			margin-left: 41.50%;
+		}
+			.column.{{name}}-right.push-twofifths {
+				margin-right: 41.50%;
+			}
+		.column.{{name}}-push-threefifths {
+			margin-left: 62.25%;
+		}
+			.column.{{name}}-right.push-threefifths {
+				margin-right: 62.25%;
+			}
+		.column.{{name}}-push-fourfifths {
+			margin-left: 83.00%;
+		}
+			.column.{{name}}-right.push-fourfifths {
+				margin-right: 83.00%;
+			}
 
 	/*Fluid column widths*/
 	.column.{{name}}-one {

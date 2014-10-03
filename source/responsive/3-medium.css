@@ -2,6 +2,10 @@
 @media handheld, only screen and (min-width: 70em) {
 
 	/*Roll back default last-in-line behavior*/
+	.column.last.medium-fifth,
+	.column.last.medium-twofifths,
+	.column.last.medium-threefifths,
+	.column.last.medium-fourfifths,
 	.column.last.medium-one,
 	.column.last.medium-two,
 	.column.last.medium-sixth,
@@ -27,7 +31,11 @@
 	.column.last.medium-twelve,
 	.column.last.medium-full,
 
-	/*Roll back default last-in-line behavior of the previous break point set*/
+	/*Roll back last-in-line behavior of the previous break point set*/
+	.column.small-last.medium-fifth,
+	.column.small-last.medium-twofifths,
+	.column.small-last.medium-threefifths,
+	.column.small-last.medium-fourfifths,
 	.column.small-last.medium-one,
 	.column.small-last.medium-two,
 	.column.small-last.medium-sixth,
@@ -56,6 +64,10 @@
 	}
 
 		/*Roll back default last-in-line behavior*/
+		.column.right.last.medium-fifth,
+		.column.right.last.medium-twofifths,
+		.column.right.last.medium-threefifths,
+		.column.right.last.medium-fourfifths,
 		.column.right.last.medium-one,
 		.column.right.last.medium-two,
 		.column.right.last.medium-sixth,
@@ -81,7 +93,11 @@
 		.column.right.last.medium-twelve,
 		.column.right.last.medium-full,
 
-		/*Roll back default last-in-line behavior of the previous break point set*/
+		/*Roll back last-in-line behavior of the previous break point set*/
+		.column.right.small-last.medium-fifth,
+		.column.right.small-last.medium-twofifths,
+		.column.right.small-last.medium-threefifths,
+		.column.right.small-last.medium-fourfifths,
 		.column.right.small-last.medium-one,
 		.column.right.small-last.medium-two,
 		.column.right.small-last.medium-sixth,
@@ -112,6 +128,10 @@
 
 
 	/*Column basics*/
+	.column.medium-fifth,
+	.column.medium-twofifths,
+	.column.medium-threefifths,
+	.column.medium-fourfifths,
 	.column.medium-one,
 	.column.medium-two,
 	.column.medium-sixth,
@@ -142,6 +162,10 @@
 		margin-left: 0;
 		margin-right: 3.8%;
 	}
+		.column.right.medium-fifth,
+		.column.right.medium-twofifths,
+		.column.right.medium-threefifths,
+		.column.right.medium-fourfifths,
 		.column.right.medium-one,
 		.column.right.medium-two,
 		.column.right.medium-sixth,
@@ -170,6 +194,37 @@
 			margin-right: 0;
 			margin-left: 3.8%;
 		}
+		.column.reset.medium-fifth,
+		.column.reset.medium-twofifths,
+		.column.reset.medium-threefifths,
+		.column.reset.medium-fourfifths,
+		.column.reset.medium-one,
+		.column.reset.medium-two,
+		.column.reset.medium-sixth,
+		.column.reset.medium-three,
+		.column.reset.medium-fourth,
+		.column.reset.medium-four,
+		.column.reset.medium-twosixths,
+		.column.reset.medium-third,
+		.column.reset.medium-five,
+		.column.reset.medium-six,
+		.column.reset.medium-half,
+		.column.reset.medium-threesixths,
+		.column.reset.medium-twofourths,
+		.column.reset.medium-seven,
+		.column.reset.medium-eight,
+		.column.reset.medium-foursixths,
+		.column.reset.medium-twothirds,
+		.column.reset.medium-nine,
+		.column.reset.medium-threefourths,
+		.column.reset.medium-ten,
+		.column.reset.medium-fivesixths,
+		.column.reset.medium-eleven,
+		.column.reset.medium-twelve,
+		.column.reset.medium-full {
+			margin-right: 0;
+			margin-left: 0;
+		}
 
 	/*Full-width column*/
 	.column.medium-full,
@@ -178,6 +233,44 @@
 	}
 
 
+
+	/*Fifth*/
+	.column.medium-fifth {
+		width: 16.95%;		/* 16.96 */
+	}
+	.column.medium-twofifths {
+		width: 37.70%;		/* 33.92 + 3.8 */
+	}
+	.column.medium-threefifths {
+		width: 58.45%;		/* 50.88 + 3.8 + 3.8 */
+	}
+	.column.medium-fourfifths {
+		width: 79.20%;		/* 67.84 + 3.8 + 3.8 + 3.8 */
+	}
+		.column.medium-push-fifth {
+			margin-left: 20.45%;
+		}
+			.column.medium-right.push-fifth {
+				margin-right: 20.45%;
+			}
+		.column.medium-push-twofifths {
+			margin-left: 41.50%;
+		}
+			.column.medium-right.push-twofifths {
+				margin-right: 41.50%;
+			}
+		.column.medium-push-threefifths {
+			margin-left: 62.25%;
+		}
+			.column.medium-right.push-threefifths {
+				margin-right: 62.25%;
+			}
+		.column.medium-push-fourfifths {
+			margin-left: 83.00%;
+		}
+			.column.medium-right.push-fourfifths {
+				margin-right: 83.00%;
+			}
 
 	/*Fluid column widths*/
 	.column.medium-one {

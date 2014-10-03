@@ -2,7 +2,7 @@
 Layers CSS 1.1.0 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2014-08-01 09:22 UTC
+2014-10-03 07:25 UTC
 */
 
 /*Basics*/
@@ -179,8 +179,9 @@ blockquote, q {
 /*Forms & interaction*/
 
 /*Use the same box-model and sizing in all browsers*/
-button, input[type="submit"], input[type="reset"], input[type="button"],
-input[type=""], input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], textarea {
+button,
+input,
+textarea {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
@@ -192,29 +193,38 @@ input[type="search"] {
 	-webkit-appearance: textfield;
 	-moz-appearance: textfield;
 }
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
 /*Get IE on the line with checkboxes*/
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
 	box-sizing: border-box;
 	padding: 0;
 }
 
 /*Make button rendering consistent on Firefox 4+*/
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
 
 /*Style clickable inputs consistently on all webkits*/
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	-webkit-appearance: button;
 }
 
 /*Buttons have center-aligned text*/
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	text-align: center;
 }
 
@@ -236,16 +246,37 @@ abbr[title], dfn[title] {
 	text-decoration: underline;
 	cursor: help;
 }
-a, label, button, input[type="submit"], input[type="button"], input[type="reset"], input[type="radio"], input[type="checkbox"], select, option, input[type='image'], input[type='file'] {
+a,
+label,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="radio"],
+input[type="checkbox"],
+select,
+option,
+input[type='image'],
+input[type='file'] {
 	cursor: pointer;
 }
-	.disabled button, .disabled label, .disabled a,
-	button.disabled, label.disabled, a.disabled,
-	.disabled input[type="submit"], .disabled input[type="button"], .disabled input[type="reset"],
-	input[type="submit"].disabled, input[type="button"].disabled, input[type="reset"].disabled {
+	.disabled button,
+	.disabled label,
+	.disabled a,
+	button.disabled,
+	label.disabled,
+	a.disabled,
+	.disabled input[type="submit"],
+	.disabled input[type="button"],
+	.disabled input[type="reset"],
+	input[type="submit"].disabled,
+	input[type="button"].disabled,
+	input[type="reset"].disabled {
 		cursor: default;
 	}
-	a[disabled], button[disabled], input[disabled] {
+	a[disabled],
+	button[disabled],
+	input[disabled] {
 		cursor: default;
 	}
 
@@ -260,11 +291,25 @@ a:focus {
 /*Form elements*/
 
 /*Dimensions*/
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type=""], input:not([type]) {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type=""],
+input:not([type]) {
 	width: 20em;
 	max-width: 90%;
 }
-	input[type="text"].squeeze, input[type="password"].squeeze, input[type="email"].squeeze, input[type="url"].squeeze, input[type="search"].squeeze, input[type="tel"].squeeze, input[type=""].squeeze, input:not([type]).squeeze {
+	input[type="text"].squeeze,
+	input[type="password"].squeeze,
+	input[type="email"].squeeze,
+	input[type="url"].squeeze,
+	input[type="search"].squeeze,
+	input[type="tel"].squeeze,
+	input[type=""].squeeze,
+	input:not([type]).squeeze {
 		width: 14em;
 	}
 textarea {
@@ -432,11 +477,11 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 		clear: both;
 	}
 
-	.column.reset:not(.right) {
-		margin-right: 0 !important;
+	.column.reset {
+		margin-right: 0;
 	}
 		.column.right.reset {
-			margin-left: 0 !important;
+			margin-left: 0;
 		}
 
 
@@ -1085,7 +1130,7 @@ body {
 	-epub-hyphens: auto;
 	hyphens: auto;
 }
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
+input, textarea {
 	word-break: normal;
 }
 
@@ -1192,7 +1237,10 @@ h1, h2, h3 {
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
-.border-box {
+.border-box,
+button.border-box,
+input.border-box,
+textarea.border-box {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
