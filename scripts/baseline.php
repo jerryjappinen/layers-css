@@ -1,15 +1,37 @@
 <?php
 
 /**
-* Baseline.php 0.1
+* # Baseline.php 0.1
 *
 * Released under MIT License
-* Authored by Jerry Jäppinen
+* Authored by Jerry JÃ¤ppinen
 * http://eiskis.net/
 * eiskis@gmail.com
 *
-* Compiled from source on 2013-10-10 13:46 UTC
+* Compiled from source on 2014-01-05 14:51 UTC
 */
+
+
+
+/**
+* Get the first item in an array.
+*
+* @param $array
+*	...
+*
+* @param $traverseChildArrays
+*	If the first item is a child array, treat the stack recursively and find the first non-array value.
+*
+* @return
+*	...
+*/
+function array_first (array $array = array(), $traverseChildArrays = false) {
+	$result = reset($array);
+	if ($traverseChildArrays and is_array($result)) {
+		$result = array_first($result, true);
+	}
+	return $result;
+}
 
 
 
@@ -19,10 +41,10 @@
 * @param $array
 *	...
 *
-* @param $removeChildren
+* @param $removeChildren (optional)
 *	...
 *
-* @param $preserveKeys
+* @param $preserveKeys (optional)
 *	...
 *
 * @return
@@ -57,6 +79,28 @@ function array_flatten (array $array, $removeChildren = false, $preserveKeys = f
 
 
 /**
+* Get the last item in an array.
+*
+* @param $array
+*	...
+*
+* @param $traverseChildArrays
+*	If the last item is a child array, treat the stack recursively and find the last non-array value.
+*
+* @return
+*	...
+*/
+function array_last (array $array = array(), $traverseChildArrays = false) {
+	$result = end($array);
+	if ($traverseChildArrays and is_array($result)) {
+		$result = array_last($result, true);
+	}
+	return $result;
+}
+
+
+
+/**
 * Traverse a a multidimensional array based on given keys.
 *
 * I.e. $subject[ $keys[0] ][ $keys[1] ] ...
@@ -64,7 +108,7 @@ function array_flatten (array $array, $removeChildren = false, $preserveKeys = f
 * @param $subject
 *	...
 *
-* @param $keys
+* @param $keys (optional)
 *	...
 *
 * @return
@@ -109,7 +153,43 @@ function array_traverse (array $subject, $keys = array()) {
 
 
 /**
-* Allow giving a different last glue for implode
+* implode() an array, wrapping each item in $prefix and $suffix, optionally separated with $glue.
+*
+* @param $prefix
+*	...
+*
+* @param $suffix
+*	...
+*
+* @param $pieces
+*	...
+*
+* @param $glue (optional)
+*	...
+*
+* @return
+*	...
+*/
+function implode_wrap ($prefix = '', $suffix = '', $pieces = array(), $glue = '') {
+	$realPrefix = $prefix;
+	$realSuffix = $suffix;
+	$realPieces = $pieces;
+	$realGlue = $glue;
+
+	// Allow giving glue and array in reverse order, like implode() does
+	if (is_array($prefix)) {
+		$realPieces = $prefix;
+		$realPrefix = $suffix;
+		$realSuffix = $pieces;
+	}
+
+	return empty($pieces) ? '' : $realPrefix.limplode($realSuffix.$realGlue.$realPrefix, $realPieces).$realSuffix;
+}
+
+
+
+/**
+* Allow giving a different last glue for implode.
 *
 * @param $glue
 *	...
@@ -117,7 +197,7 @@ function array_traverse (array $subject, $keys = array()) {
 * @param $pieces
 *	...
 *
-* @param $lastGlue
+* @param $lastGlue (optional)
 *	...
 *
 * @return
@@ -156,7 +236,7 @@ function limplode ($glue = '', $pieces = array(), $lastGlue = false) {
 
 
 /**
-* Make sure value is array, convert if needed
+* Make sure value is array, convert if needed.
 *
 * @param $value
 *	...
@@ -385,49 +465,109 @@ function remove_file ($path) {
 /**
 * Run a script file cleanly (no visible variables left around).
 *
-* @param 1
+* @param 1 ($file)
 *   Path to a file.
 *
-* @param 2
+* @param 2 ($scriptVariables)
 *   Array of variables and values to be created for the script.
+*
+* @param 3 ($queue)
+*   Array of other scripts to include, with variables carried over from previous scripts. When a missing file is encountered, execution on the queue stops.
 *
 * @return 
 *   String content of output buffer after the script has run, false on failure.
 */
 function run_script () {
 	$output = false;
+	$num_args = func_num_args();
 
-	$path = func_get_arg(0);
-	if (is_file($path)) {
-		unset($path);
+	if ($num_args) {
 
-		// Set up variables for the script
-		foreach (func_get_arg(1) as $____key => $____value) {
-			if (is_string($____key) and !in_array($____key, array('____key', '____value'))) {
-				${$____key} = $____value;
+		// File must exist
+		$file = func_get_arg(0);
+		if (is_file($file)) {
+
+			// Set up variables for the script
+			if ($num_args > 1) {
+				foreach (func_get_arg(1) as $____key => $____value) {
+					if (is_string($____key) and !in_array($____key, array('____key', '____value'))) {
+						${$____key} = $____value;
+					}
+				}
+				unset($____key, $____value);
 			}
+
+			// Clean up variables
+			unset($num_args, $output, $file);
+
+			// Run each script
+			ob_start();
+
+			// Include script
+			include func_get_arg(0);
+
+			// Store script variables
+			$definedVars = get_defined_vars();
+
+			// Catch output reliably
+			$output = ob_get_contents();
+			if (!is_string($output)) {
+				$output = '';
+			}
+
+			// Clear buffer
+			ob_end_clean();
+
+			// More scripts to include
+			if (func_num_args() > 2) {
+
+				// Normalize queue
+				$queue = func_get_arg(2);
+				$queue = array_flatten(to_array($queue));
+				$next = array_shift($queue);
+
+				// Run other scripts
+				$others = run_script($next, $definedVars, $queue);
+				if ($others !== false) {
+					return $output.$others;
+				}
+
+			}
+
 		}
-		unset($____key, $____value);
-
-		// Run each script
-		ob_start();
-
-		// Include script
-		include func_get_arg(0);
-
-		// Catch output reliably
-		$output = ob_get_contents();
-		if ($output === false) {
-			$output = '';
-		}
-
-		// Clear buffer
-		ob_end_clean();
 
 	}
 
 	// Return any output
 	return $output;
+}
+
+
+
+/**
+* Shortcut to running a script consisting of multiple files with run_script.
+*
+* @param 1 ($files)
+*   Path to the script files.
+*
+* @param 2 ($scriptVariables)
+*   Array of variables and values to be created for the script (initially).
+*
+* @return 
+*   String content of output buffer after the script has run, false on failure.
+*/
+function run_scripts ($files = array(), $scriptVariables = array()) {
+	$queue = array();
+	$first = '';
+
+	// Normalize
+	$files = array_flatten(to_array($files));
+	if (count($files) >= 1) {
+		$first = array_shift($files);
+		$queue = $files;
+	}
+
+	return run_script($first, $scriptVariables, $queue);
 }
 
 
@@ -445,7 +585,7 @@ function glob_dir ($path = '') {
 
 	// Normalize path
 	if (!empty($path)) {
-		$path = suffix($path, '/');
+		$path = preg_replace('/(\*|\?|\[)/', '[$1]', suffix($path, '/'));
 	}
 
 	// Find directories in the path
@@ -491,7 +631,7 @@ function glob_files ($path = '', $filetypes = array()) {
 
 	// Handle path input
 	if (!empty($path)) {
-		$path = suffix($path, '/');
+		$path = preg_replace('/(\*|\?|\[)/', '[$1]', suffix($path, '/'));
 	}
 
 	// Do the glob()
@@ -589,14 +729,20 @@ function rglob_files ($path = '', $filetypes = array()) {
 /**
 * Shorthand for creating a new object, making chainable object creation possible.
 *
-* @param $object
-*	...
+* @param $classname
+*	Name of the object's class as a string
+*
+* @param $parameter [, $parameter2 ...] (optional)
+*	Any number of parameters to be passed to the constructor of the new object.
 *
 * @return
-*	The created object.
+*	The newly created object.
 */
-function create_object ($object) {
-	return $object;
+function create_object ($classname, $parameter = null) {
+	$parameters = func_get_args();
+	$classname = array_shift($parameters);
+	$class = new ReflectionClass($classname);
+	return $class->newInstanceArgs($parameters);
 }
 
 

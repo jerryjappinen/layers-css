@@ -1,0 +1,17 @@
+
+#
+#   SETTINGS
+#
+
+# Enable compression for HTML, CSS and JavaScript
+AddOutputFilterByType DEFLATE text/plain text/html text/css text/javascript application/javascript
+
+# Allow URL rewrites (uncomment "+FollowSymLinks" line if needed on your server)
+# Options +FollowSymLinks
+RewriteEngine on
+
+# Disable directory listings
+# Options -Indexes
+
+# Might be required for CORS (uncomment if needed on your server)
+# Header set Access-Control-Allow-Origin *

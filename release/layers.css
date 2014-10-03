@@ -1,11 +1,16 @@
 /*
-Layers CSS 1.0.6 
+Layers CSS 1.1.0 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2014-04-10 13:32 UTC
+2014-10-03 07:47 UTC
 */
 
 /*Basics*/
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -179,8 +184,9 @@ blockquote, q {
 /*Forms & interaction*/
 
 /*Use the same box-model and sizing in all browsers*/
-button, input[type="submit"], input[type="reset"], input[type="button"],
-input[type=""], input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], textarea {
+button,
+input,
+textarea {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
@@ -192,29 +198,38 @@ input[type="search"] {
 	-webkit-appearance: textfield;
 	-moz-appearance: textfield;
 }
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
 /*Get IE on the line with checkboxes*/
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
 	box-sizing: border-box;
 	padding: 0;
 }
 
 /*Make button rendering consistent on Firefox 4+*/
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
 
 /*Style clickable inputs consistently on all webkits*/
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	-webkit-appearance: button;
 }
 
 /*Buttons have center-aligned text*/
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	text-align: center;
 }
 
@@ -236,16 +251,37 @@ abbr[title], dfn[title] {
 	text-decoration: underline;
 	cursor: help;
 }
-a, label, button, input[type="submit"], input[type="button"], input[type="reset"], input[type="radio"], input[type="checkbox"], select, option, input[type='image'], input[type='file'] {
+a,
+label,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="radio"],
+input[type="checkbox"],
+select,
+option,
+input[type='image'],
+input[type='file'] {
 	cursor: pointer;
 }
-	.disabled button, .disabled label, .disabled a,
-	button.disabled, label.disabled, a.disabled,
-	.disabled input[type="submit"], .disabled input[type="button"], .disabled input[type="reset"],
-	input[type="submit"].disabled, input[type="button"].disabled, input[type="reset"].disabled {
+	.disabled button,
+	.disabled label,
+	.disabled a,
+	button.disabled,
+	label.disabled,
+	a.disabled,
+	.disabled input[type="submit"],
+	.disabled input[type="button"],
+	.disabled input[type="reset"],
+	input[type="submit"].disabled,
+	input[type="button"].disabled,
+	input[type="reset"].disabled {
 		cursor: default;
 	}
-	a[disabled], button[disabled], input[disabled] {
+	a[disabled],
+	button[disabled],
+	input[disabled] {
 		cursor: default;
 	}
 
@@ -260,11 +296,25 @@ a:focus {
 /*Form elements*/
 
 /*Dimensions*/
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type=""], input:not([type]) {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type=""],
+input:not([type]) {
 	width: 20em;
 	max-width: 90%;
 }
-	input[type="text"].squeeze, input[type="password"].squeeze, input[type="email"].squeeze, input[type="url"].squeeze, input[type="search"].squeeze, input[type="tel"].squeeze, input[type=""].squeeze, input:not([type]).squeeze {
+	input[type="text"].squeeze,
+	input[type="password"].squeeze,
+	input[type="email"].squeeze,
+	input[type="url"].squeeze,
+	input[type="search"].squeeze,
+	input[type="tel"].squeeze,
+	input[type=""].squeeze,
+	input:not([type]).squeeze {
 		width: 14em;
 	}
 textarea {
@@ -323,11 +373,18 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	width: 100%;
 	clear: both;
 	float: none;
+	*zoom: 1;
 }
 .row-content {
-	margin: 0 auto;
 	max-width: 70em;
+	margin: 0 auto;
+	*zoom: 1;
 }
+	.row:after, .row-content:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
 	.row-content.buffer,
 	.row-content.buffer-top {
 		padding-top: 2%;
@@ -350,53 +407,93 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	}
 
 /*Column basics (12-based fluid grid)*/
-.column {
+.column.one,
+.column.two,
+.column.sixth,
+.column.fifth,
+.column.three,
+.column.fourth,
+.column.four,
+.column.twofifths,
+.column.twosixths,
+.column.third,
+.column.five,
+.column.six,
+.column.half,
+.column.threefifths,
+.column.threesixths,
+.column.twofourths,
+.column.seven,
+.column.eight,
+.column.fourfifths,
+.column.foursixths,
+.column.twothirds,
+.column.nine,
+.column.threefourths,
+.column.ten,
+.column.fivefifths,
+.column.fivesixths,
+.column.eleven,
+.column.twelve,
+.column.full {
 	clear: none;
 	float: left;
 	min-height: 1px;
-}
-	.column.first,
-	.column.full,
-	.column.twelve,
-	.column.center {
-		clear: both;
-	}
-	.column.right {
-		float: right;
-	}
-	.column.center, .column.right.center {
-		float: none;
-	}
-
-
-
-/*Fluid columns*/
-.column {
 	margin-left: 0;
 	margin-right: 3.8%;
 }
-	.column.last,
+	.column.right.one,
+	.column.right.two,
+	.column.right.fifth,
+	.column.right.sixth,
+	.column.right.three,
+	.column.right.fourth,
+	.column.right.four,
+	.column.right.twofifths,
+	.column.right.twosixths,
+	.column.right.third,
+	.column.right.five,
+	.column.right.six,
+	.column.right.half,
+	.column.right.threefifths,
+	.column.right.threesixths,
+	.column.right.twofourths,
+	.column.right.seven,
+	.column.right.eight,
+	.column.right.fourfifths,
+	.column.right.foursixths,
+	.column.right.twothirds,
+	.column.right.nine,
+	.column.right.threefourths,
+	.column.right.ten,
+	.column.right.fivefifths,
+	.column.right.fivesixths,
+	.column.right.eleven,
+	.column.right.twelve,
+	.column.right.full {
+		float: right;
+		margin-right: 0;
+		margin-left: 3.8%;
+	}
+
+	.column.first,
+	.column.full,
+	.column.twelve {
+		clear: both;
+	}
+
 	.column.reset {
-		margin-right: 0 !important;
+		margin-right: 0;
 	}
-
-/*Reverse stacking*/
-.column.right {
-	margin-right: 0;
-	margin-left: 3.8%;
-}
-	.column.right.last,
-	.column.right.reset {
-		margin-left: 0 !important;
-	}
-
-/*Centered columns*/
-.column.center, .column.right.center {
-	margin-right: auto !important;
-	margin-left: auto !important;
-}
+		.column.right.reset {
+			margin-left: 0;
+		}
 
 
+
+/**
+* Column widths
+*/
 
 /*Full-width column*/
 .column.full,
@@ -404,7 +501,43 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	width: 100%;
 }
 
-
+/*Fifth*/
+.column.fifth {
+	width: 16.95%;		/* 16.96 */
+}
+.column.twofifths {
+	width: 37.70%;		/* 33.92 + 3.8 */
+}
+.column.threefifths {
+	width: 58.45%;		/* 50.88 + 3.8 + 3.8 */
+}
+.column.fourfifths {
+	width: 79.20%;		/* 67.84 + 3.8 + 3.8 + 3.8 */
+}
+	.column.push-fifth {
+		margin-left: 20.45%;
+	}
+		.column.right.push-fifth {
+			margin-right: 20.45%;
+		}
+	.column.push-twofifths {
+		margin-left: 41.50%;
+	}
+		.column.right.push-twofifths {
+			margin-right: 41.50%;
+		}
+	.column.push-threefifths {
+		margin-left: 62.25%;
+	}
+		.column.right.push-threefifths {
+			margin-right: 62.25%;
+		}
+	.column.push-fourfifths {
+		margin-left: 83.00%;
+	}
+		.column.right.push-fourfifths {
+			margin-right: 83.00%;
+		}
 
 /*Fluid column widths*/
 .column.one {
@@ -552,6 +685,9 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.sixth.reset {
 	width: 16.65%;
 }
+.column.fifth.reset {
+	width: 20%;
+}
 .column.three.reset,
 .column.fourth.reset {
 	width: 25%;
@@ -560,6 +696,9 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.twosixths.reset,
 .column.third.reset {
 	width: 33.3%;
+}
+.column.twofifths.reset {
+	width: 40%;
 }
 .column.five.reset {
 	width: 41.65%;
@@ -573,6 +712,9 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.seven.reset {
 	width: 58.3%;
 }
+.column.threefifths.reset {
+	width: 60%;
+}
 .column.eight.reset,
 .column.foursixths.reset,
 .column.twothirds.reset {
@@ -581,6 +723,9 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 .column.nine.reset,
 .column.threefourths.reset {
 	width: 75%;
+}
+.column.fourfifths.reset {
+	width: 80%;
 }
 .column.ten.reset,
 .column.fivesixths.reset {
@@ -605,6 +750,12 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	.column.reset.right.push-sixth {
 		margin-right: 16.65%;
 	}
+.column.reset.push-fifth {
+	margin-left: 20%;
+}
+	.column.reset.right.push-fifth {
+		margin-right: 20%;
+	}
 .column.reset.push-three,
 .column.reset.push-fourth {
 	margin-left: 25%;
@@ -622,6 +773,12 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	.column.reset.right.push-twosixths,
 	.column.reset.right.push-third {
 		margin-right: 33.3%;
+	}
+.column.reset.push-twofifths {
+	margin-left: 40%;
+}
+	.column.reset.right.push-twofifths {
+		margin-right: 40%;
 	}
 .column.reset.push-five {
 	margin-left: 41.65%;
@@ -647,6 +804,12 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	.column.reset.right.push-seven {
 		margin-right: 58.3%;
 	}
+.column.reset.push-threefifths {
+	margin-left: 60%;
+}
+	.column.reset.right.push-threefifths {
+		margin-right: 60%;
+	}
 .column.reset.push-eight,
 .column.reset.push-foursixths,
 .column.reset.push-twothirds {
@@ -665,6 +828,12 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 	.column.reset.right.push-threefourths {
 		margin-right: 75%;
 	}
+.column.reset.push-fourfifths {
+	margin-left: 80%;
+}
+	.column.reset.right.push-fourfifths {
+		margin-right: 80%;
+	}
 .column.reset.push-ten,
 .column.reset.push-fivesixths {
 	margin-left: 83.35%;
@@ -678,6 +847,16 @@ input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
 }
 	.column.reset.right.push-eleven {
 		margin-right: 91.7%;
+	}
+
+
+
+/*Last in line*/
+.column.last {
+	margin-right: 0;
+}
+	.column.right.last {
+		margin-left: 0;
 	}
 
 
@@ -956,7 +1135,7 @@ body {
 	-epub-hyphens: auto;
 	hyphens: auto;
 }
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"] {
+input, textarea {
 	word-break: normal;
 }
 
@@ -1063,7 +1242,10 @@ h1, h2, h3 {
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
-.border-box {
+.border-box,
+button.border-box,
+input.border-box,
+textarea.border-box {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;

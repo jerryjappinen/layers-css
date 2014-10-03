@@ -1,6 +1,6 @@
 
 /**
-* Custom behavior
+* Scrolling and menu watching
 */
 
 // Scrolling behavior
@@ -71,7 +71,7 @@ var watchWaypoints = function () {
 		}
 
 
-	// We're up in the intro of Timo
+	// We're up there
 	} else {
 		removeClass(menu, 'fixed');
 		currentWaypoint = 0;
@@ -138,21 +138,12 @@ var hasClass = function (element, className) {
 
 
 /**
-* Browser tabs
-*/
-
-
-
-/**
 * Document skeleton & configs
 */
 
-var downloadLink = document.getElementsByClassName('download')[0];
-var firstSection = document.getElementById('grid');
-var intro = document.getElementsByClassName('row-intro')[0];
-
 var menu = document.getElementById('menu');
 var menuLinks = menu.getElementsByTagName('a');
+var menuPrev = document.getElementsByClassName('display')[0];
 
 var browser = document.getElementsByClassName('browser')[0];
 var browserTabs = browser.getElementsByClassName('tabbar')[0].getElementsByTagName('a');
@@ -160,37 +151,150 @@ var browserSandbox = browser.getElementsByTagName('iframe')[0];
 var browserTrigger = browser.getElementsByClassName('trigger')[0];
 var browserLink = browser.getElementsByClassName('extracontrols')[0].getElementsByClassName('open')[0].getElementsByTagName('a')[0];
 
-var menuPrev = document.getElementsByClassName('display')[0];
 var sourceContainers = document.getElementsByClassName('source');
-var tabGuard = document.getElementsByClassName('tabGuard')[0];
 var menuWaypoints = [];
 var currentWaypoint = 0;
-var highlightDownload = function () {
-	addClass(intro, 'highlightDownload');
-};
-var removeHighlightDownload = function () {
-	removeClass(intro, 'highlightDownload');
-};
 
 
 
 /**
-* App launch & bindings
+* App
 */
 
+var DownloadManager = function () {
+	var self = this;
+
+	// Default values
+	self.defaults = {
+		em: [0, 40, 70],
+		px: [0, 640, 1024]
+	};
+
+	// Constants
+	self.generatorUrl = 'responsive/';
+	self.breakpointNames = ['tiny', 'small', 'medium', 'large', 'huge', 'extra'];
+	self.coreSize = 15.5;
+	self.breakpointSize = 12.2;
+	self.compressionRatio = 0.25;
+
+	// Active parameters
+	self.breakpoints = ko.observableArray((function () {
+		var results = [];
+		for (var i = 0; i < self.breakpointNames.length; i++) {
+			results.push(new Breakpoint(self.breakpointNames[i], i, (self.defaults.em[i] ? self.defaults.em[i] : 0), (self.defaults.px[i] ? self.defaults.px[i] : 0)));
+		}
+		return results;
+	})());
+
+	// Computed active parameters
+	self.breakpointCount = ko.computed(function () {
+		var count = 0;
+		var breakpoints = self.breakpoints();
+		for (var i = 0; i < breakpoints.length; i++) {
+			if (!breakpoints[i].isEmpty()) {
+				count++;
+			}
+		}
+		return count;
+	});
+
+	self.estimatedSize = ko.computed(function () {
+		return Math.floor(self.coreSize + self.breakpointCount() * self.breakpointSize);
+	});
+
+	self.estimatedSizeCompressed = ko.computed(function () {
+		return Math.floor(self.compressionRatio * self.estimatedSize());
+	});
+
+
+
+	// Behavior
+	self.url = ko.computed(function () {
+		if (!self.breakpointCount()) {
+			return '';
+		} else {
+
+			var result = [];
+			var breakpoints = self.breakpoints();
+			for (var i = 0; i < breakpoints.length; i++) {
+				var b = breakpoints[i];
+				if (!b.isEmpty()) {
+					result.push('breakpoint' + i + '=' + b.name() + ',' + b[b.unit()]() + b.unit());
+				}
+			}
+			return self.generatorUrl + '?' + result.join('&');
+
+		}
+	});
+
+};
+
+var Breakpoint = function (name, i, em, px) {
+	var self = this;
+
+	// Basic parameters
+	self.i = ko.observable(i);
+	self.name = ko.observable(name);
+	self.unit = ko.observable('em');
+	self.em = ko.observable(em > 0 ? em : 0);
+	self.px = ko.observable(px > 0 ? px : 0);
+
+	// Validations
+	self.em.subscribe(function (newValue) {
+		if (newValue !== parseInt(newValue)) {
+			if (newValue > 0) {
+				self.em(parseInt(newValue));
+			} else {
+				self.em(0);
+			}
+		}
+	});
+
+	self.px.subscribe(function (newValue) {
+		if (newValue !== parseInt(newValue)) {
+			if (newValue > 0) {
+				self.px(parseInt(newValue));
+			} else {
+				self.px(0);
+			}
+		}
+	});
+
+	self.isEmpty = ko.computed(function () {
+		return self.unit() === 'px' ? (self.px() <= 0) : (self.em() <= 0);
+	});
+
+	self.css = ko.computed(function () {
+		return self.unit() + (self.isEmpty() ? ' empty' : '');
+	});
+
+	self.emTabindex = ko.computed(function () {
+		return self.unit() === 'em' ? self.i() + 1: '';
+	});
+
+	self.pxTabindex = ko.computed(function () {
+		return self.unit() === 'px' ? self.i() + 1: '';
+	});
+
+	self.empty = function () {
+		return (self[self.unit()] <= 0);
+	};
+
+	self.toggle = function () {
+		return self.unit() === 'px' ? self.unit('em') : self.unit('px');
+	};
+
+};
+
+var app = new DownloadManager();
+
+
+
+/**
+* Init
+*/
 window.onload = function () {
 	var i;
-
-	// Highlight download link
-	downloadLink.onmouseover = highlightDownload;
-	downloadLink.onfocus = highlightDownload;
-	downloadLink.onmouseout = removeHighlightDownload;
-	downloadLink.onblur = removeHighlightDownload;
-
-	// Cycle tabindex
-	tabGuard.onfocus = function () {
-		downloadLink.focus();
-	};
 
 	// Bind menu links to scrolling
 	for (i = 0; i < menuLinks.length; i++) {
@@ -249,6 +353,11 @@ window.onload = function () {
 	// Watch waypoints when scrolling
 	watchWaypoints();
 	window.onscroll = watchWaypoints;
+
+
+
+	// Ko
+	ko.applyBindings(app);
 
 };
 

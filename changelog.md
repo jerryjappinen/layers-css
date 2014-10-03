@@ -5,6 +5,34 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
+## 1.1.0 - Sunday October 3, 2014
+
+### To do
+
+### Miscellaneous fixes
+
+- `width: 100%; height: 100%;` added to normalizations for `html` and `body`.
+- Some `input` definitions are less specific.
+- Resetting border-radius in `.plain` inputs and buttons.
+- Also added `.fifth`-width columns.
+- `.row` and `.row-content` clear floats. However, they're still completely optional.
+
+### New responsive adjustments !important;
+
+The Layers CSS grid now supports columns set to arbitrary break points. The stock responsive adjustments set uses 4 break points.
+
+Regular columns continue to never break unless explicitly set.
+
+`.center` columns are no longer supported. To reliably center content, you can
+
+1. adjust the `max-width` or a `row-container`,
+2. `.keep-center` a container element while setting a sensible `max-width`, or
+3. `.push-` a `.column` (responsive versions available).
+
+Furthermore, `.limit-` classes based on the breakpoints are now available. Refer to the documentation for more info.
+
+
+
 ## 1.0.6 - Saturday April 5, 2014
 
 Switched width and max-width on text fields in `forms.css`. They're more intuitive and easier to override this way.

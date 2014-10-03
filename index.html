@@ -27,7 +27,7 @@
 		<link rel="shortcut icon" href="index/images/logo.ico" type="image/x-icon">
 
 		<meta property="og:title" content="Layers CSS" />
-		<meta property="og:description" content="A lightweight, unobtrusive, style-agnostic CSS pack. Build your look on the web, not Twitter's &ndash; and build it fluid. Comes with no bullshit." />
+		<meta property="og:description" content="A lightweight, unobtrusive, style-agnostic CSS pack. Build your look on the web, not Twitter's &ndash; and build it fluid. Comes with zero bullshit." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://eiskis.net/layers/" />
 		<meta property="og:image" content="http://eiskis.net/layers/index/images/layers.png" />
@@ -44,56 +44,58 @@
 		<div class="row row-intro dark">
 			<div class="row-content buffer">
 
-				<h1 class="pageTitle squeeze-top"><a href="./">Layers <small>CSS</small></a></h1>
+				<h1 class="pageTitle squeeze"><a href="./">Layers <small>CSS</small></a></h1>
 
 				<p class="pageTitleImage invisible"><img src="index/images/layers.png" height="480" width="480" alt="Layers CSS" title="Layers CSS"></p>
 
-				<div class="column half">
-					<div class="buffer-right">
+				<div class="column small-half medium-seven excerpt">
 
-						<p>Lightweight. Unobtrusive. Style-agnostic. Build <em>your</em> look on the web, not Twitter's &ndash; and build it fluid. Layers CSS is aimed for practical use and comes with zero bullshit.</p>
+					<p class="squeeze-top">Lightweight. Unobtrusive. Style-agnostic. Build <em>your</em> look on the web, not Twitter's &ndash; and build it fluid.</p>
 
-						<ul>
-							<li>Normalizations &amp; sensible defaults</li>
-							<li>Fluid grid + layout tools</li>
-							<li>Preserves native form styles by default</li>
-							<li>No <code>px</code> definitions</li>
-							<li>No colors, no borders, no rounded corners</li>
-							<li>No dependencies</li>
-						</ul>
+					<p>Layers CSS is a CSS framework aimed for practical use cases. It comes with a small footprint and zero bullshit.</p>
 
-						<p class="discreet">Maintained on <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank">Bitbucket</a> by <a href="https://twitter.com/Eiskis" target="_blank">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank">eiskis.net</a>.</p>
+					<!-- <p class="discreet">Developed by <a href="https://twitter.com/Eiskis" target="_blank">@Eiskis</a> from <a href="http://eiskis.net/" target="_blank">eiskis.net</a>.</p> -->
 
-						<p class="reset-bottom"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://eiskis.net/layers" data-text="Layers CSS - A clean, no-bullshit CSS pack" data-via="Eiskis" data-size="large" data-related="Eiskis" data-count="none" data-hashtags="layerscss">Tweet</a></p>
+					<!-- <p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://eiskis.net/layers" data-text="Layers CSS - A clean, no-bullshit CSS pack" data-via="Eiskis" data-size="large" data-related="Eiskis" data-count="none" data-hashtags="layerscss">Share this on Twitter</a></p> -->
 
-					</div>
 				</div>
 
-				<div class="column half last">
-					<div class="buffer-right">
+				<div class="column small-half small-last medium-five medium-last">
 
-						<h2><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" class="download" tabindex="1">Download 1.0.6</a> layers.min.css, 15 kb</h2>
+					<ul class="features">
+						<li>Normalizations &amp; sensible defaults</li>
+						<li>Fluid grid + progressively enhanced columns</li>
+						<li>Preserves native form styles by default</li>
+						<li>No <code>px</code> definitions</li>
+						<li>No colors, no borders, no rounded corners</li>
+						<li>No dependencies</li>
+					</ul>
+					<div class="clear"></div>
 
-						<dl class="">
-
-							<dt><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/responsive.min.css" target="_blank" tabindex="2">Responsive adjustments</a></dt>
-							<dd>Break all columns, adjust font size on small screens.</dd>
-
-							<dt><a href="https://bitbucket.org/Eiskis/layers-css/src/default/extras/" target="_blank" tabindex="3">Extras</a></dt>
-							<dd>Default color schemes, typography etc.</dd>
-
-							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.css" target="_blank" tabindex="4">Development version</a></dt>
-
-							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="5">Changelog</a></dt>
-
-							<dt class="discreet"><a href="https://bitbucket.org/Eiskis/layers-css/src/tip/source/layers" target="_blank" tabindex="6">Source code</a></dt>
-
-						</dl>
-						<div class="clear"></div>
-
-					</div>
 				</div>
+
 				<div class="clear"></div>
+
+				<div class="download limit" id="download">
+
+					<h3 class="discreet">Download &amp; customize</h3>
+
+					<ul class="plain keep-center clear-after breakpoints" data-bind="foreach: breakpoints">
+						<li class="column reset medium-third small-half" data-bind="css: css"><div class="center"><label class="transition em"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: em, attr: { tabindex: emTabindex }"></label><label class="transition px"><span class="name"><span data-bind="text: name"></span>: </span> <input type="text" class="plain text" data-bind="value: px, attr: { tabindex: pxTabindex }"></label><a href="." data-bind="click: toggle"><code class="transition em">em</code> <code class="transition px">px</code></a></div></li>
+					</ul>
+					<div class="clear"></div>
+
+					<div class="go">
+
+						<p><a href="https://bitbucket.org/Eiskis/layers-css/raw/default/release/layers.min.css" target="_blank" tabindex="7" class="button">Download core</a><a href="" data-bind="attr: { href: url }, css: { disabled: (breakpointCount() < 1)}" target="_blank" tabindex="8" class="button secondary">Download breakpoints</a></p>
+
+						<p class="discreet">Estimated size <span data-bind="text: estimatedSize"></span> kb uncompressed, <span data-bind="text: estimatedSizeCompressed"></span> kb gzipped. Check out <a href="https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md" target="_blank" tabindex="9">v. 1.1 changelog</a> and <a href="https://bitbucket.org/Eiskis/layers-css/" target="_blank" tabindex="10">source code</a>.</p>
+
+						<p><a href="https://twitter.com/share?url=http%3A%2F%2Feiskis.net%2Flayers&amp;related=Eiskis&amp;via=Eiskis&amp;hashtags=layerscss&amp;text=Layers%20CSS%20-%20A%20clean,%20no-bullshit%20CSS%20pack" target="_blank">Share on Twitter</a></p>
+
+					</div>
+
+				</div>
 
 			</div>
 		</div>
@@ -106,9 +108,9 @@
 
 				<h1 class="display squeeze-top reset-bottom">Reference</h1>
 
-				<ul id="menu" class="plain reset"><li><a href="#grid" tabindex="7">Grid</a></li><li><a href="#tools" tabindex="8">Tools</a></li><li><a href="#lists" tabindex="9">Lists</a></li><li><a href="#tables" tabindex="10">Tables</a></li><li><a href="#forms" tabindex="11">Forms</a></li><li><a href="#samples" tabindex="12">Samples</a></li></ul>
+				<ul id="menu" class="plain reset"><li><a href="#grid">Grid</a></li><li><a href="#tools">Tools</a></li><li><a href="#lists">Lists</a></li><li><a href="#tables">Tables</a></li><li><a href="#forms">Forms</a></li><li><a href="#samples">Samples</a></li></ul>
 
-				<p class="invisible"><a href="#" class="tabGuard" tabindex="13">Tab guard</a></p>
+				<p class="invisible"><a href="." class="tabGuard">Tab guard</a></p>
 
 				<p class="description">Colors and visuals below are created by custom styles, not Layers CSS.</p>
 
@@ -179,7 +181,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
@@ -229,7 +231,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-traditional.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
@@ -237,32 +239,7 @@
 
 					<div class="row-content buffer-top buffer-right buffer-left even description">
 
-						<p>You can <code>.center</code> columns:</p>
-
-					</div>
-
-					<div class="colored clear-after">
-
-						<div class="column ten center">
-							<p><code>.column.ten.<strong>center</strong></code></p>
-						</div>
-						<div class="column half center">
-							<p><code>.column.half.<strong>center</strong></code></p>
-						</div>
-
-					</div>
-
-					<!-- Source -->
-					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
-						<pre data-src="index/samples/grid-center.html" class="sourceContent reset buffer even collapsed"></pre>
-					</div>
-
-
-
-					<div class="row-content buffer-top buffer-right buffer-left even description">
-
-						<p>...or <code>.push-</code> columns to shift them further from their default position:</p>
+						<p>You can <code>.push-</code> columns to shift them further from their default position:</p>
 
 					</div>
 
@@ -280,7 +257,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-push.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -306,7 +283,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-right.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -346,14 +323,14 @@
 
 
 
-					<div class="column half reset center">
-						<p><code>column.half.reset.center</code></p>
+					<div class="column half push-fourth reset">
+						<p><code>column.half.push-fourth.reset</code></p>
 					</div>
 					<div class="clear"></div>
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-nogutters.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -382,7 +359,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-fixedfluid.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -407,7 +384,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/grid-fixedfluid-right.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -436,6 +413,91 @@
 
 					<div class="row-content buffer even description">
 
+						<h3>Progressive enhancement</h3>
+
+						<p>The columns we used in the previous samples never break. We can extend them to present different layouts in viewports larger than specific breakpoints (which you can customize in the <a href="#download">download section</a>).</p>
+
+						<p>Here, users see <strong>2</strong> columns by default, <strong>3 + 1</strong> on <code>.small-</code> screens and <strong>4</strong> on <code>.large-</code> screens:</p>
+
+					</div>
+
+					<div class="column half small-third medium-fourth colored">
+						<p><code>.column.half.small-third.medium-fourth</code></p>
+					</div>
+					<div class="column half small-third medium-fourth last">
+						<p><code>.column.half.last.small-third.medium-fourth</code></p>
+					</div>
+					<div class="column half small-third medium-fourth small-last colored">
+						<p><code>.column.half.small-third.small-last.medium-fourth</code></p>
+					</div>
+					<div class="column half small-full medium-fourth medium-last last">
+						<p><code>.column.half.last.small-full.medium-fourth.medium-last</code></p>
+					</div>
+					<div class="clear"></div>
+
+					<!-- Source -->
+					<div class="source collapsed">
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<pre data-src="index/samples/responsive.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>Remember to mark the <code>.last-</code> column for each screen size when you're not <code>.resetting</code> gutters.</p>
+
+						<p>We can make more complicated arrangements without nested columns:</p>
+
+					</div>
+
+					<div class="column small-third medium-full large-half colored">
+						<p><code>.column.small-third.medium-full.large-half</code></p>
+					</div>
+					<div class="column small-twothirds small-last medium-half large-fourth">
+						<p><code>.column.small-twothirds.small-last.medium-half.large-fourth</code></p>
+					</div>
+					<div class="column medium-half medium-last large-fourth large-last colored">
+						<p><code>.column.medium-half.medium-last.large-fourth.large-last</code></p>
+					</div>
+					<div class="clear"></div>
+
+					<!-- Source -->
+					<div class="source collapsed">
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<pre data-src="index/samples/responsive-advanced.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
+
+
+					<div class="row-content buffer-top buffer-right buffer-left even description">
+
+						<p>You can also <code>.-break</code> columns:</p>
+
+					</div>
+
+					<div class="column reset fourth medium-third large-break">
+						<p><code>.column.reset.fourth.medium-third.large-break</code></p>
+					</div>
+					<div class="column reset fourth medium-twothirds medium-last large-break colored">
+						<p><code>.column.reset.fourth.medium-twothirds.medium-last.large-break</code></p>
+					</div>
+					<div class="column reset half last medium-break">
+						<p><code>.column.reset.half.last.medium-break</code></p>
+					</div>
+					<div class="clear"></div>
+
+					<!-- Source -->
+					<div class="source collapsed">
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<pre data-src="index/samples/responsive-break.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
+
+
+
+					<div class="row-content buffer even description">
+
 						<h3>Rows</h3>
 
 						<p><code>.rows</code> are also available. <code>.row-content</code> is aligned to the center of its parent, and controlling its <strong>max-width</strong> results in a layout that scales down automatically but doesn't get too wide on large screens.</p>
@@ -458,7 +520,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/rows.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -484,7 +546,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/rows-buffer.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -511,7 +573,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/rows-evenbuffer.html" class="sourceContent reset buffer even collapsed"></pre>
 					</div>
 
@@ -635,6 +697,34 @@
 						</div>
 					</div>
 					<div class="clear"></div>
+
+
+
+					<div class="row-content buffer even description">
+
+						<h4>Limited column widths</h4>
+
+						<p>Sometimes you need containers that are not too wide even when there's screen space. `limit-` classes come with your custom-set breakpoints and do just this. Multiple limit classes can be used, and they will work progressively.</p>
+
+						<p>They can be applied to `.row-content` elements or used together with `.keep-center` to keep the container centered on the screen.</p>
+
+					</div>
+
+					<div class="limit-small keep-center colored">
+						<p><code>.limit-small.keep-center</code></p>
+					</div>
+
+					<div class="limit-small limit-medium limit-large keep-center colored">
+						<p><code>.limit-small.limit-medium.limit-large.keep-center</code></p>
+					</div>
+
+					<!-- Source -->
+					<div class="source collapsed">
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<pre data-src="index/samples/limits.html" class="sourceContent reset buffer even collapsed"></pre>
+					</div>
+
+
 
 				</div>
 			</div>
@@ -801,16 +891,16 @@
 					<div class="colored">
 
 						<ul class="reset collapse">
-							<li><a href="#">One</a></li>
-							<li><a href="#">Two</a></li>
-							<li><a href="#">Three</a></li>
-							<li><a href="#">Four</a></li>
+							<li><a href=".">One</a></li>
+							<li><a href=".">Two</a></li>
+							<li><a href=".">Three</a></li>
+							<li><a href=".">Four</a></li>
 						</ul>
 						<ul class="reset collapse right">
-							<li><a href="#">One</a></li>
-							<li><a href="#">Two</a></li>
-							<li><a href="#">Three</a></li>
-							<li><a href="#">Four</a></li>
+							<li><a href=".">One</a></li>
+							<li><a href=".">Two</a></li>
+							<li><a href=".">Three</a></li>
+							<li><a href=".">Four</a></li>
 						</ul>
 						<div class="clear"></div>
 
@@ -818,7 +908,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/lists-collapse.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
@@ -964,7 +1054,7 @@
 
 					<!-- Source -->
 					<div class="source collapsed">
-						<p class="reset-bottom"><a href="#" class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
+						<p class="reset-bottom"><a href="." class="trigger"><span class="show">Show HTML</span><span class="hide">Thanks, mate</span></a></p>
 						<pre data-src="index/samples/tables-alignments.html" class="sourceContent reset buffer even"></pre>
 					</div>
 
@@ -983,12 +1073,10 @@
 
 						<p>Native input element styles are left alone. Input fields use the same, default box-sizing model as all other elements in all browsers so they're easy to customize.</p>
 
-						<form action="">
-							<p><input type="email" value="email@domain.com"> <input type="password" placeholder="Password"></p>
-							<p><input type="text" value="Disabled field" disabled></p>
-							<p><textarea>Longer piece of text</textarea></p>
-							<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
-						</form>
+						<p><input type="email" value="email@domain.com"> <input type="password" placeholder="Password"></p>
+						<p><input type="text" value="Disabled field" disabled></p>
+						<p><textarea>Longer piece of text</textarea></p>
+						<p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
 
 
 
@@ -996,16 +1084,12 @@
 
 						<p><code>.plain</code> elements are robbed of their OS-specific default styles, so they're a good jumping-off point to your own visuals.</p>
 
-						<form action="">
-							<p><input type="text" placeholder="Placeholder" value="input.plain" class="plain"> <input type="submit" value="Submit" class="plain"></p>
-							<p><textarea class="plain squeeze">Longer piece of text (with .squeeze)</textarea></p>
-						</form>
+						<p><input type="text" placeholder="Placeholder" value="input.plain" class="plain"> <input type="submit" value="Submit" class="plain"></p>
+						<p><textarea class="plain squeeze">Longer piece of text (with .squeeze)</textarea></p>
 
 						<p>Remember, <code>.buffer</code> gives elements breathing room.</p>
 
-						<form action="">
-							<p><input type="text" placeholder="Placeholder" value="input.plain.buffer" class="plain buffer"> <input type="submit" value="Submit" class="plain buffer"></p>
-						</form>
+						<p><input type="text" placeholder="Placeholder" value="input.plain.buffer" class="plain buffer"> <input type="submit" value="Submit" class="plain buffer"></p>
 
 					</div>
 
@@ -1105,29 +1189,28 @@
 			</div>
 		</div>
 
+
+
+		<!-- Libraries -->
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+
 		<!-- Scripts for this page -->
-		<script type='text/javascript' src='index/index.js'></script>
+		<script type="text/javascript" src="index/index.js"></script>
 
 		<!-- Web fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
 
 		<!-- Code highlighting -->
-		<script type='text/javascript' src='index/prism.js'></script>
+		<script type="text/javascript" src="index/prism.js"></script>
 		<link rel="stylesheet" href="index/prism.css" media="screen">
 
-
-		<!-- Twitter button -->
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
 		<!-- Google analytics -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		<!-- <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 			ga('create', 'UA-3911404-8', 'eiskis.net');
-			ga('send', 'pageview');
-		</script>
+			ga('send', 'pageview');</script> -->
 
 	</body>
 

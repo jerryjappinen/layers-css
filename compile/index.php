@@ -1,5 +1,7 @@
 <?php
-include_once 'include.php';
+date_default_timezone_set('UTC');
+include_once '../scripts/baseline.php';
+include_once '../scripts/minify.php';
 
 
 
@@ -26,7 +28,7 @@ foreach ($releases as $name) {
 
 	// Read source files
 	$source = '';
-	foreach (rglob($sourcePath.$name.'/'.'*') as $value) {
+	foreach (rglob_files($sourcePath.$name.'/') as $value) {
 		$source .= file_get_contents($value);
 	}
 
