@@ -460,6 +460,10 @@
 	.column.large-eleven.reset {
 		width: 91.7%;
 	}
+	.column.large-full.reset,
+	.column.large-twelve.reset {
+		width: 100%;
+	}
 
 	/*Shift no-gutter columns*/
 	.column.reset.large-push-one {

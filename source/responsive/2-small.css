@@ -400,6 +400,10 @@
 	.column.small-eleven.reset {
 		width: 91.7%;
 	}
+	.column.small-full.reset,
+	.column.small-twelve.reset {
+		width: 100%;
+	}
 
 	/*Shift no-gutter columns*/
 	.column.reset.small-push-one {
