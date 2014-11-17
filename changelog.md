@@ -5,9 +5,14 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
-## 1.1.0 - Sunday October 3, 2014
+## 1.1.1 - Monday November 17, 2014
 
-### To do
+- Normalizing `i` and `b` in `_normalize.css`.
+- Progressively enhanced `.reset` columns can be overwritten to go full-width as expected.
+
+
+
+## 1.1.0 - Sunday October 3, 2014
 
 ### Miscellaneous fixes
 
@@ -83,3 +88,25 @@ Definition lists added to reference documentation as well.
 ## 1.0 - Friday October 18, 2013
 
 First formal release. Latest additions include `.clear-after` and positioning tools.
+
+
+
+# Known issues
+
+## Overeffective `.last` definitions
+
+Progressively enhanced columns do not cancel all previous, which might cause issues when skipping a breakpoints. Example:
+
+	// Everything works
+	.column.small-half.medium-fourth
+	.column.small-half.medium-fourth.small-last
+	.column.small-half.medium-fourth
+	.column.small-half.medium-fourth.medium-last
+
+	// `.small-last` will stay effective (remove margin) even on large screens.
+	.column.small-half.large-fourth
+	.column.small-half.large-fourth.small-last
+	.column.small-half.large-fourth
+	.column.small-half.large-fourth.large-last
+
+This issue is caused by how progressive enhancements attempt to only cancel other column modifiers when needed. This issue can be worked around usually, and will probably be resolved in some future version of Layers.

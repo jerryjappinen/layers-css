@@ -460,6 +460,10 @@
 	.column.medium-eleven.reset {
 		width: 91.7%;
 	}
+	.column.medium-full.reset,
+	.column.medium-twelve.reset {
+		width: 100%;
+	}
 
 	/*Shift no-gutter columns*/
 	.column.reset.medium-push-one {

@@ -321,6 +321,10 @@
 	.column.{{name}}-eleven {
 		width: 91.35%;
 	}
+	.column.{{name}}-full.reset,
+	.column.{{name}}-twelve.reset {
+		width: 100%;
+	}
 
 	/*Shift guttered columns*/
 	.column.{{name}}-push-one {

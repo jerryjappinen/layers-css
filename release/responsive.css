@@ -1,8 +1,8 @@
 /*
-Layers CSS 1.1.0  responsive adjustments
+Layers CSS 1.1.1  responsive adjustments
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2014-10-03 07:47 UTC
+2014-11-17 10:11 UTC
 */
 
 @media handheld, only screen and (min-width: 40em) {
@@ -405,6 +405,10 @@ http://eiskis.net/layers
 	}
 	.column.small-eleven.reset {
 		width: 91.7%;
+	}
+	.column.small-full.reset,
+	.column.small-twelve.reset {
+		width: 100%;
 	}
 
 	/*Shift no-gutter columns*/
@@ -981,6 +985,10 @@ http://eiskis.net/layers
 	}
 	.column.medium-eleven.reset {
 		width: 91.7%;
+	}
+	.column.medium-full.reset,
+	.column.medium-twelve.reset {
+		width: 100%;
 	}
 
 	/*Shift no-gutter columns*/
@@ -1655,6 +1663,10 @@ http://eiskis.net/layers
 	}
 	.column.large-eleven.reset {
 		width: 91.7%;
+	}
+	.column.large-full.reset,
+	.column.large-twelve.reset {
+		width: 100%;
 	}
 
 	/*Shift no-gutter columns*/
