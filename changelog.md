@@ -5,6 +5,12 @@ Latest official changelog is available on the web at [bitbucket.org/Eiskis/layer
 
 
 
+## 1.1.2 - Monday December 29, 2014
+
+- Bugfix: `:not()` used only in separate declarations, so non-compliant browsers don't ignore other declarations. Affects some input-related declarations in IE8, for example.
+
+
+
 ## 1.1.1 - Monday November 17, 2014
 
 - Normalizing `i` and `b` in `_normalize.css`.

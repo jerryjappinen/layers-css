@@ -39,9 +39,14 @@ h5 {
 h6 {
 	font-size: 1em;
 }
-@media handheld, only screen and (max-width: 30em) {
+@media handheld, only screen and (max-width: 40em) {
 	h1, h1.display {
 		font-size: 3.5em;
+	}
+}
+@media handheld, only screen and (max-width: 30em) {
+	h1, h1.display {
+		font-size: 3em;
 	}
 	h2 {
 		font-size: 2.8em;

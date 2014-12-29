@@ -144,10 +144,15 @@ a {
 input, select, textarea, button {
 	font-family: inherit;
 }
-input[type=""], input:not([type]), input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], select, textarea, pre, code, kbd, samp {
+input[type=""], input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], select, textarea, pre, code, kbd, samp {
 	font-size: inherit;
 	line-height: inherit;
 }
+	/*Non-compliant browsers require this as separate declaration*/
+	input:not([type]) {
+		font-size: inherit;
+		line-height: inherit;
+	}
 button, input, select, textarea, pre, code, kbd, samp {
 	font-weight: inherit;
 }

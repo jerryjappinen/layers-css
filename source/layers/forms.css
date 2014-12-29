@@ -8,7 +8,10 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
-input[type=""],
+input[type=""] {
+	width: 20em;
+	max-width: 90%;
+}
 input:not([type]) {
 	width: 20em;
 	max-width: 90%;
@@ -19,7 +22,9 @@ input:not([type]) {
 	input[type="url"].squeeze,
 	input[type="search"].squeeze,
 	input[type="tel"].squeeze,
-	input[type=""].squeeze,
+	input[type=""].squeeze {
+		width: 14em;
+	}
 	input:not([type]).squeeze {
 		width: 14em;
 	}
