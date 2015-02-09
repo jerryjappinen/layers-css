@@ -18,7 +18,7 @@ A minimum-interference collection of common-sense default styles.
 To get it all, use the single-file compilation:
 
 ```html
-<link rel="stylesheet" href="release/layers.css">
+<link rel="stylesheet" href="release/layers.min.css">
 ```
 
 You can also pick and choose what you want (in alphabetical order):
@@ -39,20 +39,10 @@ If you use an autoloader (e.g. asset pipeline in Rails), you can just include th
 All responsive adjustments are included in separate from the main release:
 
 ```html
-<link rel="stylesheet" href="release/responsive.css">
+<link rel="stylesheet" href="release/responsive.min.css">
 ```
 
 Individual files are also available under `source/`. Feel free to edit the breaking points and add more complex degradation behavior, this is just a start.
-
-
-
-### Extras
-
-None of the other files contain any color scheme declarations. If you want to just get a usable page out, fast, you can add one of the separate color schemes from extras:
-
-```html
-<link rel="stylesheet" href="extras/light.css">
-```
 
 
 
