@@ -4,7 +4,7 @@
 A minimum-interference collection of common-sense default styles.
 
 - Reference docs at [eiskis.net/layers](http://eiskis.net/layers/)
-- Bitbucket project at [bitbucket.org/Eiskis/layers-css](https://bitbucket.org/Eiskis/layers-css)
+- GitHub project at [https://github.com/Eiskis/layers-css](https://github.com/Eiskis/layers-css)
 - Released under the MIT license
 - Authored by Jerry Jäppinen
 	- [eiskis@gmail.com](mailto:eiskis@gmail.com)
