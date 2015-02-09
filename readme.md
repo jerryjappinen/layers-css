@@ -17,14 +17,18 @@ A minimum-interference collection of common-sense default styles.
 
 To get it all, use the single-file compilation:
 
-	<link rel="stylesheet" href="release/layers.css">
+```css
+<link rel="stylesheet" href="release/layers.css">
+```
 
 You can also pick and choose what you want (in alphabetical order):
 
-	<link rel="stylesheet" href="source/layers/_normalize.css">
-	<link rel="stylesheet" href="source/layers/forms.css">
-	<link rel="stylesheet" href="source/layers/grid.css">
-	...
+```css
+<link rel="stylesheet" href="source/layers/_normalize.css">
+<link rel="stylesheet" href="source/layers/forms.css">
+<link rel="stylesheet" href="source/layers/grid.css">
+...
+```
 
 If you use an autoloader (e.g. asset pipeline in Rails), you can just include the whole directory.
 
@@ -34,7 +38,9 @@ If you use an autoloader (e.g. asset pipeline in Rails), you can just include th
 
 All responsive adjustments are included in separate from the main release:
 
-	<link rel="stylesheet" href="release/responsive.css">
+```css
+<link rel="stylesheet" href="release/responsive.css">
+```
 
 Individual files are also available under `source/`. Feel free to edit the breaking points and add more complex degradation behavior, this is just a start.
 
@@ -44,7 +50,9 @@ Individual files are also available under `source/`. Feel free to edit the break
 
 None of the other files contain any color scheme declarations. If you want to just get a usable page out, fast, you can add one of the separate color schemes from extras:
 
-	<link rel="stylesheet" href="extras/light.css">
+```css
+<link rel="stylesheet" href="extras/light.css">
+```
 
 
 
