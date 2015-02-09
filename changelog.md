@@ -1,7 +1,7 @@
 
 # Layers CSS changelog
 
-Latest official changelog is available on the web at [bitbucket.org/Eiskis/layers-css](https://bitbucket.org/Eiskis/layers-css/src/default/changelog.md).
+Latest official changelog is available on the web at [https://github.com/Eiskis/layers-css]().
 
 
 
