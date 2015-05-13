@@ -6,166 +6,36 @@
 	}
 
 	/*Roll back default last-in-line behavior*/
-	.column.last.{{name}}-fifth,
-	.column.last.{{name}}-twofifths,
-	.column.last.{{name}}-threefifths,
-	.column.last.{{name}}-fourfifths,
-	.column.last.{{name}}-one,
-	.column.last.{{name}}-two,
-	.column.last.{{name}}-sixth,
-	.column.last.{{name}}-three,
-	.column.last.{{name}}-fourth,
-	.column.last.{{name}}-four,
-	.column.last.{{name}}-twosixths,
-	.column.last.{{name}}-third,
-	.column.last.{{name}}-five,
-	.column.last.{{name}}-six,
-	.column.last.{{name}}-half,
-	.column.last.{{name}}-threesixths,
-	.column.last.{{name}}-twofourths,
-	.column.last.{{name}}-seven,
-	.column.last.{{name}}-eight,
-	.column.last.{{name}}-foursixths,
-	.column.last.{{name}}-twothirds,
-	.column.last.{{name}}-nine,
-	.column.last.{{name}}-threefourths,
-	.column.last.{{name}}-ten,
-	.column.last.{{name}}-fivesixths,
-	.column.last.{{name}}-eleven,
-	.column.last.{{name}}-twelve,
-	.column.last.{{name}}-full {
+	.column.last[class^="{{name}}-"],
+	.column.last[class*=" {{name}}-"] {
 		margin-right: 3.8%;
 	}
 
 		/*Roll back default last-in-line behavior*/
-		.column.right.last.{{name}}-fifth,
-		.column.right.last.{{name}}-twofifths,
-		.column.right.last.{{name}}-threefifths,
-		.column.right.last.{{name}}-fourfifths,
-		.column.right.last.{{name}}-one,
-		.column.right.last.{{name}}-two,
-		.column.right.last.{{name}}-sixth,
-		.column.right.last.{{name}}-three,
-		.column.right.last.{{name}}-fourth,
-		.column.right.last.{{name}}-four,
-		.column.right.last.{{name}}-twosixths,
-		.column.right.last.{{name}}-third,
-		.column.right.last.{{name}}-five,
-		.column.right.last.{{name}}-six,
-		.column.right.last.{{name}}-half,
-		.column.right.last.{{name}}-threesixths,
-		.column.right.last.{{name}}-twofourths,
-		.column.right.last.{{name}}-seven,
-		.column.right.last.{{name}}-eight,
-		.column.right.last.{{name}}-foursixths,
-		.column.right.last.{{name}}-twothirds,
-		.column.right.last.{{name}}-nine,
-		.column.right.last.{{name}}-threefourths,
-		.column.right.last.{{name}}-ten,
-		.column.right.last.{{name}}-fivesixths,
-		.column.right.last.{{name}}-eleven,
-		.column.right.last.{{name}}-twelve,
-		.column.right.last.{{name}}-full {
+		.column.right.last[class^="{{name}}-"],
+		.column.right.last[class*=" {{name}}-"] {
 			margin-left: 3.8%;
 		}
 
 
 
 	/*Column basics*/
-	.column.{{name}}-fifth,
-	.column.{{name}}-twofifths,
-	.column.{{name}}-threefifths,
-	.column.{{name}}-fourfifths,
-	.column.{{name}}-one,
-	.column.{{name}}-two,
-	.column.{{name}}-sixth,
-	.column.{{name}}-three,
-	.column.{{name}}-fourth,
-	.column.{{name}}-four,
-	.column.{{name}}-twosixths,
-	.column.{{name}}-third,
-	.column.{{name}}-five,
-	.column.{{name}}-six,
-	.column.{{name}}-half,
-	.column.{{name}}-threesixths,
-	.column.{{name}}-twofourths,
-	.column.{{name}}-seven,
-	.column.{{name}}-eight,
-	.column.{{name}}-foursixths,
-	.column.{{name}}-twothirds,
-	.column.{{name}}-nine,
-	.column.{{name}}-threefourths,
-	.column.{{name}}-ten,
-	.column.{{name}}-fivesixths,
-	.column.{{name}}-eleven,
-	.column.{{name}}-twelve,
-	.column.{{name}}-full {
+	.column[class^="{{name}}-"],
+	.column[class*=" {{name}}-"] {
 		clear: none;
 		float: left;
 		min-height: 1px;
 		margin-left: 0;
 		margin-right: 3.8%;
 	}
-		.column.right.{{name}}-fifth,
-		.column.right.{{name}}-twofifths,
-		.column.right.{{name}}-threefifths,
-		.column.right.{{name}}-fourfifths,
-		.column.right.{{name}}-one,
-		.column.right.{{name}}-two,
-		.column.right.{{name}}-sixth,
-		.column.right.{{name}}-three,
-		.column.right.{{name}}-fourth,
-		.column.right.{{name}}-four,
-		.column.right.{{name}}-twosixths,
-		.column.right.{{name}}-third,
-		.column.right.{{name}}-five,
-		.column.right.{{name}}-six,
-		.column.right.{{name}}-half,
-		.column.right.{{name}}-threesixths,
-		.column.right.{{name}}-twofourths,
-		.column.right.{{name}}-seven,
-		.column.right.{{name}}-eight,
-		.column.right.{{name}}-foursixths,
-		.column.right.{{name}}-twothirds,
-		.column.right.{{name}}-nine,
-		.column.right.{{name}}-threefourths,
-		.column.right.{{name}}-ten,
-		.column.right.{{name}}-fivesixths,
-		.column.right.{{name}}-eleven,
-		.column.right.{{name}}-twelve,
-		.column.right.{{name}}-full {
+		.column.right[class^="{{name}}-"],
+		.column.right[class*=" {{name}}-"] {
 			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}
-		.column.reset.{{name}}-fifth,
-		.column.reset.{{name}}-twofifths,
-		.column.reset.{{name}}-threefifths,
-		.column.reset.{{name}}-fourfifths,
-		.column.reset.{{name}}-one,
-		.column.reset.{{name}}-two,
-		.column.reset.{{name}}-sixth,
-		.column.reset.{{name}}-three,
-		.column.reset.{{name}}-fourth,
-		.column.reset.{{name}}-four,
-		.column.reset.{{name}}-twosixths,
-		.column.reset.{{name}}-third,
-		.column.reset.{{name}}-five,
-		.column.reset.{{name}}-six,
-		.column.reset.{{name}}-half,
-		.column.reset.{{name}}-threesixths,
-		.column.reset.{{name}}-twofourths,
-		.column.reset.{{name}}-seven,
-		.column.reset.{{name}}-eight,
-		.column.reset.{{name}}-foursixths,
-		.column.reset.{{name}}-twothirds,
-		.column.reset.{{name}}-nine,
-		.column.reset.{{name}}-threefourths,
-		.column.reset.{{name}}-ten,
-		.column.reset.{{name}}-fivesixths,
-		.column.reset.{{name}}-eleven,
-		.column.reset.{{name}}-twelve,
-		.column.reset.{{name}}-full {
+		.column.reset[class^="{{name}}-"],
+		.column.reset[class*=" {{name}}-"] {
 			margin-right: 0;
 			margin-left: 0;
 		}
@@ -180,16 +50,16 @@
 
 	/*Fifth*/
 	.column.{{name}}-fifth {
-		width: 16.95%;		/* 16.96 */
+		width: 16.95%;
 	}
 	.column.{{name}}-twofifths {
-		width: 37.70%;		/* 33.92 + 3.8 */
+		width: 37.70%;
 	}
 	.column.{{name}}-threefifths {
-		width: 58.45%;		/* 50.88 + 3.8 + 3.8 */
+		width: 58.45%;
 	}
 	.column.{{name}}-fourfifths {
-		width: 79.20%;		/* 67.84 + 3.8 + 3.8 + 3.8 */
+		width: 79.20%;
 	}
 		.column.{{name}}-push-fifth {
 			margin-left: 20.45%;
