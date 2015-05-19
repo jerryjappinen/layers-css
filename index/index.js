@@ -61,7 +61,7 @@ var watchWaypoints = function () {
 			for (i = 0; i < menuLinks.length; i++) {
 				if (i === currentWaypoint-1) {
 					addClass(menuLinks[i], 'selected');
-					menuLinks[i].focus();
+					// menuLinks[i].focus();
 				} else {
 					removeClass(menuLinks[i], 'selected');
 					// menuLinks[i].blur();
@@ -203,7 +203,7 @@ var DownloadManager = function () {
 	});
 
 	self.estimatedSizeCompressed = ko.computed(function () {
-		return Math.floor(self.compressionRatio * self.estimatedSize());
+		return Math.floor(10 * self.compressionRatio * self.estimatedSize()) / 10;
 	});
 
 
@@ -327,13 +327,6 @@ window.onload = function () {
 		selectBrowserTab(0);
 	};
 
-	// Keep menu waypoints accurate
-	menuWaypoints = findWaypoints();
-	window.onresize = function (event) {
-		menuWaypoints = findWaypoints();
-		watchWaypoints();
-	};
-
 	// Source code previews
 	for (i = 0; i < sourceContainers.length; i++) {
 		(function () {
@@ -350,15 +343,27 @@ window.onload = function () {
 		})();
 	}
 
-	// Watch waypoints when scrolling
-	watchWaypoints();
-	window.onscroll = watchWaypoints;
-
-
 
 	// Ko
 	ko.applyBindings(app);
 
+
+
+	// Keep menu waypoints accurate
+	window.onresize = function (event) {
+		menuWaypoints = findWaypoints();
+		watchWaypoints();
+	};
+
+	// Watch waypoints when scrolling
+	window.onscroll = watchWaypoints;
+
+	// Recalculate waypoints (hacky)
+	setTimeout(function () {
+		menuWaypoints = findWaypoints();
+		watchWaypoints();
+
+	}, 1);
 };
 
 
