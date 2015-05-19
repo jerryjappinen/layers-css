@@ -1,232 +1,78 @@
+@media handheld, only screen and (max-width: 99.9375em) {
 
+	/*Show/hide*/
+	.hidden-under-large {
+		display: none;
+	}
+
+}
 @media handheld, only screen and (min-width: 100em) {
+
+	/*Show/hide*/
+	.hidden-over-large {
+		display: none;
+	}
 
 	/*Width limit*/
 	.limit-large {
 		max-width: 100em;
 	}
 
+
+
+	/*Roll back default first-in-line behavior*/
+	.column.first[class^="large-"],
+	.column.first[class*=" large-"] {
+		clear: none;
+	}
+
+	/*Roll back first-in-line behavior of the previous break point set*/
+	.column.medium-first[class^="large-"],
+	.column.medium-first[class*=" large-"] {
+		clear: none;
+	}
+
+
+
 	/*Roll back default last-in-line behavior*/
-	.column.last.large-fifth,
-	.column.last.large-twofifths,
-	.column.last.large-threefifths,
-	.column.last.large-fourfifths,
-	.column.last.large-one,
-	.column.last.large-two,
-	.column.last.large-sixth,
-	.column.last.large-three,
-	.column.last.large-fourth,
-	.column.last.large-four,
-	.column.last.large-twosixths,
-	.column.last.large-third,
-	.column.last.large-five,
-	.column.last.large-six,
-	.column.last.large-half,
-	.column.last.large-threesixths,
-	.column.last.large-twofourths,
-	.column.last.large-seven,
-	.column.last.large-eight,
-	.column.last.large-foursixths,
-	.column.last.large-twothirds,
-	.column.last.large-nine,
-	.column.last.large-threefourths,
-	.column.last.large-ten,
-	.column.last.large-fivesixths,
-	.column.last.large-eleven,
-	.column.last.large-twelve,
-	.column.last.large-full,
+	.column.last[class^="large-"],
+	.column.last[class*=" large-"],
 
 	/*Roll back last-in-line behavior of the previous break point set*/
-	.column.medium-last.large-fifth,
-	.column.medium-last.large-twofifths,
-	.column.medium-last.large-threefifths,
-	.column.medium-last.large-fourfifths,
-	.column.medium-last.large-one,
-	.column.medium-last.large-two,
-	.column.medium-last.large-sixth,
-	.column.medium-last.large-three,
-	.column.medium-last.large-fourth,
-	.column.medium-last.large-four,
-	.column.medium-last.large-twosixths,
-	.column.medium-last.large-third,
-	.column.medium-last.large-five,
-	.column.medium-last.large-six,
-	.column.medium-last.large-half,
-	.column.medium-last.large-threesixths,
-	.column.medium-last.large-twofourths,
-	.column.medium-last.large-seven,
-	.column.medium-last.large-eight,
-	.column.medium-last.large-foursixths,
-	.column.medium-last.large-twothirds,
-	.column.medium-last.large-nine,
-	.column.medium-last.large-threefourths,
-	.column.medium-last.large-ten,
-	.column.medium-last.large-fivesixths,
-	.column.medium-last.large-eleven,
-	.column.medium-last.large-twelve,
-	.column.medium-last.large-full {
+	.column.medium-last[class^="large-"],
+	.column.medium-last[class*=" large-"] {
 		margin-right: 3.8%;
 	}
 
 		/*Roll back default last-in-line behavior*/
-		.column.right.last.large-fifth,
-		.column.right.last.large-twofifths,
-		.column.right.last.large-threefifths,
-		.column.right.last.large-fourfifths,
-		.column.right.last.large-one,
-		.column.right.last.large-two,
-		.column.right.last.large-sixth,
-		.column.right.last.large-three,
-		.column.right.last.large-fourth,
-		.column.right.last.large-four,
-		.column.right.last.large-twosixths,
-		.column.right.last.large-third,
-		.column.right.last.large-five,
-		.column.right.last.large-six,
-		.column.right.last.large-half,
-		.column.right.last.large-threesixths,
-		.column.right.last.large-twofourths,
-		.column.right.last.large-seven,
-		.column.right.last.large-eight,
-		.column.right.last.large-foursixths,
-		.column.right.last.large-twothirds,
-		.column.right.last.large-nine,
-		.column.right.last.large-threefourths,
-		.column.right.last.large-ten,
-		.column.right.last.large-fivesixths,
-		.column.right.last.large-eleven,
-		.column.right.last.large-twelve,
-		.column.right.last.large-full,
+		.column.right.last[class^="large-"],
+		.column.right.last[class*=" large-"],
 
 		/*Roll back last-in-line behavior of the previous break point set*/
-		.column.right.medium-last.large-fifth,
-		.column.right.medium-last.large-twofifths,
-		.column.right.medium-last.large-threefifths,
-		.column.right.medium-last.large-fourfifths,
-		.column.right.medium-last.large-one,
-		.column.right.medium-last.large-two,
-		.column.right.medium-last.large-sixth,
-		.column.right.medium-last.large-three,
-		.column.right.medium-last.large-fourth,
-		.column.right.medium-last.large-four,
-		.column.right.medium-last.large-twosixths,
-		.column.right.medium-last.large-third,
-		.column.right.medium-last.large-five,
-		.column.right.medium-last.large-six,
-		.column.right.medium-last.large-half,
-		.column.right.medium-last.large-threesixths,
-		.column.right.medium-last.large-twofourths,
-		.column.right.medium-last.large-seven,
-		.column.right.medium-last.large-eight,
-		.column.right.medium-last.large-foursixths,
-		.column.right.medium-last.large-twothirds,
-		.column.right.medium-last.large-nine,
-		.column.right.medium-last.large-threefourths,
-		.column.right.medium-last.large-ten,
-		.column.right.medium-last.large-fivesixths,
-		.column.right.medium-last.large-eleven,
-		.column.right.medium-last.large-twelve,
-		.column.right.medium-last.large-full {
+		.column.right.medium-last[class^="large-"],
+		.column.right.medium-last[class*=" large-"] {
 			margin-left: 3.8%;
 		}
 
 
 
 	/*Column basics*/
-	.column.large-fifth,
-	.column.large-twofifths,
-	.column.large-threefifths,
-	.column.large-fourfifths,
-	.column.large-one,
-	.column.large-two,
-	.column.large-sixth,
-	.column.large-three,
-	.column.large-fourth,
-	.column.large-four,
-	.column.large-twosixths,
-	.column.large-third,
-	.column.large-five,
-	.column.large-six,
-	.column.large-half,
-	.column.large-threesixths,
-	.column.large-twofourths,
-	.column.large-seven,
-	.column.large-eight,
-	.column.large-foursixths,
-	.column.large-twothirds,
-	.column.large-nine,
-	.column.large-threefourths,
-	.column.large-ten,
-	.column.large-fivesixths,
-	.column.large-eleven,
-	.column.large-twelve,
-	.column.large-full {
+	.column[class^="large-"],
+	.column[class*=" large-"] {
 		clear: none;
 		float: left;
 		min-height: 1px;
 		margin-left: 0;
 		margin-right: 3.8%;
 	}
-		.column.right.large-fifth,
-		.column.right.large-twofifths,
-		.column.right.large-threefifths,
-		.column.right.large-fourfifths,
-		.column.right.large-one,
-		.column.right.large-two,
-		.column.right.large-sixth,
-		.column.right.large-three,
-		.column.right.large-fourth,
-		.column.right.large-four,
-		.column.right.large-twosixths,
-		.column.right.large-third,
-		.column.right.large-five,
-		.column.right.large-six,
-		.column.right.large-half,
-		.column.right.large-threesixths,
-		.column.right.large-twofourths,
-		.column.right.large-seven,
-		.column.right.large-eight,
-		.column.right.large-foursixths,
-		.column.right.large-twothirds,
-		.column.right.large-nine,
-		.column.right.large-threefourths,
-		.column.right.large-ten,
-		.column.right.large-fivesixths,
-		.column.right.large-eleven,
-		.column.right.large-twelve,
-		.column.right.large-full {
+		.column.right[class^="large-"],
+		.column.right[class*=" large-"] {
 			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}
-		.column.reset.large-fifth,
-		.column.reset.large-twofifths,
-		.column.reset.large-threefifths,
-		.column.reset.large-fourfifths,
-		.column.reset.large-one,
-		.column.reset.large-two,
-		.column.reset.large-sixth,
-		.column.reset.large-three,
-		.column.reset.large-fourth,
-		.column.reset.large-four,
-		.column.reset.large-twosixths,
-		.column.reset.large-third,
-		.column.reset.large-five,
-		.column.reset.large-six,
-		.column.reset.large-half,
-		.column.reset.large-threesixths,
-		.column.reset.large-twofourths,
-		.column.reset.large-seven,
-		.column.reset.large-eight,
-		.column.reset.large-foursixths,
-		.column.reset.large-twothirds,
-		.column.reset.large-nine,
-		.column.reset.large-threefourths,
-		.column.reset.large-ten,
-		.column.reset.large-fivesixths,
-		.column.reset.large-eleven,
-		.column.reset.large-twelve,
-		.column.reset.large-full {
+		.column.reset[class^="large-"],
+		.column.reset[class*=" large-"] {
 			margin-right: 0;
 			margin-left: 0;
 		}
@@ -241,16 +87,16 @@
 
 	/*Fifth*/
 	.column.large-fifth {
-		width: 16.95%;		/* 16.96 */
+		width: 16.95%;
 	}
 	.column.large-twofifths {
-		width: 37.70%;		/* 33.92 + 3.8 */
+		width: 37.70%;
 	}
 	.column.large-threefifths {
-		width: 58.45%;		/* 50.88 + 3.8 + 3.8 */
+		width: 58.45%;
 	}
 	.column.large-fourfifths {
-		width: 79.20%;		/* 67.84 + 3.8 + 3.8 + 3.8 */
+		width: 79.20%;
 	}
 		.column.large-push-fifth {
 			margin-left: 20.45%;
@@ -321,6 +167,10 @@
 	}
 	.column.large-eleven {
 		width: 91.35%;
+	}
+	.column.large-full.reset,
+	.column.large-twelve.reset {
+		width: 100%;
 	}
 
 	/*Shift guttered columns*/
@@ -460,10 +310,6 @@
 	.column.large-eleven.reset {
 		width: 91.7%;
 	}
-	.column.large-full.reset,
-	.column.large-twelve.reset {
-		width: 100%;
-	}
 
 	/*Shift no-gutter columns*/
 	.column.reset.large-push-one {
@@ -557,112 +403,26 @@
 
 
 
-	/*Last column in the series*/
+	/*First column in the series*/
+	.column.large-first[class^="large-"],
+	.column.large-first[class*=" large-"] {
+		clear: both;
+	}
+
+	/*Last column in this series*/
 	.column.large-last,
 
-	.column.large-last.large-one,
-	.column.large-last.large-two,
-	.column.large-last.large-sixth,
-	.column.large-last.large-three,
-	.column.large-last.large-fourth,
-	.column.large-last.large-four,
-	.column.large-last.large-twosixths,
-	.column.large-last.large-third,
-	.column.large-last.large-five,
-	.column.large-last.large-six,
-	.column.large-last.large-half,
-	.column.large-last.large-threesixths,
-	.column.large-last.large-twofourths,
-	.column.large-last.large-seven,
-	.column.large-last.large-eight,
-	.column.large-last.large-foursixths,
-	.column.large-last.large-twothirds,
-	.column.large-last.large-nine,
-	.column.large-last.large-threefourths,
-	.column.large-last.large-ten,
-	.column.large-last.large-fivesixths,
-	.column.large-last.large-eleven,
-	.column.large-last.large-twelve,
-	.column.large-last.large-full,
-
-	.column.last.large-last.large-one,
-	.column.last.large-last.large-two,
-	.column.last.large-last.large-sixth,
-	.column.last.large-last.large-three,
-	.column.last.large-last.large-fourth,
-	.column.last.large-last.large-four,
-	.column.last.large-last.large-twosixths,
-	.column.last.large-last.large-third,
-	.column.last.large-last.large-five,
-	.column.last.large-last.large-six,
-	.column.last.large-last.large-half,
-	.column.last.large-last.large-threesixths,
-	.column.last.large-last.large-twofourths,
-	.column.last.large-last.large-seven,
-	.column.last.large-last.large-eight,
-	.column.last.large-last.large-foursixths,
-	.column.last.large-last.large-twothirds,
-	.column.last.large-last.large-nine,
-	.column.last.large-last.large-threefourths,
-	.column.last.large-last.large-ten,
-	.column.last.large-last.large-fivesixths,
-	.column.last.large-last.large-eleven,
-	.column.last.large-last.large-twelve,
-	.column.last.large-last.large-full {
+	/*Attribute selector matches because of the second class, but we need this for specificity*/
+	.column.large-last[class^="large-"],
+	.column.large-last[class*=" large-"] {
 		margin-right: 0;
 	}
+
+		/*The same for right-aligned columns*/
 		.column.right.large-last,
-
-		.column.right.large-last.large-one,
-		.column.right.large-last.large-two,
-		.column.right.large-last.large-sixth,
-		.column.right.large-last.large-three,
-		.column.right.large-last.large-fourth,
-		.column.right.large-last.large-four,
-		.column.right.large-last.large-twosixths,
-		.column.right.large-last.large-third,
-		.column.right.large-last.large-five,
-		.column.right.large-last.large-six,
-		.column.right.large-last.large-half,
-		.column.right.large-last.large-threesixths,
-		.column.right.large-last.large-twofourths,
-		.column.right.large-last.large-seven,
-		.column.right.large-last.large-eight,
-		.column.right.large-last.large-foursixths,
-		.column.right.large-last.large-twothirds,
-		.column.right.large-last.large-nine,
-		.column.right.large-last.large-threefourths,
-		.column.right.large-last.large-ten,
-		.column.right.large-last.large-fivesixths,
-		.column.right.large-last.large-eleven,
-		.column.right.large-last.large-twelve,
-		.column.right.large-last.large-full,
-
-		.column.right.last.large-last.large-one,
-		.column.right.last.large-last.large-two,
-		.column.right.last.large-last.large-sixth,
-		.column.right.last.large-last.large-three,
-		.column.right.last.large-last.large-fourth,
-		.column.right.last.large-last.large-four,
-		.column.right.last.large-last.large-twosixths,
-		.column.right.last.large-last.large-third,
-		.column.right.last.large-last.large-five,
-		.column.right.last.large-last.large-six,
-		.column.right.last.large-last.large-half,
-		.column.right.last.large-last.large-threesixths,
-		.column.right.last.large-last.large-twofourths,
-		.column.right.last.large-last.large-seven,
-		.column.right.last.large-last.large-eight,
-		.column.right.last.large-last.large-foursixths,
-		.column.right.last.large-last.large-twothirds,
-		.column.right.last.large-last.large-nine,
-		.column.right.last.large-last.large-threefourths,
-		.column.right.last.large-last.large-ten,
-		.column.right.last.large-last.large-fivesixths,
-		.column.right.last.large-last.large-eleven,
-		.column.right.last.large-last.large-twelve,
-		.column.right.last.large-last.large-full {
-			margin-left: 0;
+		.column.right.large-last[class^="large-"],
+		.column.right.large-last[class*=" large-"] {
+			margin-right: 0;
 		}
 
 

@@ -1,8 +1,27 @@
+@media handheld, only screen and (max-width: {{barelyWidth}}) {
+
+	/*Show/hide*/
+	.hidden-under-{{name}} {
+		display: none;
+	}
+
+}
 @media handheld, only screen and (min-width: {{width}}) {
+
+	/*Show/hide*/
+	.hidden-over-{{name}} {
+		display: none;
+	}
 
 	/*Width limit*/
 	.limit-{{name}} {
 		max-width: {{width}};
+	}
+
+	/*Roll back default first-in-line behavior*/
+	.column.first[class^="{{name}}-"],
+	.column.first[class*=" {{name}}-"] {
+		clear: none;
 	}
 
 	/*Roll back default last-in-line behavior*/
@@ -365,6 +384,12 @@
 		}
 
 
+
+	/*First column in the series*/
+	.column.{{name}}-first,
+	.column.first.{{name}}-first {
+		clear: both;
+	}
 
 	/*Last column in the series*/
 	.column.{{name}}-last,

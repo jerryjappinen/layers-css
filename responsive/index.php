@@ -105,9 +105,17 @@ $output = array();
 $previousName = '';
 foreach ($breakpoints as $name => $value) {
 
+	// Breakpoint offset
+	$barelyValue = intval(substr($value, 0, -2));
+	if (suffixed($value, 'em')) {
+		$barelyValue = ($barelyValue - 0.0625).'em';
+	} else {
+		$barelyValue = ($barelyValue - 1).'px';
+	}
+
 	// String replacement in template
-	$keys = array('{{name}}', '{{width}}');
-	$values = array($name, $value);
+	$keys = array('{{name}}', '{{barelyWidth}}', '{{width}}');
+	$values = array($name, $barelyValue, $value);
 
 	// Raw template
 	$temp = '';

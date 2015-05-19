@@ -1,172 +1,60 @@
+@media handheld, only screen and (max-width: 39.9375em) {
 
+	/*Show/hide*/
+	.hidden-under-small {
+		display: none;
+	}
+
+}
 @media handheld, only screen and (min-width: 40em) {
+
+	/*Show/hide*/
+	.hidden-over-small {
+		display: none;
+	}
 
 	/*Width limit*/
 	.limit-small {
 		max-width: 40em;
 	}
 
+	/*Roll back default first-in-line behavior*/
+	.column.first[class^="small-"],
+	.column.first[class*=" small-"] {
+		clear: none;
+	}
+
 	/*Roll back default last-in-line behavior*/
-	.column.last.small-fifth,
-	.column.last.small-twofifths,
-	.column.last.small-threefifths,
-	.column.last.small-fourfifths,
-	.column.last.small-one,
-	.column.last.small-two,
-	.column.last.small-sixth,
-	.column.last.small-three,
-	.column.last.small-fourth,
-	.column.last.small-four,
-	.column.last.small-twosixths,
-	.column.last.small-third,
-	.column.last.small-five,
-	.column.last.small-six,
-	.column.last.small-half,
-	.column.last.small-threesixths,
-	.column.last.small-twofourths,
-	.column.last.small-seven,
-	.column.last.small-eight,
-	.column.last.small-foursixths,
-	.column.last.small-twothirds,
-	.column.last.small-nine,
-	.column.last.small-threefourths,
-	.column.last.small-ten,
-	.column.last.small-fivesixths,
-	.column.last.small-eleven,
-	.column.last.small-twelve,
-	.column.last.small-full {
+	.column.last[class^="small-"],
+	.column.last[class*=" small-"] {
 		margin-right: 3.8%;
 	}
 
 		/*Roll back default last-in-line behavior*/
-		.column.right.last.small-fifth,
-		.column.right.last.small-twofifths,
-		.column.right.last.small-threefifths,
-		.column.right.last.small-fourfifths,
-		.column.right.last.small-one,
-		.column.right.last.small-two,
-		.column.right.last.small-sixth,
-		.column.right.last.small-three,
-		.column.right.last.small-fourth,
-		.column.right.last.small-four,
-		.column.right.last.small-twosixths,
-		.column.right.last.small-third,
-		.column.right.last.small-five,
-		.column.right.last.small-six,
-		.column.right.last.small-half,
-		.column.right.last.small-threesixths,
-		.column.right.last.small-twofourths,
-		.column.right.last.small-seven,
-		.column.right.last.small-eight,
-		.column.right.last.small-foursixths,
-		.column.right.last.small-twothirds,
-		.column.right.last.small-nine,
-		.column.right.last.small-threefourths,
-		.column.right.last.small-ten,
-		.column.right.last.small-fivesixths,
-		.column.right.last.small-eleven,
-		.column.right.last.small-twelve,
-		.column.right.last.small-full {
+		.column.right.last[class^="small-"],
+		.column.right.last[class*=" small-"] {
 			margin-left: 3.8%;
 		}
 
 
 
 	/*Column basics*/
-	.column.small-fifth,
-	.column.small-twofifths,
-	.column.small-threefifths,
-	.column.small-fourfifths,
-	.column.small-one,
-	.column.small-two,
-	.column.small-sixth,
-	.column.small-three,
-	.column.small-fourth,
-	.column.small-four,
-	.column.small-twosixths,
-	.column.small-third,
-	.column.small-five,
-	.column.small-six,
-	.column.small-half,
-	.column.small-threesixths,
-	.column.small-twofourths,
-	.column.small-seven,
-	.column.small-eight,
-	.column.small-foursixths,
-	.column.small-twothirds,
-	.column.small-nine,
-	.column.small-threefourths,
-	.column.small-ten,
-	.column.small-fivesixths,
-	.column.small-eleven,
-	.column.small-twelve,
-	.column.small-full {
+	.column[class^="small-"],
+	.column[class*=" small-"] {
 		clear: none;
 		float: left;
 		min-height: 1px;
 		margin-left: 0;
 		margin-right: 3.8%;
 	}
-		.column.right.small-fifth,
-		.column.right.small-twofifths,
-		.column.right.small-threefifths,
-		.column.right.small-fourfifths,
-		.column.right.small-one,
-		.column.right.small-two,
-		.column.right.small-sixth,
-		.column.right.small-three,
-		.column.right.small-fourth,
-		.column.right.small-four,
-		.column.right.small-twosixths,
-		.column.right.small-third,
-		.column.right.small-five,
-		.column.right.small-six,
-		.column.right.small-half,
-		.column.right.small-threesixths,
-		.column.right.small-twofourths,
-		.column.right.small-seven,
-		.column.right.small-eight,
-		.column.right.small-foursixths,
-		.column.right.small-twothirds,
-		.column.right.small-nine,
-		.column.right.small-threefourths,
-		.column.right.small-ten,
-		.column.right.small-fivesixths,
-		.column.right.small-eleven,
-		.column.right.small-twelve,
-		.column.right.small-full {
+		.column.right[class^="small-"],
+		.column.right[class*=" small-"] {
 			float: right;
 			margin-right: 0;
 			margin-left: 3.8%;
 		}
-		.column.reset.small-fifth,
-		.column.reset.small-twofifths,
-		.column.reset.small-threefifths,
-		.column.reset.small-fourfifths,
-		.column.reset.small-one,
-		.column.reset.small-two,
-		.column.reset.small-sixth,
-		.column.reset.small-three,
-		.column.reset.small-fourth,
-		.column.reset.small-four,
-		.column.reset.small-twosixths,
-		.column.reset.small-third,
-		.column.reset.small-five,
-		.column.reset.small-six,
-		.column.reset.small-half,
-		.column.reset.small-threesixths,
-		.column.reset.small-twofourths,
-		.column.reset.small-seven,
-		.column.reset.small-eight,
-		.column.reset.small-foursixths,
-		.column.reset.small-twothirds,
-		.column.reset.small-nine,
-		.column.reset.small-threefourths,
-		.column.reset.small-ten,
-		.column.reset.small-fivesixths,
-		.column.reset.small-eleven,
-		.column.reset.small-twelve,
-		.column.reset.small-full {
+		.column.reset[class^="small-"],
+		.column.reset[class*=" small-"] {
 			margin-right: 0;
 			margin-left: 0;
 		}
@@ -181,16 +69,16 @@
 
 	/*Fifth*/
 	.column.small-fifth {
-		width: 16.95%;		/* 16.96 */
+		width: 16.95%;
 	}
 	.column.small-twofifths {
-		width: 37.70%;		/* 33.92 + 3.8 */
+		width: 37.70%;
 	}
 	.column.small-threefifths {
-		width: 58.45%;		/* 50.88 + 3.8 + 3.8 */
+		width: 58.45%;
 	}
 	.column.small-fourfifths {
-		width: 79.20%;		/* 67.84 + 3.8 + 3.8 + 3.8 */
+		width: 79.20%;
 	}
 		.column.small-push-fifth {
 			margin-left: 20.45%;
@@ -496,6 +384,12 @@
 		}
 
 
+
+	/*First column in the series*/
+	.column.small-first,
+	.column.first.small-first {
+		clear: both;
+	}
 
 	/*Last column in the series*/
 	.column.small-last,

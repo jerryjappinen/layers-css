@@ -1,9 +1,38 @@
+@media handheld, only screen and (max-width: {{barelyWidth}}) {
+
+	/*Show/hide*/
+	.hidden-under-{{name}} {
+		display: none;
+	}
+
+}
 @media handheld, only screen and (min-width: {{width}}) {
+
+	/*Show/hide*/
+	.hidden-over-{{name}} {
+		display: none;
+	}
 
 	/*Width limit*/
 	.limit-{{name}} {
 		max-width: {{width}};
 	}
+
+
+
+	/*Roll back default first-in-line behavior*/
+	.column.first[class^="{{name}}-"],
+	.column.first[class*=" {{name}}-"] {
+		clear: none;
+	}
+
+	/*Roll back first-in-line behavior of the previous break point set*/
+	.column.{{previousName}}-first[class^="{{name}}-"],
+	.column.{{previousName}}-first[class*=" {{name}}-"] {
+		clear: none;
+	}
+
+
 
 	/*Roll back default last-in-line behavior*/
 	.column.last[class^="{{name}}-"],
@@ -373,6 +402,12 @@
 		}
 
 
+
+	/*First column in the series*/
+	.column.{{name}}-first[class^="{{name}}-"],
+	.column.{{name}}-first[class*=" {{name}}-"] {
+		clear: both;
+	}
 
 	/*Last column in this series*/
 	.column.{{name}}-last,

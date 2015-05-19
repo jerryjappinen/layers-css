@@ -1,14 +1,33 @@
 /*
-Layers CSS 1.1.2
+Layers CSS 1.2.0
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2015-05-13 08:53 UTC
+2015-05-19 10:53 UTC
 */
+@media handheld, only screen and (max-width: 39.9375em) {
+
+	/*Show/hide*/
+	.hidden-under-small {
+		display: none;
+	}
+
+}
 @media handheld, only screen and (min-width: 40em) {
+
+	/*Show/hide*/
+	.hidden-over-small {
+		display: none;
+	}
 
 	/*Width limit*/
 	.limit-small {
 		max-width: 40em;
+	}
+
+	/*Roll back default first-in-line behavior*/
+	.column.first[class^="small-"],
+	.column.first[class*=" small-"] {
+		clear: none;
 	}
 
 	/*Roll back default last-in-line behavior*/
@@ -372,6 +391,12 @@ http://eiskis.net/layers
 
 
 
+	/*First column in the series*/
+	.column.small-first,
+	.column.first.small-first {
+		clear: both;
+	}
+
 	/*Last column in the series*/
 	.column.small-last,
 	.column.last.small-last {
@@ -395,12 +420,41 @@ http://eiskis.net/layers
 
 }
 
+@media handheld, only screen and (max-width: 69.9375em) {
+
+	/*Show/hide*/
+	.hidden-under-medium {
+		display: none;
+	}
+
+}
 @media handheld, only screen and (min-width: 70em) {
+
+	/*Show/hide*/
+	.hidden-over-medium {
+		display: none;
+	}
 
 	/*Width limit*/
 	.limit-medium {
 		max-width: 70em;
 	}
+
+
+
+	/*Roll back default first-in-line behavior*/
+	.column.first[class^="medium-"],
+	.column.first[class*=" medium-"] {
+		clear: none;
+	}
+
+	/*Roll back first-in-line behavior of the previous break point set*/
+	.column.small-first[class^="medium-"],
+	.column.small-first[class*=" medium-"] {
+		clear: none;
+	}
+
+
 
 	/*Roll back default last-in-line behavior*/
 	.column.last[class^="medium-"],
@@ -771,6 +825,12 @@ http://eiskis.net/layers
 
 
 
+	/*First column in the series*/
+	.column.medium-first[class^="medium-"],
+	.column.medium-first[class*=" medium-"] {
+		clear: both;
+	}
+
 	/*Last column in this series*/
 	.column.medium-last,
 
@@ -800,12 +860,41 @@ http://eiskis.net/layers
 
 }
 
+@media handheld, only screen and (max-width: 99.9375em) {
+
+	/*Show/hide*/
+	.hidden-under-large {
+		display: none;
+	}
+
+}
 @media handheld, only screen and (min-width: 100em) {
+
+	/*Show/hide*/
+	.hidden-over-large {
+		display: none;
+	}
 
 	/*Width limit*/
 	.limit-large {
 		max-width: 100em;
 	}
+
+
+
+	/*Roll back default first-in-line behavior*/
+	.column.first[class^="large-"],
+	.column.first[class*=" large-"] {
+		clear: none;
+	}
+
+	/*Roll back first-in-line behavior of the previous break point set*/
+	.column.medium-first[class^="large-"],
+	.column.medium-first[class*=" large-"] {
+		clear: none;
+	}
+
+
 
 	/*Roll back default last-in-line behavior*/
 	.column.last[class^="large-"],
@@ -1175,6 +1264,12 @@ http://eiskis.net/layers
 		}
 
 
+
+	/*First column in the series*/
+	.column.large-first[class^="large-"],
+	.column.large-first[class*=" large-"] {
+		clear: both;
+	}
 
 	/*Last column in this series*/
 	.column.large-last,

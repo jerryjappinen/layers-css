@@ -27,6 +27,53 @@
 				padding: 1em 1em 6em 1em;
 			}
 
+			#current {
+				position: fixed;
+				z-index: 200;
+				top: 0;
+				left: 0;
+				color: #fff;
+				background-color: #000;
+				font-size: 0.8em;
+				padding: 0.2em 0.6em 0.4em 0.4em;
+				text-transform: uppercase;
+			}
+
+			#current div {
+				display: none;
+			}
+
+			#current .default {
+				display: block;
+			}
+
+			@media handheld, only screen and (min-width: 40em) {
+				#current .default {
+					display: none;
+				}
+				#current .small {
+					display: block;
+				}
+			}
+
+			@media handheld, only screen and (min-width: 70em) {
+				#current .small {
+					display: none;
+				}
+				#current .medium {
+					display: block;
+				}
+			}
+
+			@media handheld, only screen and (min-width: 100em) {
+				#current .medium {
+					display: none;
+				}
+				#current .large {
+					display: block;
+				}
+			}
+
 			#result {
 				background-color: #eee;
 				margin: 0;
@@ -73,14 +120,36 @@
 			}
 
 			.column {
+				position: relative;
+				background-color: rgba(0, 0, 0, 0.2);
+				color: #fff;
+				outline: 2px solid transparent;
+			}
+			.row:not(.keep-content) .column {
 				height: 40px;
 				line-height: 40px;
-				background-color: rgba(0, 0, 0, 0.2);
 				overflow: hidden;
-				color: #fff;
+				text-indent: -9999em;
+			}
+			.row:not(.keep-content) .column:after {
+				word-wrap: normal;
+				white-space: nowrap;
+				overflow: hidden;
 
-				outline: 0 solid transparent;
-				transition: box-shadow 200ms, outline 200ms;
+				content: attr(class);
+				font-size: 0.8em;
+				text-indent: 0;
+				position: absolute;
+				padding-left: 1em;
+				padding-right: 1em;
+				box-sizing: border-box;
+				min-width: 100%;
+				text-align: left;
+				left: 0;
+			}
+			.column,
+			.row:not(.keep-content) .column:after {
+				transition: background-color 100ms, box-shadow 100ms, outline 100ms;
 			}
 
 			.column:nth-of-type(2n) {
@@ -95,9 +164,19 @@
 				background-color: rgba(0, 0, 0, 0.45);
 			}
 
-			.column:hover, .row:nth-of-type(2n) .column:hover {
-				outline: 0.2em solid #12171a;
-				box-shadow: 0 0 4em rgba(0, 0, 0, 0.6);
+			/*Column hover*/
+			.column:hover,
+			.row:nth-of-type(2n) .column:hover {
+				outline-color: #12171a;
+				box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
+			}
+			.column:hover,
+			.row:not(.keep-content) .column:hover:after {
+				z-index: 100;
+				overflow: visible;
+			}
+			.row:not(.keep-content) .column:hover:after {
+				background-color: rgba(0, 0, 0, 0.5);
 			}
 
 		</style>
@@ -105,10 +184,59 @@
 	</head>
 
 	<body class="clear-after">
-		<div class="body-content">
+		<div class="body-content relative">
+
+			<div id="current">
+				<div class="default">Default</div>
+				<div class="small">Small</div>
+				<div class="medium">Medium</div>
+				<div class="large">Large</div>
+			</div>
 
 			<div id="test"></div>
 			<p id="result"></p>
+
+			<p class="align-center">Warnings are rows that are heigher than one column. This means false positives.</p>
+
+
+
+			<h1>Explicitly mark first</h1>
+
+			<div class="row keep-content">
+				<div class="reset column small-half medium-third large-fourth">
+					<p class="reset buffer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt soluta alias corporis nisi sed error optio quos porro tempore, possimus quia amet ipsa ab, vitae consequuntur animi non exercitationem sequi.</p>
+				</div>
+				<div class="reset column small-half small-last medium-third large-fourth">
+					<p class="reset buffer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque labore rerum rem facilis quaerat soluta tenetur culpa perspiciatis impedit eius vero, deserunt asperiores doloribus alias provident non excepturi reprehenderit vitae?</p>
+				</div>
+				<div class="reset column medium-third medium-first medium-last large-fourth">
+					<p class="reset buffer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, non placeat possimus numquam libero id est repellendus! Magnam culpa nemo, voluptatum, laboriosam tempora, minima deserunt fuga accusamus ab est assumenda!</p>
+				</div>
+				<div class="reset column large-fourth large-last">
+					<p class="reset buffer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo consequatur maiores commodi porro impedit deserunt!</p>
+				</div>
+				<div class="reset column small-half medium-third large-fourth large-first">
+					<p class="reset buffer">LARGE FIRST. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt soluta alias corporis nisi sed error optio quos porro tempore, possimus quia amet ipsa ab, vitae consequuntur animi non exercitationem sequi.</p>
+				</div>
+				<div class="reset column small-half small-last medium-third large-fourth">
+					<p class="reset buffer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque labore rerum rem facilis quaerat soluta tenetur culpa perspiciatis impedit eius vero, deserunt asperiores doloribus alias provident non excepturi reprehenderit vitae?</p>
+				</div>
+				<div class="reset column medium-third medium-last large-fourth">
+					<p class="reset buffer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, non placeat possimus numquam libero id est repellendus! Magnam culpa nemo, voluptatum, laboriosam tempora, minima deserunt fuga accusamus ab est assumenda!</p>
+				</div>
+				<div class="reset column large-fourth large-last">
+					<p class="reset buffer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo consequatur maiores commodi porro impedit deserunt, iste nobis laboriosam assumenda, veniam. Distinctio suscipit cumque omnis consequatur. Animi ullam quo consequuntur, dolor!</p>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -838,6 +966,103 @@
 
 
 
+			<h1>.fifths</h1>
+
+			<div class="row">
+				<div class="column fifth"></div>
+				<div class="column fifth"></div>
+				<div class="column fifth"></div>
+				<div class="column fifth"></div>
+				<div class="column fifth last"></div>
+			</div>
+
+			<div class="row">
+				<div class="column twofifths"></div>
+				<div class="column threefifths last"></div>
+			</div>
+
+			<div class="row">
+				<div class="column twofifths"></div>
+				<div class="column twofifths"></div>
+				<div class="column fifth last"></div>
+			</div>
+
+			<div class="row">
+				<div class="column fifth"></div>
+				<div class="column fourfifths last"></div>
+			</div>
+
+			<div class="row">
+				<div class="column right fifth"></div>
+				<div class="column right fifth"></div>
+				<div class="column right fifth"></div>
+				<div class="column right fifth"></div>
+				<div class="column right fifth last"></div>
+			</div>
+
+			<div class="row">
+				<div class="column right twofifths"></div>
+				<div class="column right threefifths last"></div>
+			</div>
+
+			<div class="row">
+				<div class="column right twofifths"></div>
+				<div class="column right twofifths"></div>
+				<div class="column right fifth last"></div>
+			</div>
+
+			<div class="row">
+				<div class="column right fifth"></div>
+				<div class="column right fourfifths last"></div>
+			</div>
+
+			<div class="row">
+				<div class="column reset fifth"></div>
+				<div class="column reset fifth"></div>
+				<div class="column reset fifth"></div>
+				<div class="column reset fifth"></div>
+				<div class="column reset fifth"></div>
+			</div>
+
+			<div class="row">
+				<div class="column reset twofifths"></div>
+				<div class="column reset threefifths"></div>
+			</div>
+
+			<div class="row">
+				<div class="column reset fifth"></div>
+				<div class="column reset fourfifths"></div>
+			</div>
+
+			<div class="row">
+				<div class="column right reset fifth"></div>
+				<div class="column right reset fifth"></div>
+				<div class="column right reset fifth"></div>
+				<div class="column right reset fifth"></div>
+				<div class="column right reset fifth"></div>
+			</div>
+
+			<div class="row">
+				<div class="column right reset twofifths"></div>
+				<div class="column right reset threefifths"></div>
+			</div>
+
+			<div class="row">
+				<div class="column right reset fifth"></div>
+				<div class="column right reset fourfifths"></div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
 			<h1>1st-level progressive enhancements</h1>
 
 			<div class="row">
@@ -1223,90 +1448,53 @@
 
 
 
-			<h1>.fifths</h1>
+			<h1>Multiple levels of progressive enhancement</h1>
+
+			<p class="squeeze-bottom">Small: 33% + 66% + full, medium: full + 2&times;50%, large: 4&times;25%</p>
 
 			<div class="row">
-				<div class="column fifth"></div>
-				<div class="column fifth"></div>
-				<div class="column fifth"></div>
-				<div class="column fifth"></div>
-				<div class="column fifth last"></div>
+				<div class="column small-third medium-full large-half"></div>
+				<div class="column small-twothirds small-last medium-half large-fourth"></div>
+				<div class="column medium-half medium-last large-fourth large-last"></div>
 			</div>
 
-			<div class="row">
-				<div class="column twofifths"></div>
-				<div class="column threefifths last"></div>
-			</div>
+			<p class="squeeze-bottom">Default: 2&times;2&times;50%, small: 3&times;33% + full, medium: 4&times;25%</p>
 
 			<div class="row">
-				<div class="column twofifths"></div>
-				<div class="column twofifths"></div>
-				<div class="column fifth last"></div>
+				<div class="column half small-third medium-fourth"></div>
+				<div class="column half last small-third medium-fourth"></div>
+				<div class="column half small-third small-last medium-fourth"></div>
+				<div class="column half last small-full medium-fourth medium-last"></div>
 			</div>
 
-			<div class="row">
-				<div class="column fifth"></div>
-				<div class="column fourfifths last"></div>
-			</div>
+			<p class="squeeze-bottom">Small: 2&times;50% + full, medium: 3&times;33%, large: 4&times;25%</p>
 
 			<div class="row">
-				<div class="column right fifth"></div>
-				<div class="column right fifth"></div>
-				<div class="column right fifth"></div>
-				<div class="column right fifth"></div>
-				<div class="column right fifth last"></div>
+				<div class="column small-half medium-third large-fourth"></div>
+				<div class="column small-half small-last medium-third large-fourth"></div>
+				<div class="column medium-third medium-last large-fourth"></div>
+				<div class="column large-fourth large-last"></div>
 			</div>
 
-			<div class="row">
-				<div class="column right twofifths"></div>
-				<div class="column right threefifths last"></div>
-			</div>
+
+
+
+
+
+
+
+
+
+
+
+			<h1>Progressive breaks</h1>
+
+			<p>Breaks can't be undone on higher levels.</p>
 
 			<div class="row">
-				<div class="column right twofifths"></div>
-				<div class="column right twofifths"></div>
-				<div class="column right fifth last"></div>
-			</div>
-
-			<div class="row">
-				<div class="column right fifth"></div>
-				<div class="column right fourfifths last"></div>
-			</div>
-
-			<div class="row">
-				<div class="column reset fifth"></div>
-				<div class="column reset fifth"></div>
-				<div class="column reset fifth"></div>
-				<div class="column reset fifth"></div>
-				<div class="column reset fifth"></div>
-			</div>
-
-			<div class="row">
-				<div class="column reset twofifths"></div>
-				<div class="column reset threefifths"></div>
-			</div>
-
-			<div class="row">
-				<div class="column reset fifth"></div>
-				<div class="column reset fourfifths"></div>
-			</div>
-
-			<div class="row">
-				<div class="column right reset fifth"></div>
-				<div class="column right reset fifth"></div>
-				<div class="column right reset fifth"></div>
-				<div class="column right reset fifth"></div>
-				<div class="column right reset fifth"></div>
-			</div>
-
-			<div class="row">
-				<div class="column right reset twofifths"></div>
-				<div class="column right reset threefifths"></div>
-			</div>
-
-			<div class="row">
-				<div class="column right reset fifth"></div>
-				<div class="column right reset fourfifths"></div>
+				<div class="column reset fourth medium-third"></div>
+				<div class="column reset fourth medium-twothirds medium-last"></div>
+				<div class="column reset half last medium-break"></div>
 			</div>
 
 
@@ -1346,11 +1534,15 @@
 			var warnings = [];
 			var targetHeight = testContainer.offsetHeight;
 
+			var windowWidth = null;
+			var windowHeight = null;
+
 
 
 			// Behavior
 			var runTests = function () {
-				console.log('Running tests...');
+				var windowWidth = window.innerWidth;
+				var windowHeight = window.innerHeight;
 
 				results = [];
 				warnings = [];
@@ -1380,7 +1572,7 @@
 				}
 
 				// Show results
-				resultContainer.innerHTML = '<strong>' + results.length + ' rows</strong><strong>' + warnings.length + ' warnings</strong><strong>' + window.innerWidth + ' &times; ' + window.innerHeight + '</strong>';
+				resultContainer.innerHTML = '<strong>' + results.length + ' rows</strong><strong>' + warnings.length + ' warnings</strong><strong>' + windowWidth + ' &times; ' + windowHeight + '</strong>';
 				if (warnings.length) {
 					addClass(resultContainer, 'warning');
 				} else {
