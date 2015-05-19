@@ -41,31 +41,49 @@ textarea {
 
 
 /*Resets*/
-button.plain, input.plain, textarea.plain {
+button.plain,
+input.plain,
+textarea.plain {
 	color: inherit;
+	outline-color: transparent;
+	outline-style: solid;
 	border-width: 0;
 	border-style: solid;
 	background-color: transparent;
 	padding: 0;
+	line-height: inherit;
+	font-size: inherit;
+	font-family: inherit;
 }
-	button.plain, input[type="submit"].plain, input[type="button"].plain, input[type="reset"].plain {
-		line-height: inherit;
-		font-size: inherit;
-		font-family: inherit;
+	button.plain:focus,
+	input.plain:focus,
+	textarea.plain:focus {
+		outline-offset: 0;
+		outline-width: 0;
 	}
 
-
-
 /*Explicit padding for input elements*/
-input.buffer, input.buffer-top, textarea.buffer, textarea.buffer-top {
+input.buffer,
+input.buffer-top,
+textarea.buffer,
+textarea.buffer-top {
 	padding-top: 0.35em;
 }
-input.buffer, input.buffer-right, textarea.buffer, textarea.buffer-right {
+input.buffer,
+input.buffer-right,
+textarea.buffer,
+textarea.buffer-right {
 	padding-right: 0.6em;
 }
-input.buffer, input.buffer-bottom, textarea.buffer, textarea.buffer-bottom {
+input.buffer,
+input.buffer-bottom,
+textarea.buffer,
+textarea.buffer-bottom {
 	padding-bottom: 0.4em;
 }
-input.buffer, input.buffer-left, textarea.buffer, textarea.buffer-left {
+input.buffer,
+input.buffer-left,
+textarea.buffer,
+textarea.buffer-left {
 	padding-left: 0.6em;
 }

@@ -37,7 +37,7 @@ foreach ($releases as $name) {
 '.$title.' '.($name === 'responsive' ? ' responsive adjustments' : '').'
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-'.date('Y-m-d H:i e') .'
+'.date('Y-m-d') .'
 */
 ';
 	$minRelease = $prefix.minify($source);
