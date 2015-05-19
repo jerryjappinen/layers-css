@@ -10,9 +10,9 @@ Latest official changelog is available on the web at [https://github.com/Eiskis/
 - Using attribute selectors in progressively enhanced `.columns` for big file size reductions.
 - Added progressively enhanced `.column.first` support to explicitly mark the first column of a row (for each breakpoint).
 - You can now mark elements `.hidden-over-` and `.hidden-under-` breakpoints.
+- TODO: Setting typography basics for `html` instead of `body`
 - TODO: `input.plain` removes magical focus outlines on webkit
 - TODO: `[type="search"].plain` resets iOS's default `border-radius`
-- TODO: Setting typography basics for `html` instead of `body`
 - TODO: Changed filenames for released files
 
 
