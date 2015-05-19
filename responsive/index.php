@@ -7,7 +7,7 @@ include_once '../scripts/minify.php';
 
 // Locate files
 $readmePath = '../readme.md';
-$templatesPath = '../templates/';
+$templatesPath = '../source/templates/';
 
 // Find title with version info (first line in readme)
 $title = 'Layers CSS';
