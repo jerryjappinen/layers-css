@@ -431,6 +431,12 @@ h1.pageTitle {
 			padding-left: 0.55em;
 		}
 	}
+	@media handheld, only screen and (max-width: 20em) {
+		#menu a {
+			padding-right: 0.25em;
+			padding-left: 0.25em;
+		}
+	}
 	#menu a.selected {
 		background-color: #ce2930;
 	}
