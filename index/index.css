@@ -1,4 +1,51 @@
 
+/*Light Layers-style color scheme*/
+html, body, div, blockquote, pre, 
+p, ol, ul, li, dl, dt, dd, 
+h1, h2, h3, h4, h5, h6, 
+table, th, tr, td, thead, tbody, tfoot, caption, 
+img, 
+form, fieldset, legend, label {
+	border-color: #e0e0e0;
+}
+
+/*Background colors*/
+body {
+	background-color: #fff;
+}
+table td, table th {
+	border-width: 1px;
+}
+
+/*Tables*/
+pre, table th, .zebra .even td {
+	background-color: #f2f2f2;
+}
+	table table .zebra .even td, table table th {
+		background-color: #f2f2f2;
+	}
+
+/*Text colors*/
+body {
+	color: #222;
+}
+a, a:visited {
+	color: #0080bf;
+}
+
+/*Alterations*/
+.discreet, .disabled {
+	color: #888;
+}
+.highlight {
+	color: #7ae400;
+}
+.error {
+	color: #c6122a;
+}
+
+
+
 /*Typography*/
 html {
 	font-family: "Lato", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
