@@ -1,5 +1,5 @@
 /*Overall rhythm*/
-body {
+html {
 	word-break: break-word;
 
 	-webkit-hyphens: auto;

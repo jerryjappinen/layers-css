@@ -1155,7 +1155,7 @@ th.top, td.top {
 		vertical-align: bottom;
 	}
 /*Overall rhythm*/
-body {
+html {
 	word-break: break-word;
 
 	-webkit-hyphens: auto;
