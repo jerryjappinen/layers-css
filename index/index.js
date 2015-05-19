@@ -362,8 +362,7 @@ window.onload = function () {
 	setTimeout(function () {
 		menuWaypoints = findWaypoints();
 		watchWaypoints();
-
-	}, 1);
+	}, 100);
 };
 
 

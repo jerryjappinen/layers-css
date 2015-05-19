@@ -430,7 +430,7 @@ h1.pageTitle {
 #menu a {
 	display: inline-block;
 	position: relative;
-	padding: 0.4em 1.2em 0.5em 1.2em;
+	padding: 6px 0.8em 6px 0.8em;
 	border-color: #ff4551;
 	text-transform: uppercase;
 	color: #fff;
@@ -439,24 +439,14 @@ h1.pageTitle {
 	border-bottom-width: 0.5em;
 	top: 0;
 }
-	@media handheld, only screen and (max-width: 55em) {
-		#menu a {
-			padding-right: 1em;
-			padding-left: 1em;
-		}
-	}
 	@media handheld, only screen and (max-width: 40em) {
 		#menu a {
-			font-size: 1.1em;
-			padding-right: 0.8em;
-			padding-left: 0.8em;
+			font-size: 1em;
 		}
 	}
 	@media handheld, only screen and (max-width: 30em) {
 		#menu a {
 			font-size: 0.85em;
-			padding-right: 0.8em;
-			padding-left: 0.8em;
 		}
 	}
 	@media handheld, only screen and (max-width: 25em) {
@@ -467,20 +457,23 @@ h1.pageTitle {
 	}
 	@media handheld, only screen and (max-width: 20em) {
 		#menu a {
-			font-size: 0.7em;
+			font-size: 0.75em;
 		}
 	}
 	#menu a.selected {
 		background-color: #ce2930;
 	}
-	#menu a:hover, #menu a:focus {
+	#menu a:hover,
+	#menu a:focus {
 		top: -0.2em;
 	}
 		#menu a:active {
 			top: 0.15em;
 			border-bottom-width: 0.35em;
 		}
-		#menu a:hover:active, #menu a.selected:hover, #menu a.selected:focus {
+		#menu a:hover:active,
+		#menu a.selected:hover,
+		#menu a.selected:focus {
 			top: 0;
 			border-bottom-width: 0.5em;
 		}
