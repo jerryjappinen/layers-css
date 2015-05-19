@@ -218,7 +218,10 @@ a, input.plain, .transition {
 		}
 
 .dark .button-discreet {
+	-webkit-border-radius: 999em;
+	-moz-border-radius: 999em;
 	border-radius: 999em;
+
 	border-width: 1px;
 	border-color: #00b3d9;
 	color: #00b3d9;
@@ -364,6 +367,9 @@ h1.pageTitle {
 		margin-left: 0.4em;
 		padding: 0.2em 0.4em 0.4em 0.4em;
 		color: inherit;
+
+		-webkit-border-radius: 0.1em;
+		-moz-border-radius: 0.1em;
 		border-radius: 0.1em;
 	}
 		.breakpoints a:hover {
@@ -375,9 +381,11 @@ h1.pageTitle {
 	margin-top: 2.2em;
 	text-align: center;
 }
-	.go .button {
-		font-size: 1.2em;
-		min-width: 9em;
+	@media handheld, only screen and (min-width: 25em) {
+		.go .button {
+			font-size: 1.2em;
+			min-width: 9em;
+		}
 	}
 	@media handheld, only screen and (max-width: 40em) {
 		.go .button {
@@ -887,8 +895,10 @@ h1.pageTitle {
 			margin-right: 0.25em;
 			padding: 0.25em;
 			overflow: hidden;
-			border-radius: 99em;
 			border-width: 1px;
+			-webkit-border-radius: 99em;
+			-moz-border-radius: 99em;
+			border-radius: 99em;
 
 			background-color: rgb(0, 0, 0);
 			background-color: rgba(0, 0, 0, 0.15);
@@ -1064,6 +1074,8 @@ h1.pageTitle {
 	max-width: 34em;
 }
 .row-footer .column img {
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
 	border-radius: 0.2em;
 
 	-webkit-box-shadow: 0 0.1em 0.4em #000;

@@ -44,22 +44,31 @@ textarea {
 button.plain,
 input.plain,
 textarea.plain {
-	color: inherit;
-	outline-color: transparent;
-	outline-style: solid;
 	border-width: 0;
+	padding: 0;
+
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+
 	border-style: solid;
 	background-color: transparent;
-	padding: 0;
-	line-height: inherit;
+	outline-color: transparent;
+	outline-style: solid;
+
+	color: inherit;
 	font-size: inherit;
 	font-family: inherit;
+	line-height: inherit;
 }
 	button.plain:focus,
 	input.plain:focus,
 	textarea.plain:focus {
 		outline-offset: 0;
 		outline-width: 0;
+	}
+	input[type="search"].plain {
+		-webkit-appearance: none;
 	}
 
 /*Explicit padding for input elements*/

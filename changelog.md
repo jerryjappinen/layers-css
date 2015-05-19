@@ -12,8 +12,7 @@ Latest official changelog is available on the web at [https://github.com/Eiskis/
 - You can now mark elements `.hidden-over-` and `.hidden-under-` breakpoints.
 - `input.plain` removes magical focus outlines on webkit
 - Typography basics are set for `html`, not `body`
-- TODO: `[type="search"].plain` resets iOS's default `border-radius`
-- TODO: Changed filenames for released files
+- `border-radius` is reset for `.plain` inputs on iOS Safari as expected
 
 
 
