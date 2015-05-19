@@ -137,12 +137,12 @@ if (!count($breakpoints)) {
 
 	// Author info
 	$prefix = '/*
-	'.$title.'
-	Released by Jerry Jäppinen under the MIT license
-	http://eiskis.net/layers
-	'.date('Y-m-d H:i e') .'
-	*/
-	';
+'.$title.'
+Released by Jerry Jäppinen under the MIT license
+http://eiskis.net/layers
+'.date('Y-m-d H:i e') .'
+*/
+';
 
 
 
@@ -181,8 +181,8 @@ if (!count($breakpoints)) {
 	header('Content-Type: text/css; charset=utf-8');
 	header('HTTP/1.1 200 OK');
 	$output = implode("\n\n", $output);
-	echo $prefix.$output;
-	// echo $prefix.minify($output);
+	// echo $prefix.$output;
+	echo $prefix.minify($output);
 
 }
 

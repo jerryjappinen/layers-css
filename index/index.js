@@ -173,8 +173,8 @@ var DownloadManager = function () {
 	// Constants
 	self.generatorUrl = 'responsive/';
 	self.breakpointNames = ['tiny', 'small', 'medium', 'large', 'huge', 'extra'];
-	self.coreSize = 15.5;
-	self.breakpointSize = 12.2;
+	self.coreSize = 16.8;
+	self.breakpointSize = 6.9;
 	self.compressionRatio = 0.25;
 
 	// Active parameters
@@ -199,7 +199,7 @@ var DownloadManager = function () {
 	});
 
 	self.estimatedSize = ko.computed(function () {
-		return Math.floor(self.coreSize + self.breakpointCount() * self.breakpointSize);
+		return self.coreSize + (self.breakpointCount() * self.breakpointSize);
 	});
 
 	self.estimatedSizeCompressed = ko.computed(function () {

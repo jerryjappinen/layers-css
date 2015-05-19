@@ -149,7 +149,8 @@ a, input.plain, .transition {
 	text-decoration: none;
 	color: #00c0e6;
 }
-	.dark a:hover {
+	.dark a:hover,
+	.dark a:focus {
 		color: #88ddee;
 	}
 		.dark a:active {
@@ -172,7 +173,8 @@ a, input.plain, .transition {
 
 
 /*Buttons*/
-.button, .dark .button {
+.button,
+.dark .button {
 	position: relative;
 	display: inline-block;
 	padding: 0.4em 1.4em 0.4em 1.4em;
@@ -184,10 +186,14 @@ a, input.plain, .transition {
 	background-color: #00b3d9;
 	color: #fff;
 }
-	.button.secondary, .dark .button.secondary {
+	.button.secondary,
+	.dark .button.secondary {
 		background-color: #0089a6;
 	}
-	.button:hover, .button:focus, .dark .button:hover, .dark .button:focus {
+	.button:hover,
+	.button:focus,
+	.dark .button:hover,
+	.dark .button:focus {
 		background-color: #0089a6;
 		text-decoration: none;
 		color: #fff;
@@ -210,6 +216,26 @@ a, input.plain, .transition {
 			-ms-box-shadow: 0 0 0 transparent;
 			box-shadow: 0 0 0 transparent;
 		}
+
+.dark .button-discreet {
+	border-radius: 999em;
+	border-width: 1px;
+	border-color: #00b3d9;
+	color: #00b3d9;
+	padding: 0.6em 1.6em;
+	text-transform: uppercase;
+	font-size: 0.85em;
+}
+	.dark .button-discreet:hover,
+	.dark .button-discreet:focus {
+		border-color: #fff;
+		color: #fff;
+	}
+		.dark .button-discreet:active {
+			border-color: #00b3d9;
+			color: #00b3d9;
+		}
+
 
 
 /*Master title*/
