@@ -1,8 +1,8 @@
 /*
-Layers CSS 1.2.0
+Layers CSS 1.2.0  responsive adjustments
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2015-05-19 10:53 UTC
+2015-05-19 10:59 UTC
 */
 @media handheld, only screen and (max-width: 39.9375em) {
 
@@ -418,9 +418,7 @@ http://eiskis.net/layers
 		margin-left: 0 !important;
 	}
 
-}
-
-@media handheld, only screen and (max-width: 69.9375em) {
+}@media handheld, only screen and (max-width: 69.9375em) {
 
 	/*Show/hide*/
 	.hidden-under-medium {
@@ -858,9 +856,7 @@ http://eiskis.net/layers
 		margin-left: 0 !important;
 	}
 
-}
-
-@media handheld, only screen and (max-width: 99.9375em) {
+}@media handheld, only screen and (max-width: 99.9375em) {
 
 	/*Show/hide*/
 	.hidden-under-large {
