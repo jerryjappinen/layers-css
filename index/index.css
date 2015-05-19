@@ -656,7 +656,9 @@ h1.pageTitle {
 
 
 /*Forms*/
-.row-forms input.plain, .row-forms textarea.plain {
+.row-forms button.plain,
+.row-forms input.plain,
+.row-forms textarea.plain {
 	background-color: #ddd;
 }
 
