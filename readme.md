@@ -30,7 +30,7 @@ You can also pick and choose what you want (in alphabetical order):
 ...
 ```
 
-If you use an autoloader (e.g. asset pipeline in Rails), you can just include the whole directory.
+If you use an autoloader (e.g. asset pipeline in Rails), you can just include the whole source directory.
 
 
 
@@ -42,7 +42,9 @@ All responsive adjustments are included in separate from the main release:
 <link rel="stylesheet" href="release/responsive.min.css">
 ```
 
-Individual files are also available under `source/`. Feel free to edit the breaking points and add more complex degradation behavior, this is just a start.
+Individual files are also available under `source/`.
+
+You'll want to build the responsive part with your own break points at [eiskis.net/layers](http://eiskis.net/layers) and add more complex degradation behavior, this is just a start.
 
 
 
