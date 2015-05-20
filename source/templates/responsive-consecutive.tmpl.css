@@ -422,7 +422,7 @@
 		.column.right.{{name}}-last,
 		.column.right.{{name}}-last[class^="{{name}}-"],
 		.column.right.{{name}}-last[class*=" {{name}}-"] {
-			margin-right: 0;
+			margin-left: 0;
 		}
 
 
