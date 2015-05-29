@@ -68,7 +68,7 @@ textarea.plain {
 		outline-width: 0;
 	}
 	input[type="search"].plain {
-		-webkit-appearance: none;
+		-webkit-appearance: textfield;
 	}
 
 /*Explicit padding for input elements*/
