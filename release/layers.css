@@ -2,7 +2,7 @@
 Layers CSS 1.2.0 
 Released by Jerry Jäppinen under the MIT license
 http://eiskis.net/layers
-2015-05-20
+2015-05-29
 */
 
 /*Basics*/
@@ -43,6 +43,7 @@ img, iframe, button, input, select, textarea {
 }
 iframe {
 	width: 100%;
+	display: block;
 }
 
 
@@ -367,7 +368,7 @@ textarea.plain {
 		outline-width: 0;
 	}
 	input[type="search"].plain {
-		-webkit-appearance: none;
+		-webkit-appearance: textfield;
 	}
 
 /*Explicit padding for input elements*/
@@ -969,44 +970,71 @@ dl.plain dt {
 }
 
 /*Inline lists*/
-ul.inline.right, ol.inline.right, dl.inline.right {
+ul.inline.right,
+ol.inline.right,
+dl.inline.right {
 	text-align: right;
 }
-ul.inline.center, ol.inline.center, dl.inline.center {
+ul.inline.center,
+ol.inline.center,
+dl.inline.center {
 	text-align: center;
 }
-	ul.inline > li, ol.inline > li, dl.inline > dt, dl.inline > dd {
+	ul.inline > li,
+	ol.inline > li,
+	dl.inline > dt,
+	dl.inline > dd {
 		display: inline;
 	}
 
 /*Horizontal lists with block elements*/
-ul.collapse, ol.collapse, dl.collapse {
+ul.collapse,
+ol.collapse,
+dl.collapse {
 	float: left;
 	clear: none;
 }
-	ul.collapse.right, ol.collapse.right, dl.collapse.right {
+	ul.collapse.right,
+	ol.collapse.right,
+	dl.collapse.right {
 		float: right;
 	}
-		ul.collapse > li, ol.collapse > li, dl.collapse > dt, dl.collapse > dd {
+		ul.collapse > li,
+		ol.collapse > li,
+		dl.collapse > dt,
+		dl.collapse > dd {
 			float: left;
 			clear: none;
 		}
 
 /*Rhythm*/
-body {
+html {
 	line-height: 1.34;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin-top: 1.34em;
 	margin-bottom: 0.67em;
 }
-p, ul, ol, table, pre, blockquote {
+p,
+ul,
+ol,
+table,
+pre,
+blockquote {
 	margin-top: 0.67em;
 	margin-bottom: 1.34em;
 }
 
 	/*Nested lists*/
-	ul ul, ul ol, ol ol, ol ul {
+	ul ul,
+	ul ol,
+	ol ol,
+	ol ul {
 		margin-top: 0;
 		margin-bottom: 0.67em;
 	}
@@ -1018,14 +1046,17 @@ dl {
 	dl.plain {
 		margin-top: 0.67em;
 	}
-		dl.reset, dl.reset-top {
+		dl.reset,
+		dl.reset-top {
 			margin-top: 0;
 		}
 dt {
 	margin-top: 0.67em;
 	margin-bottom: 0;
 }
-	dl.plain > dt, dl.inline > dt, dl.collapse > dt {
+	dl.plain > dt,
+	dl.inline > dt,
+	dl.collapse > dt {
 		margin-top: 0;
 	}
 dd {
@@ -1038,10 +1069,16 @@ dd {
 caption {
 	margin-bottom: 0.67em;
 }
-th, td {
+th,
+td {
 	padding: 0.67em;
 }
-	.squeeze th, .squeeze td, th.squeeze, td.squeeze, table table th, table table td {
+	.squeeze th,
+	.squeeze td,
+	th.squeeze,
+	td.squeeze,
+	table table th,
+	table table td {
 		padding: 0.335em;
 	}
 	table.plain th,
@@ -1060,83 +1097,142 @@ th, td {
 	}
 
 /*Headings*/
-h1.squeeze, h2.squeeze, h3.squeeze, h4.squeeze, h5.squeeze, h6.squeeze, 
-h1.squeeze-top , h2.squeeze-top, h3.squeeze-top, h4.squeeze-top, h5.squeeze-top, h6.squeeze-top {
+h1.squeeze,
+h2.squeeze,
+h3.squeeze,
+h4.squeeze,
+h5.squeeze,
+h6.squeeze,
+
+h1.squeeze-top ,
+h2.squeeze-top,
+h3.squeeze-top,
+h4.squeeze-top,
+h5.squeeze-top,
+h6.squeeze-top {
 	margin-top: 0.67em;
 }
-p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeeze,
-p.squeeze-top, ul.squeeze-top, ol.squeeze-top, table.squeeze-top, pre.squeeze-top, blockquote.squeeze-top {
+p.squeeze,
+ul.squeeze,
+ol.squeeze,
+table.squeeze,
+pre.squeeze,
+blockquote.squeeze,
+p.squeeze-top,
+ul.squeeze-top,
+ol.squeeze-top,
+table.squeeze-top,
+pre.squeeze-top,
+blockquote.squeeze-top {
 	margin-top: 0.335em;
 }
-h1.squeeze, h2.squeeze, h3.squeeze, h4.squeeze, h5.squeeze, h6.squeeze, 
-h1.squeeze-bottom , h2.squeeze-bottom, h3.squeeze-bottom, h4.squeeze-bottom, h5.squeeze-bottom, h6.squeeze-bottom {
+h1.squeeze,
+h2.squeeze,
+h3.squeeze,
+h4.squeeze,
+h5.squeeze,
+h6.squeeze,
+
+h1.squeeze-bottom ,
+h2.squeeze-bottom,
+h3.squeeze-bottom,
+h4.squeeze-bottom,
+h5.squeeze-bottom,
+h6.squeeze-bottom {
 	margin-bottom: 0.335em;
 }
-p.squeeze, ul.squeeze, ol.squeeze, table.squeeze, pre.squeeze, blockquote.squeeze,
-p.squeeze-bottom, ul.squeeze-bottom, ol.squeeze-bottom, table.squeeze-bottom, pre.squeeze-bottom, blockquote.squeeze-bottom {
+p.squeeze,
+ul.squeeze,
+ol.squeeze,
+table.squeeze,
+pre.squeeze,
+blockquote.squeeze,
+p.squeeze-bottom,
+ul.squeeze-bottom,
+ol.squeeze-bottom,
+table.squeeze-bottom,
+pre.squeeze-bottom,
+blockquote.squeeze-bottom {
 	margin-bottom: 0.67em;
 }
 
 
 
 /*Spacing*/
-.push, .push-top {
+.push,
+.push-top {
 	margin-top: 1.34em;
 }
-.push, .push-right {
+.push,
+.push-right {
 	margin-right: 1.34em;
 }
-.push, .push-bottom {
+.push,
+.push-bottom {
 	margin-bottom: 1.34em;
 }
-.push, .push-left {
+.push,
+.push-left {
 	margin-left: 1.34em;
 }
 
 /*No spacing*/
-.reset, .reset-top {
+.reset,
+.reset-top {
 	margin-top: 0;
 }
-.reset, .reset-right {
+.reset,
+.reset-right {
 	margin-right: 0;
 }
-.reset, .reset-bottom {
+.reset,
+.reset-bottom {
 	margin-bottom: 0;
 }
-.reset, .reset-left {
+.reset,
+.reset-left {
 	margin-left: 0;
 }
 
 
 
 /*Buffers*/
-.buffer, .buffer-top {
+.buffer,
+.buffer-top {
 	padding-top: 1em;
 }
-	.buffer.even, .buffer-top.even {
+	.buffer.even,
+	.buffer-top.even {
 		padding-top: 2em;
 	}
-.buffer, .buffer-right {
+.buffer,
+.buffer-right {
 	padding-right: 2em;
 }
-.buffer, .buffer-bottom {
+.buffer,
+.buffer-bottom {
 	padding-bottom: 2em;
 }
-.buffer, .buffer-left {
+.buffer,
+.buffer-left {
 	padding-left: 2em;
 }
 
 /*No buffers*/
-.no-buffer, .no-buffer-top {
+.no-buffer,
+.no-buffer-top {
 	padding-top: 0;
 }
-.no-buffer, .no-buffer-right {
+.no-buffer,
+.no-buffer-right {
 	padding-right: 0;
 }
-.no-buffer, .no-buffer-bottom {
+.no-buffer,
+.no-buffer-bottom {
 	padding-bottom: 0;
 }
-.no-buffer, .no-buffer-left {
+.no-buffer,
+.no-buffer-left {
 	padding-left: 0;
 }
 
@@ -1241,7 +1337,9 @@ h1, h2, h3 {
 .inline {
 	display: inline;
 }
-	ul.inline, ol.inline, dl.inline {
+	ul.inline,
+	ol.inline,
+	dl.inline {
 		display: block;
 	}
 
