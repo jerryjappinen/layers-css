@@ -37,6 +37,7 @@ img, iframe, button, input, select, textarea {
 }
 iframe {
 	width: 100%;
+	display: block;
 }
 
 
