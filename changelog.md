@@ -5,7 +5,7 @@ Latest official changelog is available on the web at [https://github.com/Eiskis/
 
 
 
-## 1.2.0 - Friday May 15, 2015
+## 1.2.0 - Friday May 29, 2015
 
 - Using attribute selectors in progressively enhanced `.columns` for big file size reductions.
 - Added progressively enhanced `.column.first` support to explicitly mark the first column of a row (for each breakpoint).
