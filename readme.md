@@ -44,7 +44,7 @@ All responsive adjustments are included in separate from the main release:
 
 Individual files are also available under `source/`.
 
-You'll want to build the responsive part with your own break points at [eiskis.net/layers](http://eiskis.net/layers) and add more complex degradation behavior, this is just a start.
+You'll want to build the responsive part with your own break points at [jerryjappinen.com/layers/](http://labs.jerryjappinen.com/layers/) and add more complex degradation behavior, this is just a start.
 
 
 
