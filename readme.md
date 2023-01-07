@@ -2,17 +2,14 @@
 
 A minimum-interference collection of common-sense default styles.
 
-- Reference docs at [eiskis.net/layers](http://eiskis.net/layers/)
-- GitHub project at [https://github.com/Eiskis/layers-css](https://github.com/Eiskis/layers-css)
+- Reference docs at [layers-css.vercel.app](https://layers-css.vercel.app)
+- GitHub project at [https://github.com/jerryjappinen/layers-css](https://github.com/jerryjappinen/layers-css)
 - Released under the MIT license
-- Authored by Jerry Jäppinen
-	- [eiskis@gmail.com](mailto:eiskis@gmail.com)
-	- [eiskis.net](http://eiskis.net/)
-	- [@Eiskis](https://twitter.com/Eiskis)
+- Authored by [@jerryjappinen](https://github.com/jerryjappinen/)
 
 
 
-## Get started using Layers
+## Get started using Layers CSS
 
 To get it all, use the single-file compilation:
 
@@ -23,7 +20,7 @@ To get it all, use the single-file compilation:
 You can also pick and choose what you want (in alphabetical order):
 
 ```html
-<link rel="stylesheet" href="source/layers/_normalize.css">
+<link rel="stylesheet" href="source/layers/normalize.css">
 <link rel="stylesheet" href="source/layers/forms.css">
 <link rel="stylesheet" href="source/layers/grid.css">
 ...

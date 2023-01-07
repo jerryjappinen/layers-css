@@ -1,7 +1,7 @@
 
 # Layers CSS changelog
 
-Latest official changelog is available on the web at [https://github.com/Eiskis/layers-css](https://github.com/Eiskis/layers-css/blob/master/changelog.md).
+Latest official changelog is available on the web at [https://github.com/jerryjappinen/layers-css](https://github.com/jerryjappinen/layers-css/blob/master/changelog.md).
 
 
 
