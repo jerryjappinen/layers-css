@@ -1,0 +1,443 @@
+@mixin responsive-consecutive ($previous-name, $name, $width, $barely-width) {
+		
+	@media handheld, only screen and (max-width: $barely-width) {
+
+		/*Show/hide*/
+		.hidden-under-#{$name} {
+			display: none;
+		}
+
+	}
+	@media handheld, only screen and (min-width: $width) {
+
+		/*Show/hide*/
+		.hidden-over-#{$name} {
+			display: none;
+		}
+
+		/*Width limit*/
+		.limit-#{$name} {
+			max-width: $width;
+		}
+
+
+
+		/*Roll back default first-in-line behavior*/
+		.column.first[class^="#{$name}-"],
+		.column.first[class*=" #{$name}-"] {
+			clear: none;
+		}
+
+		/*Roll back first-in-line behavior of the previous break point set*/
+		.column.#{$previous-name}-first[class^="#{$name}-"],
+		.column.#{$previous-name}-first[class*=" #{$name}-"] {
+			clear: none;
+		}
+
+
+
+		/*Roll back default last-in-line behavior*/
+		.column.last[class^="#{$name}-"],
+		.column.last[class*=" #{$name}-"],
+
+		/*Roll back last-in-line behavior of the previous break point set*/
+		.column.#{$previous-name}-last[class^="#{$name}-"],
+		.column.#{$previous-name}-last[class*=" #{$name}-"] {
+			margin-right: 3.8%;
+		}
+
+			/*Roll back default last-in-line behavior*/
+			.column.right.last[class^="#{$name}-"],
+			.column.right.last[class*=" #{$name}-"],
+
+			/*Roll back last-in-line behavior of the previous break point set*/
+			.column.right.#{$previous-name}-last[class^="#{$name}-"],
+			.column.right.#{$previous-name}-last[class*=" #{$name}-"] {
+				margin-left: 3.8%;
+			}
+
+
+
+		/*Column basics*/
+		.column[class^="#{$name}-"],
+		.column[class*=" #{$name}-"] {
+			clear: none;
+			float: left;
+			min-height: 1px;
+			margin-left: 0;
+			margin-right: 3.8%;
+		}
+			.column.right[class^="#{$name}-"],
+			.column.right[class*=" #{$name}-"] {
+				float: right;
+				margin-right: 0;
+				margin-left: 3.8%;
+			}
+			.column.reset[class^="#{$name}-"],
+			.column.reset[class*=" #{$name}-"] {
+				margin-right: 0;
+				margin-left: 0;
+			}
+
+		/*Full-width column*/
+		.column.#{$name}-full,
+		.column.#{$name}-twelve {
+			width: 100%;
+		}
+
+
+
+		/*Fifth*/
+		.column.#{$name}-fifth {
+			width: 16.95%;
+		}
+		.column.#{$name}-twofifths {
+			width: 37.70%;
+		}
+		.column.#{$name}-threefifths {
+			width: 58.45%;
+		}
+		.column.#{$name}-fourfifths {
+			width: 79.20%;
+		}
+			.column.#{$name}-push-fifth {
+				margin-left: 20.45%;
+			}
+				.column.#{$name}-right.push-fifth {
+					margin-right: 20.45%;
+				}
+			.column.#{$name}-push-twofifths {
+				margin-left: 41.50%;
+			}
+				.column.#{$name}-right.push-twofifths {
+					margin-right: 41.50%;
+				}
+			.column.#{$name}-push-threefifths {
+				margin-left: 62.25%;
+			}
+				.column.#{$name}-right.push-threefifths {
+					margin-right: 62.25%;
+				}
+			.column.#{$name}-push-fourfifths {
+				margin-left: 83.00%;
+			}
+				.column.#{$name}-right.push-fourfifths {
+					margin-right: 83.00%;
+				}
+
+		/*Fluid column widths*/
+		.column.#{$name}-one {
+			width: 4.85%;
+		}
+		.column.#{$name}-two,
+		.column.#{$name}-sixth {
+			width: 13.45%;
+		}
+		.column.#{$name}-three,
+		.column.#{$name}-fourth {
+			width: 22.05%;
+		}
+		.column.#{$name}-four,
+		.column.#{$name}-twosixths,
+		.column.#{$name}-third {
+			width: 30.75%;
+		}
+		.column.#{$name}-five {
+			width: 39.45%;
+		}
+		.column.#{$name}-six,
+		.column.#{$name}-half,
+		.column.#{$name}-threesixths,
+		.column.#{$name}-twofourths {
+			width: 48%;
+		}
+		.column.#{$name}-seven {
+			width: 56.75%;
+		}
+		.column.#{$name}-eight,
+		.column.#{$name}-foursixths,
+		.column.#{$name}-twothirds {
+			width: 65.4%;
+		}
+		.column.#{$name}-nine,
+		.column.#{$name}-threefourths {
+			width: 74.05%;
+		}
+		.column.#{$name}-ten,
+		.column.#{$name}-fivesixths {
+			width: 82.7%;
+		}
+		.column.#{$name}-eleven {
+			width: 91.35%;
+		}
+		.column.#{$name}-full.reset,
+		.column.#{$name}-twelve.reset {
+			width: 100%;
+		}
+
+		/*Shift guttered columns*/
+		.column.#{$name}-push-one {
+			margin-left: 8.65%;
+		}
+			.column.right.#{$name}-push-one {
+				margin-right: 8.65%;
+			}
+		.column.#{$name}-push-two,
+		.column.#{$name}-push-sixth {
+			margin-left: 17.25%;
+		}
+			.column.right.#{$name}-push-two,
+			.column.right.#{$name}-push-sixth {
+				margin-right: 17.25%;
+			}
+		.column.#{$name}-push-three,
+		.column.#{$name}-push-fourth {
+			margin-left: 25.85%;
+		}
+			.column.right.#{$name}-push-three,
+			.column.right.#{$name}-push-fourth {
+				margin-right: 25.85%;
+			}
+		.column.#{$name}-push-four,
+		.column.#{$name}-push-twosixths,
+		.column.#{$name}-push-third {
+			margin-left: 34.55%;
+		}
+			.column.right.#{$name}-push-four,
+			.column.right.#{$name}-push-twosixths,
+			.column.right.#{$name}-push-third {
+				margin-right: 34.55%;
+			}
+		.column.#{$name}-push-five {
+			margin-left: 43.25%;
+		}
+			.column.right.#{$name}-push-five {
+				margin-right: 43.25%;
+			}
+		.column.#{$name}-push-six,
+		.column.#{$name}-push-half,
+		.column.#{$name}-push-threesixths,
+		.column.#{$name}-push-twofourths {
+			margin-left: 51.8%;
+		}
+			.column.right.#{$name}-push-six,
+			.column.right.#{$name}-push-half,
+			.column.right.#{$name}-push-threesixths,
+			.column.right.#{$name}-push-twofourths {
+				margin-right: 51.8%;
+			}
+		.column.#{$name}-push-seven {
+			margin-left: 60.55%;
+		}
+			.column.right.#{$name}-push-seven {
+				margin-right: 60.55%;
+			}
+		.column.#{$name}-push-eight,
+		.column.#{$name}-push-foursixths,
+		.column.#{$name}-push-twothirds {
+			margin-left: 69.2%;
+		}
+			.column.right.#{$name}-push-eight,
+			.column.right.#{$name}-push-foursixths,
+			.column.right.#{$name}-push-twothirds {
+				margin-right: 69.2%;
+			}
+		.column.#{$name}-push-nine,
+		.column.#{$name}-push-threefourths {
+			margin-left: 77.85%;
+		}
+			.column.right.#{$name}-push-nine,
+			.column.right.#{$name}-push-threefourths {
+				margin-right: 77.85%;
+			}
+		.column.#{$name}-push-ten,
+		.column.#{$name}-push-fivesixths {
+			margin-left: 86.5%;
+		}
+			.column.right.#{$name}-push-ten,
+			.column.right.#{$name}-push-fivesixths {
+				margin-right: 86.5%;
+			}
+		.column.#{$name}-push-eleven {
+			margin-left: 95.15%;
+		}
+			.column.right.#{$name}-push-eleven {
+				margin-right: 95.15%;
+			}
+
+
+
+		/*No gutters*/
+		.column.#{$name}-one.reset {
+			width: 8.3%;
+		}
+		.column.#{$name}-two.reset,
+		.column.#{$name}-sixth.reset {
+			width: 16.65%;
+		}
+		.column.#{$name}-three.reset,
+		.column.#{$name}-fourth.reset {
+			width: 25%;
+		}
+		.column.#{$name}-four.reset,
+		.column.#{$name}-twosixths.reset,
+		.column.#{$name}-third.reset {
+			width: 33.3%;
+		}
+		.column.#{$name}-five.reset {
+			width: 41.65%;
+		}
+		.column.#{$name}-six.reset,
+		.column.#{$name}-half.reset,
+		.column.#{$name}-threesixths.reset,
+		.column.#{$name}-twofourths.reset {
+			width: 50%;
+		}
+		.column.#{$name}-seven.reset {
+			width: 58.3%;
+		}
+		.column.#{$name}-eight.reset,
+		.column.#{$name}-foursixths.reset,
+		.column.#{$name}-twothirds.reset {
+			width: 66.6%;
+		}
+		.column.#{$name}-nine.reset,
+		.column.#{$name}-threefourths.reset {
+			width: 75%;
+		}
+		.column.#{$name}-ten.reset,
+		.column.#{$name}-fivesixths.reset {
+			width: 83.35%;
+		}
+		.column.#{$name}-eleven.reset {
+			width: 91.7%;
+		}
+
+		/*Shift no-gutter columns*/
+		.column.reset.#{$name}-push-one {
+			margin-left: 8.3%;
+		}
+			.column.reset.right.#{$name}-push-one {
+				margin-right: 8.3%;
+			}
+		.column.reset.#{$name}-push-two,
+		.column.reset.#{$name}-push-sixth {
+			margin-left: 16.65%;
+		}
+			.column.reset.right.#{$name}-push-two,
+			.column.reset.right.#{$name}-push-sixth {
+				margin-right: 16.65%;
+			}
+		.column.reset.#{$name}-push-three,
+		.column.reset.#{$name}-push-fourth {
+			margin-left: 25%;
+		}
+			.column.reset.right.#{$name}-push-three,
+			.column.reset.right.#{$name}-push-fourth {
+				margin-right: 25%;
+			}
+		.column.reset.#{$name}-push-four,
+		.column.reset.#{$name}-push-twosixths,
+		.column.reset.#{$name}-push-third {
+			margin-left: 33.3%;
+		}
+			.column.reset.right.#{$name}-push-four,
+			.column.reset.right.#{$name}-push-twosixths,
+			.column.reset.right.#{$name}-push-third {
+				margin-right: 33.3%;
+			}
+		.column.reset.#{$name}-push-five {
+			margin-left: 41.65%;
+		}
+			.column.reset.right.#{$name}-push-five {
+				margin-right: 41.65%;
+			}
+		.column.reset.#{$name}-push-six,
+		.column.reset.#{$name}-push-half,
+		.column.reset.#{$name}-push-threesixths,
+		.column.reset.#{$name}-push-twofourths {
+			margin-left: 50%;
+		}
+			.column.reset.right.#{$name}-push-six,
+			.column.right.reset.#{$name}-push-half,
+			.column.right.reset.#{$name}-push-threesixths,
+			.column.right.reset.#{$name}-push-twofourths {
+				margin-right: 50%;
+			}
+		.column.reset.#{$name}-push-seven {
+			margin-left: 58.3%;
+		}
+			.column.reset.right.#{$name}-push-seven {
+				margin-right: 58.3%;
+			}
+		.column.reset.#{$name}-push-eight,
+		.column.reset.#{$name}-push-foursixths,
+		.column.reset.#{$name}-push-twothirds {
+			margin-left: 66.6%;
+		}
+			.column.reset.right.#{$name}-push-eight,
+			.column.reset.right.#{$name}-push-foursixths,
+			.column.reset.right.#{$name}-push-twothirds {
+				margin-right: 66.6%;
+			}
+		.column.reset.#{$name}-push-nine,
+		.column.reset.#{$name}-push-threefourths {
+			margin-left: 75%;
+		}
+			.column.reset.right.#{$name}-push-nine,
+			.column.reset.right.#{$name}-push-threefourths {
+				margin-right: 75%;
+			}
+		.column.reset.#{$name}-push-ten,
+		.column.reset.#{$name}-push-fivesixths {
+			margin-left: 83.35%;
+		}
+			.column.reset.right.#{$name}-push-ten,
+			.column.reset.right.#{$name}-push-fivesixths {
+				margin-right: 83.35%;
+			}
+		.column.reset.#{$name}-push-eleven {
+			margin-left: 91.7%;
+		}
+			.column.reset.right.#{$name}-push-eleven {
+				margin-right: 91.7%;
+			}
+
+
+
+		/*First column in the series*/
+		.column.#{$name}-first[class^="#{$name}-"],
+		.column.#{$name}-first[class*=" #{$name}-"] {
+			clear: both;
+		}
+
+		/*Last column in this series*/
+		.column.#{$name}-last,
+
+		/*Attribute selector matches because of the second class, but we need this for specificity*/
+		.column.#{$name}-last[class^="#{$name}-"],
+		.column.#{$name}-last[class*=" #{$name}-"] {
+			margin-right: 0;
+		}
+
+			/*The same for right-aligned columns*/
+			.column.right.#{$name}-last,
+			.column.right.#{$name}-last[class^="#{$name}-"],
+			.column.right.#{$name}-last[class*=" #{$name}-"] {
+				margin-left: 0;
+			}
+
+
+
+		/*Break columns after this*/
+		.column.#{$name}-break {
+			width: auto !important;
+			float: none !important;
+			clear: both !important;
+			margin-right: 0 !important;
+			margin-left: 0 !important;
+		}
+
+	}
+
+}

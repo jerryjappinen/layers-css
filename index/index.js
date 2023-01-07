@@ -171,7 +171,7 @@ var DownloadManager = function () {
 	};
 
 	// Constants
-	self.generatorUrl = 'responsive/';
+	self.generatorUrl = 'api/responsive';
 	self.breakpointNames = ['tiny', 'small', 'medium', 'large', 'huge', 'extra'];
 	self.coreSize = 16.8;
 	self.breakpointSize = 6.9;
@@ -219,10 +219,11 @@ var DownloadManager = function () {
 			for (var i = 0; i < breakpoints.length; i++) {
 				var b = breakpoints[i];
 				if (!b.isEmpty()) {
-					result.push('breakpoint' + i + '=' + b.name() + ',' + b[b.unit()]() + b.unit());
+					// result.push('breakpoint' + i + '=' + b.name() + ',' + b[b.unit()]() + b.unit());
+					result.push(b.name() + ',' + b[b.unit()]() + b.unit());
 				}
 			}
-			return self.generatorUrl + '?' + result.join('&');
+			return self.generatorUrl + '?breakpoints=' + result.join(';') + '&min=true';
 
 		}
 	});
