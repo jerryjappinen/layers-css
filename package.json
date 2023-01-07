@@ -1,0 +1,19 @@
+{
+	"name": "layers-css",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "npx http-server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:jerryjappinen/layers-css.git"
+	},
+	"dependencies": {
+		"@node-minify/clean-css": "^7.1.0",
+		"@node-minify/core": "^7.1.0"
+	},
+	"devDependencies": {
+		"vercel": "^28.10.3"
+	}
+}
