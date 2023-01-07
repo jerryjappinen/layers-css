@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "npx http-server"
+		"local": "vercel dev"
 	},
 	"repository": {
 		"type": "git",

@@ -5,3 +5,4 @@
 *.orig
 doc/
 node_modules/
+.vercel
