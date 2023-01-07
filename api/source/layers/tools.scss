@@ -1,0 +1,91 @@
+/*Force floats*/
+.keep-left, .keep-right {
+	clear: none;
+}
+.keep-left {
+	float: left;
+}
+.keep-right {
+	float: right;
+}
+.keep-center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+/*Positioning*/
+.static {
+	position: static;
+}
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+.fixed {
+	position: fixed;
+}
+
+
+
+/*Blocks and inline-blocks*/
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+}
+.inline {
+	display: inline;
+}
+	ul.inline,
+	ol.inline,
+	dl.inline {
+		display: block;
+	}
+
+
+
+/*Utilities for common CSS-based behavior*/
+.hidden {
+	display: none;
+}
+.clear {
+	clear: both;
+}
+.clear-after:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+	.clear-after {
+		*zoom: 1;
+	}
+
+
+
+/*Dry element of its content*/
+.dry {
+	text-indent: -9999em;
+	direction: ltr;
+}
+
+
+
+/*Include padding and border in dimensions*/
+.content-box {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.border-box,
+button.border-box,
+input.border-box,
+textarea.border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

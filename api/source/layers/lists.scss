@@ -1,0 +1,78 @@
+/*List layouts*/
+
+
+
+/*Modified lists*/
+ul.plain,
+ul.plain ul,
+ul.plain ol,
+ol.plain,
+ol.plain ul,
+ol.plain ol,
+ul.inline,
+ol.inline,
+ul.collapse,
+ol.collapse {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+/*Child lists*/
+ul.plain ul,
+ul.plain ol,
+ol.plain ul,
+ol.plain ol,
+ul.inline ul,
+ul.inline ol,
+ol.inline ul,
+ol.inline ol,
+ul.collapse ul,
+ul.collapse ol,
+ol.collapse ul,
+ol.collapse ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/*Plain definition lists*/
+dl.plain dt {
+	font-weight: inherit;
+}
+
+/*Inline lists*/
+ul.inline.right,
+ol.inline.right,
+dl.inline.right {
+	text-align: right;
+}
+ul.inline.center,
+ol.inline.center,
+dl.inline.center {
+	text-align: center;
+}
+	ul.inline > li,
+	ol.inline > li,
+	dl.inline > dt,
+	dl.inline > dd {
+		display: inline;
+	}
+
+/*Horizontal lists with block elements*/
+ul.collapse,
+ol.collapse,
+dl.collapse {
+	float: left;
+	clear: none;
+}
+	ul.collapse.right,
+	ol.collapse.right,
+	dl.collapse.right {
+		float: right;
+	}
+		ul.collapse > li,
+		ol.collapse > li,
+		dl.collapse > dt,
+		dl.collapse > dd {
+			float: left;
+			clear: none;
+		}

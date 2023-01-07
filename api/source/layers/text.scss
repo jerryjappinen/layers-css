@@ -1,0 +1,32 @@
+/*Overall rhythm*/
+html {
+	word-break: break-word;
+
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-epub-hyphens: auto;
+	hyphens: auto;
+}
+input, textarea {
+	word-break: normal;
+}
+
+/*Font families*/
+html {
+	font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Lucida Grande", "Ubuntu", "Roboto", "Arial", sans-serif;
+}
+blockquote, q {
+	font-family: "Droid Serif", "Georgia", serif;
+}
+pre, code, kbd, samp {
+	font-family: "Menlo", "Monaco", "Segoe UI Mono", "Droid Sans Mono", "Consolas", monospace;
+	font-size: 0.9em;
+}
+	pre code, pre kbd, pre samp {
+		font-size: 1em;
+	}
+
+/*Sizes*/
+h1, h2, h3 {
+	text-rendering: optimizeLegibility;
+}

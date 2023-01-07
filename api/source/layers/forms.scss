@@ -1,0 +1,97 @@
+/*Form elements*/
+
+/*Dimensions*/
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type=""] {
+	width: 20em;
+	max-width: 90%;
+}
+input:not([type]) {
+	width: 20em;
+	max-width: 90%;
+}
+	input[type="text"].squeeze,
+	input[type="password"].squeeze,
+	input[type="email"].squeeze,
+	input[type="url"].squeeze,
+	input[type="search"].squeeze,
+	input[type="tel"].squeeze,
+	input[type=""].squeeze {
+		width: 14em;
+	}
+	input:not([type]).squeeze {
+		width: 14em;
+	}
+textarea {
+	width: 32em;
+	max-width: 90%;
+	height: 10.72em;
+}
+	textarea.squeeze {
+		width: 20em;
+		height: 4.02em;
+	}
+
+
+
+/*Resets*/
+button.plain,
+input.plain,
+textarea.plain {
+	border-width: 0;
+	padding: 0;
+
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+
+	border-style: solid;
+	background-color: transparent;
+	outline-color: transparent;
+	outline-style: solid;
+
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
+}
+	button.plain:focus,
+	input.plain:focus,
+	textarea.plain:focus {
+		outline-offset: 0;
+		outline-width: 0;
+	}
+	input[type="search"].plain {
+		-webkit-appearance: textfield;
+	}
+
+/*Explicit padding for input elements*/
+input.buffer,
+input.buffer-top,
+textarea.buffer,
+textarea.buffer-top {
+	padding-top: 0.35em;
+}
+input.buffer,
+input.buffer-right,
+textarea.buffer,
+textarea.buffer-right {
+	padding-right: 0.6em;
+}
+input.buffer,
+input.buffer-bottom,
+textarea.buffer,
+textarea.buffer-bottom {
+	padding-bottom: 0.4em;
+}
+input.buffer,
+input.buffer-left,
+textarea.buffer,
+textarea.buffer-left {
+	padding-left: 0.6em;
+}
