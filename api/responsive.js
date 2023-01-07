@@ -31,7 +31,7 @@ export default async (req, res) => {
   }
 
   // const sourceCodePath = path.join(process.cwd() + '/' + sourcePath + 'responsive.scss')
-  const mixinsPath = path.join('./' + sourcePath + 'mixins/')
+  const mixinsPath = path.join(process.cwd() + '/' + sourcePath + 'mixins/')
   const sourceCode = `
   /*
   Layers CSS 1.2.0

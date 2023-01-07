@@ -7,7 +7,7 @@ import { sourcePath } from '../settings'
 export default async (req, res) => {
   const { min } = req.query
 
-  const sourceCodePath = path.join('./' + sourcePath + 'layers.scss')
+  const sourceCodePath = path.join(process.cwd() + './' + sourcePath + 'layers.scss')
   // console.log(sourcePath)
   
   // const sourceCode = readFileSync(sourceCodePath, 'utf8')
