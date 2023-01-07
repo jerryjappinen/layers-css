@@ -44,7 +44,7 @@ export default async (req, res) => {
   })).join(',')});
   
   // Actual CSS code is here
-  @import '${mixinsPath}responsive';
+  @import '${mixinsPath}responsive.scss';
 
   @include responsive($custom-breakpoints);
   `
