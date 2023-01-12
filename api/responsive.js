@@ -1,7 +1,7 @@
 import sass from 'node-sass'
 import path from 'path'
 
-import { sourcePath } from '../settings'
+// import { sourcePath } from '../settings'
 
 // https://layers-css.vercel.app/responsive/?breakpoint0=tiny,20em&breakpoint1=small,40em&breakpoint2=medium,70em&breakpoint3=large,30em&breakpoint4=huge,80em&breakpoint5=extra,90em
 export default async (req, res) => {
@@ -31,7 +31,8 @@ export default async (req, res) => {
   }
 
   // const sourceCodePath = path.join(process.cwd() + '/' + sourcePath + 'responsive.scss')
-  const mixinsPath = path.join(process.cwd() + '/' + sourcePath + 'mixins/')
+  // const mixinsPath = path.join(process.cwd() + '/' + sourcePath + 'mixins/') // won't work
+  const mixinsPath = path.join(process.cwd(), 'source', 'mixins')
   const sourceCode = `
   /*
   Layers CSS 1.2.0
@@ -44,7 +45,7 @@ export default async (req, res) => {
   })).join(',')});
   
   // Actual CSS code is here
-  @import '${mixinsPath}responsive.scss';
+  @import '${mixinsPath}/responsive.scss';
 
   @include responsive($custom-breakpoints);
   `
