@@ -1,6 +1,6 @@
 # Layers CSS 1.2.0
 
-A minimum-interference collection of common-sense default styles.
+Minimum-interference collection of common-sense default styles.
 
 - Reference docs at [layers-css.vercel.app](https://layers-css.vercel.app)
 - GitHub project at [https://github.com/jerryjappinen/layers-css](https://github.com/jerryjappinen/layers-css)
