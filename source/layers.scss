@@ -4,11 +4,11 @@ Docs: https://layers-css.vercel.app
 Source: https://github.com/jerryjappinen/layers-css
 */
 
-@import './layers/normalize';
-@import './layers/forms';
-@import './layers/grid';
-@import './layers/lists';
-@import './layers/rhythm';
-@import './layers/tables';
-@import './layers/text';
-@import './layers/tools';
+@import './layers/normalize.scss';
+@import './layers/forms.scss';
+@import './layers/grid.scss';
+@import './layers/lists.scss';
+@import './layers/rhythm.scss';
+@import './layers/tables.scss';
+@import './layers/text.scss';
+@import './layers/tools.scss';
