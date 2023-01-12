@@ -8,7 +8,7 @@ export default async (req, res) => {
   const { min } = req.query
 
   // const sourceCodePath = path.join(process.cwd() + './' + sourcePath + 'layers.scss')
-  const sourceCodePath = path.join(process.cwd(), 'source', 'layers.scss')
+  const sourceCodePath = path.join(process.cwd(), 'source')
   // console.log(sourcePath)
   
   // const sourceCode = readFileSync(sourceCodePath, 'utf8')
@@ -17,7 +17,7 @@ export default async (req, res) => {
   // https://www.npmjs.com/package/node-sass
   const result = sass.renderSync({
     // data: sourceCode,
-    file: sourceCodePath,
+    file: sourceCodePath + '/layers.scss',
     outputStyle: min ? 'compressed' : 'expanded'
   })
 
